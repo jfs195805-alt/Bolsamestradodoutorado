@@ -3,7 +3,9 @@
 **Perfil (do CV):** **18+ anos** em BI, Cloud Analytics e Modern Data Stack. Especialista em **Google Cloud/BigQuery, ThoughtSpot, Power BI (PL-300), Tableau (certificado), Looker**, SQL, Python, dbt, Databricks; IA/ML e BI Copilots. Trajetória em **Oi, TIM, Coca-Cola, Keyrus, DataEX**. Entregou **US$3M** em economia (Six Sigma Green Belt).
 **Formação:** MBA em Administração (Ibmec) + Bacharelado em Segurança de Sistemas de Informação (Ibmec).
 **Idiomas:** Português nativo · **Inglês (Full Professional)** · **Espanhol (Professional Working)**.
+**Idade:** 45 anos — ✅ sem limite para **Chevening, Fulbright, Humphrey, MBZUAI, la Caixa, PhDs** (valorizam experiência). ❌ fora de programas de intercâmbio jovem (Au Pair 18-26, Austrália 462 18-30). ⚠️ **Knight-Hennessy** tende a priorizar quem se formou recentemente — encaixe fraco; despriorizar.
 **Objetivo:** mestrado e/ou doutorado com bolsa integral. Aberto ao melhor.
+**Amostras de estilo:** ✅ CV + seção "Sobre" do LinkedIn recebidos (estilo profissional). Um texto mais **pessoal/reflexivo** (por que estudar, um desafio) deixaria o SOP ainda mais forte.
 
 ## 💡 Leitura estratégica do seu perfil
 - **Inglês já é Full Professional** → você **não precisa** de curso de inglês; precisa apenas **certificar** (IELTS/TOEFL) quando a bolsa exigir. Isso te poupa tempo e já te qualifica.

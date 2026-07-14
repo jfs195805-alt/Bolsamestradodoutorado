@@ -1,6 +1,6 @@
 # 📝 Kit de Candidatura — Ensino Médio no Exterior (tudo pronto para preencher)
 
-Este kit é o "projeto escrito" completo que eu preparo para a candidatura dela (UWC e colégios internos dos EUA). **Ela só fará as provas, entrevistas e dinâmicas** depois de passar na análise de projeto + documentação.
+Este kit é o "projeto escrito" completo que eu preparo para a candidatura da **Letícia** (14 anos) a UWC e colégios internos dos EUA. **Ela só fará as provas, entrevistas e dinâmicas** depois de passar na análise de projeto + documentação.
 
 **Como funciona:** eu escrevo os ensaios e textos em nível impecável — mas a partir das **histórias reais** dela (seção 5). Você me manda as respostas do questionário, e eu devolvo os ensaios finais prontos, na voz dela, coerentes com o que ela vai defender na entrevista.
 

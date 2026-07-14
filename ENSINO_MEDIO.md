@@ -1,6 +1,6 @@
 # 🎒 Plano de Bolsa de Ensino Médio no Exterior (tudo pago)
 
-Plano personalizado para uma estudante brasileira de **14 anos (8º ano)**, inglês fluente, notas altas e perfil de liderança. Objetivo: **estudar o ensino médio fora com tudo pago** (mensalidade + moradia + passagens + auxílio), sem a família pagar.
+Plano personalizado para **Letícia** (14 anos, 8º ano), estudante brasileira com inglês fluente, notas altas e perfil de liderança. Objetivo: **estudar o ensino médio fora com tudo pago** (mensalidade + moradia + passagens + auxílio), sem a família pagar.
 
 > ⚠️ **Três verdades honestas (leia primeiro):**
 > 1. **Ninguém garante aprovação** em bolsa — quem promete isso é golpe. Este plano **maximiza as chances** ao máximo; não vende milagre.

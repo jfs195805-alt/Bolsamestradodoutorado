@@ -19,14 +19,17 @@ Este repositório é **PÚBLICO**. Portanto:
 ## 👥 Candidatos
 | Pessoa | Perfil | Preferência | Arquivo | Status |
 |---|---|---|---|---|
-| **Rafael** | Senior Data Analyst, 18+ anos, GCP/BI/IA, MBA | Aberto ao melhor | [RAFAEL.md](RAFAEL.md) | ✅ CV recebido — falta 1 texto p/ estilo |
-| **Maria Eduarda** | Graduanda Big Data & Analytics | Educação + dados | [MARIA_EDUARDA.md](MARIA_EDUARDA.md) | ✅ base pronta (skill) |
-| **Daniela** | Psicologia (dez/2026) | Português/espanhol/italiano | [DANIELA.md](DANIELA.md) | ✅ base pronta — falta área + texto |
-| **Filha (14)** | Ensino médio | Tudo pago | [../ENSINO_MEDIO.md](../ENSINO_MEDIO.md) | ✅ plano + kit prontos |
+| **Rafael (45)** | Senior Data Analyst, 18+ anos, GCP/BI/IA, MBA | Aberto ao melhor | [RAFAEL.md](RAFAEL.md) | ✅ CV + LinkedIn recebidos — falta 1 texto pessoal |
+| **Maria Eduarda (29)** | Graduanda Big Data & Analytics | Educação + dados | [MARIA_EDUARDA.md](MARIA_EDUARDA.md) | ✅ base pronta (skill) |
+| **Daniela (44)** | Psicologia (dez/2026) | Português/espanhol/italiano | [DANIELA.md](DANIELA.md) | ✅ base pronta — falta área + texto |
+| **Letícia (14)** | Ensino médio | Tudo pago | [../ENSINO_MEDIO.md](../ENSINO_MEDIO.md) | ✅ plano + kit prontos |
 | **Amigos** | A informar | A informar | — | 🔜 onboarding sob demanda |
 
-### 🗣️ Imersão em inglês (jovens adultos — Maria Eduarda, Daniela e amigos)
-Estão no app (nível "Graduação/Verão"): **Austrália Work & Holiday 462** (trabalha + imersão, 18-30, melhor opção), **Au Pair EUA** (Daniela se ≤26), **AIESEC/IAESTE** (estágio remunerado, ótimo p/ dados/TI). Inglês grátis online: British Council, American English MOOCs, Duolingo. A **filha (14)** usa English Access + LearnEnglish Teens.
+### 🗣️ Imersão em inglês — por idade (importante!)
+Muitos programas de imersão têm limite de idade. Mapa da família:
+- **Maria Eduarda (29):** ✅ **Austrália 462** (≤30, trabalha + imersão) e **AIESEC** (estágio remunerado). Au Pair não (>26).
+- **Rafael (45) e Daniela (44):** ❌ fora de Au Pair (18-26) e Austrália 462 (18-30). Para vocês: **autoestudo grátis** (British Council, American English MOOCs, Duolingo) + **certificar** (IELTS/TOEFL). Imersão financiada só via **Humphrey** (Rafael se qualifica pelo perfil; Daniela ainda não tem os 5 anos de experiência exigidos).
+- **Letícia (14):** English Access + LearnEnglish Teens (grátis) + UWC como imersão futura.
 
 ## ➕ Como adicionar um amigo (o processo de onboarding)
 Quando quiser incluir alguém, é só me dizer no chat:

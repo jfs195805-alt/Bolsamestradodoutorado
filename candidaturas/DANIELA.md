@@ -1,7 +1,8 @@
-# 🎯 Candidatura — Daniela de Oliveira Coelho
+# 🎯 Candidatura — Daniela
 
 **Perfil:** Graduanda em **Psicologia** (formatura **dez/2026**).
 **Preferência:** programas em **português, espanhol ou italiano**.
+**Idade:** 44 anos — ✅ sem limite para mestrado/doutorado com bolsa. ❌ fora de intercâmbio jovem (Au Pair 18-26, Austrália 462 18-30). Inglês: autoestudo grátis + certificação.
 **Objetivo:** mestrado e/ou doutorado com bolsa/estipêndio (pagar pouco ou nada).
 
 ## 🧩 Versatilidade (encaixa em várias áreas)

@@ -2,6 +2,7 @@
 
 **Perfil:** Graduanda em **Big Data e Inteligência Analítica** (Centro Universitário IBMR, conclusão jan/2026). TCC: *Inteligência artificial e inclusão escolar*. Painel de dados públicos de educação (produto técnico).
 **Alvo:** **Mestrado em Educação** com narrativa dados + educação especial inclusiva (caso-modelo da skill: PPGE/Unicamp 2027).
+**Idade:** 29 anos — ✅ ainda entra em **Austrália 462** e **AIESEC** (imersão em inglês trabalhando, ≤30) e em Erasmus Mundus/mestrados. Au Pair não (>26).
 
 > ✅ **Base já pronta:** este é o caso que validou a skill `candidatura-mestrado`. O **Guia Lattes/ORCID** dela e o **Playbook** já estão em `.claude/skills/candidatura-mestrado/templates/`.
 
