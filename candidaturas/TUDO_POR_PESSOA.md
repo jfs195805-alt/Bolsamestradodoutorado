@@ -51,18 +51,23 @@ British Council · American English MOOCs · Alison (diploma B2) · Duolingo.
 
 ---
 
-## 🧠 DANIELA (44) — neurociência/mente, mestrado/doutorado (aceita quem NÃO tem mestrado), PT/ES/IT
+## 🧠 DANIELA (44) — Psicologia (todas as frentes) + Neurociência, mestrado/doutorado (aceita quem NÃO tem mestrado), PT/ES/IT **e mundo todo**
+🏅 **Trunfo:** Certificação Internacional em **Terapia do Esquema** (Schema Therapy) — diferencial forte para candidaturas clínicas/psicoterapia.
 
 ### Neurociência — integralmente financiados
 **Champalimaud** (Lisboa 🇵🇹) · **SISSA** (Trieste 🇮🇹) · **Neurasmus** (Erasmus Mundus, aceita bacharel) · **IN Alicante** (master, ES, aceita bacharel) · IIT (Itália, PhD) · **UNAM Neurobiología** (México, aceita bacharel no master) · **Uniandes** (Colômbia, doutorado aceita bacharel).
+
+### 🇬🇧🇩🇪🇩🇰 UK & Norte da Europa — doutorado que aceita só bacharelado e paga internacional
+**Sainsbury Wellcome (UCL)** ⭐ ~US$3.000 · **Gatsby (UCL)** ~US$3.000 · **Oxford Wellcome 1+3** · **IMPRS Göttingen** ⭐ (aceita bacharel em Psicologia) · **Edinburgh Wellcome 4-year** · **BCCN Berlin** · **Aarhus 4+4** 🇩🇰 (salário já no bacharelado, ~US$4.200). ⚠️ Suíça/Holanda/Escandinávia geralmente exigem mestrado antes.
+
+### 🏅 Psicologia clínica / Terapia do Esquema no mundo
+**Maastricht (grupo Arntz, 🇳🇱 berço da Terapia do Esquema)** e outros grupos de esquemas/TPB/psicoterapia — **(agente dedicado rodando; adiciono ao concluir).**
 
 ### Brasil — DOUTORADO DIRETO (só bacharelado, sem mestrado)
 **USP NEC** · **USP-FMRP** · **UNIFESP Psicobiologia** (fluxo contínuo) · **UFRN Instituto do Cérebro** (⚠️ até 06/08/2026) · **UFRJ IBCCF** · UFMG. Bolsa R$3.100 (ou FAPESP ~R$4.930).
 
 ### Rotas gerais PT/ES/IT/BR/LatAm (também servem)
 FCT (PT) · FPU/FI (ES) · borsa (IT) · DSU (IT, mestrado pago) · ANID/CONICET · CAPES/FAPESP.
-
-> ⏳ Pendente: grupo do Reino Unido (Sainsbury Wellcome, Gatsby, Wellcome 4-year) — agente falhou por limite de sessão; re-rodar após reset (06:50 UTC).
 
 ---
 

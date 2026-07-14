@@ -1,9 +1,17 @@
 # 🎯 Candidatura — Daniela
 
-**Perfil:** Graduanda em **Psicologia** (formatura **dez/2026**).
-**Preferência:** programas em **português, espanhol ou italiano**.
-**Idade:** 44 anos — ✅ sem limite para mestrado/doutorado com bolsa. ❌ fora de intercâmbio jovem (Au Pair 18-26, Austrália 462 18-30). Inglês: autoestudo grátis + certificação.
-**Objetivo:** mestrado e/ou doutorado com bolsa/estipêndio (pagar pouco ou nada).
+**Perfil:** Graduanda em **Psicologia** (formatura **dez/2026**) + **Certificação Internacional em Terapia do Esquema** (Schema Therapy — padrão ISST). 🏅
+**Preferência:** programas em **português, espanhol ou italiano** — **mas também no mundo todo** (inglês incluído, com autoestudo grátis + certificação).
+**Idade:** 44 anos — ✅ sem limite para mestrado/doutorado com bolsa. ❌ fora de intercâmbio jovem (Au Pair 18-26, Austrália 462 18-30).
+**Objetivo:** mestrado e/ou doutorado com bolsa/estipêndio (pagar pouco ou nada), em **Psicologia (todas as frentes) e Neurociência**, **no mundo inteiro**.
+
+## 🏅 Trunfo — Certificação Internacional em Terapia do Esquema
+A certificação em **Terapia do Esquema** (Schema Therapy, terceira onda da TCC) é um **diferencial competitivo forte** para candidaturas — abre portas em:
+- **Psicologia clínica / psicoterapia** financiada (mestrado/doutorado) em grupos que pesquisam esquemas, transtornos de personalidade, TPB, regulação emocional.
+- **Berço da abordagem:** **Maastricht (Holanda) — grupo do Prof. Arntz** é a referência mundial em Terapia do Esquema (candidatura de pesquisa forte).
+- **Vagas clínicas / assistantships** no exterior que valorizam a certificação e podem financiar estudo.
+- **Progressão ISST** (treinamento avançado, supervisor/trainer).
+> 🔎 Rota de psicologia mundial + oportunidades ligadas à Terapia do Esquema em pesquisa **(atualizando — agente dedicado rodando).**
 
 ## 🧩 Versatilidade (encaixa em várias áreas)
 Psicologia abre muitas frentes — escolher a de melhor bolsa e fit:
@@ -15,6 +23,19 @@ Psicologia abre muitas frentes — escolher a de melhor bolsa e fit:
 - **Champalimaud (Lisboa) 🇵🇹** — doutorado internacional em neurociência: €1.484→1.669/mês + propina + laptop + viagem + seguro (até 5,5 anos, inglês). Próximo ciclo ~dez/2026-fev/2027. [INDP](https://fchampalimaud.org/champalimaud-research/education/indp)
 - **SISSA (Trieste) 🇮🇹** — doutorado em Neurociência Cognitiva/Neurobiologia, ~€20.037/ano, sem propina (inglês). [PhD](https://www.sissa.it/phd-admission)
 > Nota: são em inglês, mas ficam em Portugal/Itália (dia a dia em português/italiano). Para doutorado em português/espanhol/italiano puro, ver FCT (PT), universidades ES/IT e Brasil.
+
+### 🇬🇧🇩🇪🇩🇰 UK & Norte da Europa — doutorado que ACEITA SÓ BACHARELADO e financia internacional
+Programas integrados (entram direto do bacharelado, sem exigir mestrado) e que **pagam brasileiros por igual** — estipêndio **acima de US$1.000/mês**:
+| Programa | País | Aceita bacharel | Estipêndio | Prazo (estimado) |
+|---|---|---|---|---|
+| **Sainsbury Wellcome Centre (UCL)** ⭐ | 🇬🇧 | ✅ (2:1) | ~US$3.000/mês + propina | ~09/11/2026 |
+| **Gatsby Unit (UCL)** | 🇬🇧 | ✅ (exige matemática forte) | ~US$3.000/mês + propina | ~09/11/2026 |
+| **Oxford Wellcome DPhil (1+3)** | 🇬🇧 | ✅ | integral (MSc+DPhil) | ~04/12/2026 |
+| **IMPRS Neurosciences (Göttingen)** ⭐ | 🇩🇪 | ✅ **aceita bacharel em Psicologia** | ~US$1.650 fase MSc | 15/01/2027 |
+| **Edinburgh Wellcome 4-year** | 🇬🇧 | ✅ | ~US$2.100 (£20k+) + propina | ~jan/2027 |
+| **BCCN Berlin (Bernstein)** | 🇩🇪 | ✅ (tem estágio pré-doc p/ países emergentes) | financiado | ~dez-jan |
+| **Aarhus 4+4 (Ciência Cognitiva)** | 🇩🇰 | ✅ (salário já no bacharelado) | ~US$4.200/mês, sem propina | ~fev/2027 |
+> **Encaixe honesto:** SWC/Gatsby/Bernstein premiam base matemática/programação. Se o foco dela for **clínico/qualitativo** (Terapia do Esquema!), os mais amigáveis são **Göttingen IMPRS, Oxford 1+3 e Edinburgh**. Suíça/Holanda/Escandinávia (ETH, Donders, Karolinska, Oslo) geralmente **exigem mestrado** para o doutorado direto — rota lá = fazer um mestrado de pesquisa antes.
 
 ## ⏳ Insight de sequência (importante!)
 Você se forma em **dez/2026**. A maioria dos **doutorados europeus com salário exige o mestrado concluído** — que você ainda não terá em 2027. Então o caminho mais inteligente é uma **escada**:
