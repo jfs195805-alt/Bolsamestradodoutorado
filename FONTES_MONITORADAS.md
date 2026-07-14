@@ -21,4 +21,17 @@ MEXT 🇯🇵 · GKS 🇰🇷 · Türkiye Bursları 🇹🇷 · Stipendium Hunga
 ## Outras fontes já mapeadas
 - scholarshipdreamss.com · Hanjo Foundation (Japão) · Opportunity Desk · ScholarshipsAds · agregadores e portais oficiais por país/continente (ver `RELATORIO.md`).
 
+## 🔧 Tentativas de raspagem direta (registro honesto — 14/07/2026)
+Testei todos os caminhos legítimos para ler scholarshippk/opportunityportal e **todos falharam**:
+- WebFetch (servidor) → **403 do Cloudflare** do site.
+- Navegador real (Playwright/Chromium pré-instalado) → **bloqueado pela política de rede do ambiente** (o proxy nega CONNECT até para google.com).
+- API REST pública `/wp-json` e RSS `/feed` → 403.
+- Leitor público (r.jina.ai) → 403.
+
+**Conclusão:** não é possível raspar diretamente a partir deste ambiente. Caminhos que REALMENTE funcionam:
+1. **Enviar o conteúdo** (print/screenshot ou colar o texto dos posts) — eu leio e adiciono cada bolsa de forma verificável. ✅ mais rápido e confiável.
+2. **Abrir a política de rede do ambiente** (Claude Code na web → configuração do ambiente) para permitir saída externa — aí o navegador alcança o opportunityportal.info. Docs: https://code.claude.com/docs/en/claude-code-on-the-web
+3. **Acesso autenticado ao LinkedIn** (cookie/sessão) ou um **MCP de scraping autorizado** — para ler os posts da scholarshippk um a um.
+4. **Fallback automático já ativo:** o agente diário busca cada bolsa divulgada por nome (WebSearch) e adiciona só o verificável na fonte oficial.
+
 > Regra Zero: nada de dados inventados. Toda bolsa entra só com prazo/valor conferidos na fonte oficial; estimativas ficam marcadas.
