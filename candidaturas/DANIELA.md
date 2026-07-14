@@ -9,7 +9,12 @@
 Psicologia abre muitas frentes — escolher a de melhor bolsa e fit:
 **clínica, saúde mental, neurociência do comportamento, psicologia educacional/da educação, organizacional/RH, social**. A ponte com **educação** é natural (psicologia educacional) e conversa com o projeto da família (dados + educação).
 
-**🎯 Foco preferido dela:** **relações humanas** (clínica, social, organizacional) e **educação**. Vamos priorizar PPGs/linhas nessas áreas e escrever o pré-projeto/carta com essa narrativa — adaptando ao que cada programa valoriza mais.
+**🎯 Foco preferido dela:** **neurociência e tudo ligado à mente humana** — neurociência cognitiva, comportamento, saúde mental — além de **relações humanas** (clínica, social, organizacional) e **educação**. Vamos priorizar linhas nessas áreas e escrever o pré-projeto/carta com essa narrativa, adaptando ao que cada programa valoriza.
+
+### 🧠 Neurociência — dois destaques integralmente financiados (abertos a brasileiros)
+- **Champalimaud (Lisboa) 🇵🇹** — doutorado internacional em neurociência: €1.484→1.669/mês + propina + laptop + viagem + seguro (até 5,5 anos, inglês). Próximo ciclo ~dez/2026-fev/2027. [INDP](https://fchampalimaud.org/champalimaud-research/education/indp)
+- **SISSA (Trieste) 🇮🇹** — doutorado em Neurociência Cognitiva/Neurobiologia, ~€20.037/ano, sem propina (inglês). [PhD](https://www.sissa.it/phd-admission)
+> Nota: são em inglês, mas ficam em Portugal/Itália (dia a dia em português/italiano). Para doutorado em português/espanhol/italiano puro, ver FCT (PT), universidades ES/IT e Brasil.
 
 ## ⏳ Insight de sequência (importante!)
 Você se forma em **dez/2026**. A maioria dos **doutorados europeus com salário exige o mestrado concluído** — que você ainda não terá em 2027. Então o caminho mais inteligente é uma **escada**:
