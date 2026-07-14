@@ -7,6 +7,22 @@
 **Objetivo:** **mestrado + doutorado + emprego + fellowship — mundo todo**, com **foco em IA** (aprender e trabalhar com tecnologia/IA). Aberto ao melhor. Nada excluído.
 **Amostras de estilo:** ✅ CV + seção "Sobre" do LinkedIn recebidos (estilo profissional). Um texto mais **pessoal/reflexivo** (por que estudar, um desafio) deixaria o SOP ainda mais forte.
 
+## 🏆 RANKING GERAL — os melhores para ele (mais estipêndio + melhor carreira em IA)
+| # | Programa | País | Idioma | Estipêndio | Necessário para ele participar | Detalhes e vantagens para ele |
+|---|---|---|---|---|---|---|
+| 1 | **Anthropic Fellows** ⚠️ | 🇺🇸🇬🇧🇨🇦 | Inglês | US$3.850/sem + ~US$15k/mês de compute | Forte em ML/código; proposta de pesquisa de segurança em IA; **autorização de trabalho EUA/UK/CA** ⚠️ | Altíssimo valor e prestígio máximo em IA. ⚠️ **Barreira de visto** é o gargalo para brasileiro. |
+| 2 | **MBZUAI (mestrado/doutorado IA)** ⭐ | 🇦🇪 EAU | Inglês | ~US$4.220-4.765/mês, integral | Bacharelado + CV técnico/portfólio de IA; cartas; (GRE opcional) | Pós em IA **totalmente financiada**; encaixe técnico perfeito com seu perfil de dados. Mudar p/ Abu Dhabi. |
+| 3 | **la Caixa INPhINIT** | 🇪🇸 Espanha | Inglês/Espanhol | ~US$3.680/mês | Bacharelado; CV; contato com grupo; usa seu **espanhol profissional** | Doutorado STEM bem pago; menos concorrência anglófona. |
+| 4 | **Hong Kong PhD Fellowship** | 🇭🇰 Hong Kong | Inglês | ~US$3.635/mês | Admissão em universidade de HK; CV de pesquisa; cartas | Doutorado bem financiado em polo asiático de tecnologia. |
+| 5 | **Cohere Labs — Scholars** ⭐ | 🌍 Remoto | Inglês | Remunerado (8 meses), remoto | Forte engenharia/open source (aceita **sem papers**); proposta | **Melhor encaixe realista em IA:** 100% remoto (**sem visto**). Inscrições ~ago. |
+| 6 | **Chevening** ⭐ | 🇬🇧 UK | Inglês | propina + ~£1.300+/mês + voos | Bacharelado + **~2 anos de experiência** (você tem 18+); 3 cursos UK; 4 ensaios; certificar IELTS | Mestrado de 1 ano; adora líderes experientes. MSc Data Science/IA/Data & Public Policy. **06/10/2026**. |
+| 7 | **Fulbright** | 🇺🇸 EUA | Inglês | integral + estipêndio | Via Comissão Fulbright Brasil; SOP; trajetória profissional | Forte para profissionais com trajetória sólida. fev–mai/2027. |
+| 8 | **MATS** (segurança em IA) | 🇺🇸 EUA | Inglês | ~US$1.250/sem + **visto J1** | Python + interesse em alinhamento; preparo em pesquisa | Acessível (**dá visto**); porta de entrada em pesquisa de segurança em IA. |
+| 9 | **Erasmus Mundus BDMA** | 🇪🇺 Europa | Inglês | €1.400/mês + propina | Bacharelado; inglês; documentos do consórcio | Mestrado conjunto de Big Data; estipêndio + estágios. out/2026–fev/2027. |
+| 10 | **Hubert Humphrey** | 🇺🇸 EUA | Inglês | integral + curso de inglês | Mid-career; via Fulbright Brasil; enquadrar como tecnologia/política de dados | Imersão financiada p/ profissionais de meio de carreira. Prazo **11/08/2026**. |
+| 11 | **DAAD Helmut-Schmidt** | 🇩🇪 Alemanha | Inglês | integral | Foco em políticas públicas/governança com dados; dossiê | Mestrado de políticas públicas. Prazo **31/07/2026** ⚠️ curtíssimo. |
+> ⚠️ **Knight-Hennessy (Stanford)** tende a priorizar quem se formou recentemente — encaixe fraco p/ 45 anos; **despriorizar**.
+
 ## 💡 Leitura estratégica do seu perfil
 - **Inglês já é Full Professional** → você **não precisa** de curso de inglês; precisa apenas **certificar** (IELTS/TOEFL) quando a bolsa exigir. Isso te poupa tempo e já te qualifica.
 - **18 anos + MBA + certificações** = você compete (e ganha) exatamente nas bolsas que **exigem experiência** — onde recém-formados nem entram.

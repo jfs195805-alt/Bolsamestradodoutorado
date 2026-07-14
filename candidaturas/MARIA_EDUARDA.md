@@ -4,6 +4,23 @@
 **Alvo:** **Mestrado em Educação** com narrativa dados + educação especial inclusiva (caso-modelo da skill: PPGE/Unicamp 2027).
 **Idade:** 29 anos — ✅ ainda entra em **Austrália 462** e **AIESEC** (imersão em inglês trabalhando, ≤30) e em Erasmus Mundus/mestrados. Au Pair não (>26).
 
+## 🏆 RANKING GERAL — os melhores para ela (mais estipêndio + melhor carreira/objetivo)
+| # | Programa/Rota | País | Idioma | Estipêndio | Necessário para ela participar | Detalhes e vantagens para ela |
+|---|---|---|---|---|---|---|
+| 1 | **UN Volunteers (Internacional)** ⭐ | 🌍 vários | Inglês | ~US$2.500-4.500/mês | Diploma + **~2 anos de experiência** em dados; perfil no talent pool da UNV | Voluntariado que **PAGA bem** + experiência internacional de impacto. |
+| 2 | **Irlanda — Critical Skills (Data Analyst)** | 🇮🇪 Irlanda | Inglês | salário €40.904+ | **Oferta de emprego** de analista de dados (na lista 2026); inglês | Emprego + residência; carreira em dados na Europa anglófona. |
+| 3 | **Alemanha — Opportunity Card → Blue Card** | 🇩🇪 Alemanha | Inglês (B2 aceito) | salário €45.934+ | Pontuação (diploma+experiência); depois oferta de emprego; **sem limite de idade** | Analista de dados = ocupação em falta; entra para buscar e depois trabalha. |
+| 4 | **Erasmus Mundus (Data Science)** ⭐ | 🇪🇺 Europa | Inglês | €1.400/mês + propina | Bacharelado; inglês; documentos do consórcio | Estudo + estágios + estipêndio; carreira em dados. Aplicar out/2026–jan/2027. |
+| 5 | **Austrália 462 (trabalho+férias)** ⭐ | 🇦🇺 Austrália | Inglês | trabalho pago (salário local) | Passaporte + comprovação financeira; **≤30 anos → aplicar JÁ** | Trabalha e melhora o inglês. ⚠️ **Janela de idade fecha antes dos 31.** |
+| 6 | **FCT (doutorado)** | 🇵🇹 Portugal | Português | ~US$1.360/mês + propina | Mestrado; orientador; projeto | Doutorado com estipêndio; português nativo é vantagem. |
+| 7 | **FPU / FI Joan Oró** | 🇪🇸 Espanha | Espanhol | ~US$1.300-1.400/mês | Mestrado + 300 ECTS; nota média convertida; projeto | Contrato predoutoral; usa o espanhol. |
+| 8 | **Borsa di Dottorato** | 🇮🇹 Itália | Italiano/Inglês | ~US$1.300-1.350/mês | Laurea magistrale/mestrado; concorso; projeto | Todo PhD admitido é financiado por lei. |
+| 9 | **ANID Beca Doctorado** | 🇨🇱 Chile | Espanhol | ~US$684 + propina + bônus OEA US$1.200 | Mestrado (ou em curso); admissão no Chile; projeto | Prazo ~set-nov; espanhol. |
+| 10 | **FAPESP (mestrado)** ⭐ | 🇧🇷 Brasil | Português | ~US$620 (R$3.347) | Bacharelado; orientador; projeto | Maior bolsa do Brasil; base rápida em dados/educação. |
+| 11 | **Mestrado via DSU** | 🇮🇹 Itália | Italiano | ~US$500 + tudo | Admissão no mestrado; ISEE-parificato (renda baixa) | Único mestrado PAGO na Europa (isenção + auxílio + moradia). |
+| 12 | **VSO / Au Pair França** | 🇬🇧🇫🇷 | Inglês/Francês | auxílio + voos (VSO) / €320 (Au Pair) | VSO: diploma; Au Pair: ≤26 ⚠️ (ela tem 29 → **só VSO**) | Voluntariado/imersão; VSO cobre custos (não é salário). |
+> ⚠️ Ordem de ação: (a) **Austrália 462 já** (idade); (b) provar **inglês B2**; (c) **UNV** se tiver ~2 anos de experiência; (d) preparar **Erasmus Mundus** (out/2026–jan/2027).
+
 ## 🌍 Além do mestrado: trabalho + voluntariado + estudo (com $$$) + inglês
 Melhores apostas **financiadas** para ela (29 anos, dados) — todas abertas a brasileiras:
 
