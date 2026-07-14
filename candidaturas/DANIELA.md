@@ -9,6 +9,8 @@
 Psicologia abre muitas frentes — escolher a de melhor bolsa e fit:
 **clínica, saúde mental, neurociência do comportamento, psicologia educacional/da educação, organizacional/RH, social**. A ponte com **educação** é natural (psicologia educacional) e conversa com o projeto da família (dados + educação).
 
+**🎯 Foco preferido dela:** **relações humanas** (clínica, social, organizacional) e **educação**. Vamos priorizar PPGs/linhas nessas áreas e escrever o pré-projeto/carta com essa narrativa — adaptando ao que cada programa valoriza mais.
+
 ## ⏳ Insight de sequência (importante!)
 Você se forma em **dez/2026**. A maioria dos **doutorados europeus com salário exige o mestrado concluído** — que você ainda não terá em 2027. Então o caminho mais inteligente é uma **escada**:
 1. **2027:** entrar num **mestrado financiado** (Brasil ou Itália-DSU) →

@@ -22,7 +22,7 @@ Este repositório é **PÚBLICO**. Portanto:
 | **Rafael (45)** | Senior Data Analyst, 18+ anos, GCP/BI/IA, MBA | Aberto ao melhor | [RAFAEL.md](RAFAEL.md) | ✅ CV + LinkedIn recebidos — falta 1 texto pessoal |
 | **Maria Eduarda (29)** | Graduanda Big Data & Analytics | Educação + dados | [MARIA_EDUARDA.md](MARIA_EDUARDA.md) | ✅ base pronta (skill) |
 | **Daniela (44)** | Psicologia (dez/2026) | Português/espanhol/italiano | [DANIELA.md](DANIELA.md) | ✅ base pronta — falta área + texto |
-| **Letícia (14)** | Ensino médio | Tudo pago | [../ENSINO_MEDIO.md](../ENSINO_MEDIO.md) | ✅ plano + kit prontos |
+| **Letícia (14)** | Ensino médio (eclética: STEM/IA/dados, esportes, leitura) | Tudo pago | [LETICIA.md](LETICIA.md) · [../ENSINO_MEDIO.md](../ENSINO_MEDIO.md) | ✅ plano + kit + estratégia de narrativa |
 | **Amigos** | A informar | A informar | — | 🔜 onboarding sob demanda |
 
 ### 🗣️ Imersão em inglês — por idade (importante!)

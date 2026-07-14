@@ -4,6 +4,13 @@
 **Alvo:** **Mestrado em Educação** com narrativa dados + educação especial inclusiva (caso-modelo da skill: PPGE/Unicamp 2027).
 **Idade:** 29 anos — ✅ ainda entra em **Austrália 462** e **AIESEC** (imersão em inglês trabalhando, ≤30) e em Erasmus Mundus/mestrados. Au Pair não (>26).
 
+## 🌍 Além do mestrado: estudo + intercâmbio + trabalho + voluntariado (mundo)
+Ela quer combinar **estudar, intercâmbio, trabalhar e voluntariado com auxílio** + melhorar o inglês. Como é eclética (dados), há muitas rotas — estou pesquisando as melhores (⏳). Já no radar:
+- **Trabalho + inglês:** Austrália 462 (trabalha 12 meses), AIESEC Global Talent (estágio remunerado em país anglófono), vistos de talento para dados/TI (Alemanha Opportunity Card, Holanda, Canadá).
+- **Estudo financiado:** Erasmus Mundus (Data Science, com estágios), mestrado público na Alemanha (sem propina + trabalhar meio período).
+- **Voluntariado com auxílio:** UN Volunteers e afins (verificando quais pagam de verdade).
+> A narrativa dela também se adapta ao que cada programa valoriza (educação+dados, tech, impacto social) — monto por destino.
+
 > ✅ **Base já pronta:** este é o caso que validou a skill `candidatura-mestrado`. O **Guia Lattes/ORCID** dela e o **Playbook** já estão em `.claude/skills/candidatura-mestrado/templates/`.
 
 ## 🧩 Narrativa vencedora
