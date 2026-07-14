@@ -4,22 +4,43 @@
 **Alvo:** **Mestrado em Educação** com narrativa dados + educação especial inclusiva (caso-modelo da skill: PPGE/Unicamp 2027).
 **Idade:** 29 anos — ✅ ainda entra em **Austrália 462** e **AIESEC** (imersão em inglês trabalhando, ≤30) e em Erasmus Mundus/mestrados. Au Pair não (>26).
 
-## 🌍 Além do mestrado: estudo + intercâmbio + trabalho + voluntariado (mundo)
-Ela quer combinar **estudar, intercâmbio, trabalhar e voluntariado com auxílio** + melhorar o inglês. Como é eclética (dados), há muitas rotas — estou pesquisando as melhores (⏳). Já no radar:
-- **Trabalho + inglês:** Austrália 462 (trabalha 12 meses), AIESEC Global Talent (estágio remunerado em país anglófono), vistos de talento para dados/TI (Alemanha Opportunity Card, Holanda, Canadá).
-- **Estudo financiado:** Erasmus Mundus (Data Science, com estágios), mestrado público na Alemanha (sem propina + trabalhar meio período).
-- **Voluntariado com auxílio:** UN Volunteers e afins (verificando quais pagam de verdade).
-> A narrativa dela também se adapta ao que cada programa valoriza (educação+dados, tech, impacto social) — monto por destino.
+## 🌍 Além do mestrado: trabalho + voluntariado + estudo (com $$$) + inglês
+Melhores apostas **financiadas** para ela (29 anos, dados) — todas abertas a brasileiras:
+
+| Prioridade | Rota | Paga? | Inglês | Observação |
+|---|---|---|---|---|
+| **1 ⭐** | **Austrália 462** (trabalho+férias) | Trabalho pago | Nativo | Qualifica aos 29 — ⚠️ **janela fecha antes dos 31, aplicar já**. Sem cota p/ Brasil |
+| **2 ⭐** | **UN Volunteers (Internacional)** | Financiado (~US$2.500–4.500/mês) | Sim | Voluntariado que PAGA. Exige diploma + ~2 anos de experiência em dados |
+| **3 ⭐** | **Erasmus Mundus (Data Science)** | Integral (€1.400/mês + propina) | Inglês | Estudo + estágios + estipêndio. Aplicar out/2026–jan/2027 |
+| 4 | **Irlanda — Critical Skills (Data Analyst)** | Salário | Nativo | Analista de dados está na lista 2026. Precisa de oferta de emprego (€40.904+) |
+| 5 | **Alemanha — Opportunity Card → Blue Card** | Busca + depois salário | B2 aceito | Analista de dados = ocupação em falta (€45.934). Sem limite de idade |
+| 6 | **Nova Zelândia WHV** | Trabalho pago | Nativo | Só 300 vagas/ano, esgota em horas — difícil |
+| 7 | **VSO — Voluntariado p/ Desenvolvimento** | Auxílio + voos | Sim | Cobre custos (não é salário); valoriza dados |
+
+**Inglês grátis para certificar (B2 destrava Alemanha/Irlanda/Erasmus/UNV):** British Council LearnEnglish, Alison (diploma B2), FutureLearn, Duolingo.
+> ⚠️ Ordem de ação: (a) **Austrália 462 já** (prazo de idade); (b) provar **inglês B2**; (c) se tiver ~2 anos de experiência, entrar no **talent pool da UNV**; (d) preparar **Erasmus Mundus** (out/2026–jan/2027).
+> Narrativa adaptada por programa (educação+dados, tech, impacto social).
 
 > ✅ **Base já pronta:** este é o caso que validou a skill `candidatura-mestrado`. O **Guia Lattes/ORCID** dela e o **Playbook** já estão em `.claude/skills/candidatura-mestrado/templates/`.
 
 ## 🧩 Narrativa vencedora
 "Dados + educação especial = competência rara em faculdades de educação." A formação em analytics é o **ativo diferencial** num campo (Educação) com pouca gente que domina microdados (INEP/Censo Escolar, SIOPE/FNDE). O orientador cuja biografia espelha a dela (ex.: economista que migrou para educação) valida a candidatura.
 
-## 🏆 Alvos
-- **Brasil:** PPGs de Educação (ex.: PPGE/Unicamp, USP, UFRJ, UFMG) — projeto + Lattes + prova da bibliografia + entrevista. Bolsa CAPES/CNPq/FAPESP depois do ingresso.
-- **Portugal/Espanha:** mestrados em Educação/EdTech (línguas próximas) — ver Playbook por país.
-- **Mundo (bolsa integral):** **Lemann Fellowship** (Stanford/Harvard GSE, p/ brasileiros) e **Chevening** (educação) quando cumprir requisitos.
+## 🏆 Alvos — mestrado **E** doutorado com bolsa, em português/espanhol/italiano
+Mesmas rotas financiadas do plano da Daniela (servem para qualquer área — ela mira **dados/educação**):
+
+### Mestrado financiado
+- 🇧🇷 **Brasil** (português): **CAPES/CNPq** (PPG de Educação ou Ciência de Dados) · **FAPESP** (maior bolsa, SP)
+- 🇮🇹 **Itália** (italiano): mestrado via **DSU** — isenção de propina + auxílio + moradia (renda baixa via ISEE)
+
+### Doutorado com estipêndio
+- 🇵🇹 **Portugal** (português): **FCT** ~US$1.360/mês + propina
+- 🇪🇸 **Espanha** (espanhol): **FPU / FI Joan Oró** ~US$1.300–1.400/mês
+- 🇮🇹 **Itália** (italiano): **borsa di dottorato** ~US$1.300–1.350/mês
+- 🇨🇱 **Chile** ANID (~US$684 + propina + bônus OEA) · 🇦🇷 **Argentina** CONICET · 🇲🇽 **México** SECIHTI
+- 🌎 Bônus p/ brasileiros: **Lemann** (Stanford/Harvard, educação) se quiser mirar EUA
+
+> Nota: em PT/ES/IT o mestrado quase não paga (cobra propina; CPLP reduz em Portugal). O dinheiro no mestrado está no **Brasil (FAPESP/CAPES)** e na **Itália (DSU)**. No **doutorado, todos pagam**. Todos os programas acima já estão no `bolsas.csv`/app.
 
 ## ⚙️ Próximos passos (rodar a skill)
 1. Confirmar o edital-alvo e o prazo (Fase 1).
