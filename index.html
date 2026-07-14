@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agregador Mundial de Bolsas — Mestrado & Doutorado</title>
+<style>
+  :root{
+    --bg:#f6f7fb; --panel:#ffffff; --text:#1c2333; --muted:#6b7280;
+    --border:#e5e7eb; --accent:#4f46e5; --accent-soft:#eef2ff;
+    --ok:#16a34a; --soon:#d97706; --urgent:#dc2626; --done:#0891b2;
+    --shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.04);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f1420; --panel:#171d2b; --text:#e8ebf2; --muted:#9aa4b6;
+      --border:#28303f; --accent:#818cf8; --accent-soft:#1e2436;
+      --shadow:0 1px 3px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f1420; --panel:#171d2b; --text:#e8ebf2; --muted:#9aa4b6;
+    --border:#28303f; --accent:#818cf8; --accent-soft:#1e2436;
+  }
+  :root[data-theme="light"]{
+    --bg:#f6f7fb; --panel:#ffffff; --text:#1c2333; --muted:#6b7280;
+    --border:#e5e7eb; --accent:#4f46e5; --accent-soft:#eef2ff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
+  header{padding:22px 20px 8px;max-width:1180px;margin:0 auto}
+  h1{margin:0;font-size:1.5rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .sub{color:var(--muted);font-size:.9rem;margin-top:4px}
+  main{max-width:1180px;margin:0 auto;padding:12px 20px 60px}
+
+  .tabs{display:flex;gap:8px;margin:16px 0 6px;flex-wrap:wrap}
+  .tab{border:1px solid var(--border);background:var(--panel);border-radius:999px;padding:8px 16px;cursor:pointer;font-weight:600;box-shadow:var(--shadow)}
+  .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0}
+  .toolbar .spacer{flex:1}
+  button,select,input,textarea{font:inherit;color:inherit}
+  .search{flex:1;min-width:200px;border:1px solid var(--border);background:var(--panel);border-radius:9px;padding:9px 13px;box-shadow:var(--shadow)}
+  .btn{border:1px solid var(--border);background:var(--panel);border-radius:9px;padding:8px 13px;
+    cursor:pointer;display:inline-flex;align-items:center;gap:7px;box-shadow:var(--shadow);transition:.15s}
+  .btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btn.ghost{box-shadow:none;background:transparent}
+  select.filter{border:1px solid var(--border);background:var(--panel);border-radius:9px;padding:8px 11px;box-shadow:var(--shadow)}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:6px 0 18px}
+  .stat{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+  .stat .n{font-size:1.7rem;font-weight:700;line-height:1}
+  .stat .l{color:var(--muted);font-size:.82rem;margin-top:5px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:var(--shadow);
+    display:flex;flex-direction:column;gap:10px;border-left:5px solid var(--border)}
+  .card.s-ok{border-left-color:var(--ok)}
+  .card.s-soon{border-left-color:var(--soon)}
+  .card.s-urgent{border-left-color:var(--urgent)}
+  .card.s-done{border-left-color:var(--done)}
+  .card.s-past{border-left-color:var(--muted);opacity:.72}
+  .card h3{margin:0;font-size:1.08rem}
+  .inst{color:var(--muted);font-size:.86rem;margin-top:-4px}
+  .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .chip{font-size:.74rem;padding:3px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+  .chip.status{background:transparent;border:1px solid var(--border);color:var(--text)}
+  .deadline{font-weight:700;font-size:.95rem}
+  .count{font-size:.8rem;font-weight:600}
+  .count.ok{color:var(--ok)} .count.soon{color:var(--soon)} .count.urgent{color:var(--urgent)}
+  .count.past{color:var(--muted)} .count.done{color:var(--done)}
+  .money{font-size:.9rem;font-weight:600}
+  .docs{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-direction:column;gap:5px}
+  .docs li{display:flex;gap:8px;align-items:flex-start;font-size:.85rem}
+  .docs input{margin-top:3px}
+  .docs .done-doc{text-decoration:line-through;color:var(--muted)}
+  .card-actions{display:flex;gap:8px;margin-top:auto;padding-top:6px;flex-wrap:wrap}
+  .card-actions .btn{padding:5px 10px;font-size:.82rem}
+  a.link{color:var(--accent);font-size:.82rem;text-decoration:none;font-weight:600}
+  a.link:hover{text-decoration:underline}
+  .empty{text-align:center;color:var(--muted);padding:50px 20px;border:2px dashed var(--border);border-radius:14px;grid-column:1/-1}
+
+  .cat-title{grid-column:1/-1;font-size:1.05rem;font-weight:700;margin:18px 0 2px;display:flex;align-items:center;gap:8px}
+  .cat-title:first-child{margin-top:0}
+  .portal{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+  .portal h4{margin:0;font-size:1rem}
+  .portal p{margin:0;font-size:.85rem;color:var(--muted)}
+  .portal .tags{display:flex;gap:6px;flex-wrap:wrap}
+  .portal .tag{font-size:.7rem;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+  .hidden{display:none!important}
+
+  /* modal */
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+  .overlay.open{display:flex}
+  .modal{background:var(--panel);border-radius:16px;padding:22px;width:100%;max-width:520px;max-height:90vh;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+  .modal h2{margin:0 0 14px;font-size:1.2rem}
+  .field{margin-bottom:12px}
+  .field label{display:block;font-size:.82rem;color:var(--muted);margin-bottom:5px}
+  .field input,.field select,.field textarea{width:100%;border:1px solid var(--border);background:var(--bg);
+    border-radius:9px;padding:9px 11px}
+  .field textarea{min-height:70px;resize:vertical}
+  .field small{color:var(--muted);font-size:.75rem}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:8px}
+  @media(max-width:520px){.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🌍 Agregador Mundial de Bolsas <span class="chip">Mestrado & Doutorado</span></h1>
+  <div class="sub">Bolsas de todos os continentes — mestrado, doutorado, <b>fellowships e programas de verão</b> — com auxílio em dinheiro, + programas do Brasil e Portugal, + um diretório dos melhores portais de bolsas do mundo. Atualizado diariamente por um agente automático.</div>
+</header>
+
+<main>
+  <div class="tabs">
+    <button class="tab active" id="tab-bolsas" onclick="showView('bolsas')">🎓 Bolsas curadas</button>
+    <button class="tab" id="tab-portais" onclick="showView('portais')">🧭 Portais do mundo</button>
+  </div>
+
+  <!-- ===== VIEW: BOLSAS ===== -->
+  <section id="view-bolsas">
+    <div class="stats" id="stats"></div>
+    <div class="toolbar">
+      <input class="search" id="searchBox" placeholder="🔎 Buscar por nome, instituição, país…" oninput="render()">
+      <button class="btn primary" onclick="openModal()">➕ Nova</button>
+    </div>
+    <div class="toolbar">
+      <select class="filter" id="filterStatus" onchange="render()">
+        <option value="">Todos os status</option>
+        <option>A fazer</option><option>Em andamento</option><option>Enviado</option><option>Aprovado</option><option>Não aprovado</option>
+      </select>
+      <select class="filter" id="filterNivel" onchange="render()">
+        <option value="">Todos os níveis</option>
+        <option>Ensino Médio</option><option>Graduação/Verão</option><option>Mestrado</option><option>Doutorado</option><option>Pós-doutorado</option><option>Fellowship</option>
+      </select>
+      <select class="filter" id="filterValor" onchange="render()">
+        <option value="0">Qualquer valor</option>
+        <option value="1000">&gt; US$ 1.000/mês</option>
+        <option value="2000">&gt; US$ 2.000/mês</option>
+        <option value="3000">&gt; US$ 3.000/mês</option>
+      </select>
+      <select class="filter" id="sortBy" onchange="render()">
+        <option value="prazo">Ordenar por prazo</option>
+        <option value="valor">Ordenar por valor</option>
+        <option value="nome">Ordenar por nome</option>
+      </select>
+      <div class="spacer"></div>
+      <button class="btn ghost" onclick="syncFromCsv(false)">🔄 Sincronizar</button>
+      <button class="btn ghost" onclick="importCsv()">📥 Importar</button>
+      <button class="btn ghost" onclick="exportCsv()">📤 Exportar</button>
+      <input type="file" id="fileInput" accept=".csv" style="display:none" onchange="handleFile(event)">
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- ===== VIEW: PORTAIS ===== -->
+  <section id="view-portais" class="hidden">
+    <div class="toolbar">
+      <input class="search" id="portalSearch" placeholder="🔎 Buscar portal por nome, país, categoria…" oninput="renderPortais()">
+      <span class="inst" id="portalCount"></span>
+    </div>
+    <div class="grid" id="portais"></div>
+  </section>
+</main>
+
+<!-- Modal -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h2 id="modalTitle">Nova bolsa</h2>
+    <input type="hidden" id="f_id">
+    <div class="field"><label>Nome da bolsa *</label><input id="f_nome" placeholder="Ex.: Chevening Scholarship"></div>
+    <div class="two">
+      <div class="field"><label>Instituição</label><input id="f_instituicao" placeholder="CAPES, DAAD, FCT..."></div>
+      <div class="field"><label>Nível</label><select id="f_nivel"><option>Ensino Médio</option><option>Graduação/Verão</option><option>Mestrado</option><option>Doutorado</option><option>Mestrado e Doutorado</option><option>Pós-doutorado</option><option>Fellowship</option><option>Outro</option></select></div>
+    </div>
+    <div class="two">
+      <div class="field"><label>Prazo de inscrição</label><input type="date" id="f_prazo"></div>
+      <div class="field"><label>Status</label><select id="f_status"><option>A fazer</option><option>Em andamento</option><option>Enviado</option><option>Aprovado</option><option>Não aprovado</option></select></div>
+    </div>
+    <div class="two">
+      <div class="field"><label>Valor mensal (US$)</label><input type="number" id="f_valor" placeholder="1700" min="0" step="50"></div>
+      <div class="field"><label>Duração (meses)</label><input type="number" id="f_duracao" placeholder="24" min="0"></div>
+    </div>
+    <div class="field"><label>Documentos necessários</label><textarea id="f_documentos" placeholder="Um por linha, ou separados por ponto e vírgula (;)"></textarea><small>Ex.: CV; Histórico; Cartas de referência</small></div>
+    <div class="field"><label>Link do edital</label><input id="f_link" placeholder="https://..."></div>
+    <div class="field"><label>Observações</label><input id="f_observacoes" placeholder="País, valor na moeda original, ressalvas"></div>
+    <div class="modal-actions">
+      <button class="btn ghost" onclick="closeModal()">Cancelar</button>
+      <button class="btn primary" onclick="save()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const STORE_KEY = 'bolsas_v1';
+const DOCS_KEY  = 'bolsas_docs_v1';
+const SEED = []; // carregado do bolsas.csv
+
+// ===== Diretório curado dos melhores portais de bolsas do mundo =====
+const PORTAIS = [
+  // Globais / agregadores
+  {cat:'🌐 Agregadores globais',nome:'Scholars4Dev',url:'https://www.scholars4dev.com/',reg:['Global'],desc:'Bolsas para estudantes de países em desenvolvimento; um dos diretórios mais respeitados.'},
+  {cat:'🌐 Agregadores globais',nome:'ScholarshipsAds',url:'https://scholarship-positions.com/',reg:['Global'],desc:'Scholarship Positions — mestrado/doutorado no mundo todo, com filtros por país e nível.'},
+  {cat:'🌐 Agregadores globais',nome:'ScholarshipTab',url:'https://www.scholarshiptab.com/',reg:['Global'],desc:'Grande base de bolsas por país, nível e área.'},
+  {cat:'🌐 Agregadores globais',nome:'ScholarshipRoar',url:'https://www.scholarshiproar.com/',reg:['Global'],desc:'Foco em bolsas integralmente financiadas.'},
+  {cat:'🌐 Agregadores globais',nome:'Opportunities for Youth',url:'https://opportunitiesforyouth.org/',reg:['Global'],desc:'Bolsas, fellowships, conferências e estágios internacionais.'},
+  {cat:'🌐 Agregadores globais',nome:'Opportunity Desk',url:'https://opportunitydesk.org/',reg:['Global'],desc:'Oportunidades diárias: bolsas, fellowships, competições.'},
+  {cat:'🌐 Agregadores globais',nome:'WeMakeScholars',url:'https://www.wemakescholars.com/',reg:['Global'],desc:'Bolsas e financiamento estudantil internacional.'},
+  {cat:'🌐 Agregadores globais',nome:'ProFellow',url:'https://www.profellow.com/',reg:['Global'],desc:'Base de fellowships de pós-graduação e pesquisa.'},
+  {cat:'🌐 Agregadores globais',nome:'Mastersportal',url:'https://www.mastersportal.com/',reg:['Global'],desc:'Busca de mestrados no mundo todo + bolsas associadas.'},
+  {cat:'🌐 Agregadores globais',nome:'PhDportal',url:'https://www.phdportal.com/',reg:['Global'],desc:'Busca de doutorados no mundo todo + financiamento.'},
+  {cat:'🌐 Agregadores globais',nome:'DAAD Scholarship Database',url:'https://www.daad.de/en/study-and-research-in-germany/scholarships/',reg:['Alemanha','Global'],desc:'Banco oficial de bolsas para estudar/pesquisar na Alemanha.'},
+  // Pesquisa / PhD / posições assalariadas
+  {cat:'🔬 Pesquisa & PhD (vagas o ano todo)',nome:'EURAXESS',url:'https://euraxess.ec.europa.eu/jobs',reg:['Europa'],desc:'Portal oficial da UE com milhares de vagas de doutorado/pós-doc assalariados.'},
+  {cat:'🔬 Pesquisa & PhD (vagas o ano todo)',nome:'Academic Positions',url:'https://academicpositions.com/',reg:['Global','Europa'],desc:'Vagas de PhD, pós-doc e docência com salário, especialmente na Europa.'},
+  {cat:'🔬 Pesquisa & PhD (vagas o ano todo)',nome:'FindAPhD',url:'https://www.findaphd.com/',reg:['Global','Reino Unido'],desc:'Maior base de doutorados financiados, com foco em UK/Europa.'},
+  {cat:'🔬 Pesquisa & PhD (vagas o ano todo)',nome:'jobs.ac.uk',url:'https://www.jobs.ac.uk/',reg:['Reino Unido'],desc:'Vagas acadêmicas e PhDs financiados no Reino Unido.'},
+  {cat:'🔬 Pesquisa & PhD (vagas o ano todo)',nome:'ScholarshipDb',url:'https://scholarshipdb.net/',reg:['Global'],desc:'Bolsas e posições de pesquisa por país.'},
+  {cat:'🔬 Pesquisa & PhD (vagas o ano todo)',nome:'Nature Careers',url:'https://www.nature.com/naturecareers/',reg:['Global'],desc:'Vagas de pesquisa e PhD em ciências.'},
+  // Portais oficiais de governo / país
+  {cat:'🏛️ Portais oficiais por país',nome:'Chevening (Reino Unido)',url:'https://www.chevening.org/',reg:['Reino Unido'],desc:'Programa do governo britânico para mestrado.'},
+  {cat:'🏛️ Portais oficiais por país',nome:'Erasmus+ / EACEA (Europa)',url:'https://www.eacea.ec.europa.eu/scholarships/emjmd-catalogue_en',reg:['Europa'],desc:'Catálogo oficial dos mestrados Erasmus Mundus.'},
+  {cat:'🏛️ Portais oficiais por país',nome:'Campus France',url:'https://www.campusfrance.org/en',reg:['França'],desc:'Portal oficial para estudar na França (Eiffel etc.).'},
+  {cat:'🏛️ Portais oficiais por país',nome:'Study in Japan (MEXT/JASSO)',url:'https://www.studyinjapan.go.jp/en/',reg:['Japão'],desc:'Bolsas do governo japonês.'},
+  {cat:'🏛️ Portais oficiais por país',nome:'Study in Korea (GKS)',url:'https://www.studyinkorea.go.kr/',reg:['Coreia do Sul'],desc:'Global Korea Scholarship.'},
+  {cat:'🏛️ Portais oficiais por país',nome:'Swedish Institute',url:'https://si.se/en/apply/scholarships/',reg:['Suécia'],desc:'Bolsas do governo sueco.'},
+  {cat:'🏛️ Portais oficiais por país',nome:'Study in Holland / Nuffic',url:'https://www.studyinnl.org/finances/scholarships',reg:['Holanda'],desc:'Bolsas para estudar na Holanda (Orange Tulip etc.).'},
+  {cat:'🏛️ Portais oficiais por país',nome:'Türkiye Bursları',url:'https://www.turkiyeburslari.gov.tr/',reg:['Turquia'],desc:'Bolsas do governo turco.'},
+  {cat:'🏛️ Portais oficiais por país',nome:'China Scholarship Council (CSC)',url:'https://www.campuschina.org/',reg:['China'],desc:'Bolsas do governo chinês.'},
+  {cat:'🏛️ Portais oficiais por país',nome:'DAAD (Alemanha)',url:'https://www.daad.de/en/',reg:['Alemanha'],desc:'Serviço alemão de intercâmbio acadêmico.'},
+  {cat:'🏛️ Portais oficiais por país',nome:'Study in Switzerland (ESKAS)',url:'https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html',reg:['Suíça'],desc:'Swiss Government Excellence Scholarships.'},
+  // Brasil
+  {cat:'🇧🇷 Brasil',nome:'CAPES',url:'https://www.gov.br/capes/',reg:['Brasil'],desc:'Bolsas de mestrado, doutorado e doutorado-sanduíche (PDSE, PrInt).'},
+  {cat:'🇧🇷 Brasil',nome:'CNPq',url:'https://www.gov.br/cnpq/',reg:['Brasil'],desc:'Bolsas de pós-graduação no país e no exterior.'},
+  {cat:'🇧🇷 Brasil',nome:'FAPESP',url:'https://fapesp.br/bolsas',reg:['Brasil'],desc:'Bolsas de mestrado/doutorado em São Paulo e BEPE (exterior).'},
+  {cat:'🇧🇷 Brasil',nome:'FAPERJ',url:'https://www.faperj.br/',reg:['Brasil'],desc:'Fundação de amparo à pesquisa do Rio de Janeiro.'},
+  {cat:'🇧🇷 Brasil',nome:'FAPEMIG',url:'https://fapemig.br/',reg:['Brasil'],desc:'Fundação de amparo à pesquisa de Minas Gerais.'},
+  {cat:'🇧🇷 Brasil',nome:'Fundação Estudar / Estudar Fora',url:'https://www.estudarfora.org.br/',reg:['Brasil'],desc:'Guia e bolsas para brasileiros estudarem fora.'},
+  // Portugal
+  {cat:'🇵🇹 Portugal',nome:'FCT — Fundação para a Ciência e a Tecnologia',url:'https://www.fct.pt/',reg:['Portugal'],desc:'Bolsas de doutoramento e investigação em Portugal.'},
+  {cat:'🇵🇹 Portugal',nome:'DGES — Estudar em Portugal',url:'https://www.dges.gov.pt/',reg:['Portugal'],desc:'Direção-Geral do Ensino Superior; acesso e estatuto de estudante internacional.'},
+  {cat:'🇵🇹 Portugal',nome:'Study in Portugal',url:'https://www.studyinportugal.edu.pt/',reg:['Portugal'],desc:'Portal oficial para estudar em Portugal.'},
+  // Portais oficiais por país / região — chegue a qualquer universidade
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'EducationUSA',url:'https://educationusa.state.gov/',reg:['EUA'],desc:'Rede oficial dos EUA para encontrar universidades e financiamento.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'EduCanada',url:'https://www.educanada.ca/',reg:['Canadá'],desc:'Portal oficial do governo do Canadá: universidades e bolsas.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Study Australia',url:'https://www.studyaustralia.gov.au/',reg:['Austrália'],desc:'Portal oficial da Austrália: cursos, universidades e bolsas.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Study with New Zealand',url:'https://www.studywithnewzealand.govt.nz/',reg:['Nova Zelândia'],desc:'Portal oficial da Nova Zelândia.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Study in Europe',url:'https://education.ec.europa.eu/study-in-europe',reg:['Europa'],desc:'Portal oficial da UE para estudar em qualquer país europeu.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Universitaly (Itália)',url:'https://www.universitaly.it/',reg:['Itália'],desc:'Portal oficial das universidades italianas.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Study in Italy (MAECI)',url:'https://studyinitaly.esteri.it/',reg:['Itália'],desc:'Portal do governo italiano para estudantes estrangeiros.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Study in China (CUCAS)',url:'https://www.cucas.cn/',reg:['China'],desc:'Busca de cursos e bolsas em universidades chinesas.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Study in India',url:'https://www.studyinindia.gov.in/',reg:['Índia'],desc:'Portal oficial da Índia para estudantes internacionais.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Universities South Africa',url:'https://www.universitiessa.ac.za/',reg:['África do Sul','África'],desc:'Diretório das universidades públicas da África do Sul.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Mastercard Foundation Scholars',url:'https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/',reg:['África','Global'],desc:'Rede de bolsas integrais em universidades parceiras (foco África).'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Study in Norway',url:'https://www.studyinnorway.no/',reg:['Noruega'],desc:'Portal oficial da Noruega.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Study in Denmark',url:'https://studyindenmark.dk/',reg:['Dinamarca'],desc:'Portal oficial da Dinamarca.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'Study in Finland',url:'https://www.studyinfinland.fi/',reg:['Finlândia'],desc:'Portal oficial da Finlândia.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'ScholarshipPortal (Studyportals)',url:'https://www.scholarshipportal.com/',reg:['Europa','Global'],desc:'Base de bolsas para estudar na Europa e no mundo.'},
+  {cat:'🌎 Portais por país (chegue a qualquer universidade)',nome:'QS — Encontrar universidades e bolsas',url:'https://www.topuniversities.com/',reg:['Global'],desc:'Rankings para navegar por universidades do mundo todo + bolsas.'},
+  // Verão, fellowships e bolsas em geral (não só mestrado/doutorado)
+  {cat:'🎓 Verão, fellowships e bolsas em geral',nome:'Mitacs Globalink',url:'https://www.mitacs.ca/our-programs/globalink-research-internship-students/',reg:['Canadá'],desc:'Estágio de pesquisa de verão remunerado para graduandos (aberto ao Brasil).'},
+  {cat:'🎓 Verão, fellowships e bolsas em geral',nome:'DAAD RISE',url:'https://www.daad.de/rise/en/',reg:['Alemanha'],desc:'Estágios de pesquisa de verão na Alemanha para graduandos.'},
+  {cat:'🎓 Verão, fellowships e bolsas em geral',nome:'CERN Summer Student',url:'https://careers.cern/summer',reg:['Suíça','Global'],desc:'Programa de verão remunerado em física/engenharia/computação.'},
+  {cat:'🎓 Verão, fellowships e bolsas em geral',nome:'Google Summer of Code',url:'https://summerofcode.withgoogle.com/',reg:['Global'],desc:'Programa remunerado de código aberto, remoto, aberto a maiores de 18.'},
+  {cat:'🎓 Verão, fellowships e bolsas em geral',nome:'Amgen Scholars',url:'https://amgenscholars.com/',reg:['EUA','Europa','Ásia'],desc:'Pesquisa de verão em ciências/biotecnologia com estipêndio.'},
+  {cat:'🎓 Verão, fellowships e bolsas em geral',nome:'IAESTE',url:'https://iaeste.org/',reg:['Global'],desc:'Estágios técnicos remunerados no exterior para estudantes.'},
+  {cat:'🎓 Verão, fellowships e bolsas em geral',nome:'ProFellow',url:'https://www.profellow.com/',reg:['Global'],desc:'Base de fellowships de pós-graduação, pesquisa e profissionais.'},
+  {cat:'🎓 Verão, fellowships e bolsas em geral',nome:'GoAbroad — Summer Programs',url:'https://www.goabroad.com/',reg:['Global'],desc:'Diretório de programas de verão, intercâmbio e voluntariado.'},
+  // Fontes que originaram esta base
+  {cat:'📌 Fontes monitoradas por este projeto',nome:'Opportunity Portal',url:'https://opportunityportal.info/category/scholarships/',reg:['Global'],desc:'Bolsas, estágios e intercâmbios (atualizado com frequência).'},
+  {cat:'📌 Fontes monitoradas por este projeto',nome:'Scholarship Dreamss',url:'https://scholarshipdreamss.com/blog',reg:['Global','Brasil'],desc:'Blog em português com bolsas para lusófonos.'},
+  {cat:'📌 Fontes monitoradas por este projeto',nome:'Scholarshiphive',url:'https://scholarshiphive.com/',reg:['Global'],desc:'Bolsas integralmente financiadas por universidade/país.'},
+  {cat:'📌 Fontes monitoradas por este projeto',nome:'Global Scholarship House',url:'https://globalscholarshiphouse.com/',reg:['Global'],desc:'Agregador de bolsas internacionais.'},
+  {cat:'📌 Fontes monitoradas por este projeto',nome:'ScholarshipPK (LinkedIn)',url:'https://www.linkedin.com/company/scholarshippk/',reg:['Global'],desc:'Página que divulga bolsas integralmente financiadas (exige login).'},
+];
+
+let data = load();
+let docDone = loadDocs();
+
+function load(){ try{const s=JSON.parse(localStorage.getItem(STORE_KEY));if(Array.isArray(s))return s;}catch(e){} return SEED.slice(); }
+function loadDocs(){ try{return JSON.parse(localStorage.getItem(DOCS_KEY))||{};}catch(e){return {};} }
+function persist(){ localStorage.setItem(STORE_KEY,JSON.stringify(data)); localStorage.setItem(DOCS_KEY,JSON.stringify(docDone)); }
+function uid(){ return 'b-'+Math.random().toString(36).slice(2,9); }
+function docsArray(str){ return (str||'').split(/[;\n]+/).map(s=>s.trim()).filter(Boolean); }
+
+function daysUntil(dateStr){ if(!dateStr) return null; const t=new Date();t.setHours(0,0,0,0); const d=new Date(dateStr+'T00:00:00'); return Math.round((d-t)/86400000); }
+function statusClass(item){
+  if(item.status==='Aprovado'||item.status==='Enviado') return 'done';
+  const d=daysUntil(item.prazo_inscricao); if(d===null) return 'ok';
+  if(d<0) return 'past'; if(d<=7) return 'urgent'; if(d<=30) return 'soon'; return 'ok';
+}
+function countdownText(item){
+  const d=daysUntil(item.prazo_inscricao);
+  if(item.status==='Aprovado') return '✅ Aprovado'; if(item.status==='Enviado') return '📨 Enviado';
+  if(d===null) return 'Sem prazo fixo / vagas contínuas';
+  if(d<0) return `Encerrado há ${Math.abs(d)} dia(s)`; if(d===0) return '⚠️ Encerra HOJE';
+  if(d===1) return '⚠️ Falta 1 dia'; return `Faltam ${d} dias`;
+}
+function fmtDate(s){ if(!s) return '—'; const [y,m,d]=s.split('-'); return `${d}/${m}/${y}`; }
+function fmtMoney(v){ const n=parseFloat(v); if(!n&&n!==0) return ''; return 'US$ '+n.toLocaleString('en-US',{maximumFractionDigits:0}); }
+
+function showView(v){
+  document.getElementById('view-bolsas').classList.toggle('hidden',v!=='bolsas');
+  document.getElementById('view-portais').classList.toggle('hidden',v!=='portais');
+  document.getElementById('tab-bolsas').classList.toggle('active',v==='bolsas');
+  document.getElementById('tab-portais').classList.toggle('active',v==='portais');
+  if(v==='portais') renderPortais();
+}
+
+function render(){
+  const grid=document.getElementById('grid');
+  const q=(document.getElementById('searchBox').value||'').toLowerCase().trim();
+  const fStatus=document.getElementById('filterStatus').value;
+  const fNivel=document.getElementById('filterNivel').value;
+  const fValor=parseFloat(document.getElementById('filterValor').value)||0;
+  const sortBy=document.getElementById('sortBy').value;
+
+  let list=data.filter(i=>{
+    if(fStatus && i.status!==fStatus) return false;
+    if(fNivel && !(i.nivel||'').includes(fNivel)) return false;
+    if(fValor && (parseFloat(i.valor_mensal)||0)<fValor) return false;
+    if(q){ const hay=`${i.nome} ${i.instituicao} ${i.observacoes} ${i.nivel}`.toLowerCase(); if(!hay.includes(q)) return false; }
+    return true;
+  });
+  list.sort((a,b)=>{
+    if(sortBy==='nome') return (a.nome||'').localeCompare(b.nome||'');
+    if(sortBy==='valor') return (parseFloat(b.valor_mensal)||0)-(parseFloat(a.valor_mensal)||0);
+    const da=daysUntil(a.prazo_inscricao),db=daysUntil(b.prazo_inscricao);
+    if(da===null) return 1; if(db===null) return -1; return da-db;
+  });
+
+  renderStats();
+  if(list.length===0){ grid.innerHTML=`<div class="empty">Nenhuma bolsa encontrada com esses filtros.<br>Ajuste a busca ou clique em <b>🔄 Sincronizar</b> para carregar o bolsas.csv.</div>`; return; }
+
+  grid.innerHTML=list.map(item=>{
+    const cls=statusClass(item);
+    const docs=docsArray(item.documentos); const doneMap=docDone[item.id]||{};
+    const docsHtml=docs.length?`<ul class="docs">${docs.map(doc=>{
+      const checked=doneMap[doc]?'checked':''; const done=doneMap[doc]?'done-doc':'';
+      return `<li><input type="checkbox" ${checked} onchange="toggleDoc('${item.id}',this,${JSON.stringify(doc).replace(/"/g,'&quot;')})"><span class="${done}">${escapeHtml(doc)}</span></li>`;
+    }).join('')}</ul>`:'';
+    const money=item.valor_mensal?`<span class="money">💰 ${fmtMoney(item.valor_mensal)}/mês${item.duracao_meses?` · ${item.duracao_meses} meses`:''}</span>`:'';
+    const link=item.link?`<a class="link" href="${escapeAttr(item.link)}" target="_blank" rel="noopener">🔗 Edital</a>`:'';
+    return `<div class="card s-${cls}">
+      <div><h3>${escapeHtml(item.nome||'(sem nome)')}</h3><div class="inst">${escapeHtml(item.instituicao||'')}</div></div>
+      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span></div>
+      <div class="row"><span class="deadline">📅 ${fmtDate(item.prazo_inscricao)}</span><span class="count ${cls}">${countdownText(item)}</span></div>
+      ${money?`<div class="row">${money}</div>`:''}
+      ${docsHtml}
+      ${item.observacoes?`<div class="inst">📝 ${escapeHtml(item.observacoes)}</div>`:''}
+      <div class="card-actions"><button class="btn" onclick="edit('${item.id}')">✏️ Editar</button><button class="btn" onclick="remove('${item.id}')">🗑️</button>${link}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderStats(){
+  const total=data.length;
+  const proximos=data.filter(i=>{const d=daysUntil(i.prazo_inscricao);return d!==null&&d>=0&&d<=30&&i.status!=='Aprovado'&&i.status!=='Enviado';}).length;
+  const enviados=data.filter(i=>i.status==='Enviado'||i.status==='Aprovado').length;
+  const aprovados=data.filter(i=>i.status==='Aprovado').length;
+  document.getElementById('stats').innerHTML=`
+    <div class="stat"><div class="n">${total}</div><div class="l">Bolsas cadastradas</div></div>
+    <div class="stat"><div class="n" style="color:var(--soon)">${proximos}</div><div class="l">Prazo ≤ 30 dias</div></div>
+    <div class="stat"><div class="n" style="color:var(--done)">${enviados}</div><div class="l">Enviadas / aprovadas</div></div>
+    <div class="stat"><div class="n" style="color:var(--accent)">${PORTAIS.length}</div><div class="l">Portais no diretório</div></div>`;
+}
+
+function renderPortais(){
+  const q=(document.getElementById('portalSearch').value||'').toLowerCase().trim();
+  const list=PORTAIS.filter(p=>!q||`${p.nome} ${p.desc} ${p.cat} ${p.reg.join(' ')}`.toLowerCase().includes(q));
+  document.getElementById('portalCount').textContent=`${list.length} de ${PORTAIS.length} portais`;
+  const cont=document.getElementById('portais');
+  if(!list.length){ cont.innerHTML=`<div class="empty">Nenhum portal encontrado.</div>`; return; }
+  let html=''; let lastCat=null;
+  list.forEach(p=>{
+    if(p.cat!==lastCat){ html+=`<div class="cat-title">${p.cat}</div>`; lastCat=p.cat; }
+    html+=`<div class="portal">
+      <h4>${escapeHtml(p.nome)}</h4>
+      <div class="tags">${p.reg.map(r=>`<span class="tag">${escapeHtml(r)}</span>`).join('')}</div>
+      <p>${escapeHtml(p.desc)}</p>
+      <a class="link" href="${escapeAttr(p.url)}" target="_blank" rel="noopener">🔗 Abrir portal</a>
+    </div>`;
+  });
+  cont.innerHTML=html;
+}
+
+function toggleDoc(id,el,doc){ docDone[id]=docDone[id]||{}; if(el.checked)docDone[id][doc]=true; else delete docDone[id][doc]; persist(); el.parentElement.querySelector('span').classList.toggle('done-doc',el.checked); }
+
+function openModal(){ document.getElementById('modalTitle').textContent='Nova bolsa'; ['f_id','f_nome','f_instituicao','f_prazo','f_valor','f_duracao','f_documentos','f_link','f_observacoes'].forEach(x=>document.getElementById(x).value=''); document.getElementById('f_nivel').value='Mestrado'; document.getElementById('f_status').value='A fazer'; document.getElementById('overlay').classList.add('open'); }
+function edit(id){ const item=data.find(i=>i.id===id); if(!item)return; document.getElementById('modalTitle').textContent='Editar bolsa'; document.getElementById('f_id').value=item.id; document.getElementById('f_nome').value=item.nome||''; document.getElementById('f_instituicao').value=item.instituicao||''; document.getElementById('f_nivel').value=item.nivel||'Mestrado'; document.getElementById('f_prazo').value=item.prazo_inscricao||''; document.getElementById('f_status').value=item.status||'A fazer'; document.getElementById('f_valor').value=item.valor_mensal||''; document.getElementById('f_duracao').value=item.duracao_meses||''; document.getElementById('f_documentos').value=docsArray(item.documentos).join('\n'); document.getElementById('f_link').value=item.link||''; document.getElementById('f_observacoes').value=item.observacoes||''; document.getElementById('overlay').classList.add('open'); }
+function closeModal(){ document.getElementById('overlay').classList.remove('open'); }
+function save(){
+  const nome=document.getElementById('f_nome').value.trim(); if(!nome){alert('Informe o nome da bolsa.');return;}
+  const id=document.getElementById('f_id').value||uid();
+  const obj={id,nome,instituicao:document.getElementById('f_instituicao').value.trim(),nivel:document.getElementById('f_nivel').value,prazo_inscricao:document.getElementById('f_prazo').value,valor_mensal:document.getElementById('f_valor').value,duracao_meses:document.getElementById('f_duracao').value,status:document.getElementById('f_status').value,documentos:docsArray(document.getElementById('f_documentos').value).join(';'),link:document.getElementById('f_link').value.trim(),observacoes:document.getElementById('f_observacoes').value.trim()};
+  const idx=data.findIndex(i=>i.id===id); if(idx>=0)data[idx]=obj; else data.push(obj);
+  persist(); closeModal(); render();
+}
+function remove(id){ const item=data.find(i=>i.id===id); if(!confirm(`Excluir "${item?item.nome:''}"?`))return; data=data.filter(i=>i.id!==id); delete docDone[id]; persist(); render(); }
+
+const COLS=['nome','instituicao','nivel','prazo_inscricao','valor_mensal','duracao_meses','status','documentos','link','observacoes'];
+function exportCsv(){ const rows=[COLS.join(',')]; data.forEach(i=>rows.push(COLS.map(c=>csvCell(i[c])).join(','))); const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='bolsas.csv'; a.click(); URL.revokeObjectURL(a.href); }
+function csvCell(v){ v=(v==null?'':String(v)); if(/[",\n]/.test(v))return '"'+v.replace(/"/g,'""')+'"'; return v; }
+function importCsv(){ document.getElementById('fileInput').click(); }
+function handleFile(e){ const file=e.target.files[0]; if(!file)return; const reader=new FileReader(); reader.onload=()=>{ try{ const rows=parseCsv(reader.result); const header=rows.shift().map(h=>h.trim()); const imported=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={id:uid()};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;}); if(imported.length&&confirm(`Importar ${imported.length} bolsa(s)? Isso substituirá a lista atual.`)){data=imported;persist();render();} }catch(err){alert('Não consegui ler o CSV: '+err.message);} e.target.value=''; }; reader.readAsText(file,'utf-8'); }
+function parseCsv(text){ const rows=[];let row=[],cell='',q=false; for(let i=0;i<text.length;i++){const c=text[i]; if(q){if(c==='"'){if(text[i+1]==='"'){cell+='"';i++;}else q=false;}else cell+=c;}else{if(c==='"')q=true;else if(c===','){row.push(cell);cell='';}else if(c==='\n'){row.push(cell);rows.push(row);row=[];cell='';}else if(c==='\r'){}else cell+=c;}} if(cell!==''||row.length){row.push(cell);rows.push(row);} return rows; }
+
+async function syncFromCsv(silent){
+  try{
+    const res=await fetch('bolsas.csv?ts='+Date.now(),{cache:'no-store'}); if(!res.ok)throw new Error('HTTP '+res.status);
+    const text=await res.text(); const rows=parseCsv(text); const header=rows.shift().map(h=>h.trim());
+    const imported=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={id:uid()};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;});
+    if(imported.length){ data=imported; persist(); render(); if(!silent)alert('Carregadas '+imported.length+' bolsas do bolsas.csv.'); }
+  }catch(e){ if(!silent)alert('Não consegui ler o bolsas.csv automaticamente (ocorre ao abrir do disco, sem servidor). Use "📥 Importar" e selecione o bolsas.csv, ou acesse pelo link do GitHub Pages.'); }
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function escapeAttr(s){return String(s).replace(/"/g,'&quot;');}
+
+document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==='overlay')closeModal();});
+render();
+if(!localStorage.getItem(STORE_KEY)) syncFromCsv(true);
+</script>
+</body>
+</html>
