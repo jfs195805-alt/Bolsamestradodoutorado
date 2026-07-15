@@ -1,136 +1,115 @@
-# 🎯 Candidatura — Daniela
+# Candidatura — Daniela (Psicologia / Neurociência / Terapia do Esquema)
 
-**Perfil:** Graduanda em **Psicologia** (formatura **dez/2026**) + **Certificação Internacional em Terapia do Esquema** (Schema Therapy — padrão ISST). 🏅
-**Preferência:** programas em **português, espanhol ou italiano** — **e também no mundo todo** (inglês incluído, com autoestudo grátis + certificação).
-**Idade:** 44 anos — ✅ sem limite para mestrado/doutorado com bolsa. ❌ fora de intercâmbio jovem (Au Pair 18-26, Austrália 462 18-30).
-**Objetivo:** mestrado e/ou doutorado com bolsa/estipêndio, em **Psicologia (todas as frentes) e Neurociência**, **no mundo inteiro**.
-
-> ⚠️ **Regras da Daniela:** (1) listar **TODOS os programas financiados, SEM filtro de US$1.000/mês** — qualquer estipêndio/isenção de propina entra. (2) **Sempre rankear os melhores primeiro** (mais estipêndio + melhor para a carreira). (3) Cada tabela traz **Idioma**, **Necessário para ela participar** e **Detalhes e vantagens**. Tudo verificável; nada inventado; datas ~ estimadas (confirmar no site oficial).
-
-## 🏅 Trunfo — Certificação Internacional em Terapia do Esquema
-Diferencial competitivo forte. Abre portas em **psicologia clínica/psicoterapia** financiada (grupos de esquemas, transtornos de personalidade, TPB, regulação emocional), no **berço da abordagem (Maastricht/UvA — grupo Arntz, 🇳🇱)**, em vagas clínicas que valorizam a certificação, e na **progressão ISST** (supervisor/trainer).
-
-## 🧭 A chave da estratégia
-- **Ela tem só bacharelado (sem mestrado).** Os **doutorados que aceitam entrar direto do bacharelado E financiam** ficam sobretudo em **EUA, Canadá, Austrália, UK (rotas 1+3/integradas)** e no **Brasil (doutorado direto)**.
-- Na **Europa continental** o **doutorado quase sempre exige mestrado** → rota: **mestrado financiado primeiro** (destrava os PhDs assalariados, inclusive os de Terapia do Esquema).
+**Perfil:** Brasileira, 44 anos. Graduanda em **Psicologia** (bacharelado, formatura **dez/2026**). Certificação internacional em **Terapia do Esquema (ISST)** — diferencial competitivo forte. Idiomas: português (nativo), espanhol (profissional), italiano (básico), inglês (intermediário). Foco geográfico: Espanha, Portugal, Itália — aberta ao mundo. Sem filtro mínimo de valor.
+Contato: `[PRIVADO — mantido fora do repositório público]`
 
 ---
 
-## 🏆 RANKING GERAL — os melhores para ela (mais estipêndio + melhor carreira)
-| # | Programa | País | Idioma | Estipêndio | Por que é top para ela |
-|---|---|---|---|---|---|
-| 1 | **PhD Psicologia Clínica (coorte financiada)** ⭐ | 🇺🇸 EUA | Inglês | ~US$2.100-3.300/mês + propina isenta | Direto do bacharelado, **financia o doutorado inteiro**; carreira clínica+pesquisa; **encaixe Terapia do Esquema** (labs TPB/DBT). |
-| 2 | **Maastricht — Clinical Psych. Science (Arntz)** ⭐ | 🇳🇱 Holanda | Inglês | ~US$3.700/mês (emprego) | **Berço da Terapia do Esquema**; carreira ideal e estipêndio alto (exige mestrado antes). |
-| 3 | **Aarhus 4+4 (Ciência Cognitiva)** | 🇩🇰 Dinamarca | Inglês | ~US$4.200/mês, sem propina | **Maior estipêndio** e **salário já no bacharelado** (modelo 4+4). |
-| 4 | **Sainsbury Wellcome Centre (UCL)** ⭐ | 🇬🇧 UK | Inglês | ~US$3.000/mês + propina | Prestígio máximo em neurociência; aceita bacharelado; financia internacional. |
-| 5 | **IoPPN 1+3 (King's College)** ⭐ | 🇬🇧 UK | Inglês | ~US$2.200/mês + propina | **Polo mundial de TP/DBT/psicoterapia** — Terapia do Esquema direta; aceita bacharelado. |
-| 6 | **MA→PhD Psicologia Clínica** ⭐ | 🇨🇦 Canadá | Inglês | ~US$1.300-2.400/mês | Entra do bacharelado, **financiamento garantido até o PhD**; carreira clínica. |
-| 7 | **Gatsby Unit (UCL)** | 🇬🇧 UK | Inglês | ~US$3.000/mês + propina | Estipêndio alto + prestígio; aceita psic. cognitiva (exige matemática forte). |
-| 8 | **Freiburg — Psicoterapia (Gitta Jacob)** | 🇩🇪 Alemanha | Alemão+Inglês | ~US$2.700/mês | **Terapia do Esquema em grupo para TPB** — linha direta de carreira (exige mestrado). |
-| 9 | **Edinburgh Wellcome 4-year** | 🇬🇧 UK | Inglês | ~US$2.100/mês + propina | Financia internacional por completo; aceita bacharelado; perfil clínico bem-vindo. |
-| 10 | **Master Clinical Psych + PhD (RTP)** | 🇦🇺 Austrália | Inglês | ~US$1.850/mês + propina | Grau **clínico + pesquisa**; redes de Terapia do Esquema (verificar equivalência Honours). |
-| 11 | **Champalimaud (INDP)** | 🇵🇹 Portugal | Inglês (PT no dia a dia) | €1.484-1.669/mês + tudo | Neurociência de ponta em **Lisboa**; aceita bacharelado; pacote completo. |
-| 12 | **IMPRS Neurosciences (Göttingen)** | 🇩🇪 Alemanha | Inglês | ~US$1.650/mês | **Aceita bacharel em Psicologia** — melhor ponte psicologia→neurociência. |
-> Abaixo, TODOS os programas por categoria, também **ordenados do melhor para o menor**.
+## 🏆 RANKING GERAL — TODAS as oportunidades
+
+| # | Programa | País | Nível | Valor/mês | Prazo | Link direto | Por que encaixa |
+|---|---------|------|-------|-----------|-------|-------------|-----------------|
+| 1 | Khalifa University PhD Tier III | 🇦🇪 EAU | Doutorado | ~US$5.450 | 15/09/2026 | [Inscrição](https://www.ku.ac.ae/scholarships-postgraduate) | Aceita bacharelado; estipêndio altíssimo; moradia e seguro inclusos; sem propina. |
+| 2 | ETH Zurich Doutorado | 🇨🇭 Suíça | Doutorado | ~US$5.720 | rolling | [Inscrição](https://ethz.ch/en/doctorate.html) | Salário de PhD suíço; prestígio máximo; aceita bacharelado em certas áreas; rolling admissions. |
+| 3 | EPFL Doutorado | 🇨🇭 Suíça | Doutorado | ~US$5.040 | ~01/12/2026 | [Inscrição](https://www.epfl.ch/education/phd/) | Salário alto; Suíça; neurociência/computacional; aceita bacharelado. |
+| 4 | MBZUAI PhD | 🇦🇪 EAU | Doutorado | ~US$4.765 | ~15/01/2027 | [Inscrição](https://mbzuai.ac.ae/study/admissions/) | IA aplicada (potencial neuro+IA); pacote completo; aceita bacharelado. |
+| 5 | Doutorado na Dinamarca | 🇩🇰 | Doutorado | ~US$4.190 | rolling | [Vagas](https://euraxess.ec.europa.eu/jobs/search?keywords=psychology+phd&country=denmark) | PhD é emprego assalariado; sem propina; modelo 4+4 aceita bacharelado; psicologia clínica forte. |
+| 6 | Doutorado na Noruega | 🇳🇴 | Doutorado | ~US$4.100 | rolling | [Vagas](https://www.jobbnorge.no/en/available-jobs?category=PhD) | Salário alto; sem propina; vagas de psicologia clínica/saúde mental disponíveis. |
+| 7 | la Caixa INPhINIT | 🇪🇸 | Doutorado | ~US$3.680 | 28/01/2027 | [Inscrição](https://fundacionlacaixa.org/en/inphinit-incoming) | Bolsa premium para fazer doutorado na Espanha; cobre tudo; prestígio; aceita perfil internacional. |
+| 8 | Hong Kong PhD Fellowship | 🇭🇰 | Doutorado | ~US$3.635 | ~01/12/2026 | [Inscrição](https://cerg1.ugc.edu.hk/hkpfs/) | Estipêndio alto; aceita bacharelado; universidades de alto nível; psicologia disponível. |
+| 9 | MSCA Doctoral Networks | 🇪🇺 | Doutorado | ~US$3.670 | vagas o ano todo | [Inscrição](https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks) | Excelente estipêndio; mobilidade europeia; vagas em psicologia/neurociência; prestígio. |
+| 10 | Doutorado na Holanda | 🇳🇱 | Doutorado | ~US$2.990 | rolling | [Vagas](https://www.academictransfer.com/en/jobs/?q=psychology+phd) | PhD assalariado; berço da Terapia do Esquema (grupo Arntz); ISST é trunfo direto. |
+| 11 | IMPRS Max Planck | 🇩🇪 | Doutorado | ~US$2.920 | varia | [Inscrição](https://www.mpg.de/en/imprs) | Escolas internacionais estruturadas; aceita bacharelado em vários programas; neurociência/psicologia. |
+| 12 | NYU Abu Dhabi Global PhD | 🇦🇪 EAU | Doutorado | ~US$2.500 | rolling | [Inscrição](https://nyuad.nyu.edu/en/academics/graduate-and-phd/phd-programs.html) | Marca NYU; pacote completo; aceita bacharelado; rolling admissions. |
+| 13 | Margarita Salas | 🇪🇸 | Pós-doc | ~€2.500 | variável | [Inscrição](https://www.universidades.gob.es/ayudas-para-la-recualificacion-margarita-salas/) | Requalificação pós-doutoral; estipêndio alto; mobilidade internacional; espanhol. |
+| 14 | María Zambrano | 🇪🇸 | Pós-doc | ~€2.000 | variável | [Inscrição](https://www.universidades.gob.es/ayudas-para-la-recualificacion-maria-zambrano/) | Atração de talento internacional para universidades espanholas; bom valor. |
+| 15 | Doutorado na Finlândia | 🇫🇮 | Doutorado | ~US$2.270 | rolling | [Vagas](https://www.vaalit.fi/en/) | Sem propina; vagas em psicologia; qualidade de vida alta. |
+| 16 | Gates Cambridge | 🇬🇧 | Doutorado | ~US$2.100 | ~03/12/2026 | [Inscrição](https://www.gatescambridge.org/) | Cobre tudo em Cambridge; enorme prestígio; psicologia/neurociência disponíveis. |
+| 17 | Clarendon Oxford | 🇬🇧 | Doutorado | ~US$2.100 | ~jan/2027 | [Inscrição](https://www.ox.ac.uk/clarendon/) | Oxford completo; automática ao candidatar-se; psicologia experimental disponível. |
+| 18 | SINGA Singapore | 🇸🇬 | Doutorado | ~US$2.000 | rolling | [Inscrição](https://www.a-star.edu.sg/Scholarships/for-graduate-studies/singapore-international-graduate-award-singa) | Rolling; neurociência forte; aceita bacharelado; pacote completo. |
+| 19 | Fulbright Brasil | 🇺🇸 | Doutorado | ~US$1.800 | ~fev-mai/2027 | [Inscrição](https://fulbright.org.br/) | Prestígio; EUA; psicologia clínica em universidades de ponta; rede Fulbright. |
+| 20 | Chevening | 🇬🇧 | Mestrado | ~US$1.700 | 06/10/2026 | [Inscrição](https://www.chevening.org/scholarships/) | Mestrado completo no UK; prestígio; rede de liderança; prazo próximo. |
+| 21 | FCT Doutoramento 2026 | 🇵🇹 | Doutorado | ~€1.310–1.686 | ~mar/2027 | [Inscrição](https://www.fct.pt/apoios/bolsas/concursos/) | Portugal; português nativo é vantagem; psicologia/neurociência; bolsa sólida. |
+| 22 | SISSA Trieste | 🇮🇹 | Doutorado | ~€1.300 | ~ago/2026 | [Inscrição](https://www.sissa.it/phd) | Neurociência cognitiva de excelência; aceita bacharelado; Itália; prazo próximo. |
+| 23 | Scuola Normale Superiore Pisa | 🇮🇹 | Doutorado | ~€1.400 | ~ago/2026 | [Inscrição](https://www.sns.it/en/admission) | Elite italiana; estipêndio acima da média; aceita bacharelado; prazo próximo. |
+| 24 | Scuola Sant'Anna Pisa | 🇮🇹 | Doutorado | ~€1.400 | ~ago/2026 | [Inscrição](https://www.santannapisa.it/en/education/phd-programmes) | Escola de excelência; estipêndio bom; aceita bacharelado; prazo próximo. |
+| 25 | Erasmus Mundus SPOT (Sport Psychology) | 🇪🇺 | Mestrado | €1.400 | ~jan/2027 | [Inscrição](https://www.sport-psychology-in-talent.eu/) | Psicologia aplicada; bolsa Erasmus completa; multicultural; espanhol útil. |
+| 26 | Erasmus Mundus Global-MINDS | 🇪🇺 | Mestrado | €1.400 | ~jan/2027 | [Inscrição](https://global-minds.eu/) | Psicologia intercultural; encaixe direto com perfil diverso; bolsa completa. |
+| 27 | Erasmus Mundus WOP-P | 🇪🇺 | Mestrado | €1.400 | ~jan/2027 | [Inscrição](https://www.master-wopp.eu/) | Psicologia do trabalho e organizacional; bolsa completa; mobilidade europeia. |
+| 28 | Erasmus Mundus CYBER | 🇪🇺 | Mestrado | €1.400 | ~jan/2027 | [Inscrição](https://www.cybermastersdegree.eu/) | Ciberpsicologia; interface tecnologia-psicologia; bolsa completa. |
+| 29 | Erasmus Mundus FLOURISH | 🇪🇺 | Mestrado | €1.400 | ~jan/2027 | [Inscrição](https://flourishmaster.eu/) | Bem-estar e florescimento humano; alinhado com psicologia positiva/clínica; bolsa completa. |
+| 30 | NeuroData (Erasmus Mundus) | 🇪🇺 | Mestrado | €1.400 | ~jan/2027 | [Inscrição](https://www.neurodata-master.eu/) | Neurociência + ciência de dados; ponte interdisciplinar; verificar disponibilidade. |
+| 31 | Neurasmus (Erasmus Mundus) | 🇪🇺 | Mestrado | €1.400 | ~jan/2027 | [Inscrição](https://www.neurasmus.eu/) | Neurociência pura; consórcio europeu forte; bolsa completa; aceita bacharelado. |
+| 32 | Erasmus Mundus BDMA | 🇪🇺 | Mestrado | €1.400 | ~jan/2027 | [Inscrição](https://bdma.ulb.ac.be/) | Big Data; menos alinhado com psicologia, mas bolsa completa; requer perfil quantitativo. |
+| 33 | Eiffel | 🇫🇷 | Doutorado/Mestrado | ~US$1.280 | ~08/01/2027 | [Inscrição](https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence) | França; prestígio; neurociência/ciências cognitivas em universidades francesas. |
+| 34 | FPU 2026 | 🇪🇸 | Doutorado | ~€1.250 | ~dez/2026 | [Inscrição](https://www.universidades.gob.es/becas-de-formacion-de-profesorado-universitario-fpu/) | Principal bolsa predoutoral espanhola; contrato de 4 anos; carreira acadêmica; espanhol. |
+| 35 | Doutorado UV Psicología (Valencia) | 🇪🇸 | Doutorado | ~€1.200 (FPU) | set/2026 | [Inscrição](https://www.uv.es/uvweb/doctorado-psicologia/es/doctorado-psicologia-1285932941498.html) | Grupos de personalidade e emoção; Terapia do Esquema relevante; espanhol; Valencia. |
+| 36 | Doutorado UCM Psicología (Madrid) | 🇪🇸 | Doutorado | ~€1.200 | set/2026 | [Inscrição](https://www.ucm.es/estudios/doctorado-psicologia) | Maior universidade da Espanha; grupos clínicos consolidados; Madrid; espanhol. |
+| 37 | Doutorado UB Psicologia Clínica (Barcelona) | 🇪🇸 | Doutorado | ~€1.200 | set/2026 | [Inscrição](https://www.ub.edu/portal/web/psicologia/doctorat) | Barcelona; tradição em psicologia clínica; grupos de regulação emocional. |
+| 38 | Doutorado UAB Psicología Clínica (Barcelona) | 🇪🇸 | Doutorado | ~€1.200 | set/2026 | [Inscrição](https://www.uab.cat/web/estudiar/doctorados/todos-los-doctorados/psicologia-clinica-y-de-la-salud-1345467765424.html) | Programa específico de clínica e saúde; UAB forte em pesquisa; Barcelona. |
+| 39 | Doutorado US Psicología (Sevilla) | 🇪🇸 | Doutorado | ~€1.200 | set/2026 | [Inscrição](https://doctorados.us.es/programa-de-doctorado-en-psicologia) | Sevilla; custo de vida menor; grupos de TCC/personalidade; espanhol. |
+| 40 | Doutorado UGR Psicología (Granada) | 🇪🇸 | Doutorado | ~€1.200 | set/2026 | [Inscrição](https://doctorados.ugr.es/psicologia/) | Granada; excelente custo-benefício; grupos de emoção e clínica; espanhol. |
+| 41 | Doutorado Padova | 🇮🇹 | Doutorado | ~€1.200 | ~jun–jul/2027 | [Inscrição](https://www.unipd.it/en/phd) | Tradição em psicologia na Itália; forte em clínica e neurociência; italiano. |
+| 42 | Doutorado Milano-Bicocca | 🇮🇹 | Doutorado | ~€1.200 | ~jun/2027 | [Inscrição](https://en.unimib.it/education/postgraduates/doctoral-research-phd) | Psicologia clínica e neurociência; Milão; bom financiamento. |
+| 43 | Doutorado Bologna | 🇮🇹 | Doutorado | ~€1.200 | ~mai/2027 | [Inscrição](https://phd.unibo.it/) | Universidade mais antiga do mundo; grupos consolidados; Bologna. |
+| 44 | Doutorado Sapienza Roma | 🇮🇹 | Doutorado | ~€1.200 | ~jun/2027 | [Inscrição](https://phd.uniroma1.it/web/concorso.aspx) | Maior universidade italiana; Roma; psicologia clínica e neurociência. |
+| 45 | Doutorado Torino | 🇮🇹 | Doutorado | ~€1.200 | ~jun/2027 | [Inscrição](https://www.unito.it/en/research/doctoral-programmes) | Pesquisa forte; Turim; grupos de psicologia dinâmica e clínica. |
+| 46 | Doutorado Bergamo | 🇮🇹 | Doutorado | ~€1.200 | ~jun/2027 | [Inscrição](https://www.unibg.it/en/study/postgraduates/doctoral-programmes) | Programas em inglês disponíveis; Bergamo; menor concorrência. |
+| 47 | FI Joan Oró (Catalunha) | 🇪🇸 | Doutorado | ~€1.200 | ~mar/2027 | [Inscrição](https://agaur.gencat.cat/en/beques-i-ajuts/convocatories-per-temes/Ajuts-Joan-Oro-per-a-la-contractacio-de-personal-investigador-predoctoral-en-formacio-FI/) | Bolsa catalã complementar; para quem já tem vaga em universidade catalã (UB/UAB). |
+| 48 | DAAD | 🇩🇪 | Doutorado/Mestrado | ~US$1.080 | ~31/10/2026 | [Inscrição](https://www.daad.de/en/study-and-research-in-germany/scholarships/) | Alemanha; Brasil é país prioritário; neurociência/psicologia; estruturado. |
+| 49 | Erasmus+ KA171 (mobilidade Brasil→Europa) | 🇪🇺 | Mobilidade | ~€1.000 | via universidade | [Inscrição](https://erasmus-plus.ec.europa.eu/) | Mobilidade curta; via universidade brasileira; experiência europeia; networking. |
+| 50 | BIAL Foundation Grant | 🇵🇹 | Pesquisa | variável | anual | [Inscrição](https://fundacaobial.com/en/grants/) | Financia pesquisa em psicofisiologia/consciência; Portugal; português; diferencial no CV. |
+| 51 | MAECI Bolsa Governo Italiano | 🇮🇹 | Doutorado/Mestrado | ~€900 | ~mai/2027 | [Inscrição](https://www.esteri.it/en/opportunita/borse-di-studio/per-cittadini-stranieri/borse-di-studio-per-cittadini-stranieri/) | Governo italiano para estrangeiros; brasileiros elegíveis; abre porta na Itália. |
+| 52 | DSU bolsa italiana (Diritto allo Studio) | 🇮🇹 | Mestrado/Doutorado | variável | ~set/2026 | [Inscrição](https://www.miur.gov.it/) | Isenção de propina + moradia + alimentação; por renda; cada região tem edital próprio. |
+| 53 | Fundación Carolina Doctorado | 🇪🇸 | Doutorado | variável | ~fev/2027 | [Inscrição](https://www.fundacioncarolina.es/becas/) | Específica para latino-americanos; Espanha; psicologia disponível; espanhol. |
+| 54 | Fundación Carolina Máster | 🇪🇸 | Mestrado | variável | ~fev/2027 | [Inscrição](https://www.fundacioncarolina.es/becas/) | Idem; mestrado como degrau para doutorado espanhol; rede ibero-americana. |
+| 55 | Doutorado Univ. Coimbra | 🇵🇹 | Doutorado | variável | rolling | [Inscrição](https://www.uc.pt/en/iii/phd/) | Tradição; português; psicologia clínica e educacional; rolling admissions. |
+| 56 | Doutorado NOVA Lisboa | 🇵🇹 | Doutorado | variável | rolling | [Inscrição](https://www.novalaw.unl.pt/en/phd) | Lisboa; universidade moderna; verificar programas de psicologia/saúde mental. |
+| 57 | Doutorado Católica (ICS) | 🇵🇹 | Doutorado | variável | rolling | [Inscrição](https://fch.lisboa.ucp.pt/doutoramento-psicologia) | Programa de psicologia consolidado; Lisboa; português; emoção e bem-estar. |
+| 58 | FAPESP Doutorado | 🇧🇷 SP | Doutorado | R$7.140 | fluxo contínuo | [Inscrição](https://fapesp.br/bolsas/doutorado) | Maior bolsa do Brasil; São Paulo; doutorado direto; fluxo contínuo. |
+| 59 | FAPERJ Bolsa Nota 10 | 🇧🇷 RJ | Doutorado | premium | 2º sem/2026 | [Inscrição](https://www.faperj.br/) | Bolsa premium no Rio de Janeiro; complementa CAPES; para alunos de destaque. |
+| 60 | CAPES Demanda Social | 🇧🇷 | Doutorado | R$3.410 | via PPG | [Inscrição](https://www.gov.br/capes/pt-br) | Via programa de pós-graduação; doutorado direto disponível; sem propina; base sólida. |
+| 61 | CNPq GD | 🇧🇷 | Doutorado | R$3.410 | via PPG | [Inscrição](https://www.gov.br/cnpq/pt-br) | Similar a CAPES; via PPG; doutorado direto; psicologia/neurociência. |
+| 62 | CAPES PDSE (sanduíche) | 🇧🇷/exterior | Mobilidade | moeda local | recorrente | [Inscrição](https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/pdse) | Período no exterior durante doutorado brasileiro; complementa qualquer rota nacional. |
 
 ---
 
-## 🟢 A) Doutorado que ACEITA SÓ BACHARELADO **e** financia — o caminho mais rápido
-| # | Programa | País | Idioma | Estipêndio | Necessário para ela participar | Detalhes e vantagens para ela |
-|---|---|---|---|---|---|---|
-| 1 | **PhD Psicologia Clínica (coorte financiada)** ⭐ | 🇺🇸 EUA | Inglês | ~US$2.100-3.300/mês + propina isenta | Bacharelado; SOP; 3 cartas; GRE/TOEFL (varia); amostra de pesquisa | **A melhor porta:** admite direto do bacharelado E financia o doutorado inteiro (+ saúde). Labs TPB/DBT/TCC onde a **Terapia do Esquema** é diferencial. |
-| 2 | **Aarhus 4+4 (Ciência Cognitiva)** | 🇩🇰 Dinamarca | Inglês | ~US$4.200/mês, sem propina | Bacharelado; projeto/plano; inglês | Modelo 4+4 permite **entrar já com salário** vindo do bacharelado. |
-| 3 | **Sainsbury Wellcome Centre (UCL)** ⭐ | 🇬🇧 UK | Inglês | ~US$3.000/mês + propina | Bacharelado 2:1; 2 cartas (até ~10/11); CV; carta de motivação | 4 anos; financia internacional por igual; prestígio máximo. |
-| 4 | **Gatsby Unit (UCL)** | 🇬🇧 UK | Inglês | ~US$3.000/mês + propina | Bacharelado + **matemática/programação fortes**; 2 cartas; CV | Aceita psic. cognitiva; financiamento internacional integral. |
-| 5 | **IoPPN 1+3 (King's College)** ⭐ | 🇬🇧 UK | Inglês | ~US$2.200/mês + propina | Bacharelado 2:1; proposta de pesquisa; cartas; inglês | **Polo mundial de TP/DBT/psicoterapia** — Terapia do Esquema direta. |
-| 6 | **Cambridge / KCL MRC DTP** | 🇬🇧 UK | Inglês | ~US$2.100/mês | Bacharelado; cartas; **+ fonte p/ diferença de propina internacional** | Aceita bacharelado (1+3/4 anos). ⚠️ Internacional recebe só taxa Home. |
-| 7 | **Edinburgh Wellcome 4-year** | 🇬🇧 UK | Inglês | ~US$2.100/mês + propina | Bacharelado; cartas; declaração de interesse; CV | Edinburgh cobre a taxa internacional → **totalmente financiada**. |
-| 8 | **MA→PhD Psicologia Clínica** ⭐ | 🇨🇦 Canadá | Inglês (Francês no Québec) | ~US$1.300-2.400/mês (incl. propina) | Bacharelado; cartas; carta de intenção; **contato com orientador**; TOEFL/IELTS | Mestrado financiado com dinheiro garantido até o PhD; carreira clínica. |
-| 9 | **Oxford Wellcome DPhil (1+3)** | 🇬🇧 UK | Inglês | integral (MSc+DPhil) | Bacharelado forte em ciências; cartas; declaração pessoal; IELTS | MSc integrado → DPhil, tudo financiado; amigável a perfil clínico. |
-| 10 | **Master Clinical Psych + PhD (RTP)** | 🇦🇺 Austrália | Inglês | ~US$1.850/mês + propina | **Equivalência a Honours**; proposta de pesquisa; IELTS; contato com supervisor | Grau clínico + pesquisa; redes de Terapia do Esquema. |
-| 11 | **IMPRS Neurosciences (Göttingen)** ⭐ | 🇩🇪 Alemanha | Inglês | ~US$1.650/mês (fase MSc) | Bacharelado (**aceita Psicologia**); 2 cartas; carta de motivação; inglês | Melhor ponte 'psicologia→neurociência' do continente. |
-| 12 | **BCCN Berlin (Bernstein)** | 🇩🇪 Alemanha | Inglês | financiado | Bacharelado + base matemática (álgebra/cálculo/prob.); inglês B2+ | **Estágio pré-doc voltado a países emergentes** (porta de entrada). |
+## 💡 Leitura estratégica do perfil
+
+1. **Certificação ISST é o trunfo principal.** Poucos candidatos a doutorado já possuem certificação internacional em Terapia do Esquema. Isso a diferencia especialmente na Holanda (berço da abordagem, grupo Arntz), na Espanha (grupos de personalidade/emoção) e na Itália (psicologia clínica).
+
+2. **Bacharelado sem mestrado limita a Europa continental.** A maioria dos doutorados na Espanha, Portugal e Itália exige mestrado. Rotas que aceitam bacharelado direto: EAU (Khalifa, MBZUAI, NYU AD), Suíça (ETH, EPFL), Escandinávia (modelo emprego), Scuole di eccellenza italianas (SISSA, SNS, Sant'Anna), e Brasil (doutorado direto). Alternativa: fazer mestrado primeiro (Erasmus Mundus, Chevening, DAAD).
+
+3. **Espanhol profissional é vantagem competitiva** em toda a Espanha (6 programas de doutorado + 4 bolsas predoutorais) e na Fundación Carolina.
+
+4. **Português nativo** dá vantagem direta em Portugal (FCT, Coimbra, NOVA, Católica, BIAL) e no Brasil (FAPESP, CAPES, CNPq).
+
+5. **Idade (44 anos) não é impedimento** para nenhuma das 62 oportunidades listadas. Doutorados e mestrados financiados não têm limite de idade.
+
+6. **Sequência ideal:** formatura dez/2026 → candidatar-se simultaneamente a (a) doutorados que aceitam bacharelado (EAU, Suíça, Escandinávia, Itália scuole, Brasil) e (b) mestrados financiados (Erasmus Mundus, Chevening, DAAD) que destravam os doutorados europeus na sequência.
 
 ---
 
-## 🏅 B) Terapia do Esquema & Psicologia Clínica no mundo (o trunfo dela)
-| # | Programa | País | Idioma | Estipêndio | Necessário para ela participar | Detalhes e vantagens para ela |
-|---|---|---|---|---|---|---|
-| 1 | **Maastricht — Clinical Psych. Science (Arntz)** ⭐ | 🇳🇱 Holanda | Inglês | ~US$3.700/mês (emprego), sem propina | **Mestrado concluído**; CV; carta; contato com grupo (AcademicTransfer) | **Berço da Terapia do Esquema**; RCTs de TPB/esquemas — **ISST é trunfo direto**. Alvo nº1 *após* o mestrado. |
-| 2 | **UvA — Schema Therapy Instruments (Arntz)** ⭐ | 🇳🇱 Holanda | Inglês | ~US$3.700/mês | **Mestrado** (RA às vezes aceita bacharel); CV; contato com grupo | Desenvolve os **instrumentos centrais** da Terapia do Esquema — encaixe ideal de orientador. |
-| 3 | **UvA — Memória Emocional & Tratamento** | 🇳🇱 Holanda | Inglês | ~US$3.700/mês | **Mestrado**; CV; carta; contato | Reconsolidação de memória & tratamento — adjacente a esquemas/imagery rescripting. |
-| 4 | **PhD assalariado (Radboud/Leiden/Utrecht/Erasmus)** | 🇳🇱 Holanda | Inglês | ~US$3.700/mês | **Mestrado**; CV; contato com grupo | Labs de saúde mental, clínica e TCC; PhD é emprego bem pago, sem propina. |
-| 5 | **Freiburg — Psicoterapia (Gitta Jacob)** | 🇩🇪 Alemanha | Alemão + Inglês | ~US$2.700/mês | **Mestrado**; alemão + inglês; contato com grupo | RCTs de **Terapia do Esquema em grupo para TPB** — linha direta. |
-| 6 | **ISST — Certificação Avançada → Supervisor/Trainer** | 🌍 Global | Inglês (ou local) | sem bolsa (autofinanciado) | Ser **certificada Standard ISST**; horas de prática supervisionada; inscrição no percurso avançado | Evolui a certificação para **supervisor/trainer** — **fortalece TODAS as candidaturas**. Até 2 anos após a Standard. |
+## 📋 Placeholders a confirmar
+
+- [ ] Nível exato da certificação ISST (Standard? Advanced? Em progresso?)
+- [ ] Nota média do bacharelado (necessária para conversão espanhola via Ministerio e para concorsi italianos)
+- [ ] Nível de inglês certificado (IELTS/TOEFL) — exigido pela maioria das bolsas internacionais
+- [ ] Tema/linha de pesquisa preferida para o pré-projeto (Terapia do Esquema aplicada a quê?)
+- [ ] Experiência de pesquisa/trabalho prévio (fortalece candidaturas competitivas como Chevening, la Caixa, Gates Cambridge)
+- [ ] Universidade/PPG do bacharelado (para equivalências e contato com orientadores)
+- [ ] Disponibilidade para mudar de país/continente vs. preferência forte por Espanha/Portugal/Itália
+- [ ] ISEE-parificato (para bolsas DSU italianas — declaração de renda)
+- [ ] Apostila de Haia do diploma (iniciar antes da formatura)
 
 ---
 
-## 🧠 C) Neurociência integralmente financiada (aceita bacharelado)
-| # | Programa | País | Idioma | Estipêndio | Necessário para ela participar | Detalhes e vantagens para ela |
-|---|---|---|---|---|---|---|
-| 1 | **Champalimaud (INDP)** ⭐ | 🇵🇹 Portugal | Inglês (PT no dia a dia) | €1.484→1.669/mês + propina + laptop + viagem + seguro | Bacharelado; CV; carta de motivação; cartas de referência; inglês | Doutorado de ponta em **Lisboa**. Até 5,5 anos. Ciclo ~dez/2026-fev/2027. |
-| 2 | **SISSA (Trieste)** | 🇮🇹 Itália | Inglês | ~€20.037/ano, sem propina | Bacharelado; concorso/projeto; inglês | Doutorado em Neurociência Cognitiva/Neurobiologia na Itália. |
-| 3 | **IIT (Italian Inst. of Technology)** | 🇮🇹 Itália | Inglês | estipêndio de PhD | Bacharelado; projeto; inglês; contato com grupo | PhD em neurociência bem financiado. |
-| 4 | **Neurasmus (Erasmus Mundus)** | 🇪🇺 UE | Inglês | bolsa Erasmus + propina | Bacharelado; cartas; carta de motivação; inglês | Mestrado conjunto; **aceita bacharel**; multinacional. |
-| 5 | **Uniandes** | 🇨🇴 Colômbia | Espanhol | bolsa | Bacharelado; espanhol; projeto | Doutorado que **aceita bacharel**; usa o espanhol dela. |
-| 6 | **IN Alicante (master)** | 🇪🇸 Espanha | Espanhol/Inglês | financiado | Bacharelado; espanhol/inglês | Mestrado que **aceita bacharel**. |
-| 7 | **UNAM Neurobiología** | 🇲🇽 México | Espanhol | bolsa CONACyT | Bacharelado; espanhol; exame de admissão | Mestrado que **aceita bacharel**. |
+## ⚙️ Próximo passo
 
----
+1. **Imediato (jul-ago/2026):** preparar IELTS/TOEFL; iniciar apostilamento; montar CV acadêmico e carta de motivação com narrativa de Terapia do Esquema.
+2. **Ago-set/2026:** candidatar-se a SISSA, SNS, Sant'Anna (prazos ~ago/2026); candidatar-se ao Chevening (prazo 06/10/2026).
+3. **Out-dez/2026:** FPU Espanha (~dez/2026); programas espanhóis (set/2026); Khalifa (15/09/2026); DAAD (31/10/2026); Gates Cambridge (03/12/2026); EPFL (01/12/2026); Hong Kong PhD Fellowship (01/12/2026).
+4. **Jan-mar/2027:** Erasmus Mundus (todos, ~jan/2027); la Caixa INPhINIT (28/01/2027); Clarendon (~jan/2027); Eiffel (08/01/2027); Fundación Carolina (~fev/2027); FCT (~mar/2027); FI Joan Oró (~mar/2027).
+5. **Contínuo:** FAPESP (fluxo contínuo); SINGA (rolling); vagas Escandinávia/Holanda (rolling); ETH (rolling); universidades portuguesas (rolling).
 
-## 🇧🇷 D) Brasil — DOUTORADO DIRETO (só bacharelado, sem mestrado)
-| # | Programa | Onde | Idioma | Estipêndio | Necessário para ela participar | Detalhes e vantagens para ela |
-|---|---|---|---|---|---|---|
-| 1 | **USP — NEC / FMRP** ⭐ | SP/Ribeirão | Português | R$3.100 ou **FAPESP ~R$4.930** | Bacharelado; **orientador que aceite**; projeto de pesquisa | **FAPESP é a maior bolsa do país**; doutorado direto. |
-| 2 | **UFRN — Instituto do Cérebro** ⚠️ | Natal | Português | R$3.100 (ou FAPESP) | Bacharelado; projeto; prova/entrevista; **até ~06/08/2026** | Referência em neurociência. **Prazo curto.** |
-| 3 | **UNIFESP — Psicobiologia** | SP | Português | R$3.100 | Bacharelado; orientador; projeto (**fluxo contínuo**) | Candidata quando estiver pronta; tradição em sono/comportamento. |
-| 4 | **UFRJ — IBCCF / UFMG** | RJ/BH | Português | R$3.100 | Bacharelado; projeto; processo seletivo | Grupos consolidados; doutorado direto. |
-> Sem propina; em português; começa já após a formatura (dez/2026). Ótimo **plano-base**.
-
----
-
-## 🎓 E) Mestrado financiado — o "degrau 1" (aceita bacharelado)
-| # | Programa | País | Idioma | Estipêndio | Necessário para ela participar | Detalhes e vantagens para ela |
-|---|---|---|---|---|---|---|
-| 1 | **Chevening → MSc no UK** ⭐ | 🇬🇧 UK | Inglês | propina + ~£1.300+/mês + voos | Bacharelado + **~2 anos de experiência de trabalho**; 3 cursos UK; ensaios; inglês | MSc de 1 ano (Clínica/Saúde Mental) → depois PhD financiado; certificação reforça. |
-| 2 | **Global MINDS (Erasmus Mundus)** | 🇪🇺 (multi-país) | Inglês | €1.300/mês (~US$1.400) + propina | Bacharelado em Psicologia (**≥100 ECTS**); cartas; carta de motivação; inglês | 10 bolsas integrais + €2.400 adiantamento; destrava PhDs europeus. |
-| 3 | **Erasmus Mundus (trilhas clínicas)** | 🇪🇺 (multi-país) | Inglês | ~€1.400/mês + propina | Bacharelado; inglês; documentos do consórcio | Melhor entrada financiada só-com-bacharelado na Europa. |
-| 4 | **DAAD (mestrado na Alemanha)** | 🇩🇪 Alemanha | Inglês | ~€992/mês + propina/saúde/viagem | Bacharelado; admissão/carta de aceite; proposta; inglês | Brasil é país prioritário; destrava PhDs clínicos assalariados. |
-| 5 | **FAPESP** ⭐ | 🇧🇷 Brasil | Português | ~US$620 (R$3.347) | Bacharelado; **orientador**; projeto de pesquisa | **Maior bolsa do Brasil**, sem propina. Base rápida. |
-| 6 | **Mestrado via DSU** | 🇮🇹 Itália | Italiano | ~US$500 + tudo | Admissão no mestrado; **ISEE-parificato** (renda baixa); italiano | **Único mestrado PAGO na Europa** (isenção + auxílio + moradia). |
-| 7 | **CAPES/CNPq** | 🇧🇷 Brasil | Português | ~US$389 | Bacharelado; aprovação no processo do PPG | PPGs de Psicologia (USP, UFRGS, UFMG, UnB…). |
-
----
-
-## 🔵 F) Doutorado com estipêndio (exige mestrado antes) — mundo
-| # | Programa | País | Idioma | Estipêndio | Necessário para ela participar | Detalhes e vantagens para ela |
-|---|---|---|---|---|---|---|
-| 1 | **ETH/EPFL/UZH** | 🇨🇭 Suíça | Inglês | ~US$6.400/mês (salário) | **Mestrado reconhecido**; contato com grupo | PhD assalariado altíssimo; propina simbólica. |
-| 2 | **Karolinska / Oslo / Escandinávia** | 🇸🇪🇳🇴 | Inglês (clínica pede escandinavo) | ~US$2.850-5.000/mês (salário) | **Mestrado (2º ciclo)**; candidatura a vaga; inglês | PhDs assalariados, sem propina; labs de TCC/DBT. |
-| 3 | **Donders / IMPRS Bonn** | 🇳🇱🇩🇪 | Inglês | ~US$3.200-3.700/mês | **Mestrado** (Donders Research Master aceita bacharel como ponte); CV; contato | PhDs assalariados de topo. |
-| 4 | **Max Planck Psychiatry (IMPRS-TP)** | 🇩🇪 Alemanha | Inglês | ~US$2.350/mês | (normalmente) mestrado; cartas; carta de motivação; inglês | Estruturado; às vezes admite bacharel excepcional (verificar). |
-| 5 | **FCT** | 🇵🇹 Portugal | Português | ~US$1.360/mês + propina | **Mestrado**; orientador; projeto | Português nativo é vantagem; **Católica 'Emotion & Wellbeing'** alinha com esquemas. |
-| 6 | **FPU / FI (UAB Clínica e Saúde)** | 🇪🇸 Espanha | Espanhol | ~US$1.300-1.575/mês | **Mestrado + 300 ECTS**; nota média convertida (Ministerio); projeto | Contrato predoutoral; labs de TP/emoção (Terapia do Esquema relevante). |
-| 7 | **Borsa / PhD Bergamo (clínica)** | 🇮🇹 Itália | Italiano/Inglês | ~US$1.380/mês | **Laurea magistrale/mestrado**; concorso público; projeto | **Todo PhD admitido é financiado por lei**; Bergamo é 100% inglês. |
-| 8 | **CONICET** | 🇦🇷 Argentina | Espanhol | ~US$850-1.150/mês (volátil) | **Mestrado/em curso**; diretor; projeto; espanhol | Doutorado com estipêndio. |
-| 9 | **ANID Beca Doctorado** ⭐ | 🇨🇱 Chile | Espanhol | ~US$684 + propina + bônus OEA US$1.200 | **Mestrado** (ou em curso); admissão em programa chileno; projeto; espanhol | Prazo ~set-nov (**alinha com a formatura de dez/2026!**). |
-
----
-
-## ⏳ Insight de sequência (a "escada" inteligente)
-Ela se forma em **dez/2026**. Como a maioria dos doutorados europeus exige mestrado:
-1. **2027:** entrar num **mestrado financiado** (Chevening · Global MINDS/Erasmus · DAAD · Brasil FAPESP/CAPES · Itália DSU) — **OU** já num **doutorado direto** (EUA, Canadá, Austrália, UK 1+3, Brasil).
-2. **Depois:** aplicar aos **doutorados assalariados** (Holanda Arntz ⭐, Freiburg, Suíça, Escandinávia, FCT/FPU/borsa) — onde a **Terapia do Esquema** vale mais.
-
-## 📋 Preparação universal (começar já)
-- Apostilar (Haia) diploma + histórico + tradução juramentada.
-- **Espanha:** conversão da **nota média** (Ministerio) — demora semanas.
-- **Itália:** **CIMEA / Dichiarazione di Valore** + (DSU) **ISEE-parificato**.
-- **Austrália:** solicitar **avaliação de equivalência a Honours** do bacharelado.
-- **Inglês:** agendar IELTS/TOEFL (exigido na maioria das rotas fora de PT/ES/IT).
-- CV, carta de motivação e **pré-projeto de pesquisa** com narrativa de **Terapia do Esquema / esquemas / regulação emocional**.
-
-## ⚙️ Próximo passo (skill `candidatura-mestrado`)
-Me diga a **frente preferida** (clínica/psicoterapia? neurociência? educacional?) e um **texto seu** para eu capturar seu estilo — aí escolho o alvo de maior probabilidade e monto o pré-projeto/carta sob medida por destino.
-
-> Placeholders `[PREENCHER]`: instituição, TCC/tema, experiências reais, nível de espanhol/italiano/inglês, nível da certificação ISST (Standard? Advanced?).
+> Me diga a **linha de pesquisa preferida** e envie um **texto seu** para capturar o estilo — monto o pré-projeto e cartas sob medida por destino.
