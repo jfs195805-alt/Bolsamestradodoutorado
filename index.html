@@ -105,6 +105,15 @@
     font-size:.85rem;color:var(--text);margin:14px 0}
   .rk-rank{font-weight:700;color:var(--accent);font-size:1.1rem;min-width:28px;display:inline-block}
 
+  .smart-wrap{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px 16px;
+    margin:0 0 16px;box-shadow:var(--shadow)}
+  .smart-row{display:flex;gap:10px;flex-wrap:wrap}
+  .smart-input{flex:1;min-width:220px;border:1px solid var(--border);background:var(--bg);border-radius:9px;
+    padding:11px 14px;font-size:.95rem}
+  .smart-hint{font-size:.76rem;color:var(--muted);margin-top:8px}
+  .smart-answer{font-size:.86rem;color:var(--text);margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)}
+  .smart-answer b{color:var(--accent)}
+
   /* modal */
   .overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
   .overlay.open{display:flex}
@@ -136,6 +145,15 @@
 
   <!-- ===== VIEW: BOLSAS ===== -->
   <section id="view-bolsas">
+    <div class="smart-wrap">
+      <div class="smart-row">
+        <input class="smart-input" id="smartSearchBox" placeholder="Pergunte algo… ex.: “bolsas para Maria Eduarda na Espanha”, “o que está urgente para o Rafael”, “bolsas de mestrado sem prazo”" onkeydown="if(event.key==='Enter')smartSearch()">
+        <button class="btn primary" onclick="smartSearch()">🔎 Perguntar</button>
+        <button class="btn ghost" onclick="clearSmartSearch()">✖️ Limpar</button>
+      </div>
+      <div id="smartSearchAnswer"></div>
+      <div class="smart-hint">Não é uma IA de verdade rodando aqui (o site é estático, sem servidor) — é um interpretador que reconhece pessoa, país, nível, prazo, status do dossiê e valor na sua pergunta, aplica os filtros certos, e ainda busca o texto restante em todos os campos. Funciona com frases livres em português.</div>
+    </div>
     <div class="alerts" id="alerts"></div>
     <div class="stats" id="stats"></div>
     <div class="toolbar">
@@ -513,6 +531,105 @@ function renderRanking(){
   }).join('');
 }
 
+const SMART_PESSOA=[['maria eduarda','Maria Eduarda'],['maria','Maria Eduarda'],['daniela','Daniela'],['dani','Daniela'],
+  ['letícia','Letícia'],['leticia','Letícia'],['rafael','Rafael']];
+const SMART_NIVEL={'ensino médio':'Ensino Médio','ensino medio':'Ensino Médio','pós-doutorado':'Pós-doutorado',
+  'pos-doutorado':'Pós-doutorado','pósdoc':'Pós-doutorado','posdoc':'Pós-doutorado','doutorado':'Doutorado','phd':'Doutorado',
+  'mestrado':'Mestrado','master':'Mestrado','fellowship':'Fellowship','verão':'Graduação/Verão','verao':'Graduação/Verão',
+  'summer':'Graduação/Verão','voluntariado':'Trabalho/Voluntariado','voluntário':'Trabalho/Voluntariado','au pair':'Trabalho/Voluntariado'};
+const SMART_URGENTE=['urgente','urgentes','vencendo','acabando','últimos dias','ultimos dias','esse mês','essa semana','este mes','esta semana'];
+const SMART_PRAZO_FORA=['fora do prazo','vencida','vencido','expirada','expirado','encerrada','encerrado'];
+const SMART_PRAZO_INEXIST=['sem prazo','prazo contínuo','prazo continuo','rolling','contínua','continua'];
+const SMART_PRAZO_DENTRO=['dentro do prazo','aberta','aberto','disponível','disponivel'];
+const SMART_DOSSIE=[['dossiê pronto','Completo'],['dossie pronto','Completo'],['pronta para enviar','Completo'],
+  ['pronto para enviar','Completo'],['pronto com ressalvas','Pronto com ressalvas'],['com ressalvas','Pronto com ressalvas'],
+  ['não recomendado','Não recomendado'],['nao recomendado','Não recomendado'],['não iniciado','Não iniciado'],['nao iniciado','Não iniciado']];
+const SMART_STOPWORDS=new Set(['bolsa','bolsas','para','de','da','do','das','dos','na','no','nas','nos','com','sem','e','ou',
+  'a','o','as','os','que','tem','têm','tenha','uma','um','existe','existem','quais','qual','quantas','quantos','me','mostre',
+  'mostra','busca','buscar','procura','procurar','ache','achar','encontre','encontrar','sobre','ainda','tá','ta','é','eh',
+  'está','esta','está?','isso','aquilo','tudo','algo','alguma','algum','se','tiver','tem?','o que','oq','pra','por','em','ao','aos']);
+// exclui do casamento de país as chaves curtas demais para uso seguro em texto livre
+// (são úteis só no parsing estruturado do campo observações, viram falso-positivo em frases soltas)
+const SMART_PAIS_EXCLUDE=new Set(['ia','ue','sp','rn','rj','mg']);
+
+function smartWordBoundaryTest(text, phrase){
+  const esc=phrase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return new RegExp('(^|[^\\p{L}\\p{N}])'+esc+'($|[^\\p{L}\\p{N}])','iu').test(text);
+}
+function smartWordBoundaryStrip(text, phrase){
+  const esc=phrase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return text.replace(new RegExp('(^|[^\\p{L}\\p{N}])'+esc+'($|[^\\p{L}\\p{N}])','giu'), '$1 $2');
+}
+
+function parseSmartQuery(q){
+  const ql=q.toLowerCase();
+  const r={pessoa:'',nivel:'',pais:'',prazo:'',statusDossie:'',valor:0,sortUrgente:false,restante:'',entendido:[]};
+  const usados=[];
+
+  for(const [kw,val] of SMART_PESSOA){ if(smartWordBoundaryTest(ql,kw)){ r.pessoa=val; r.entendido.push(`pessoa: ${val}`); usados.push(kw); break; } }
+  for(const kw in SMART_NIVEL){ if(smartWordBoundaryTest(ql,kw)){ r.nivel=SMART_NIVEL[kw]; r.entendido.push(`nível: ${SMART_NIVEL[kw]}`); usados.push(kw); break; } }
+
+  const paisKeys=Object.keys(COUNTRY_ALIASES).filter(k=>!SMART_PAIS_EXCLUDE.has(k)).sort((a,b)=>b.length-a.length);
+  for(const key of paisKeys){ if(smartWordBoundaryTest(ql,key)){ r.pais=COUNTRY_ALIASES[key]; r.entendido.push(`país: ${COUNTRY_ALIASES[key]}`); usados.push(key); break; } }
+
+  if(SMART_URGENTE.some(k=>smartWordBoundaryTest(ql,k))){ r.prazo='Dentro do prazo'; r.sortUrgente=true; r.entendido.push('urgente (ordenado pelo prazo mais próximo)'); usados.push(...SMART_URGENTE.filter(k=>smartWordBoundaryTest(ql,k))); }
+  else if(SMART_PRAZO_FORA.some(k=>smartWordBoundaryTest(ql,k))){ r.prazo='Fora do prazo'; r.entendido.push('fora do prazo'); usados.push(...SMART_PRAZO_FORA.filter(k=>smartWordBoundaryTest(ql,k))); }
+  else if(SMART_PRAZO_INEXIST.some(k=>smartWordBoundaryTest(ql,k))){ r.prazo='Prazo inexistente'; r.entendido.push('sem prazo fixo'); usados.push(...SMART_PRAZO_INEXIST.filter(k=>smartWordBoundaryTest(ql,k))); }
+  else if(SMART_PRAZO_DENTRO.some(k=>smartWordBoundaryTest(ql,k))){ r.prazo='Dentro do prazo'; r.entendido.push('dentro do prazo'); usados.push(...SMART_PRAZO_DENTRO.filter(k=>smartWordBoundaryTest(ql,k))); }
+
+  for(const [kw,val] of SMART_DOSSIE){ if(smartWordBoundaryTest(ql,kw)){ r.statusDossie=val; r.entendido.push(`status do dossiê: ${val}`); usados.push(kw); break; } }
+
+  const valorGatilho=ql.match(/acima de|acima|mais de|maior que/);
+  if(valorGatilho){
+    const m=ql.match(/(\d[\d.]*)\s*mil|(\d{3,6})/);
+    if(m){ const n=m[1]?parseInt(m[1].replace('.',''))*1000:parseInt(m[2]);
+      r.valor = n>=3000?3000 : n>=2000?2000 : n>=1000?1000 : 0;
+      if(r.valor){ r.entendido.push(`valor: acima de US$ ${r.valor}/mês`); usados.push(valorGatilho[0], m[0]); } }
+  }
+
+  let leftover=ql;
+  usados.forEach(u=>{ leftover=smartWordBoundaryStrip(leftover,u); });
+  leftover=leftover.replace(/[?!.,;]/g,' ').split(/\s+/).filter(w=>w && !SMART_STOPWORDS.has(w) && !/^\d+$/.test(w)).join(' ').trim();
+  r.restante=leftover;
+  return r;
+}
+
+function smartSearch(){
+  const q=(document.getElementById('smartSearchBox').value||'').trim();
+  const ansEl=document.getElementById('smartSearchAnswer');
+  if(!q){ ansEl.innerHTML=''; return; }
+  const r=parseSmartQuery(q);
+  document.getElementById('filterPessoa').value=r.pessoa;
+  document.getElementById('filterNivel').value=r.nivel;
+  document.getElementById('filterPais').value=r.pais;
+  document.getElementById('filterPrazo').value=r.prazo;
+  document.getElementById('filterStatusDossie').value=r.statusDossie;
+  document.getElementById('filterValor').value=r.valor||'0';
+  if(r.sortUrgente) document.getElementById('sortBy').value='prazo';
+  document.getElementById('searchBox').value=r.restante;
+  render();
+  const n=lastFilteredList.length;
+  let entendidoTxt;
+  if(r.entendido.length && r.restante) entendidoTxt=`Entendi: ${r.entendido.join(', ')} — mais o texto livre “${escapeHtml(r.restante)}”.`;
+  else if(r.entendido.length) entendidoTxt=`Entendi: ${r.entendido.join(', ')}.`;
+  else if(r.restante) entendidoTxt=`Buscando por “${escapeHtml(r.restante)}” em todos os campos.`;
+  else entendidoTxt='Sem filtros específicos reconhecidos — mostrando tudo.';
+  ansEl.innerHTML=`<div class="smart-answer">${entendidoTxt} <b>${n}</b> ${n===1?'resultado encontrado':'resultados encontrados'}.</div>`;
+}
+
+function clearSmartSearch(){
+  document.getElementById('smartSearchBox').value='';
+  document.getElementById('smartSearchAnswer').innerHTML='';
+  document.getElementById('filterPessoa').value='';
+  document.getElementById('filterNivel').value='';
+  document.getElementById('filterPais').value='';
+  document.getElementById('filterPrazo').value='';
+  document.getElementById('filterStatusDossie').value='';
+  document.getElementById('filterValor').value='0';
+  document.getElementById('searchBox').value='';
+  render();
+}
+
 function render(){
   const grid=document.getElementById('grid');
   const q=(document.getElementById('searchBox').value||'').toLowerCase().trim();
@@ -533,7 +650,11 @@ function render(){
     if(fPrazo && prazoStatus(i)!==fPrazo) return false;
     if(fPais && extractCountry(i.observacoes)!==fPais) return false;
     if(fStatusDossie && (i.status_dossie||'Não iniciado')!==fStatusDossie) return false;
-    if(q){ const hay=`${i.nome} ${i.instituicao} ${i.observacoes} ${i.nivel} ${i.explicacao_pessoal||''}`.toLowerCase(); if(!hay.includes(q)) return false; }
+    if(q){
+      const hay=`${i.nome} ${i.instituicao} ${i.observacoes} ${i.nivel} ${i.explicacao_pessoal||''}`.toLowerCase();
+      const termos=q.split(/\s+/).filter(Boolean);
+      if(!termos.every(t=>hay.includes(t))) return false;
+    }
     return true;
   });
   list.sort((a,b)=>{
