@@ -443,7 +443,7 @@ function renderRanking(){
     return `<div class="card s-${cls}">
       <div class="row"><span class="rk-rank">#${idx+1}</span><h3 style="margin:0">${escapeHtml(item.nome||'(sem nome)')}</h3></div>
       <div class="inst">${escapeHtml(item.instituicao||'')}</div>
-      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span>${prazoChip}</div>
+      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span><span class="chip">${escapeHtml(extractCountry(item.observacoes))}</span>${prazoChip}</div>
       <div class="row"><span class="deadline">📅 ${fmtDate(item.prazo_inscricao)}</span></div>
       <div class="row">${money}</div>
       ${item.explicacao_pessoal?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">💡 ${escapeHtml(item.explicacao_pessoal)}</div>`:''}
@@ -499,9 +499,10 @@ function render(){
     const prazoColors={'Dentro do prazo':'#059669','Fora do prazo':'#dc2626','Prazo inexistente':'#6b7280'};
     const prazoIcons={'Dentro do prazo':'✅','Fora do prazo':'⛔','Prazo inexistente':'➖'};
     const prazoChip=`<span class="chip" style="background:${prazoColors[pStatus]};color:#fff;border-color:${prazoColors[pStatus]}">${prazoIcons[pStatus]} ${pStatus}</span>`;
+    const paisChip=`<span class="chip">${escapeHtml(extractCountry(item.observacoes))}</span>`;
     return `<div class="card s-${cls}">
       <div><h3>${escapeHtml(item.nome||'(sem nome)')}</h3><div class="inst">${escapeHtml(item.instituicao||'')}</div></div>
-      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span>${pessoaChip}${prazoChip}</div>
+      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span>${paisChip}${pessoaChip}${prazoChip}</div>
       <div class="row"><span class="deadline">📅 ${fmtDate(item.prazo_inscricao)}</span><span class="count ${cls}">${countdownText(item)}</span></div>
       ${money?`<div class="row">${money}</div>`:''}
       ${docsHtml}
