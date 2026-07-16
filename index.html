@@ -110,7 +110,7 @@
 <body>
 <header>
   <h1>🌍 Agregador Mundial de Bolsas <span class="chip">Mestrado & Doutorado</span></h1>
-  <div class="sub">Bolsas de todos os continentes — mestrado, doutorado, <b>fellowships e programas de verão</b> — com auxílio em dinheiro, + programas do Brasil e Portugal, + um diretório dos melhores portais de bolsas do mundo. Atualizado diariamente por um agente automático.</div>
+  <div class="sub">Bolsas de todos os continentes — mestrado, doutorado, <b>fellowships e programas de verão</b> — com auxílio em dinheiro, + programas do Brasil e Portugal, + um diretório dos melhores portais de bolsas do mundo. Cada bolsa traz a <b>pessoa da família indicada</b> e uma <b>explicação de por que encaixa</b>. Atualizado diariamente por um agente automático.</div>
 </header>
 
 <main>
@@ -140,6 +140,13 @@
         <option value="1000">&gt; US$ 1.000/mês</option>
         <option value="2000">&gt; US$ 2.000/mês</option>
         <option value="3000">&gt; US$ 3.000/mês</option>
+      </select>
+      <select class="filter" id="filterPessoa" onchange="render()">
+        <option value="">Toda a família</option>
+        <option value="Rafael">Rafael</option>
+        <option value="Daniela">Daniela</option>
+        <option value="Maria Eduarda">Maria Eduarda</option>
+        <option value="Letícia">Letícia</option>
       </select>
       <select class="filter" id="sortBy" onchange="render()">
         <option value="prazo">Ordenar por prazo</option>
@@ -339,11 +346,13 @@ function render(){
   const fValor=parseFloat(document.getElementById('filterValor').value)||0;
   const sortBy=document.getElementById('sortBy').value;
 
+  const fPessoa=document.getElementById('filterPessoa').value;
   let list=data.filter(i=>{
     if(fStatus && i.status!==fStatus) return false;
     if(fNivel && !(i.nivel||'').includes(fNivel)) return false;
     if(fValor && (parseFloat(i.valor_mensal)||0)<fValor) return false;
-    if(q){ const hay=`${i.nome} ${i.instituicao} ${i.observacoes} ${i.nivel}`.toLowerCase(); if(!hay.includes(q)) return false; }
+    if(fPessoa){ const p=i.pessoa_indicada||''; const ok = p===fPessoa || (p==='Vários' && ['Rafael','Daniela','Maria Eduarda'].includes(fPessoa)); if(!ok) return false; }
+    if(q){ const hay=`${i.nome} ${i.instituicao} ${i.observacoes} ${i.nivel} ${i.explicacao_pessoal||''}`.toLowerCase(); if(!hay.includes(q)) return false; }
     return true;
   });
   list.sort((a,b)=>{
@@ -365,13 +374,17 @@ function render(){
     }).join('')}</ul>`:'';
     const money=item.valor_mensal?`<span class="money">💰 ${fmtMoney(item.valor_mensal)}/mês${item.duracao_meses?` · ${item.duracao_meses} meses`:''}</span>`:'';
     const link=item.link?`<a class="link" href="${escapeAttr(item.link)}" target="_blank" rel="noopener">🔗 Edital</a>`:'';
+    const pessoaColors={'Rafael':'#2563eb','Daniela':'#7c3aed','Maria Eduarda':'#059669','Letícia':'#e11d48','Vários':'#6b7280','Toda a família':'#6b7280'};
+    const pessoaCor=pessoaColors[item.pessoa_indicada]||'#6b7280';
+    const pessoaChip=item.pessoa_indicada?`<span class="chip" style="background:${pessoaCor};color:#fff;border-color:${pessoaCor}">👤 ${escapeHtml(item.pessoa_indicada)}</span>`:'';
     return `<div class="card s-${cls}">
       <div><h3>${escapeHtml(item.nome||'(sem nome)')}</h3><div class="inst">${escapeHtml(item.instituicao||'')}</div></div>
-      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span></div>
+      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span>${pessoaChip}</div>
       <div class="row"><span class="deadline">📅 ${fmtDate(item.prazo_inscricao)}</span><span class="count ${cls}">${countdownText(item)}</span></div>
       ${money?`<div class="row">${money}</div>`:''}
       ${docsHtml}
       ${item.observacoes?`<div class="inst">📝 ${escapeHtml(item.observacoes)}</div>`:''}
+      ${item.explicacao_pessoal?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">💡 ${escapeHtml(item.explicacao_pessoal)}</div>`:''}
       <div class="card-actions"><button class="btn" onclick="edit('${item.id}')">✏️ Editar</button><button class="btn" onclick="remove('${item.id}')">🗑️</button>${link}</div>
     </div>`;
   }).join('');
@@ -417,12 +430,12 @@ function save(){
   const nome=document.getElementById('f_nome').value.trim(); if(!nome){alert('Informe o nome da bolsa.');return;}
   const id=document.getElementById('f_id').value||uid();
   const obj={id,nome,instituicao:document.getElementById('f_instituicao').value.trim(),nivel:document.getElementById('f_nivel').value,prazo_inscricao:document.getElementById('f_prazo').value,valor_mensal:document.getElementById('f_valor').value,duracao_meses:document.getElementById('f_duracao').value,status:document.getElementById('f_status').value,documentos:docsArray(document.getElementById('f_documentos').value).join(';'),link:document.getElementById('f_link').value.trim(),observacoes:document.getElementById('f_observacoes').value.trim()};
-  const idx=data.findIndex(i=>i.id===id); if(idx>=0)data[idx]=obj; else data.push(obj);
+  const idx=data.findIndex(i=>i.id===id); if(idx>=0)data[idx]=Object.assign({},data[idx],obj); else data.push(obj);
   persist(); closeModal(); render();
 }
 function remove(id){ const item=data.find(i=>i.id===id); if(!confirm(`Excluir "${item?item.nome:''}"?`))return; data=data.filter(i=>i.id!==id); delete docDone[id]; persist(); render(); }
 
-const COLS=['nome','instituicao','nivel','prazo_inscricao','valor_mensal','duracao_meses','status','documentos','link','observacoes'];
+const COLS=['nome','instituicao','nivel','prazo_inscricao','valor_mensal','duracao_meses','status','documentos','link','observacoes','pessoa_indicada','explicacao_pessoal'];
 function exportCsv(){ const rows=[COLS.join(',')]; data.forEach(i=>rows.push(COLS.map(c=>csvCell(i[c])).join(','))); const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='bolsas.csv'; a.click(); URL.revokeObjectURL(a.href); }
 function csvCell(v){ v=(v==null?'':String(v)); if(/[",\n]/.test(v))return '"'+v.replace(/"/g,'""')+'"'; return v; }
 function importCsv(){ document.getElementById('fileInput').click(); }
