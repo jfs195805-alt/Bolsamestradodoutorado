@@ -523,7 +523,7 @@ function render(){
     if(da===null) return 1; if(db===null) return -1; return da-db;
   });
 
-  renderStats();
+  renderStats(list);
   if(list.length===0){ grid.innerHTML=`<div class="empty">Nenhuma bolsa encontrada com esses filtros.<br>Ajuste a busca ou clique em <b>🔄 Sincronizar</b> para carregar o bolsas.csv.</div>`; return; }
 
   grid.innerHTML=list.map(item=>{
@@ -556,16 +556,17 @@ function render(){
   }).join('');
 }
 
-function renderStats(){
-  const total=data.length;
-  const proximos=data.filter(i=>{const d=daysUntil(i.prazo_inscricao);return d!==null&&d>=0&&d<=30&&i.status!=='Aprovado'&&i.status!=='Enviado';}).length;
-  const enviados=data.filter(i=>i.status==='Enviado'||i.status==='Aprovado').length;
-  const aprovados=data.filter(i=>i.status==='Aprovado').length;
+function renderStats(list){
+  list = list || data;
+  const filtrado = list.length !== data.length;
+  const total=list.length;
+  const proximos=list.filter(i=>{const d=daysUntil(i.prazo_inscricao);return d!==null&&d>=0&&d<=30&&i.status!=='Aprovado'&&i.status!=='Enviado';}).length;
+  const enviados=list.filter(i=>i.status==='Enviado'||i.status==='Aprovado').length;
   document.getElementById('stats').innerHTML=`
-    <div class="stat"><div class="n">${total}</div><div class="l">Bolsas cadastradas</div></div>
+    <div class="stat"><div class="n">${total}</div><div class="l">${filtrado?'Bolsas (com filtro)':'Bolsas cadastradas'}</div></div>
     <div class="stat"><div class="n" style="color:var(--soon)">${proximos}</div><div class="l">Prazo ≤ 30 dias</div></div>
     <div class="stat"><div class="n" style="color:var(--done)">${enviados}</div><div class="l">Enviadas / aprovadas</div></div>
-    <div class="stat"><div class="n" style="color:var(--accent)">${PORTAIS.length}</div><div class="l">Portais no diretório</div></div>`;
+    ${filtrado?`<div class="stat"><div class="n" style="color:var(--muted)">${data.length}</div><div class="l">Total na base (sem filtro)</div></div>`:`<div class="stat"><div class="n" style="color:var(--accent)">${PORTAIS.length}</div><div class="l">Portais no diretório</div></div>`}`;
 }
 
 function renderPortais(){
