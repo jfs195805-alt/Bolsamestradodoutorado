@@ -72,6 +72,8 @@ Estes são **contratos de trabalho** (salário mensal, não "bolsa" tradicional)
 
 > Valores federais atualizados (reajuste de ago/2025): **mestrado R$2.310/mês**, **doutorado R$3.410/mês**. FAPESP e várias FAPs pagam mais. A maioria exige matrícula/aprovação em um programa de pós stricto sensu e é selecionada dentro do próprio PPG.
 
+> 📖 **Mestrados em universidades federais/estaduais** (Psicologia, Computação/Dados, Educação): veja `candidaturas/MESTRADOS_BRASIL.md` — **144 programas** de PPGs em todo o país, cada um com nota CAPES, prazo estimado, **e-mail de coordenação/secretaria verificado**, **linhas de pesquisa reais** levantadas na página oficial, e uma coluna de **melhor encaixe** comparando cada programa ao perfil de Daniela, Maria Eduarda e Rafael. Essa base também está disponível na aba "🇧🇷 Mestrados Brasil" do painel HTML.
+
 ### No Brasil (domésticas)
 | Programa | Valor/mês (R$) | Situação |
 |---|---|---|
