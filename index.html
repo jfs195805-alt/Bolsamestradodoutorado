@@ -152,6 +152,9 @@
         <option value="Maria Eduarda">Maria Eduarda</option>
         <option value="Letícia">Letícia</option>
       </select>
+      <select class="filter" id="filterPais" onchange="render()">
+        <option value="">Todos os países</option>
+      </select>
       <select class="filter" id="filterPrazo" onchange="render()">
         <option value="">Qualquer prazo</option>
         <option value="Dentro do prazo">✅ Dentro do prazo</option>
@@ -351,6 +354,21 @@ function uid(){ return 'b-'+Math.random().toString(36).slice(2,9); }
 function docsArray(str){ return (str||'').split(/[;\n]+/).map(s=>s.trim()).filter(Boolean); }
 
 function daysUntil(dateStr){ if(!dateStr) return null; const t=new Date();t.setHours(0,0,0,0); const d=new Date(dateStr+'T00:00:00'); return Math.round((d-t)/86400000); }
+function extractCountry(obs){
+  if(!obs) return '🌍 Global';
+  const s=String(obs).trim();
+  const parts=s.split(/\s+—\s+/);
+  const country=(parts[0]||'').trim();
+  if(country.length>40||country.length<2) return '🌍 Global';
+  return country;
+}
+function populatePaisFilter(){
+  const sel=document.getElementById('filterPais');
+  const cur=sel.value;
+  const paises=new Set(data.map(i=>extractCountry(i.observacoes)));
+  sel.innerHTML='<option value="">Todos os países</option>'+[...paises].sort().map(p=>`<option value="${escapeAttr(p)}">${escapeHtml(p)}</option>`).join('');
+  sel.value=cur;
+}
 function prazoStatus(item){
   if(!item.prazo_inscricao) return 'Prazo inexistente';
   const d=daysUntil(item.prazo_inscricao);
@@ -444,12 +462,14 @@ function render(){
 
   const fPessoa=document.getElementById('filterPessoa').value;
   const fPrazo=document.getElementById('filterPrazo').value;
+  const fPais=document.getElementById('filterPais').value;
   let list=data.filter(i=>{
     if(fStatus && i.status!==fStatus) return false;
     if(fNivel && !(i.nivel||'').includes(fNivel)) return false;
     if(fValor && (parseFloat(i.valor_mensal)||0)<fValor) return false;
     if(fPessoa){ const p=i.pessoa_indicada||''; const ok = p===fPessoa || (p==='Vários' && ['Rafael','Daniela','Maria Eduarda'].includes(fPessoa)); if(!ok) return false; }
     if(fPrazo && prazoStatus(i)!==fPrazo) return false;
+    if(fPais && extractCountry(i.observacoes)!==fPais) return false;
     if(q){ const hay=`${i.nome} ${i.instituicao} ${i.observacoes} ${i.nivel} ${i.explicacao_pessoal||''}`.toLowerCase(); if(!hay.includes(q)) return false; }
     return true;
   });
@@ -536,7 +556,7 @@ function save(){
   persist(); closeModal(); renderAll();
 }
 function remove(id){ const item=data.find(i=>i.id===id); if(!confirm(`Excluir "${item?item.nome:''}"?`))return; data=data.filter(i=>i.id!==id); delete docDone[id]; persist(); renderAll(); }
-function renderAll(){ render(); if(!document.getElementById('view-ranking').classList.contains('hidden')) renderRanking(); }
+function renderAll(){ populatePaisFilter(); render(); if(!document.getElementById('view-ranking').classList.contains('hidden')) renderRanking(); }
 
 const COLS=['nome','instituicao','nivel','prazo_inscricao','valor_mensal','duracao_meses','status','documentos','link','observacoes','pessoa_indicada','explicacao_pessoal','status_prazo'];
 function exportCsv(){ const rows=[COLS.join(',')]; data.forEach(i=>rows.push(COLS.map(c=>csvCell(c==='status_prazo'?prazoStatus(i):i[c])).join(','))); const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='bolsas.csv'; a.click(); URL.revokeObjectURL(a.href); }
@@ -593,6 +613,7 @@ function prepararCandidatura(id){
 function prompt2(text){ window.prompt('Copie o texto abaixo (Ctrl+C) e cole numa conversa com o Claude:', text); }
 
 document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==='overlay')closeModal();});
+populatePaisFilter();
 render();
 if(!localStorage.getItem(STORE_KEY)) syncFromCsv(true);
 </script>
