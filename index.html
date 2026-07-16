@@ -90,6 +90,9 @@
   .portal .tags{display:flex;gap:6px;flex-wrap:wrap}
   .portal .tag{font-size:.7rem;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
   .hidden{display:none!important}
+  .rk-note{background:var(--accent-soft);border:1px solid var(--border);border-radius:12px;padding:12px 16px;
+    font-size:.85rem;color:var(--text);margin:14px 0}
+  .rk-rank{font-weight:700;color:var(--accent);font-size:1.1rem;min-width:28px;display:inline-block}
 
   /* modal */
   .overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
@@ -116,6 +119,7 @@
 <main>
   <div class="tabs">
     <button class="tab active" id="tab-bolsas" onclick="showView('bolsas')">🎓 Bolsas curadas</button>
+    <button class="tab" id="tab-ranking" onclick="showView('ranking')">🏆 Ranking por Pessoa</button>
     <button class="tab" id="tab-portais" onclick="showView('portais')">🧭 Portais do mundo</button>
   </div>
 
@@ -166,6 +170,32 @@
       <input type="file" id="fileInput" accept=".csv" style="display:none" onchange="handleFile(event)">
     </div>
     <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- ===== VIEW: RANKING POR PESSOA ===== -->
+  <section id="view-ranking" class="hidden">
+    <div class="rk-note">🏆 Ranking das bolsas indicadas para cada pessoa, <b>ordenado por estipêndio mensal</b> (do maior para o menor). Não mostramos "% de chance de aprovação" — isso depende da banca, da concorrência de cada ciclo e de fatores que nenhuma base de dados consegue prever de verdade; use o ranking como ponto de partida, não como veredito.</div>
+    <div class="tabs" id="rkPersonTabs">
+      <button class="tab active" data-p="Rafael" onclick="setRankPerson('Rafael')">Rafael</button>
+      <button class="tab" data-p="Daniela" onclick="setRankPerson('Daniela')">Daniela</button>
+      <button class="tab" data-p="Maria Eduarda" onclick="setRankPerson('Maria Eduarda')">Maria Eduarda</button>
+      <button class="tab" data-p="Letícia" onclick="setRankPerson('Letícia')">Letícia</button>
+    </div>
+    <div class="toolbar">
+      <select class="filter" id="rkFilterPrazo" onchange="renderRanking()">
+        <option value="">Qualquer prazo</option>
+        <option value="Dentro do prazo" selected>✅ Só dentro do prazo</option>
+        <option value="Fora do prazo">⛔ Fora do prazo</option>
+        <option value="Prazo inexistente">➖ Prazo inexistente / contínuo</option>
+      </select>
+      <select class="filter" id="rkFilterNivel" onchange="renderRanking()">
+        <option value="">Todos os níveis</option>
+        <option>Ensino Médio</option><option>Graduação/Verão</option><option>Mestrado</option><option>Doutorado</option><option>Pós-doutorado</option><option>Fellowship</option><option>Trabalho/Voluntariado</option>
+      </select>
+      <div class="spacer"></div>
+      <span class="inst" id="rkCount"></span>
+    </div>
+    <div class="grid" id="rkGrid"></div>
   </section>
 
   <!-- ===== VIEW: PORTAIS ===== -->
@@ -344,10 +374,64 @@ function fmtMoney(v){ const n=parseFloat(v); if(!n&&n!==0) return ''; return 'US
 
 function showView(v){
   document.getElementById('view-bolsas').classList.toggle('hidden',v!=='bolsas');
+  document.getElementById('view-ranking').classList.toggle('hidden',v!=='ranking');
   document.getElementById('view-portais').classList.toggle('hidden',v!=='portais');
   document.getElementById('tab-bolsas').classList.toggle('active',v==='bolsas');
+  document.getElementById('tab-ranking').classList.toggle('active',v==='ranking');
   document.getElementById('tab-portais').classList.toggle('active',v==='portais');
   if(v==='portais') renderPortais();
+  if(v==='ranking') renderRanking();
+}
+
+let rankPerson='Rafael';
+function setRankPerson(p){
+  rankPerson=p;
+  document.querySelectorAll('#rkPersonTabs .tab').forEach(b=>b.classList.toggle('active',b.dataset.p===p));
+  renderRanking();
+}
+
+function matchesPersonRank(pessoaIndicada, target){
+  const p=pessoaIndicada||'';
+  if(p===target) return true;
+  if(p==='Vários' && ['Rafael','Daniela','Maria Eduarda'].includes(target)) return true;
+  if(p==='Toda a família') return true;
+  return false;
+}
+
+function renderRanking(){
+  const rkGrid=document.getElementById('rkGrid');
+  const fPrazo=document.getElementById('rkFilterPrazo').value;
+  const fNivel=document.getElementById('rkFilterNivel').value;
+  let list=data.filter(i=>{
+    if(!matchesPersonRank(i.pessoa_indicada, rankPerson)) return false;
+    if(fNivel && !(i.nivel||'').includes(fNivel)) return false;
+    if(fPrazo && prazoStatus(i)!==fPrazo) return false;
+    return true;
+  });
+  list.sort((a,b)=>(parseFloat(b.valor_mensal)||0)-(parseFloat(a.valor_mensal)||0));
+
+  document.getElementById('rkCount').textContent=list.length+' bolsa(s) indicada(s) para '+rankPerson;
+
+  if(list.length===0){ rkGrid.innerHTML=`<div class="empty">Nenhuma bolsa encontrada para ${escapeHtml(rankPerson)} com esses filtros.</div>`; return; }
+
+  rkGrid.innerHTML=list.map((item,idx)=>{
+    const cls=statusClass(item);
+    const money=item.valor_mensal?`<span class="money">💰 ${fmtMoney(item.valor_mensal)}/mês${item.duracao_meses?` · ${item.duracao_meses} meses`:''}</span>`:'<span class="money">💰 sem estipêndio informado</span>';
+    const link=item.link?`<a class="link" href="${escapeAttr(item.link)}" target="_blank" rel="noopener">🔗 Edital</a>`:'';
+    const pStatus=prazoStatus(item);
+    const prazoColors={'Dentro do prazo':'#059669','Fora do prazo':'#dc2626','Prazo inexistente':'#6b7280'};
+    const prazoIcons={'Dentro do prazo':'✅','Fora do prazo':'⛔','Prazo inexistente':'➖'};
+    const prazoChip=`<span class="chip" style="background:${prazoColors[pStatus]};color:#fff;border-color:${prazoColors[pStatus]}">${prazoIcons[pStatus]} ${pStatus}</span>`;
+    return `<div class="card s-${cls}">
+      <div class="row"><span class="rk-rank">#${idx+1}</span><h3 style="margin:0">${escapeHtml(item.nome||'(sem nome)')}</h3></div>
+      <div class="inst">${escapeHtml(item.instituicao||'')}</div>
+      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span>${prazoChip}</div>
+      <div class="row"><span class="deadline">📅 ${fmtDate(item.prazo_inscricao)}</span></div>
+      <div class="row">${money}</div>
+      ${item.explicacao_pessoal?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">💡 ${escapeHtml(item.explicacao_pessoal)}</div>`:''}
+      <div class="card-actions">${link}</div>
+    </div>`;
+  }).join('');
 }
 
 function render(){
@@ -449,15 +533,16 @@ function save(){
   const id=document.getElementById('f_id').value||uid();
   const obj={id,nome,instituicao:document.getElementById('f_instituicao').value.trim(),nivel:document.getElementById('f_nivel').value,prazo_inscricao:document.getElementById('f_prazo').value,valor_mensal:document.getElementById('f_valor').value,duracao_meses:document.getElementById('f_duracao').value,status:document.getElementById('f_status').value,documentos:docsArray(document.getElementById('f_documentos').value).join(';'),link:document.getElementById('f_link').value.trim(),observacoes:document.getElementById('f_observacoes').value.trim()};
   const idx=data.findIndex(i=>i.id===id); if(idx>=0)data[idx]=Object.assign({},data[idx],obj); else data.push(obj);
-  persist(); closeModal(); render();
+  persist(); closeModal(); renderAll();
 }
-function remove(id){ const item=data.find(i=>i.id===id); if(!confirm(`Excluir "${item?item.nome:''}"?`))return; data=data.filter(i=>i.id!==id); delete docDone[id]; persist(); render(); }
+function remove(id){ const item=data.find(i=>i.id===id); if(!confirm(`Excluir "${item?item.nome:''}"?`))return; data=data.filter(i=>i.id!==id); delete docDone[id]; persist(); renderAll(); }
+function renderAll(){ render(); if(!document.getElementById('view-ranking').classList.contains('hidden')) renderRanking(); }
 
 const COLS=['nome','instituicao','nivel','prazo_inscricao','valor_mensal','duracao_meses','status','documentos','link','observacoes','pessoa_indicada','explicacao_pessoal','status_prazo'];
 function exportCsv(){ const rows=[COLS.join(',')]; data.forEach(i=>rows.push(COLS.map(c=>csvCell(c==='status_prazo'?prazoStatus(i):i[c])).join(','))); const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='bolsas.csv'; a.click(); URL.revokeObjectURL(a.href); }
 function csvCell(v){ v=(v==null?'':String(v)); if(/[",\n]/.test(v))return '"'+v.replace(/"/g,'""')+'"'; return v; }
 function importCsv(){ document.getElementById('fileInput').click(); }
-function handleFile(e){ const file=e.target.files[0]; if(!file)return; const reader=new FileReader(); reader.onload=()=>{ try{ const rows=parseCsv(reader.result); const header=rows.shift().map(h=>h.trim()); const imported=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={id:uid()};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;}); if(imported.length&&confirm(`Importar ${imported.length} bolsa(s)? Isso substituirá a lista atual.`)){data=imported;persist();render();} }catch(err){alert('Não consegui ler o CSV: '+err.message);} e.target.value=''; }; reader.readAsText(file,'utf-8'); }
+function handleFile(e){ const file=e.target.files[0]; if(!file)return; const reader=new FileReader(); reader.onload=()=>{ try{ const rows=parseCsv(reader.result); const header=rows.shift().map(h=>h.trim()); const imported=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={id:uid()};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;}); if(imported.length&&confirm(`Importar ${imported.length} bolsa(s)? Isso substituirá a lista atual.`)){data=imported;persist();renderAll();} }catch(err){alert('Não consegui ler o CSV: '+err.message);} e.target.value=''; }; reader.readAsText(file,'utf-8'); }
 function parseCsv(text){ const rows=[];let row=[],cell='',q=false; for(let i=0;i<text.length;i++){const c=text[i]; if(q){if(c==='"'){if(text[i+1]==='"'){cell+='"';i++;}else q=false;}else cell+=c;}else{if(c==='"')q=true;else if(c===','){row.push(cell);cell='';}else if(c==='\n'){row.push(cell);rows.push(row);row=[];cell='';}else if(c==='\r'){}else cell+=c;}} if(cell!==''||row.length){row.push(cell);rows.push(row);} return rows; }
 
 async function syncFromCsv(silent){
@@ -465,7 +550,7 @@ async function syncFromCsv(silent){
     const res=await fetch('bolsas.csv?ts='+Date.now(),{cache:'no-store'}); if(!res.ok)throw new Error('HTTP '+res.status);
     const text=await res.text(); const rows=parseCsv(text); const header=rows.shift().map(h=>h.trim());
     const imported=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={id:uid()};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;});
-    if(imported.length){ data=imported; persist(); render(); if(!silent)alert('Carregadas '+imported.length+' bolsas do bolsas.csv.'); }
+    if(imported.length){ data=imported; persist(); renderAll(); if(!silent)alert('Carregadas '+imported.length+' bolsas do bolsas.csv.'); }
   }catch(e){ if(!silent)alert('Não consegui ler o bolsas.csv automaticamente (ocorre ao abrir do disco, sem servidor). Use "📥 Importar" e selecione o bolsas.csv, ou acesse pelo link do GitHub Pages.'); }
 }
 
