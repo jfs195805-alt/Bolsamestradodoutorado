@@ -1,6 +1,6 @@
 # Candidatura — Daniela (Psicologia / Neurociência / Terapia do Esquema)
 
-**Perfil:** Brasileira, 44 anos. Graduanda em **Psicologia** (bacharelado, formatura **dez/2026**). Certificação internacional em **Terapia do Esquema (ISST)** — diferencial competitivo forte. Idiomas: português (nativo), espanhol (profissional), italiano (básico), inglês (intermediário). Foco geográfico: Espanha, Portugal, Itália — aberta ao mundo. Sem filtro mínimo de valor.
+**Perfil:** Brasileira, 44 anos. Graduanda em **Psicologia** (bacharelado, formatura **dez/2026**). **Estágio supervisionado em Gestalt-terapia** + certificação internacional em **Terapia do Esquema (ISST)** — combinação de diferenciais competitivos fortes (abordagem humanista/fenomenológica na prática + especialização internacional reconhecida). Idiomas: português (nativo), espanhol (profissional), italiano (básico), inglês (intermediário). Foco geográfico: Espanha, Portugal, Itália — aberta ao mundo. Sem filtro mínimo de valor.
 Contato: `[PRIVADO — mantido fora do repositório público]`
 
 ---
@@ -76,7 +76,7 @@ Contato: `[PRIVADO — mantido fora do repositório público]`
 
 ## 💡 Leitura estratégica do perfil
 
-1. **Certificação ISST é o trunfo principal.** Poucos candidatos a doutorado já possuem certificação internacional em Terapia do Esquema. Isso a diferencia especialmente na Holanda (berço da abordagem, grupo Arntz), na Espanha (grupos de personalidade/emoção) e na Itália (psicologia clínica).
+1. **Certificação ISST + estágio em Gestalt-terapia são os trunfos principais.** Poucos candidatos a doutorado já possuem certificação internacional em Terapia do Esquema. Isso a diferencia especialmente na Holanda (berço da abordagem, grupo Arntz), na Espanha (grupos de personalidade/emoção) e na Itália (psicologia clínica). O estágio em Gestalt-terapia soma uma base prática humanista/fenomenológica real — usar os dois juntos na carta de motivação e no pré-projeto: prática clínica concreta (Gestalt) + especialização internacional estruturada (ISST) é uma narrativa de coerência muito mais forte do que qualquer um dos dois isolado. Priorizar, na nota de "Compatibilidade com Psicologia Clínica" de cada programa levantado, linhas de pesquisa que mencionem explicitamente Gestalt-terapia, fenomenologia, terapias humanistas-existenciais ou terapia do esquema/abordagens cognitivo-comportamentais de terceira geração — esses são match direto, não apenas adjacente.
 
 2. **Bacharelado sem mestrado limita a Europa continental.** A maioria dos doutorados na Espanha, Portugal e Itália exige mestrado. Rotas que aceitam bacharelado direto: EAU (Khalifa, MBZUAI, NYU AD), Suíça (ETH, EPFL), Escandinávia (modelo emprego), Scuole di eccellenza italianas (SISSA, SNS, Sant'Anna), e Brasil (doutorado direto). Alternativa: fazer mestrado primeiro (Erasmus Mundus, Chevening, DAAD).
 

@@ -161,7 +161,7 @@
 
   <!-- ===== VIEW: MESTRADOS BRASIL ===== -->
   <section id="view-brasil" class="hidden">
-    <div class="rk-note">🇧🇷 Diretório de <b>144 programas de pós-graduação brasileiros</b> (Psicologia, Computação/Dados, Educação) levantado para a Daniela, Maria Eduarda e Rafael — nota CAPES, prazo típico, linhas de pesquisa e e-mail de coordenação, quando encontrado. ⚠️ "Dias p/ prazo" e "Inscrição" são <b>estimados</b> a partir da janela de meses (ex.: "Ago-Out/2026"), que muitas vezes nem foi confirmada na fonte original — não são datas exatas verificadas. Confirme sempre no site oficial do programa antes de contar com esse prazo.</div>
+    <div class="rk-note">🇧🇷 Diretório de <b>276 programas de pós-graduação brasileiros</b> (Psicologia, Computação/Dados, Educação, Neurociência, Interdisciplinar/Ciência Cognitiva) levantado para a Daniela, Maria Eduarda e Rafael — nota CAPES, prazo típico, linhas de pesquisa e e-mail de coordenação, quando encontrado. Levantamento em andamento: e-mails de coordenadores de linha de pesquisa ainda estão sendo coletados programa a programa (fase 2), por isso muitas linhas aparecem como "não encontrado — consultar site" por enquanto. ⚠️ "Dias p/ prazo" e "Inscrição" são <b>estimados</b> a partir da janela de meses (ex.: "Ago-Out/2026"), que muitas vezes nem foi confirmada na fonte original — não são datas exatas verificadas. Confirme sempre no site oficial do programa antes de contar com esse prazo.</div>
     <div class="stats" id="statsBR"></div>
     <div class="toolbar">
       <input class="search" id="searchBoxBR" placeholder="🔎 Buscar universidade, PPG, linha de pesquisa…" oninput="renderBrasilFiltered()">
@@ -958,6 +958,8 @@ function renderStatsBR(){
   const psi=filteredBR.filter(r=>r.area==='Psicologia').length;
   const comp=filteredBR.filter(r=>r.area==='Computação/Dados').length;
   const edu=filteredBR.filter(r=>r.area==='Educação').length;
+  const neuro=filteredBR.filter(r=>r.area==='Neurociência').length;
+  const inter=filteredBR.filter(r=>r.area==='Interdisciplinar').length;
   const abertas=filteredBR.filter(r=>r.status_abertura==='Aberto agora (estimado)').length;
   document.getElementById('statsBR').innerHTML=`
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--accent)">${tot}</div><div style="color:var(--muted);font-size:.8rem">Total</div></div>
@@ -965,7 +967,9 @@ function renderStatsBR(){
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${comEmail}</div><div style="color:var(--muted);font-size:.8rem">Com e-mail</div></div>
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#7c3aed">${psi}</div><div style="color:var(--muted);font-size:.8rem">Psicologia (Daniela)</div></div>
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#059669">${comp}</div><div style="color:var(--muted);font-size:.8rem">Computação/Dados (Maria Eduarda)</div></div>
-    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#2563eb">${edu}</div><div style="color:var(--muted);font-size:.8rem">Educação</div></div>`;
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#2563eb">${edu}</div><div style="color:var(--muted);font-size:.8rem">Educação</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#db2777">${neuro}</div><div style="color:var(--muted);font-size:.8rem">Neurociência</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#ea580c">${inter}</div><div style="color:var(--muted);font-size:.8rem">Interdisciplinar</div></div>`;
 }
 function sortBrasil(col){
   const cols=['instituicao','ppg','nota_capes','prazo','link','email','explicacao','area',null,'dias_para_prazo','status_abertura'];
