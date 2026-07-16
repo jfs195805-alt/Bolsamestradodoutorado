@@ -474,8 +474,7 @@ function setRankPerson(p){
 function matchesPersonRank(pessoaIndicada, target){
   const p=pessoaIndicada||'';
   if(p===target) return true;
-  if(p==='Vários' && ['Rafael','Daniela','Maria Eduarda'].includes(target)) return true;
-  if(p==='Toda a família') return true;
+  if((p==='Vários'||p==='Toda a família') && ['Rafael','Daniela','Maria Eduarda'].includes(target)) return true;
   return false;
 }
 
