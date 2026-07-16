@@ -115,6 +115,61 @@
 
 > **Estratégia honesta:** seu perfil é **dados aplicados + IA (Copilots)**, não pesquisa pura em ML. O caminho mais realista para "trabalhar com IA" é: **(1) Cohere Labs Scholars** (remoto, aceita engenheiro forte sem papers) e/ou **(2) MBZUAI** (mestrado de IA financiado) — e, se topar preparar pesquisa de segurança em IA, **MATS** (que dá visto). O Anthropic Fellows é o de maior valor, mas depende de autorização de trabalho nos EUA/UK/Canadá.
 
+## 🎯 Ranking por empregabilidade internacional (análise externa, não é dado verificado)
+
+> ⚠️ Esta seção reproduz uma análise que você trouxe de outra IA (ChatGPT), não é dado oficial verificado por busca — os números "X/10" são estimativas subjetivas daquela análise, não estatísticas de fonte oficial. Uso aqui como **input estratégico seu**, mantendo transparência sobre a origem. Os programas em si (MBZUAI, NUS, ETH Zurich, EPFL, TU Delft, KTH, DAAD EPOS) já estão no ranking geral acima com dados verificados de prazo/valor/link — esta seção só reordena a prioridade **considerando empregabilidade**, não substitui os dados factuais.
+
+**Critério: maximizar empregabilidade em empresas de ponta (reputação entre recrutadores, presença de Big Techs no campus, força de marca)**
+
+| # | Universidade | Empregabilidade (estimativa) | Chance de admissão (estimativa) |
+|---|---|---|---|
+| 1 | ETH Zurich 🇨🇭 | 10/10 | 6,5/10 |
+| 2 | National University of Singapore (NUS) 🇸🇬 | 10/10 | 8,5/10 |
+| 3 | EPFL 🇨🇭 | 9,9/10 | 7/10 |
+| 4 | TU Delft 🇳🇱 | 9,8/10 | 7,5/10 |
+| 5 | KTH Royal Institute of Technology 🇸🇪 | 9,5/10 | 8,5/10 |
+| 6 | MBZUAI 🇦🇪 (foco IA) | 9,5/10 | 9,5/10 |
+| 7 | Aalto University 🇫🇮 | 9,3/10 | 8/10 |
+| 8 | Technical University of Munich 🇩🇪 | 9,3/10 | 7/10 |
+| 9 | DAAD EPOS (depende da universidade alemã escolhida) | 9/10 | 9,5/10 |
+
+**Critério alternativo: maximizar salário ao terminar o curso** — mesma lista, ordem: ETH Zurich → NUS → EPFL → MBZUAI (foco IA) → TU Delft → KTH → TUM → Aalto → DAAD EPOS.
+
+**Recomendação de estratégia combinada (equilíbrio entre chance de admissão, bolsa e empregabilidade), considerando seu perfil (18+ anos de experiência, multinacionais, Cloud/Analytics/BigQuery/Python/BI, inglês profissional):**
+1. **MBZUAI** — maior aderência ao perfil de IA/Analytics, boa bolsa, boa chance de admissão.
+2. **NUS** — melhor combinação de reputação global + empregabilidade + chance de admissão razoável.
+3. **DAAD EPOS** em universidade alemã forte em Data/AI (ex.: TU Munich) — maior probabilidade de aprovação para o perfil.
+4. **KTH** — muito alinhada ao mercado europeu de tecnologia.
+5. **TU Delft** — excelente marca para engenharia/tecnologia.
+
+ETH Zurich e EPFL têm a marca mais forte, mas processos de admissão mais competitivos — mantidas no ranking geral acima, mas não como primeira prioridade nesta leitura de empregabilidade.
+
+### ✅ Correção importante: seus 45 anos NÃO são barreira
+
+Análise de acompanhamento (mesma origem — ChatGPT, refinada): nenhum dos programas acima tem limite geral de idade. **DAAD EPOS** avalia principalmente experiência profissional (mínimo 2 anos) — favorece diretamente seu perfil de 18+ anos. **MBZUAI, NUS, KTH, Aalto, TU Delft, ETH e EPFL** avaliam mérito acadêmico/profissional, não idade. Isso reforça que o perfil sênior é vantagem, não desvantagem, nesses programas específicos.
+
+### 💰 Estipêndios — valores refinados (cruzados com os dados já verificados na base)
+
+| Universidade | Estipêndio mensal | Status de verificação |
+|---|---|---|
+| **DAAD EPOS** (Alemanha) | €992/mês (mestrado) + seguro + passagem + possível auxílio-aluguel/família | ✅ Já verificado na base (`bolsas.csv`) — bate exatamente com esse valor |
+| **MBZUAI** (EAU) | AED 15.500/mês (~US$4.220 / ~R$23 mil), inclui apoio à moradia | ✅ Já verificado na base — bate exatamente com esse valor |
+| **NUS President's Graduate Fellowship** | S$3.900/mês (internacionais) | ✅ Verificado — este é o valor da **PGF**, o programa premium/mais concorrido |
+| **NUS Research Scholarship** (padrão) | S$2.700/mês + até S$500/mês após exame de qualificação (chega a ~S$3.200) | ✅ **Recém-verificado e adicionado à base** — é este o programa "SGD 2.900-3.000" citado; é a via **padrão** (mais fácil que a PGF) |
+| **KTH** (mestrado) | Sem estipêndio mensal padrão em mestrado; bolsas focam em isenção de anuidade | ⚠️ Nota: a base já tem KTH em nível de **doutorado** (posição assalariada, SEK 32-36 mil/mês) — trata-se de posição contratada, distinta do mestrado sem estipêndio |
+| **Aalto** (mestrado) | Sem estipêndio mensal padrão; bolsas de anuidade (ex.: €3.000 bolsa de excelência) | ⚠️ Aalto ainda não tem entrada de doutorado verificada na base — pendente |
+| **TU Delft** (mestrado) | Bolsa principal cobre custos relevantes, sem estipêndio mensal padronizado | ⚠️ Nota: a base já tem TU Delft em nível de **doutorado** (posição assalariada, €3.059-3.881/mês) — distinta do mestrado |
+| **ETH Zurich** | Bolsas integrais existem (ex. ESOP) mas competitivas, sem estipêndio universal | ⚠️ Nota: a base já tem ETH em nível de **doutorado** (posição assalariada, CHF ~5.100-5.850/mês) — distinta do mestrado |
+| **EPFL** | Bolsas de excelência existem, sem estipêndio universal | ⚠️ Nota: a base já tem EPFL Excellence (mestrado, CHF ~16k/semestre) e EPFL doutorado (posição assalariada) separadamente |
+
+> A confusão entre "mestrado sem estipêndio padrão" e "doutorado como posição assalariada" é o ponto-chave: em KTH/Aalto/TU Delft/ETH/EPFL, é o **doutorado** que paga salário mensal alto (já cadastrado na base), enquanto o **mestrado** geralmente só isenta a anuidade, sem estipêndio de vida garantido. Isso reforça mirar direto o doutorado nesses cinco, e usar DAAD/MBZUAI/NUS para as vias com estipêndio de mestrado.
+
+### 🥇 Se tiver que escolher só 3 candidaturas (maximizar chance de aprovação + retorno)
+
+1. **DAAD EPOS** — maior probabilidade de aprovação para o seu perfil (foco em experiência profissional, não em idade).
+2. **MBZUAI** — maior retorno financeiro (AED 15.500/mês) e alinhamento direto com IA.
+3. **NUS** — via Research Scholarship (padrão, mais acessível) ou President's Graduate Fellowship (premium, mais concorrida) — forte reputação global e excelente empregabilidade em tecnologia.
+
 ## 🗣️ Inglês + Fellowship (opcional)
 Seu inglês já é **Full Professional** — não precisa de curso, só **certificar** (IELTS/TOEFL) quando a bolsa pedir. Se quiser uma imersão financiada, a **Hubert H. Humphrey Fellowship** (EUA, integral + curso de inglês) encaixa — enquadre como **tecnologia/política de dados**. Prazo **11/08/2026** (via Comissão Fulbright Brasil). [Inscrição](https://fulbright.org.br/edital/humphrey/)
 
