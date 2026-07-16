@@ -659,7 +659,7 @@ function prompt2(text){ window.prompt('Copie o texto abaixo (Ctrl+C) e cole numa
 document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==='overlay')closeModal();});
 populatePaisFilter();
 render();
-if(!localStorage.getItem(STORE_KEY)) syncFromCsv(true);
+syncFromCsv(true); // sempre busca o bolsas.csv mais recente ao carregar, para nunca ficar preso em cache local desatualizado
 </script>
 </body>
 </html>
