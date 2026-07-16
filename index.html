@@ -105,6 +105,18 @@
     font-size:.85rem;color:var(--text);margin:14px 0}
   .rk-rank{font-weight:700;color:var(--accent);font-size:1.1rem;min-width:28px;display:inline-block}
 
+  .tbl-wrap{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:auto;
+    box-shadow:var(--shadow);margin-top:14px}
+  table.br-tbl{width:100%;border-collapse:collapse;font-size:.85rem;white-space:normal}
+  table.br-tbl th{position:sticky;top:0;background:var(--panel);border-bottom:2px solid var(--border);
+    text-align:left;padding:10px 12px;font-weight:700;cursor:pointer;user-select:none;white-space:nowrap}
+  table.br-tbl th:hover{color:var(--accent)}
+  table.br-tbl td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  table.br-tbl tr:hover td{background:var(--accent-soft)}
+  table.br-tbl td.wrap-lg{min-width:280px;max-width:420px}
+  .area-tag{font-size:.7rem;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600;white-space:nowrap}
+  .nf{color:var(--muted);font-style:italic}
+
   .smart-wrap{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px 16px;
     margin:0 0 16px;box-shadow:var(--shadow)}
   .smart-row{display:flex;gap:10px;flex-wrap:wrap}
@@ -138,10 +150,48 @@
 
 <main>
   <div class="tabs">
-    <button class="tab active" id="tab-bolsas" onclick="showView('bolsas')">🎓 Bolsas curadas</button>
+    <button class="tab active" id="tab-bolsas" onclick="showView('bolsas')">🌍 Global (<span id="tabCountGlobal">…</span>)</button>
+    <button class="tab" id="tab-brasil" onclick="showView('brasil')">🇧🇷 Mestrados Brasil (<span id="tabCountBrasil">…</span>)</button>
     <button class="tab" id="tab-ranking" onclick="showView('ranking')">🏆 Ranking por Pessoa</button>
     <button class="tab" id="tab-portais" onclick="showView('portais')">🧭 Portais do mundo</button>
   </div>
+
+  <!-- ===== VIEW: MESTRADOS BRASIL ===== -->
+  <section id="view-brasil" class="hidden">
+    <div class="rk-note">🇧🇷 Diretório de <b>144 programas de pós-graduação brasileiros</b> (Psicologia, Computação/Dados, Educação) levantado para a Daniela, Maria Eduarda e Rafael — nota CAPES, prazo típico, linhas de pesquisa e e-mail de coordenação, quando encontrado.</div>
+    <div class="stats" id="statsBR"></div>
+    <div class="toolbar">
+      <input class="search" id="searchBoxBR" placeholder="🔎 Buscar universidade, PPG, linha de pesquisa…" oninput="renderBrasilFiltered()">
+      <select class="filter" id="filterAreaBR" onchange="renderBrasilFiltered()">
+        <option value="">Todas as áreas</option>
+      </select>
+      <select class="filter" id="filterPrazoBR" onchange="renderBrasilFiltered()">
+        <option value="">Qualquer prazo</option>
+      </select>
+      <select class="filter" id="filterPessoaBR" onchange="renderBrasilFiltered()">
+        <option value="">Todos</option>
+        <option value="Rafael">Rafael</option>
+        <option value="Daniela">Daniela</option>
+        <option value="Maria Eduarda">Maria Eduarda</option>
+      </select>
+    </div>
+    <div class="tbl-wrap">
+      <table class="br-tbl">
+        <thead><tr>
+          <th onclick="sortBrasil(0)">Universidade</th>
+          <th onclick="sortBrasil(1)">PPG</th>
+          <th onclick="sortBrasil(2)">Nota CAPES</th>
+          <th onclick="sortBrasil(3)">Prazo</th>
+          <th onclick="sortBrasil(7)">Área</th>
+          <th>E-mail coordenação</th>
+          <th onclick="sortBrasil(6)">Explicação (linhas de pesquisa + melhor encaixe)</th>
+          <th>Link</th>
+        </tr></thead>
+        <tbody id="tbodyBR"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="emptyBR" style="display:none">Nenhum programa encontrado com esses filtros.</div>
+  </section>
 
   <!-- ===== VIEW: BOLSAS ===== -->
   <section id="view-bolsas">
@@ -472,13 +522,16 @@ function fmtMoney(v){ const n=parseFloat(v); if(!n&&n!==0) return ''; return 'US
 
 function showView(v){
   document.getElementById('view-bolsas').classList.toggle('hidden',v!=='bolsas');
+  document.getElementById('view-brasil').classList.toggle('hidden',v!=='brasil');
   document.getElementById('view-ranking').classList.toggle('hidden',v!=='ranking');
   document.getElementById('view-portais').classList.toggle('hidden',v!=='portais');
   document.getElementById('tab-bolsas').classList.toggle('active',v==='bolsas');
+  document.getElementById('tab-brasil').classList.toggle('active',v==='brasil');
   document.getElementById('tab-ranking').classList.toggle('active',v==='ranking');
   document.getElementById('tab-portais').classList.toggle('active',v==='portais');
   if(v==='portais') renderPortais();
   if(v==='ranking') renderRanking();
+  if(v==='brasil') renderBrasilFiltered();
 }
 
 let rankPerson='Rafael';
@@ -790,7 +843,104 @@ async function syncFromCsv(silent){
     const text=await res.text(); const rows=parseCsv(text); const header=rows.shift().map(h=>h.trim());
     const imported=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={id:uid()};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;});
     if(imported.length){ data=imported; persist(); renderAll(); if(!silent)alert('Carregadas '+imported.length+' bolsas do bolsas.csv.'); }
+    const badgeG=document.getElementById('tabCountGlobal'); if(badgeG) badgeG.textContent=data.length;
   }catch(e){ if(!silent)alert('Não consegui ler o bolsas.csv automaticamente (ocorre ao abrir do disco, sem servidor). Use "📥 Importar" e selecione o bolsas.csv, ou acesse pelo link do GitHub Pages.'); }
+}
+
+// ===== Mestrados Brasil (PPGs) =====
+let dataBR=[];
+let filteredBR=[];
+let sortColBR=-1, sortAscBR=true;
+async function syncBrasilCsv(){
+  try{
+    const res=await fetch('mestrados_brasil.csv?ts='+Date.now(),{cache:'no-store'}); if(!res.ok)throw new Error('HTTP '+res.status);
+    const text=await res.text(); const rows=parseCsv(text); const header=rows.shift().map(h=>h.trim());
+    dataBR=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;});
+    const badgeBR=document.getElementById('tabCountBrasil'); if(badgeBR) badgeBR.textContent=dataBR.length;
+    populateBrasilFilters();
+    if(!document.getElementById('view-brasil').classList.contains('hidden')) renderBrasilFiltered();
+  }catch(e){ /* silencioso: só falha ao abrir direto do disco sem servidor */ }
+}
+function populateBrasilFilters(){
+  const selArea=document.getElementById('filterAreaBR');
+  const curArea=selArea.value;
+  const areas=[...new Set(dataBR.map(r=>r.area).filter(Boolean))].sort();
+  selArea.innerHTML='<option value="">Todas as áreas</option>'+areas.map(a=>`<option value="${escapeAttr(a)}">${escapeHtml(a)}</option>`).join('');
+  selArea.value=curArea;
+  const selPrazo=document.getElementById('filterPrazoBR');
+  const curPrazo=selPrazo.value;
+  const prazos=[...new Set(dataBR.map(r=>r.prazo).filter(Boolean))].sort();
+  selPrazo.innerHTML='<option value="">Qualquer prazo</option>'+prazos.map(p=>`<option value="${escapeAttr(p)}">${escapeHtml(p)}</option>`).join('');
+  selPrazo.value=curPrazo;
+}
+function emailCellBR(e){
+  if(!e || e.toLowerCase().startsWith('não encontrado')) return '<span class="nf">não encontrado — consultar site</span>';
+  const first=e.split(/[\s(/]/)[0];
+  if(first.includes('@')) return `<a href="mailto:${escapeAttr(first)}">${escapeHtml(e)}</a>`;
+  return escapeHtml(e);
+}
+function renderBrasilFiltered(){
+  const q=(document.getElementById('searchBoxBR').value||'').toLowerCase().trim();
+  const fArea=document.getElementById('filterAreaBR').value;
+  const fPrazo=document.getElementById('filterPrazoBR').value;
+  const fPessoa=document.getElementById('filterPessoaBR').value;
+  filteredBR=dataBR.filter(r=>{
+    if(fArea && r.area!==fArea) return false;
+    if(fPrazo && r.prazo!==fPrazo) return false;
+    if(fPessoa && !(r.explicacao||'').includes(fPessoa)) return false;
+    if(q){
+      const hay=`${r.instituicao} ${r.ppg} ${r.explicacao}`.toLowerCase();
+      const termos=q.split(/\s+/).filter(Boolean);
+      if(!termos.every(t=>hay.includes(t))) return false;
+    }
+    return true;
+  });
+  if(sortColBR>=0) doSortBrasil();
+  renderTableBR();
+}
+function renderTableBR(){
+  const tbody=document.getElementById('tbodyBR');
+  const empty=document.getElementById('emptyBR');
+  tbody.innerHTML=filteredBR.map(r=>`<tr>
+    <td class="pn">${escapeHtml(r.instituicao)}</td>
+    <td>${escapeHtml(r.ppg)}</td>
+    <td>${escapeHtml(r.nota_capes||'—')}</td>
+    <td>${escapeHtml(r.prazo||'—')}</td>
+    <td><span class="area-tag">${escapeHtml(r.area||'—')}</span></td>
+    <td>${emailCellBR(r.email)}</td>
+    <td class="wrap-lg">${escapeHtml(r.explicacao||'—')}</td>
+    <td>${r.link?`<a href="${escapeAttr(r.link)}" target="_blank" rel="noopener">Site</a>`:'—'}</td>
+  </tr>`).join('');
+  empty.style.display=filteredBR.length?'none':'block';
+  renderStatsBR();
+}
+function renderStatsBR(){
+  const tot=filteredBR.length;
+  const comEmail=filteredBR.filter(r=>r.email && !r.email.toLowerCase().startsWith('não encontrado')).length;
+  const psi=filteredBR.filter(r=>r.area==='Psicologia').length;
+  const comp=filteredBR.filter(r=>r.area==='Computação/Dados').length;
+  const edu=filteredBR.filter(r=>r.area==='Educação').length;
+  document.getElementById('statsBR').innerHTML=`
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--accent)">${tot}</div><div style="color:var(--muted);font-size:.8rem">Total</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${comEmail}</div><div style="color:var(--muted);font-size:.8rem">Com e-mail</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#7c3aed">${psi}</div><div style="color:var(--muted);font-size:.8rem">Psicologia (Daniela)</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#059669">${comp}</div><div style="color:var(--muted);font-size:.8rem">Computação/Dados (Maria Eduarda)</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#2563eb">${edu}</div><div style="color:var(--muted);font-size:.8rem">Educação</div></div>`;
+}
+function sortBrasil(col){
+  const cols=['instituicao','ppg','nota_capes','prazo','link','email','explicacao','area'];
+  if(sortColBR===col) sortAscBR=!sortAscBR; else { sortColBR=col; sortAscBR=true; }
+  doSortBrasil();
+  renderTableBR();
+}
+function doSortBrasil(){
+  const cols=['instituicao','ppg','nota_capes','prazo','link','email','explicacao','area'];
+  const key=cols[sortColBR];
+  if(!key) return;
+  filteredBR.sort((a,b)=>{
+    const va=a[key]||'', vb=b[key]||'';
+    return sortAscBR ? String(va).localeCompare(String(vb),'pt') : String(vb).localeCompare(String(va),'pt');
+  });
 }
 
 function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
@@ -835,6 +985,7 @@ document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==
 populatePaisFilter();
 render();
 syncFromCsv(true); // sempre busca o bolsas.csv mais recente ao carregar, para nunca ficar preso em cache local desatualizado
+syncBrasilCsv();
 </script>
 </body>
 </html>
