@@ -116,6 +116,9 @@
   table.br-tbl td.wrap-lg{min-width:280px;max-width:420px}
   .area-tag{font-size:.7rem;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600;white-space:nowrap}
   .nf{color:var(--muted);font-style:italic}
+  .chip.status-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+  .chip.status-soon{background:var(--soon);color:#fff;border-color:var(--soon)}
+  .chip.status-urgent{background:var(--urgent);color:#fff;border-color:var(--urgent)}
 
   .smart-wrap{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px 16px;
     margin:0 0 16px;box-shadow:var(--shadow)}
@@ -158,7 +161,7 @@
 
   <!-- ===== VIEW: MESTRADOS BRASIL ===== -->
   <section id="view-brasil" class="hidden">
-    <div class="rk-note">🇧🇷 Diretório de <b>144 programas de pós-graduação brasileiros</b> (Psicologia, Computação/Dados, Educação) levantado para a Daniela, Maria Eduarda e Rafael — nota CAPES, prazo típico, linhas de pesquisa e e-mail de coordenação, quando encontrado.</div>
+    <div class="rk-note">🇧🇷 Diretório de <b>144 programas de pós-graduação brasileiros</b> (Psicologia, Computação/Dados, Educação) levantado para a Daniela, Maria Eduarda e Rafael — nota CAPES, prazo típico, linhas de pesquisa e e-mail de coordenação, quando encontrado. ⚠️ "Dias p/ prazo" e "Inscrição" são <b>estimados</b> a partir da janela de meses (ex.: "Ago-Out/2026"), que muitas vezes nem foi confirmada na fonte original — não são datas exatas verificadas. Confirme sempre no site oficial do programa antes de contar com esse prazo.</div>
     <div class="stats" id="statsBR"></div>
     <div class="toolbar">
       <input class="search" id="searchBoxBR" placeholder="🔎 Buscar universidade, PPG, linha de pesquisa…" oninput="renderBrasilFiltered()">
@@ -181,7 +184,9 @@
           <th onclick="sortBrasil(0)">Universidade</th>
           <th onclick="sortBrasil(1)">PPG</th>
           <th onclick="sortBrasil(2)">Nota CAPES</th>
-          <th onclick="sortBrasil(3)">Prazo</th>
+          <th onclick="sortBrasil(3)">Prazo (janela)</th>
+          <th onclick="sortBrasil(9)">Dias p/ prazo (estimado)</th>
+          <th onclick="sortBrasil(10)">Inscrição (estimado)</th>
           <th onclick="sortBrasil(7)">Área</th>
           <th>E-mail coordenação</th>
           <th onclick="sortBrasil(6)">Explicação (linhas de pesquisa + melhor encaixe)</th>
@@ -856,6 +861,7 @@ async function syncBrasilCsv(){
     const res=await fetch('mestrados_brasil.csv?ts='+Date.now(),{cache:'no-store'}); if(!res.ok)throw new Error('HTTP '+res.status);
     const text=await res.text(); const rows=parseCsv(text); const header=rows.shift().map(h=>h.trim());
     dataBR=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;});
+    dataBR.forEach(computeDeadlineFieldsBR);
     const badgeBR=document.getElementById('tabCountBrasil'); if(badgeBR) badgeBR.textContent=dataBR.length;
     populateBrasilFilters();
     if(!document.getElementById('view-brasil').classList.contains('hidden')) renderBrasilFiltered();
@@ -872,6 +878,27 @@ function populateBrasilFilters(){
   const prazos=[...new Set(dataBR.map(r=>r.prazo).filter(Boolean))].sort();
   selPrazo.innerHTML='<option value="">Qualquer prazo</option>'+prazos.map(p=>`<option value="${escapeAttr(p)}">${escapeHtml(p)}</option>`).join('');
   selPrazo.value=curPrazo;
+}
+function computeDeadlineFieldsBR(r){
+  if(!r.data_maxima_estimada){ r.dias_para_prazo=null; r.status_abertura='Sem dado — consultar site'; return; }
+  const diasFim=daysUntil(r.data_maxima_estimada);
+  const diasInicio=r.data_inicio_estimada?daysUntil(r.data_inicio_estimada):null;
+  r.dias_para_prazo=diasFim;
+  if(diasInicio!==null && diasInicio>0) r.status_abertura='Ainda não abriu (estimado)';
+  else if(diasFim>=0) r.status_abertura='Aberto agora (estimado)';
+  else r.status_abertura='Encerrado (estimado)';
+}
+function diasPrazoCellBR(r){
+  if(r.dias_para_prazo===null||r.dias_para_prazo===undefined) return '<span class="nf">—</span>';
+  const d=r.dias_para_prazo;
+  if(d<0) return `<span class="nf">encerrado há ${Math.abs(d)}d</span>`;
+  return `${d}d`;
+}
+function statusAberturaCellBR(r){
+  const s=r.status_abertura;
+  const cls=s.startsWith('Aberto')?'ok':(s.startsWith('Encerrado')?'urgent':(s.startsWith('Ainda')?'soon':'nf'));
+  if(cls==='nf') return `<span class="nf">${escapeHtml(s)}</span>`;
+  return `<span class="chip status-${cls}">${escapeHtml(s)}</span>`;
 }
 function emailCellBR(e){
   if(!e || e.toLowerCase().startsWith('não encontrado')) return '<span class="nf">não encontrado — consultar site</span>';
@@ -906,6 +933,8 @@ function renderTableBR(){
     <td>${escapeHtml(r.ppg)}</td>
     <td>${escapeHtml(r.nota_capes||'—')}</td>
     <td>${escapeHtml(r.prazo||'—')}</td>
+    <td>${diasPrazoCellBR(r)}</td>
+    <td>${statusAberturaCellBR(r)}</td>
     <td><span class="area-tag">${escapeHtml(r.area||'—')}</span></td>
     <td>${emailCellBR(r.email)}</td>
     <td class="wrap-lg">${escapeHtml(r.explicacao||'—')}</td>
@@ -920,23 +949,32 @@ function renderStatsBR(){
   const psi=filteredBR.filter(r=>r.area==='Psicologia').length;
   const comp=filteredBR.filter(r=>r.area==='Computação/Dados').length;
   const edu=filteredBR.filter(r=>r.area==='Educação').length;
+  const abertas=filteredBR.filter(r=>r.status_abertura==='Aberto agora (estimado)').length;
   document.getElementById('statsBR').innerHTML=`
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--accent)">${tot}</div><div style="color:var(--muted);font-size:.8rem">Total</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${abertas}</div><div style="color:var(--muted);font-size:.8rem">Abertas agora (estimado)</div></div>
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${comEmail}</div><div style="color:var(--muted);font-size:.8rem">Com e-mail</div></div>
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#7c3aed">${psi}</div><div style="color:var(--muted);font-size:.8rem">Psicologia (Daniela)</div></div>
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#059669">${comp}</div><div style="color:var(--muted);font-size:.8rem">Computação/Dados (Maria Eduarda)</div></div>
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#2563eb">${edu}</div><div style="color:var(--muted);font-size:.8rem">Educação</div></div>`;
 }
 function sortBrasil(col){
-  const cols=['instituicao','ppg','nota_capes','prazo','link','email','explicacao','area'];
+  const cols=['instituicao','ppg','nota_capes','prazo','link','email','explicacao','area',null,'dias_para_prazo','status_abertura'];
   if(sortColBR===col) sortAscBR=!sortAscBR; else { sortColBR=col; sortAscBR=true; }
   doSortBrasil();
   renderTableBR();
 }
 function doSortBrasil(){
-  const cols=['instituicao','ppg','nota_capes','prazo','link','email','explicacao','area'];
+  const cols=['instituicao','ppg','nota_capes','prazo','link','email','explicacao','area',null,'dias_para_prazo','status_abertura'];
   const key=cols[sortColBR];
   if(!key) return;
+  if(key==='dias_para_prazo'){
+    filteredBR.sort((a,b)=>{
+      const va=a[key]===null?Infinity:a[key], vb=b[key]===null?Infinity:b[key];
+      return sortAscBR ? va-vb : vb-va;
+    });
+    return;
+  }
   filteredBR.sort((a,b)=>{
     const va=a[key]||'', vb=b[key]||'';
     return sortAscBR ? String(va).localeCompare(String(vb),'pt') : String(vb).localeCompare(String(va),'pt');
