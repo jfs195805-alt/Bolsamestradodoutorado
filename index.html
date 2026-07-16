@@ -354,13 +354,56 @@ function uid(){ return 'b-'+Math.random().toString(36).slice(2,9); }
 function docsArray(str){ return (str||'').split(/[;\n]+/).map(s=>s.trim()).filter(Boolean); }
 
 function daysUntil(dateStr){ if(!dateStr) return null; const t=new Date();t.setHours(0,0,0,0); const d=new Date(dateStr+'T00:00:00'); return Math.round((d-t)/86400000); }
-function extractCountry(obs){
+const COUNTRY_ALIASES={
+  'brasil':'🇧🇷 Brasil','sp':'🇧🇷 Brasil','no brasil':'🇧🇷 Brasil','rn':'🇧🇷 Brasil','rj':'🇧🇷 Brasil','mg':'🇧🇷 Brasil','exterior':'🌍 Global',
+  'eua':'🇺🇸 EUA','washington dc':'🇺🇸 EUA','remoto':'🌍 Global',
+  'canadá':'🇨🇦 Canadá','itália':'🇮🇹 Itália','espanha':'🇪🇸 Espanha','catalunya':'🇪🇸 Espanha',
+  'austrália':'🇦🇺 Austrália','portugal':'🇵🇹 Portugal','alemanha':'🇩🇪 Alemanha',
+  'holanda':'🇳🇱 Holanda','nova zelândia':'🇳🇿 Nova Zelândia',
+  'coreia':'🇰🇷 Coreia do Sul','coreia do sul':'🇰🇷 Coreia do Sul',
+  'uk':'🇬🇧 Reino Unido','reino unido':'🇬🇧 Reino Unido','londres':'🇬🇧 Reino Unido','oxford':'🇬🇧 Reino Unido',
+  'suécia':'🇸🇪 Suécia','japão':'🇯🇵 Japão','singapura':'🇸🇬 Singapura','israel':'🇮🇱 Israel',
+  'hong kong':'🇭🇰 Hong Kong','eau':'🇦🇪 Emirados Árabes Unidos','emirados':'🇦🇪 Emirados Árabes Unidos',
+  'méxico':'🇲🇽 México','finlândia':'🇫🇮 Finlândia','catar':'🇶🇦 Catar',
+  'europa':'🇪🇺 Europa','ue':'🇪🇺 Europa','bruxelas':'🇪🇺 Europa',
+  'suíça':'🇨🇭 Suíça','bélgica':'🇧🇪 Bélgica','irlanda':'🇮🇪 Irlanda','turquia':'🇹🇷 Turquia',
+  'áustria':'🇦🇹 Áustria','viena':'🇦🇹 Áustria','luxemburgo':'🇱🇺 Luxemburgo','frança':'🇫🇷 França',
+  'colômbia':'🇨🇴 Colômbia','taiwan':'🇹🇼 Taiwan','islândia':'🇮🇸 Islândia','china':'🇨🇳 China',
+  'dinamarca':'🇩🇰 Dinamarca','noruega':'🇳🇴 Noruega','arábia saudita':'🇸🇦 Arábia Saudita',
+  'argentina':'🇦🇷 Argentina','chile':'🇨🇱 Chile','hungria':'🇭🇺 Hungria','eslováquia':'🇸🇰 Eslováquia',
+  'malásia':'🇲🇾 Malásia','índia':'🇮🇳 Índia','brunei':'🇧🇳 Brunei','indonésia':'🇮🇩 Indonésia',
+  'polônia':'🇵🇱 Polônia','romênia':'🇷🇴 Romênia','rússia':'🇷🇺 Rússia','marrocos':'🇲🇦 Marrocos',
+  'croácia':'🇭🇷 Croácia','estônia':'🇪🇪 Estônia','áfrica do sul':'🇿🇦 África do Sul',
+  'áfrica':'🌍 África','global':'🌍 Global','internacional':'🌍 Global','latam':'🌍 América Latina',
+  'regional':'🌍 Global','ia':'🌍 Global','ia/governança':'🌍 Global','grátis':'🌍 Global',
+  'vários países':'🌍 Global','online':'🌍 Global','egito':'🌍 Global',
+  'global remoto':'🌍 Global','internacional online':'🌍 Global'
+};
+function extractCountryRaw(obs){
   if(!obs) return '🌍 Global';
   const s=String(obs).trim();
   const parts=s.split(/\s+—\s+/);
   const country=(parts[0]||'').trim();
   if(country.length>40||country.length<2) return '🌍 Global';
   return country;
+}
+function extractCountry(obs){
+  const raw=extractCountryRaw(obs);
+  let s=raw.trim();
+  // strip leading flag emoji(s) and globe/symbol emoji
+  s=s.replace(/^[\u{1F1E6}-\u{1F1FF}\u{1F300}-\u{1F5FF}\u{1F30D}\u{1F30E}\u{1F30F}\u{1F310}\s]+/u,'').trim();
+  // strip trailing parenthetical
+  s=s.replace(/\s*\([^)]*\)\s*$/,'').trim();
+  // strip trailing ", N semanas"
+  s=s.replace(/,\s*\d+\s*semanas?$/,'').trim();
+  const key0=s.toLowerCase();
+  if(COUNTRY_ALIASES[key0]) return COUNTRY_ALIASES[key0];
+  const parts=s.split(/[/→+]/);
+  for(const p of parts){
+    const key=p.trim().toLowerCase();
+    if(COUNTRY_ALIASES[key]) return COUNTRY_ALIASES[key];
+  }
+  return '🌍 Global';
 }
 function populatePaisFilter(){
   const sel=document.getElementById('filterPais');
