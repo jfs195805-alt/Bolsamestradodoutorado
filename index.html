@@ -364,6 +364,7 @@ const PORTAIS = [
 ];
 
 let data = load();
+let lastFilteredList = data;
 let docDone = loadDocs();
 
 function load(){ try{const s=JSON.parse(localStorage.getItem(STORE_KEY));if(Array.isArray(s))return s;}catch(e){} return SEED.slice(); }
@@ -543,6 +544,7 @@ function render(){
     const da=daysUntil(a.prazo_inscricao),db=daysUntil(b.prazo_inscricao);
     if(da===null) return 1; if(db===null) return -1; return da-db;
   });
+  lastFilteredList=list;
 
   renderStats(list);
   renderAlerts(list);
@@ -647,7 +649,17 @@ function remove(id){ const item=data.find(i=>i.id===id); if(!confirm(`Excluir "$
 function renderAll(){ populatePaisFilter(); render(); if(!document.getElementById('view-ranking').classList.contains('hidden')) renderRanking(); }
 
 const COLS=['nome','instituicao','nivel','prazo_inscricao','valor_mensal','duracao_meses','status','documentos','link','observacoes','pessoa_indicada','explicacao_pessoal','status_prazo'];
-function exportCsv(){ const rows=[COLS.join(',')]; data.forEach(i=>rows.push(COLS.map(c=>csvCell(c==='status_prazo'?prazoStatus(i):i[c])).join(','))); const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='bolsas.csv'; a.click(); URL.revokeObjectURL(a.href); }
+function exportCsv(){
+  const list=lastFilteredList;
+  const filtrado=list.length!==data.length;
+  const rows=[COLS.join(',')];
+  list.forEach(i=>rows.push(COLS.map(c=>csvCell(c==='status_prazo'?prazoStatus(i):i[c])).join(',')));
+  const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download=filtrado?`bolsas_filtrado_${list.length}.csv`:'bolsas.csv';
+  a.click(); URL.revokeObjectURL(a.href);
+  if(filtrado) alert(`Exportadas ${list.length} de ${data.length} bolsas (com os filtros ativos). Para exportar tudo, limpe os filtros antes.`);
+}
 function csvCell(v){ v=(v==null?'':String(v)); if(/[",\n]/.test(v))return '"'+v.replace(/"/g,'""')+'"'; return v; }
 function importCsv(){ document.getElementById('fileInput').click(); }
 function handleFile(e){ const file=e.target.files[0]; if(!file)return; const reader=new FileReader(); reader.onload=()=>{ try{ const rows=parseCsv(reader.result); const header=rows.shift().map(h=>h.trim()); const imported=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={id:uid()};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;}); if(imported.length&&confirm(`Importar ${imported.length} bolsa(s)? Isso substituirá a lista atual.`)){data=imported;persist();renderAll();} }catch(err){alert('Não consegui ler o CSV: '+err.message);} e.target.value=''; }; reader.readAsText(file,'utf-8'); }
