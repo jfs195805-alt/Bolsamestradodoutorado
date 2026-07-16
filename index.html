@@ -429,7 +429,7 @@ function renderRanking(){
       <div class="row"><span class="deadline">📅 ${fmtDate(item.prazo_inscricao)}</span></div>
       <div class="row">${money}</div>
       ${item.explicacao_pessoal?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">💡 ${escapeHtml(item.explicacao_pessoal)}</div>`:''}
-      <div class="card-actions">${link}</div>
+      <div class="card-actions"><button class="btn primary" onclick="prepararCandidatura('${item.id}')">🤖 Preparar candidatura</button>${link}</div>
     </div>`;
   }).join('');
 }
@@ -487,7 +487,7 @@ function render(){
       ${docsHtml}
       ${item.observacoes?`<div class="inst">📝 ${escapeHtml(item.observacoes)}</div>`:''}
       ${item.explicacao_pessoal?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">💡 ${escapeHtml(item.explicacao_pessoal)}</div>`:''}
-      <div class="card-actions"><button class="btn" onclick="edit('${item.id}')">✏️ Editar</button><button class="btn" onclick="remove('${item.id}')">🗑️</button>${link}</div>
+      <div class="card-actions"><button class="btn" onclick="edit('${item.id}')">✏️ Editar</button><button class="btn" onclick="remove('${item.id}')">🗑️</button><button class="btn primary" onclick="prepararCandidatura('${item.id}')">🤖 Preparar candidatura</button>${link}</div>
     </div>`;
   }).join('');
 }
@@ -556,6 +556,41 @@ async function syncFromCsv(silent){
 
 function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 function escapeAttr(s){return String(s).replace(/"/g,'&quot;');}
+
+// ===== Preparar candidatura com Claude =====
+function prazoLabel(item){ const p=prazoStatus(item); return p==='Dentro do prazo'?'dentro do prazo':(p==='Fora do prazo'?'FORA do prazo (checar próximo ciclo)':'sem prazo fixo / contínuo'); }
+function montarPromptCandidatura(item){
+  return `Quero que você prepare e pré-preencha (SEM enviar) minha candidatura para esta bolsa:
+
+Nome: ${item.nome||''}
+Instituição: ${item.instituicao||''}
+Nível: ${item.nivel||''}
+Prazo de inscrição: ${item.prazo_inscricao||'não informado'} (${prazoLabel(item)})
+Valor mensal informado: ${item.valor_mensal?('US$ '+item.valor_mensal+'/mês'):'não informado'}
+Link oficial: ${item.link||'não informado'}
+Documentos exigidos (segundo nossa base): ${item.documentos||'não informado'}
+Observações da nossa base: ${item.observacoes||'—'}
+Pessoa candidata: ${item.pessoa_indicada||'a definir'}
+Por que encaixa (nossa análise): ${item.explicacao_pessoal||'—'}
+
+O que preciso que você faça:
+1. Pesquise a fundo os critérios REAIS de seleção deste programa específico (editais anteriores, o que o comitê avalia, perfis de aprovados quando isso for público) — sem inventar nada que não conseguir verificar.
+2. Monte um dossiê de candidatura: rascunho de carta de motivação personalizada com base no meu perfil real (arquivo candidaturas/*.md do repositório jfs195805-alt/Bolsamestradodoutorado), checklist de documentos, e um briefing para quem vai escrever minha carta de recomendação.
+3. Se o link oficial for um formulário de inscrição, use automação de navegador (Playwright) para ABRIR o portal oficial e PRÉ-PREENCHER os campos com os dados que eu te passar na hora — sem clicar em enviar/submit em nenhuma hipótese. Eu reviso e envio pessoalmente.
+4. Me avise claramente quando algum campo/etapa não puder ser automatizado (CAPTCHA, verificação por e-mail/SMS, upload de documento, ensaio que exige minha voz pessoal, entrevista) em vez de fingir que preencheu.
+
+Pode começar pedindo os dados pessoais/documentos que precisar de mim.`;
+}
+function prepararCandidatura(id){
+  const item=data.find(i=>i.id===id); if(!item) return;
+  const prompt=montarPromptCandidatura(item);
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(prompt).then(()=>{
+      alert('📋 Prompt copiado! Cole numa conversa com o Claude para ele começar a pesquisa, o dossiê de candidatura e o pré-preenchimento (sem enviar) desta bolsa específica.');
+    }).catch(()=>{ prompt2(prompt); });
+  } else { prompt2(prompt); }
+}
+function prompt2(text){ window.prompt('Copie o texto abaixo (Ctrl+C) e cole numa conversa com o Claude:', text); }
 
 document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==='overlay')closeModal();});
 render();
