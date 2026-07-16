@@ -171,6 +171,13 @@
       <select class="filter" id="filterPrazoBR" onchange="renderBrasilFiltered()">
         <option value="">Qualquer prazo</option>
       </select>
+      <select class="filter" id="filterStatusAberturaBR" onchange="renderBrasilFiltered()">
+        <option value="">Qualquer status de inscrição</option>
+        <option value="Aberto agora (estimado)">✅ Aberto agora</option>
+        <option value="Ainda não abriu (estimado)">⏳ Ainda não abriu</option>
+        <option value="Encerrado (estimado)">⛔ Encerrado</option>
+        <option value="Sem dado — consultar site">➖ Sem dado</option>
+      </select>
       <select class="filter" id="filterPessoaBR" onchange="renderBrasilFiltered()">
         <option value="">Todos</option>
         <option value="Rafael">Rafael</option>
@@ -910,10 +917,12 @@ function renderBrasilFiltered(){
   const q=(document.getElementById('searchBoxBR').value||'').toLowerCase().trim();
   const fArea=document.getElementById('filterAreaBR').value;
   const fPrazo=document.getElementById('filterPrazoBR').value;
+  const fStatusAbertura=document.getElementById('filterStatusAberturaBR').value;
   const fPessoa=document.getElementById('filterPessoaBR').value;
   filteredBR=dataBR.filter(r=>{
     if(fArea && r.area!==fArea) return false;
     if(fPrazo && r.prazo!==fPrazo) return false;
+    if(fStatusAbertura && r.status_abertura!==fStatusAbertura) return false;
     if(fPessoa && !(r.explicacao||'').includes(fPessoa)) return false;
     if(q){
       const hay=`${r.instituicao} ${r.ppg} ${r.explicacao}`.toLowerCase();
