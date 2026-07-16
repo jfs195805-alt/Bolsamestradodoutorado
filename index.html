@@ -54,6 +54,17 @@
   .stat .n{font-size:1.7rem;font-weight:700;line-height:1}
   .stat .l{color:var(--muted);font-size:.82rem;margin-top:5px}
 
+  .alerts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0 0}
+  .alert-card{border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px;border:1px solid var(--border)}
+  .alert-card .icon{font-size:1.6rem;line-height:1}
+  .alert-card .n{font-size:1.5rem;font-weight:700;line-height:1}
+  .alert-card .l{color:var(--muted);font-size:.8rem;margin-top:2px}
+  .alert-card.active-ready{background:color-mix(in srgb, var(--ok) 12%, var(--panel));border-color:var(--ok)}
+  .alert-card.active-ready .n{color:var(--ok)}
+  .alert-card.active-urgent{background:color-mix(in srgb, var(--urgent) 12%, var(--panel));border-color:var(--urgent)}
+  .alert-card.active-urgent .n{color:var(--urgent)}
+  .alert-card.idle{background:var(--panel);opacity:.7}
+
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
   .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:var(--shadow);
     display:flex;flex-direction:column;gap:10px;border-left:5px solid var(--border)}
@@ -125,6 +136,7 @@
 
   <!-- ===== VIEW: BOLSAS ===== -->
   <section id="view-bolsas">
+    <div class="alerts" id="alerts"></div>
     <div class="stats" id="stats"></div>
     <div class="toolbar">
       <input class="search" id="searchBox" placeholder="🔎 Buscar por nome, instituição, país…" oninput="render()">
@@ -524,6 +536,7 @@ function render(){
   });
 
   renderStats(list);
+  renderAlerts(list);
   if(list.length===0){ grid.innerHTML=`<div class="empty">Nenhuma bolsa encontrada com esses filtros.<br>Ajuste a busca ou clique em <b>🔄 Sincronizar</b> para carregar o bolsas.csv.</div>`; return; }
 
   grid.innerHTML=list.map(item=>{
@@ -567,6 +580,27 @@ function renderStats(list){
     <div class="stat"><div class="n" style="color:var(--soon)">${proximos}</div><div class="l">Prazo ≤ 30 dias</div></div>
     <div class="stat"><div class="n" style="color:var(--done)">${enviados}</div><div class="l">Enviadas / aprovadas</div></div>
     ${filtrado?`<div class="stat"><div class="n" style="color:var(--muted)">${data.length}</div><div class="l">Total na base (sem filtro)</div></div>`:`<div class="stat"><div class="n" style="color:var(--accent)">${PORTAIS.length}</div><div class="l">Portais no diretório</div></div>`}`;
+}
+
+function renderAlerts(list){
+  const prontos=list.filter(i=>i.status_dossie==='Completo');
+  const urgentes=list.filter(i=>{
+    const d=daysUntil(i.prazo_inscricao);
+    return d!==null&&d>=0&&d<=7&&i.status!=='Aprovado'&&i.status!=='Enviado';
+  });
+  const prontosCls=prontos.length?'active-ready':'idle';
+  const urgentesCls=urgentes.length?'active-urgent':'idle';
+  const prontosNomes=prontos.slice(0,3).map(i=>escapeHtml(i.nome)).join(', ')+(prontos.length>3?` +${prontos.length-3}`:'');
+  const urgentesNomes=urgentes.slice(0,3).map(i=>escapeHtml(i.nome)).join(', ')+(urgentes.length>3?` +${urgentes.length-3}`:'');
+  document.getElementById('alerts').innerHTML=`
+    <div class="alert-card ${prontosCls}">
+      <div class="icon">📁</div>
+      <div><div class="n">${prontos.length}</div><div class="l">Dossiê pronto para envio${prontos.length?': '+prontosNomes:' — nenhum ainda'}</div></div>
+    </div>
+    <div class="alert-card ${urgentesCls}">
+      <div class="icon">⏰</div>
+      <div><div class="n">${urgentes.length}</div><div class="l">Prazo esgotando (≤7 dias)${urgentes.length?': '+urgentesNomes:' — nenhum no momento'}</div></div>
+    </div>`;
 }
 
 function renderPortais(){
