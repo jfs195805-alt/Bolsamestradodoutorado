@@ -403,19 +403,18 @@ function extractCountryRaw(obs){
   if(!obs) return '🌍 Global';
   const s=String(obs).trim();
   const parts=s.split(/\s+—\s+/);
-  const country=(parts[0]||'').trim();
-  if(country.length>40||country.length<2) return '🌍 Global';
-  return country;
+  return (parts[0]||'').trim();
 }
 function extractCountry(obs){
   const raw=extractCountryRaw(obs);
   let s=raw.trim();
   // strip leading flag emoji(s) and globe/symbol emoji
   s=s.replace(/^[\u{1F1E6}-\u{1F1FF}\u{1F300}-\u{1F5FF}\u{1F30D}\u{1F30E}\u{1F30F}\u{1F310}\s]+/u,'').trim();
-  // strip trailing parenthetical
+  // strip trailing parenthetical (e.g. "(Vancouver Island, BC)")
   s=s.replace(/\s*\([^)]*\)\s*$/,'').trim();
   // strip trailing ", N semanas"
   s=s.replace(/,\s*\d+\s*semanas?$/,'').trim();
+  if(s.length>40||s.length<2) return '🌍 Global';
   const key0=s.toLowerCase();
   if(COUNTRY_ALIASES[key0]) return COUNTRY_ALIASES[key0];
   const parts=s.split(/[/→+]/);
