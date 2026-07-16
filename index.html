@@ -173,6 +173,13 @@
         <option value="Fora do prazo">⛔ Fora do prazo</option>
         <option value="Prazo inexistente">➖ Prazo inexistente / contínuo</option>
       </select>
+      <select class="filter" id="filterStatusDossie" onchange="render()">
+        <option value="">Qualquer status de dossiê</option>
+        <option value="Completo">📁 Dossiê completo</option>
+        <option value="Pronto com ressalvas">⚠️ Pronto com ressalvas</option>
+        <option value="Não recomendado">🚫 Não recomendado</option>
+        <option value="Não iniciado">➖ Não iniciado</option>
+      </select>
       <select class="filter" id="sortBy" onchange="render()">
         <option value="prazo">Ordenar por prazo</option>
         <option value="valor">Ordenar por valor</option>
@@ -518,6 +525,7 @@ function render(){
   const fPessoa=document.getElementById('filterPessoa').value;
   const fPrazo=document.getElementById('filterPrazo').value;
   const fPais=document.getElementById('filterPais').value;
+  const fStatusDossie=document.getElementById('filterStatusDossie').value;
   let list=data.filter(i=>{
     if(fStatus && i.status!==fStatus) return false;
     if(fNivel && !(i.nivel||'').includes(fNivel)) return false;
@@ -525,6 +533,7 @@ function render(){
     if(fPessoa){ const p=i.pessoa_indicada||''; const ok = p===fPessoa || (p==='Vários' && ['Rafael','Daniela','Maria Eduarda'].includes(fPessoa)); if(!ok) return false; }
     if(fPrazo && prazoStatus(i)!==fPrazo) return false;
     if(fPais && extractCountry(i.observacoes)!==fPais) return false;
+    if(fStatusDossie && (i.status_dossie||'Não iniciado')!==fStatusDossie) return false;
     if(q){ const hay=`${i.nome} ${i.instituicao} ${i.observacoes} ${i.nivel} ${i.explicacao_pessoal||''}`.toLowerCase(); if(!hay.includes(q)) return false; }
     return true;
   });
