@@ -158,6 +158,7 @@
     <button class="tab" id="tab-rankingpsi" onclick="showView('rankingpsi')">🎯 Ranking Clínico Psicologia (<span id="tabCountPsi">…</span>)</button>
     <button class="tab" id="tab-rankingdados" onclick="showView('rankingdados')">📊 Ranking Dados (<span id="tabCountDados">…</span>)</button>
     <button class="tab" id="tab-rankingedu" onclick="showView('rankingedu')">🎓 Ranking Educação (<span id="tabCountEdu">…</span>)</button>
+    <button class="tab" id="tab-rankingneuro" onclick="showView('rankingneuro')">🧠 Ranking Interdisciplinar/Neurociência (<span id="tabCountNeuro">…</span>)</button>
     <button class="tab" id="tab-ranking" onclick="showView('ranking')">🏆 Ranking por Pessoa</button>
     <button class="tab" id="tab-portais" onclick="showView('portais')">🧭 Portais do mundo</button>
   </div>
@@ -281,6 +282,25 @@
     </div>
     <div class="grid" id="rkGridEdu"></div>
     <div class="empty" id="emptyEdu" style="display:none">Nenhum programa encontrado com esses filtros.</div>
+  </section>
+
+  <!-- ===== VIEW: RANKING INTERDISCIPLINAR/NEUROCIÊNCIA ===== -->
+  <section id="view-rankingneuro" class="hidden">
+    <div class="rk-note">🧠 <b>Os 38 programas de Interdisciplinar e Neurociência</b> do levantamento — mistura heterogênea de neurociência clínica, cognitiva e computacional, bioengenharia, comunicação humana/fonoaudiologia e computação/matemática aplicada. Assim como em Educação, cada programa recebe uma <b>categoria temática dominante</b> em vez de nota de compatibilidade pessoal, já que este grupo cruza interesses de mais de uma pessoa da família: Neurociência Clínica/Cognitiva pode interessar à Daniela (Psicologia + Terapia do Esquema), Computação/Matemática Aplicada e Neurociência Computacional à Maria Eduarda/Alê/Big (Big Data) e ao Rafael (BI/Analytics).
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">✅ <b>Cobertura:</b> 37 dos 38 programas têm linha de pesquisa confirmada em fonte oficial. Único caso não localizado: USP (EACH) "Neurociência e Cognição" — o domínio não resolve e nenhuma fonte oficial confirma esse programa; possível erro de referência (nome idêntico ao PPGNC da UFABC, já presente na base). Sinalizado no card, não inventado.</div>
+    </div>
+    <div class="stats" id="statsNeuro"></div>
+    <div class="toolbar">
+      <input class="search" id="searchBoxNeuro" placeholder="🔎 Buscar universidade, programa, linha de pesquisa…" oninput="renderRankingNeuro()">
+      <select class="filter" id="filterCategoriaNeuro" onchange="renderRankingNeuro()">
+        <option value="">Categoria: todas</option>
+      </select>
+      <div class="spacer"></div>
+      <span class="inst" id="rkNeuroCount"></span>
+      <button class="btn ghost" onclick="exportCsvNeuro()">📤 Exportar</button>
+    </div>
+    <div class="grid" id="rkGridNeuro"></div>
+    <div class="empty" id="emptyNeuro" style="display:none">Nenhum programa encontrado com esses filtros.</div>
   </section>
 
   <!-- ===== VIEW: BOLSAS ===== -->
@@ -620,6 +640,7 @@ function showView(v){
   document.getElementById('view-rankingpsi').classList.toggle('hidden',v!=='rankingpsi');
   document.getElementById('view-rankingdados').classList.toggle('hidden',v!=='rankingdados');
   document.getElementById('view-rankingedu').classList.toggle('hidden',v!=='rankingedu');
+  document.getElementById('view-rankingneuro').classList.toggle('hidden',v!=='rankingneuro');
   document.getElementById('view-ranking').classList.toggle('hidden',v!=='ranking');
   document.getElementById('view-portais').classList.toggle('hidden',v!=='portais');
   document.getElementById('tab-bolsas').classList.toggle('active',v==='bolsas');
@@ -627,6 +648,7 @@ function showView(v){
   document.getElementById('tab-rankingpsi').classList.toggle('active',v==='rankingpsi');
   document.getElementById('tab-rankingdados').classList.toggle('active',v==='rankingdados');
   document.getElementById('tab-rankingedu').classList.toggle('active',v==='rankingedu');
+  document.getElementById('tab-rankingneuro').classList.toggle('active',v==='rankingneuro');
   document.getElementById('tab-ranking').classList.toggle('active',v==='ranking');
   document.getElementById('tab-portais').classList.toggle('active',v==='portais');
   if(v==='portais') renderPortais();
@@ -635,6 +657,7 @@ function showView(v){
   if(v==='rankingpsi') renderRankingPsi();
   if(v==='rankingdados') renderRankingDados();
   if(v==='rankingedu') renderRankingEdu();
+  if(v==='rankingneuro') renderRankingNeuro();
 }
 
 // Alê e Big têm perfil e formação idêntica à Maria Eduarda (Big Data & Inteligência
@@ -972,11 +995,13 @@ async function syncBrasilCsv(){
     const badgePsi=document.getElementById('tabCountPsi'); if(badgePsi) badgePsi.textContent=dataBR.filter(r=>r.area==='Psicologia').length;
     const badgeDados=document.getElementById('tabCountDados'); if(badgeDados) badgeDados.textContent=dataBR.filter(r=>r.area==='Computação/Dados').length;
     const badgeEdu=document.getElementById('tabCountEdu'); if(badgeEdu) badgeEdu.textContent=dataBR.filter(r=>r.area==='Educação').length;
+    const badgeNeuro=document.getElementById('tabCountNeuro'); if(badgeNeuro) badgeNeuro.textContent=dataBR.filter(r=>r.area==='Interdisciplinar'||r.area==='Neurociência').length;
     populateBrasilFilters();
     if(!document.getElementById('view-brasil').classList.contains('hidden')) renderBrasilFiltered();
     if(!document.getElementById('view-rankingpsi').classList.contains('hidden')) renderRankingPsi();
     if(!document.getElementById('view-rankingdados').classList.contains('hidden')) renderRankingDados();
     if(!document.getElementById('view-rankingedu').classList.contains('hidden')) renderRankingEdu();
+    if(!document.getElementById('view-rankingneuro').classList.contains('hidden')) renderRankingNeuro();
   }catch(e){ /* silencioso: só falha ao abrir direto do disco sem servidor */ }
 }
 function populateBrasilFilters(){
@@ -1400,6 +1425,114 @@ function prepararCandidaturaEdu(idx){
   copyCandidaturaPromptBR(montarPromptCandidaturaBR(r));
 }
 
+// ===== Ranking Interdisciplinar/Neurociência (38 programas) =====
+let currentNeuroList=[];
+const CATEGORIA_NEURO_CORES={
+  'Neurociência Clínica/Translacional':'#dc2626',
+  'Neurociência Cognitiva/Comportamental':'#0891b2',
+  'Neurociência Computacional/Neuroengenharia':'#7c3aed',
+  'Bioengenharia/Engenharia Biomédica':'#2563eb',
+  'Comunicação Humana/Fonoaudiologia/Distúrbios da Comunicação':'#be185d',
+  'Computação/Matemática Aplicada/Modelagem':'#4338ca',
+  'Ensino em Saúde/Educação em Saúde':'#0d9488',
+  'Diversidade Cultural/Inclusão Social':'#b45309',
+  'Genérica/Multitemática':'#6b7280',
+  '⚠ não localizado':'#6b7280'
+};
+function parseCategoriaNeuro(v){
+  if(!v) return null;
+  const idx=v.indexOf(' — ');
+  if(idx===-1) return {cat:v,motivo:''};
+  return {cat:v.slice(0,idx),motivo:v.slice(idx+3)};
+}
+function categoriaNeuroHtml(v){
+  const p=parseCategoriaNeuro(v);
+  if(!p) return '';
+  const cor=CATEGORIA_NEURO_CORES[p.cat]||'#6b7280';
+  const unconfirmed=p.cat.startsWith('⚠');
+  const label=unconfirmed?'⚠ Não localizado':escapeHtml(p.cat);
+  return `<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">
+    <span class="chip" style="background:${cor};color:#fff;border-color:${cor};margin-bottom:4px;display:inline-block">${label}</span><br>
+    ${escapeHtml(p.motivo||'')}
+  </div>`;
+}
+function renderRankingNeuro(){
+  const grid=document.getElementById('rkGridNeuro');
+  const empty=document.getElementById('emptyNeuro');
+  const q=(document.getElementById('searchBoxNeuro').value||'').toLowerCase().trim();
+  const fCategoria=document.getElementById('filterCategoriaNeuro').value;
+  let list=dataBR.filter(r=>r.area==='Interdisciplinar'||r.area==='Neurociência');
+  populateCategoriaNeuroFilter(list);
+  list=list.filter(r=>{
+    const cat=parseCategoriaNeuro(r.categoria_tematica_interdisc_neuro);
+    if(fCategoria && (!cat || cat.cat!==fCategoria)) return false;
+    if(q){
+      const hay=`${r.instituicao} ${r.ppg} ${r.linhas_pesquisa} ${r.categoria_tematica_interdisc_neuro}`.toLowerCase();
+      const termos=q.split(/\s+/).filter(Boolean);
+      if(!termos.every(t=>hay.includes(t))) return false;
+    }
+    return true;
+  });
+  list.sort((a,b)=>{
+    const catA=parseCategoriaNeuro(a.categoria_tematica_interdisc_neuro)?.cat||'';
+    const catB=parseCategoriaNeuro(b.categoria_tematica_interdisc_neuro)?.cat||'';
+    if(catA!==catB) return catA.localeCompare(catB,'pt-BR');
+    return (parseFloat(b.nota_capes)||-1)-(parseFloat(a.nota_capes)||-1);
+  });
+  document.getElementById('rkNeuroCount').textContent=list.length+' programa(s) de Interdisciplinar/Neurociência';
+  empty.style.display=list.length?'none':'block';
+  renderStatsNeuro(list);
+  currentNeuroList=list;
+  grid.innerHTML=list.map((r,idx)=>{
+    const emailHtml=emailCellBR(r.email);
+    const siteBtn=r.link?`<a class="btn ghost" href="${escapeAttr(r.link)}" target="_blank" rel="noopener">🔗 Site</a>`:'';
+    const capesChip=`<span class="chip status">CAPES ${escapeHtml(r.nota_capes||'—')}</span>`;
+    const areaChip=`<span class="chip">${escapeHtml(r.area)}</span>`;
+    return `<div class="card s-ok">
+      <div class="row"><span class="rk-rank">#${idx+1}</span><h3 style="margin:0">${escapeHtml(r.instituicao)}</h3></div>
+      <div class="inst">${escapeHtml(r.ppg)}</div>
+      <div class="row">${capesChip}${areaChip}</div>
+      ${r.linhas_pesquisa?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">📚 ${escapeHtml(r.linhas_pesquisa)}</div>`:''}
+      ${categoriaNeuroHtml(r.categoria_tematica_interdisc_neuro)}
+      <div class="row" style="margin-top:6px">✉️ ${emailHtml}</div>
+      <div class="card-actions">${siteBtn}<button class="btn primary" onclick="prepararCandidaturaNeuro(${idx})">🤖 Preparar candidatura</button></div>
+    </div>`;
+  }).join('');
+}
+function populateCategoriaNeuroFilter(list){
+  const sel=document.getElementById('filterCategoriaNeuro');
+  if(sel.dataset.populated==='1') return;
+  const cats=[...new Set(list.map(r=>parseCategoriaNeuro(r.categoria_tematica_interdisc_neuro)?.cat).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+  sel.innerHTML='<option value="">Categoria: todas</option>'+cats.map(c=>`<option value="${escapeAttr(c)}">${escapeHtml(c)}</option>`).join('');
+  sel.dataset.populated='1';
+}
+function renderStatsNeuro(list){
+  const confirmados=list.filter(r=>!(r.categoria_tematica_interdisc_neuro||'').startsWith('⚠')).length;
+  const naoLocalizados=list.length-confirmados;
+  const comEmail=list.filter(r=>r.email && !r.email.toLowerCase().startsWith('não encontrado')).length;
+  const categorias=new Set(list.map(r=>parseCategoriaNeuro(r.categoria_tematica_interdisc_neuro)?.cat).filter(c=>c&&!c.startsWith('⚠'))).size;
+  document.getElementById('statsNeuro').innerHTML=`
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--accent)">${list.length}</div><div style="color:var(--muted);font-size:.8rem">Total (filtrado)</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${confirmados}</div><div style="color:var(--muted);font-size:.8rem">Linhas confirmadas</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--muted)">${naoLocalizados}</div><div style="color:var(--muted);font-size:.8rem">⚠ Não localizados</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#c99a4b">${categorias}</div><div style="color:var(--muted);font-size:.8rem">Categorias temáticas presentes</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${comEmail}</div><div style="color:var(--muted);font-size:.8rem">Com e-mail</div></div>`;
+}
+const COLS_NEURO=['instituicao','ppg','nota_capes','area','categoria_tematica_interdisc_neuro','linhas_pesquisa','email','link'];
+function exportCsvNeuro(){
+  const list=dataBR.filter(r=>r.area==='Interdisciplinar'||r.area==='Neurociência');
+  const rows=[COLS_NEURO.join(',')];
+  list.forEach(i=>rows.push(COLS_NEURO.map(c=>csvCell(i[c])).join(',')));
+  const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='ranking_interdisciplinar_neurociencia.csv';
+  a.click(); URL.revokeObjectURL(a.href);
+}
+function prepararCandidaturaNeuro(idx){
+  const r=currentNeuroList[idx]; if(!r) return;
+  copyCandidaturaPromptBR(montarPromptCandidaturaBR(r));
+}
+
 function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 function escapeAttr(s){return String(s).replace(/"/g,'&quot;');}
 
@@ -1450,6 +1583,7 @@ function personGuessBR(r){
   if(r.area==='Psicologia') return 'Daniela';
   if(r.area==='Computação/Dados') return 'Maria Eduarda';
   if(r.area==='Educação') return 'Rafael, Daniela, Maria Eduarda, Alê ou Big (área serve à família toda, exceto Letícia — escolha conforme a categoria temática e o objetivo de quem for se candidatar)';
+  if(r.area==='Interdisciplinar'||r.area==='Neurociência') return 'Daniela (Neurociência Clínica/Cognitiva) ou Maria Eduarda/Alê/Big/Rafael (Computação/Matemática Aplicada, Neurociência Computacional) — escolha conforme a categoria temática do programa';
   const e=(r.explicacao||'')+' '+(r.linhas_pesquisa||'');
   if(e.includes('Daniela')) return 'Daniela';
   if(e.includes('Maria Eduarda')) return 'Maria Eduarda';
@@ -1471,6 +1605,7 @@ Compatibilidade clínica — nossa análise, quando aplicável (Psicologia): ${r
 Linha recomendada para o projeto do zero — nossa análise, quando aplicável (Psicologia): ${r.linha_recomendada_projeto||'—'}
 Aceita "provável formando" — nossa pesquisa, quando aplicável (Psicologia): ${r.aceita_provavel_formando||'não pesquisado'}
 Categoria temática dominante — nossa análise, quando aplicável (Educação): ${r.categoria_tematica_educacao||'—'}
+Categoria temática dominante — nossa análise, quando aplicável (Interdisciplinar/Neurociência): ${r.categoria_tematica_interdisc_neuro||'—'}
 Observações da nossa base: ${r.explicacao||'—'}
 Pessoa candidata: ${personGuessBR(r)}
 
