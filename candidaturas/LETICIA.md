@@ -79,3 +79,18 @@
 2. **Este mês:** verificar datas de inscrição para OBMEP, OBI e AMC 8. Procurar edital do English Access na embaixada mais próxima. Montar equipe para Technovation Girls.
 3. **Próximos 3 meses:** iniciar projeto de ciências (alvo: FEBRACE). Participar do NASA Space Apps Challenge (outubro). Começar Duke of Edinburgh.
 4. **Até o fim do ano:** completar CS50 ou ao menos os primeiros módulos. Fazer AMC 8 (novembro). Pesquisar processo UWC Brasil para o ciclo seguinte.
+
+---
+
+## 🔍 Verificação urgente — 4 programas com prazo em 30 dias (17/07/2026)
+
+Pesquisa de confirmação feita nas fontes oficiais (fetch bloqueado em vários sites; dados cruzados via busca). Nenhuma informação pessoal da Letícia foi pesquisada — ela é menor de idade e só os editais foram checados.
+
+| Programa | Prazo na nossa base | Situação real confirmada | Recomendação |
+|---|---|---|---|
+| TKS — The Knowledge Society | 31/07/2026 | ✅ confirmado, mas vagas podem esgotar antes. Pago (US$489/mês), bolsa até 100% disponível | Inscrever-se — formulário rápido + entrevista, gratuito até aí |
+| ASSIST — Bolsa para colégios dos EUA | 01/08/2026 | 🚫 **data provavelmente errada** — ciclo 2026-2027 já fechou; o real prazo do próximo ciclo é ~1º de dezembro de 2026 | Confirmar manualmente no site antes de agir — não é tão urgente quanto parecia |
+| Lumiere Research Scholar Program | 09/08/2026 | ✅ confirmado. Caro (US$2.800–8.900), bolsa de inclusão até 100% baseada em renda | Inscrição é gratuita — vale explorar a bolsa antes de decidir |
+| NYT Learning Network — Student Contests | 14/08/2026 | ✅ confirmado, contest semanal (fecha toda sexta) | Vale muito a pena — gratuito, rápido, baixo risco |
+
+Detalhamento completo (documentos, elegibilidade, fontes) está no `bolsas.csv` (coluna `observacoes`).

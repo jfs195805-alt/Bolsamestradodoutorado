@@ -173,7 +173,21 @@ Análise de acompanhamento (mesma origem — ChatGPT, refinada): nenhum dos prog
 3. **NUS** — via Research Scholarship (padrão, mais acessível) ou President's Graduate Fellowship (premium, mais concorrida) — forte reputação global e excelente empregabilidade em tecnologia.
 
 ## 🗣️ Inglês + Fellowship (opcional)
-Seu inglês já é **Full Professional** — não precisa de curso, só **certificar** (IELTS/TOEFL) quando a bolsa pedir. Se quiser uma imersão financiada, a **Hubert H. Humphrey Fellowship** (EUA, integral + curso de inglês) encaixa — enquadre como **tecnologia/política de dados**. Prazo **11/08/2026** (via Comissão Fulbright Brasil). [Inscrição](https://fulbright.org.br/edital/humphrey/)
+Seu inglês já é **Full Professional** — não precisa de curso, só **certificar** (IELTS/TOEFL) quando a bolsa pedir. A **Hubert H. Humphrey Fellowship** (EUA, integral + curso de inglês) encaixaria bem — enquadre como **tecnologia/política de dados** — mas ⚠️ **o prazo de inscrição do ciclo 2026-2027 já encerrou em 30/06/2026**; a data 11/08/2026 era a de resultados/entrevistas da 1ª fase, não o prazo de candidatura (ver seção de verificação abaixo). Replaneje para o ciclo 2027-2028. [Inscrição](https://fulbright.org.br/edital/humphrey/)
+
+## 🔍 Verificação urgente — 5 bolsas com prazo em 30 dias (17/07/2026)
+
+Pesquisa de confirmação de edital feita diretamente nas fontes oficiais (ou cruzada via busca quando o fetch foi bloqueado). Resultado: **nenhuma das 5 está hoje em condição real de candidatura completa e viável no prazo**.
+
+| Bolsa | Prazo na nossa base | Situação real confirmada | Recomendação |
+|---|---|---|---|
+| DAAD Helmut-Schmidt-Programme | 31/07/2026 | ✅ prazo real, mas regra DAAD exige diploma emitido há no máx. 6 anos (pós jan/2020) | Descartar salvo diploma pós-2020 |
+| UNSW Scientia PhD Scholarship | 31/07/2026 | ⚠️ confusão entre 3 programas "Scientia"; PhD por pesquisa sem rodada confirmada | Descartar — estrutura incompatível com 30 dias |
+| Rhodes Scholarship (Global) | 01/08/2026 | 🚫 **modalidade Global suspensa** pelo Rhodes Trust (abr/2026) + limite de idade 18-24/27 | Descartar — sem volta |
+| NLnet Foundation | 01/08/2026 | ✅ prazo real, mas só para escopo Taler/Fediversity (fundo genérico pausado) | Só se já existir projeto open-source pronto nesse escopo |
+| Hubert H. Humphrey Fellowship | 11/08/2026 | 🚫 **prazo real foi 30/06/2026**, já encerrado — data na base era a de resultados | Descartar; replanejar 2027-2028 |
+
+Detalhamento completo de cada uma (documentos exigidos, critérios de seleção, fontes) está registrado no `bolsas.csv` (coluna `observacoes`) e no histórico da sessão. Nenhuma informação pessoal do Rafael foi pesquisada nesta rodada — só os editais.
 
 ## 📋 Placeholders a confirmar (só você sabe)
 - `[PREENCHER]` Ano de conclusão do MBA/graduação (CV: MBA 2007-2008; Bacharelado 2001-2004 — confirmar).
