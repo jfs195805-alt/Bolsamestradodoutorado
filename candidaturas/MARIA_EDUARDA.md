@@ -106,3 +106,52 @@
 6. **Fev-mai/2027:** Fundacion Carolina (fev), Fulbright (fev-mai), MEXT (abr).
 7. **Rolling (aplicar a qualquer momento):** ETH Zurich, KAIST, SINGA, NYU Abu Dhabi, Dinamarca, Noruega, Holanda, FAPESP, UNDP, UNICEF, Correlation One, Women in AI, WHV Alemanha/NZ/Portugal.
 8. **2027:** World Bank YPP (jun), IDB YPP, Coreia WHV (mar).
+
+---
+
+## 🇧🇷 TOP MESTRADOS/DOUTORADOS NO BRASIL — COMPUTAÇÃO/DADOS (para a Maria Eduarda)
+
+Ranking construído com **apenas dados verificados** (Regra Zero: nenhum campo foi inventado). Dois fatores reais entraram no cálculo:
+- **Compatibilidade (★1-5)**: avaliada a partir das linhas de pesquisa OFICIAIS de cada um dos 120 programas de Computação/Dados do levantamento (pesquisadas uma a uma), não de um resumo genérico. Critério: 5★ = linha nomeada especificamente de IA/Ciência de Dados aplicada à Educação ou a impacto social; 4★ = linha central em IA/Machine Learning/Ciência de Dados/Big Data (geral, sem foco educacional); 3★ = área próxima (Mineração de Dados, Estatística Aplicada, Visualização, PLN) mas não central; 2★ = programa majoritariamente teórico/infraestrutura com fraca tangência a dados; 1★ = nenhuma relação com dados/IA/estatística.
+- **Nota CAPES**: usada quando conhecida; marcada "—" quando não disponível, nunca inventada.
+
+**Fatores que NÃO entraram no cálculo por falta de dado verificável** (Regra Zero):
+- *Chance de bolsa*, *qualidade docente* e *localização*: sem base confiável sem pesquisa dedicada por orientador/edital.
+
+💡 **Lembrete estratégico**: a Maria Eduarda se formou em **Big Data & Inteligência Analítica** (jan/2026) com TCC em **"Inteligência artificial e inclusão escolar"**, e tem interesse forte em EdTech, mulheres em STEM e dados para desenvolvimento/impacto social. Isso é um diferencial real de narrativa para a carta de motivação e o pré-projeto — vale citar o TCC explicitamente, especialmente nos 7 programas ★★★★★ abaixo, que têm linha nomeada de "Computação/Informática Aplicada à Educação" ou equivalente direto.
+
+⚠️ Dois erros de instituição foram encontrados e corrigidos durante a pesquisa: um registro que dizia "UFF — Sistemas de Informação e Gestão do Conhecimento" era na verdade um programa da **FUMEC** (universidade privada de MG); e um registro "UFRN — Estatística Aplicada e Biometria" (PPGEAB) pertence de fato à **UNIFAL-MG** — corrigido para o programa real de estatística da UFRN, o **PPGMAE**.
+
+⚠️ 5 dos 120 programas não puderam ter as linhas de pesquisa confirmadas nesta rodada (sites institucionais bloquearam acesso automatizado): UNIR, UEL (2 registros), UNESP-IBILCE (interunidades) e PUC Minas — marcados como "dado insuficiente", não decida com base na ausência.
+
+🖥️ **Ranking completo no site**: a tabela abaixo mostra só o Top 15 (deduplicado). **Os 120 programas estão todos disponíveis** (ordenáveis, filtráveis por estrelas, com botão de site, e-mail e "Preparar candidatura" por card) na aba **"📊 Ranking Dados Maria Eduarda"** do [site do projeto](https://jfs195805-alt.github.io/Bolsamestradodoutorado/) — inclui também exportação em CSV.
+
+### Top 15 (deduplicado)
+
+| # | Instituição | Programa | ★ | CAPES | E-mail |
+|---|---|---|---|---|---|
+| 1 | USP (IME) | Ciência da Computação | ★★★★★ | 7 | poscomp@ime.usp.br ✓verificado |
+| 2 | USP (ICMC) | Ciências de Computação e Matemática Computacional | ★★★★★ | 7 | ppgccmc@icmc.usp.br ✓verificado |
+| 3 | UFRJ (COPPE) | Engenharia de Sistemas e Computação | ★★★★★ | 7 | contato@cos.ufrj.br ✓verificado |
+| 4 | UFF | Computação | ★★★★★ | 6 | secretaria.pos@ic.uff.br ✓verificado |
+| 5 | UFRJ | Informática | ★★★★★ | 5 | secretaria@ppgi.ufrj.br ✓verificado |
+| 6 | UFMT | Programa de Pós-Graduação em Computação (PPGCOMP/PPGCA) | ★★★★★ | — | ppgcomp@ic.ufmt.br ✓verificado |
+| 7 | UFSM | Programa de Pós-Graduação em Ciência da Computação (PPGCC) | ★★★★★ | — | ppgcc@ufsm.br |
+| 8 | UFMG | Ciência da Computação | ★★★★☆ | 7 | ppgcc@dcc.ufmg.br ✓verificado |
+| 9 | UFRGS | Computação | ★★★★☆ | 7 | ppgc@inf.ufrgs.br ✓verificado |
+| 10 | UNICAMP | Ciência da Computação | ★★★★☆ | 7 | sec-pos@ic.unicamp.br ✓verificado |
+| 11 | USP (IME) | Estatística | ★★★★☆ | 7 | posmae@ime.usp.br ✓verificado |
+| 12 | UNICAMP | Engenharia Elétrica e de Computação | ★★★★☆ | 7 | cpg@fee.unicamp.br ✓verificado |
+| 13 | UFPE | Ciência da Computação | ★★★★☆ | 7 | secpos-acad@cin.ufpe.br |
+| 14 | UFRJ (COPPE) | Eng. Sistemas e Computação (2ª chamada) | ★★★★☆ | 7 | secexpesc@coppe.ufrj.br ✓verificado |
+| 15 | USP (EACH) | Sistemas de Informação | ★★★★☆ | 5 | ppgsi-each@usp.br ✓verificado |
+
+### Os 7 programas ★★★★★ — linha nomeada diretamente em IA/Dados aplicados à Educação/impacto social
+
+- **USP (IME) — Ciência da Computação**: linha "Computer Science in Education" (Computação Aplicada à Educação), nota CAPES 7 — aderência mais direta e literal ao TCC entre todos os 120 programas.
+- **USP (ICMC) — Ciências de Computação e Matemática Computacional**: linha "Computação Aplicada à Educação" (Laboratório CAED), nota CAPES 7.
+- **UFRJ (COPPE) — Engenharia de Sistemas e Computação**: linha de dados inclui explicitamente Ciência de Dados/ML e "Design de Jogos Educativos" — combinação rara.
+- **UFF — Computação**: linha "Inteligência Artificial e Ciência de Dados" com subtema explícito de mineração de dados aplicada à educação e à saúde.
+- **UFRJ — Informática**: linha "Informática, Educação e Sociedade" combina Ciência de Dados/Mineração de Dados com Educação.
+- **UFMT — Computação Aplicada**: linha "Ciência de Dados" (Big Data + IA) nomeia educação como domínio de aplicação na própria descrição oficial.
+- **UFSM — Ciência da Computação**: linha "Computação Aplicada" reúne explicitamente "Informática na Educação" + "Inteligência Artificial".
