@@ -113,3 +113,75 @@ Contato: `[PRIVADO — mantido fora do repositório público]`
 5. **Contínuo:** FAPESP (fluxo contínuo); SINGA (rolling); vagas Escandinávia/Holanda (rolling); ETH (rolling); universidades portuguesas (rolling).
 
 > Me diga a **linha de pesquisa preferida** e envie um **texto seu** para capturar o estilo — monto o pré-projeto e cartas sob medida por destino.
+
+---
+
+## 🇧🇷 TOP MESTRADOS/DOUTORADOS NO BRASIL — PSICOLOGIA (para a Daniela)
+
+Ranking construído com **apenas dados verificados** (Regra Zero: nenhum campo foi inventado). Dois fatores reais entraram no cálculo:
+- **Compatibilidade Clínica (★1-5)**: avaliada a partir das linhas de pesquisa OFICIAIS de cada programa (pesquisadas uma a uma), não de um resumo genérico. Critério: 5★ = linha nomeada de Gestalt-terapia/Fenomenologia/Terapia do Esquema; 4★ = linha central em Psicologia Clínica/Psicoterapia/Saúde Mental; 3★ = tangência real mas não central; 2★ = tangência fraca; 1★ = nenhuma relação.
+- **Nota CAPES**: usada quando conhecida (54/105 programas); ausente em ~48% dos casos porque vieram do levantamento nacional amplo (fase 1) sem esse dado — marcado como "—" quando não disponível, nunca inventado.
+
+**Fatores do pedido original que NÃO entraram no cálculo por falta de dado verificável** (Regra Zero — nenhum foi estimado/inventado):
+- *Chance de bolsa*: não há como determinar probabilidade real sem ler cada edital vigente. Quando o programa menciona bolsa explicitamente no e-mail/observações, isso aparece na coluna, mas não vira número.
+- *Aceita provável formando*: exigiria ler o edital de cada programa (23 campos do pedido original, fase 4 ainda não feita).
+- *Qualidade docente* e *Localização*: não avaliadas — não há base de dados confiável para isso sem uma pesquisa dedicada por orientador.
+
+⚠️ **UNISINOS foi excluído do ranking**: o programa de Psicologia (que teria nota CAPES 5 e área de concentração em Psicologia Clínica) foi **encerrado pela própria universidade em julho/2022** — não aceita mais candidatos.
+
+⚠️ Alguns dados de origem têm baixa confiança e devem ser confirmados antes de decidir: UNICAMP "Psicologia" (pode não existir como PPG autônomo), UDESC e UESC "Psicologia da Saúde" (não confirmados via busca), UFMS e UERJ "Psicologia Clínica" (linhas não confirmadas com certeza).
+
+### Top 10
+
+| # | Instituição | Programa | ★ Compat. Clínica | Nota CAPES | Por que | E-mail | Link |
+|---|---|---|---|---|---|---|---|
+| 1 | USP (IP) | Psicologia Clínica | ★★★★★ | 6 | programa 100% dedicado a Psicologia Clínica/psicoterapia, mas viés majoritariamente PSICANALÍTICO — checar orientadores individuais | pospsc@usp.br (corrigido: ippsc@usp.br era da secretaria do Departamento, não do programa de pós) | [Site](https://www.ip.usp.br/pos-graduacao/psicologia-clinica) |
+| 2 | UFPA | Psicologia | ★★★★★ | 4 | DESTAQUE MÁXIMO: linha explícita 'Fenomenologia: Teoria e Clínica' (Husserl/Heidegger/Ricoeur/Giorgi) — máxima aderência ao perfil humanista-existencial/fenomenológico | secppgp@ufpa.br ✓verificado | [Site](https://ppgp.propesp.ufpa.br) |
+| 3 | USP (FFCLRP) | Psicologia | ★★★★☆ | 7 | área forte em saúde mental/desenvolvimento humano | posgraduacao.psicologia@ffclrp.usp.br ✓verificado | [Site](https://www.ffclrp.usp.br/pos/psicologia) |
+| 4 | UFRGS | Psicologia | ★★★★☆ | 7 | linha Saúde forte + Desenvolvimento Humano | ppgpsico@ufrgs.br ✓verificado | [Site](https://www.ufrgs.br/ppgpsicologia) |
+| 5 | UFRJ (IP) | Psicologia | ★★★★☆ | 6 | linha 'Práticas Clínicas' central | secretariapos2011@gmail.com (coord. Prof. Pedro Paulo Pires) | [Site](https://ppgp.psicologia.ufrj.br) |
+| 6 | UFF | Psicologia | ★★★★☆ | 6 | linha Clínica e Subjetividade central | sp.ppe.ips@id.uff.br (alt. ppgpsicologia@hotmail.com) | [Site](https://www.ppgpsicologia.uff.br) |
+| 7 | UFBA | Psicologia | ★★★★☆ | 5 | linha central 'Contextos de Desenvolvimento, Clínica e Saúde' | pospsi@ufba.br (secretaria; coord. Prof. Leonardo Barros — leonardobarros@ufba.br) | [Site](https://ppgpsi.ufba.br) |
+| 8 | UnB | Psicologia Clínica e Cultura | ★★★★☆ | 5 | foco central clínico, sem Gestalt/Fenomenologia nomeada | secpsicc@unb.br ✓verificado | [Site](https://ppgpsicc.unb.br) |
+| 9 | UFPR | Psicologia | ★★★★☆ | 5 | linha nomeada 'Psicologia Clínica' explícita | ppgpsicologia@ufpr.br (alt. selecao.ppgpsi@ufpr.br) | [Site](https://www.prppg.ufpr.br/ppgpsicologia) |
+| 10 | UEM | Psicologia | ★★★★☆ | 5 | linha 1 clínica/psicopatologia psicanalítica, linha 3 desenv. humano | sec-ppi@uem.br ✓verificado | [Site](https://www.ppi.uem.br) |
+
+### Top 30 (completo)
+
+| # | Instituição | Programa | ★ | Nota CAPES | E-mail |
+|---|---|---|---|---|---|
+| 1 | USP (IP) | Psicologia Clínica | ★★★★★ | 6 | pospsc@usp.br (corrigido: ippsc@usp.br era da secretaria do Departamento, não do programa de pós) |
+| 2 | UFPA | Psicologia | ★★★★★ | 4 | secppgp@ufpa.br ✓verificado |
+| 3 | USP (FFCLRP) | Psicologia | ★★★★☆ | 7 | posgraduacao.psicologia@ffclrp.usp.br ✓verificado |
+| 4 | UFRGS | Psicologia | ★★★★☆ | 7 | ppgpsico@ufrgs.br ✓verificado |
+| 5 | UFRJ (IP) | Psicologia | ★★★★☆ | 6 | secretariapos2011@gmail.com (coord. Prof. Pedro Paulo Pires) |
+| 6 | UFF | Psicologia | ★★★★☆ | 6 | sp.ppe.ips@id.uff.br (alt. ppgpsicologia@hotmail.com) |
+| 7 | UFBA | Psicologia | ★★★★☆ | 5 | pospsi@ufba.br (secretaria; coord. Prof. Leonardo Barros — leonardobarros@ufba.br) |
+| 8 | UnB | Psicologia Clínica e Cultura | ★★★★☆ | 5 | secpsicc@unb.br ✓verificado |
+| 9 | UFPR | Psicologia | ★★★★☆ | 5 | ppgpsicologia@ufpr.br (alt. selecao.ppgpsi@ufpr.br) |
+| 10 | UEM | Psicologia | ★★★★☆ | 5 | sec-ppi@uem.br ✓verificado |
+| 11 | UFSM | Psicologia | ★★★★☆ | 4 | coord.ppgp@ufsm.br (coord. Marcele P. da Rosa Zucolotto) |
+| 12 | UFG | Psicologia | ★★★★☆ | 4 | ppgp.fe@ufg.br (alt. ppgpufg@gmail.com) |
+| 13 | UFAM | Psicologia | ★★★★☆ | 4 | ppgpsiufam@ufam.edu.br ✓verificado |
+| 14 | UEL | Psicologia | ★★★★☆ | 4 | secretariappgpsi@uel.br (alt. mestradopsico@uel.br) |
+| 15 | UERJ | Psicologia Clínica | ★★★★☆ | 4 | _(não encontrado)_ |
+| 16 | UFAL | Psicologia | ★★★★☆ | 3 | coordenacao.ppgpsi@ip.ufal.br (coord. Saulo Fernandes / Jefferson Bernardes) |
+| 17 | UFMA | Psicologia | ★★★★☆ | 3 | ppgpsi@ufma.br (coord. Catarina Malcher Teixeira) |
+| 18 | UFMT | Psicologia | ★★★★☆ | 3 | ppgpsi.ie@ufmt.br ✓verificado |
+| 19 | UNIR | Mestrado Acadêmico em Psicologia | ★★★★☆ | — | secretaria.mapsi@unir.br (coord. coord.mapsi@unir.br) |
+| 20 | Unifor | Programa de Pós-Graduação em Psicologia (PPGP) | ★★★★☆ | — | ppgp@unifor.br (alt. secretariapgss@unifor.br) |
+| 21 | Unicap | Programa de Pós-Graduação em Psicologia Clínica (PPGPSI) | ★★★★☆ | — | secretariastrictosensu@unicap.br ✓verificado |
+| 22 | UPE (Garanhuns) | Mestrado Profissional em Psicologia – Práticas e Inovação em Saúde Mental (PRISMAL) | ★★★★☆ | — | garanhuns.saudemental@upe.br ✓verificado |
+| 23 | Bahiana (EBMSP) | Mestrado Profissional em Psicologia e Intervenções em Saúde | ★★★★☆ | — | posgrad2@bahiana.edu.br (dúvidas de inscrição) ou selecao.pos@bahiana.edu.br (envio de documentação) — corrigido: e-mail anterior só aparece vinculado a registro de defesas |
+| 24 | UFRJ | Programa de Pós-graduação em Teoria Psicanalítica (PPGTP) | ★★★★☆ | — | teoriapsi@gmail.com (alt. selecaomestradoppgtp@gmail.com) |
+| 25 | PUC-Rio | Programa de Pós-graduação em Psicologia (área Psicologia Clínica) | ★★★★☆ | — | psipos@puc-rio.br ✓verificado |
+| 26 | UFRRJ | Programa de Pós-Graduação em Psicologia (PPGPSI) | ★★★★☆ | — | ppgpsi@ufrrj.br ✓verificado |
+| 27 | PUC Minas | Programa de Pós-graduação em Psicologia (área Processos de Subjetivação) | ★★★★☆ | — | ppgpsi@pucminas.br ✓verificado |
+| 28 | UFU | Programa de Pós-Graduação em Psicologia (PPGPSI) | ★★★★☆ | — | pgpsi@ipsi.ufu.br (alt. atendimento.ppgpsi@ipsi.ufu.br; coord. Rodrigo Sanches Peres) |
+| 29 | UNIVALI | Mestrado Profissional em Psicologia (PPGP) | ★★★★☆ | — | mestradopsicologia@univali.br (secretário Juliano dos Santos) |
+| 30 | PUCRS | Programa de Pós-Graduação em Psicologia (PPGP) | ★★★★☆ | — | psicologia-pg@pucrs.br ✓verificado |
+
+### Lista: mais indicados para Gestalt-terapia/Fenomenologia (★★★★★)
+
+- **USP (IP) — Psicologia Clínica**: programa 100% dedicado a Psicologia Clínica/psicoterapia, mas viés majoritariamente PSICANALÍTICO — checar orientadores individuais
+- **UFPA — Psicologia**: DESTAQUE MÁXIMO: linha explícita 'Fenomenologia: Teoria e Clínica' (Husserl/Heidegger/Ricoeur/Giorgi) — máxima aderência ao perfil humanista-existencial/fenomenológico
