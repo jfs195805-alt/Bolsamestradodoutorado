@@ -155,6 +155,7 @@
   <div class="tabs">
     <button class="tab active" id="tab-bolsas" onclick="showView('bolsas')">🌍 Global (<span id="tabCountGlobal">…</span>)</button>
     <button class="tab" id="tab-brasil" onclick="showView('brasil')">🇧🇷 Mestrados Brasil (<span id="tabCountBrasil">…</span>)</button>
+    <button class="tab" id="tab-rankingpsi" onclick="showView('rankingpsi')">🎯 Ranking Clínico Psicologia (<span id="tabCountPsi">…</span>)</button>
     <button class="tab" id="tab-ranking" onclick="showView('ranking')">🏆 Ranking por Pessoa</button>
     <button class="tab" id="tab-portais" onclick="showView('portais')">🧭 Portais do mundo</button>
   </div>
@@ -204,6 +205,34 @@
       </table>
     </div>
     <div class="empty" id="emptyBR" style="display:none">Nenhum programa encontrado com esses filtros.</div>
+  </section>
+
+  <!-- ===== VIEW: RANKING CLÍNICO PSICOLOGIA (DANIELA) ===== -->
+  <section id="view-rankingpsi" class="hidden">
+    <div class="rk-note">🎯 <b>Todos os 105 programas de Psicologia</b> do levantamento, ordenados por <b>Compatibilidade Clínica (★1–5)</b> — avaliada a partir das linhas de pesquisa oficiais de cada programa, não de um resumo genérico — com nota CAPES como critério de desempate. Fatores como chance de bolsa, qualidade docente e localização <b>não entram na pontuação</b> por falta de dado verificável; não foram inventados.
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">💡 <b>Lembrete estratégico:</b> a Daniela tem <b>certificação internacional em Terapia do Esquema (ISST — International Society of Schema Therapy)</b>. Isso é um diferencial real de currículo para a carta de motivação e o projeto de pesquisa, especialmente em programas com linha de Psicoterapia/Psicologia Clínica/Saúde Mental (★4–5 abaixo) — vale citar essa certificação explicitamente na narrativa de candidatura, mesmo em programas de orientação não-Gestalt, como evidência de formação clínica avançada e prática supervisionada já em curso.</div>
+    </div>
+    <div class="stats" id="statsPsi"></div>
+    <div class="toolbar">
+      <input class="search" id="searchBoxPsi" placeholder="🔎 Buscar universidade, programa, linha de pesquisa…" oninput="renderRankingPsi()">
+      <select class="filter" id="filterFormandoPsi" onchange="renderRankingPsi()">
+        <option value="">Provável formando: qualquer</option>
+        <option value="SIM">✅ Aceita provável formando</option>
+        <option value="NAO">❌ Não aceita</option>
+        <option value="UNK">⚪ Não confirmado</option>
+      </select>
+      <select class="filter" id="filterEstrelasPsi" onchange="renderRankingPsi()">
+        <option value="">Estrelas: qualquer</option>
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★☆ ou mais</option>
+        <option value="3">★★★☆☆ ou mais</option>
+      </select>
+      <div class="spacer"></div>
+      <span class="inst" id="rkPsiCount"></span>
+      <button class="btn ghost" onclick="exportCsvPsi()">📤 Exportar</button>
+    </div>
+    <div class="grid" id="rkGridPsi"></div>
+    <div class="empty" id="emptyPsi" style="display:none">Nenhum programa encontrado com esses filtros.</div>
   </section>
 
   <!-- ===== VIEW: BOLSAS ===== -->
@@ -536,15 +565,18 @@ function fmtMoney(v){ const n=parseFloat(v); if(!n&&n!==0) return ''; return 'US
 function showView(v){
   document.getElementById('view-bolsas').classList.toggle('hidden',v!=='bolsas');
   document.getElementById('view-brasil').classList.toggle('hidden',v!=='brasil');
+  document.getElementById('view-rankingpsi').classList.toggle('hidden',v!=='rankingpsi');
   document.getElementById('view-ranking').classList.toggle('hidden',v!=='ranking');
   document.getElementById('view-portais').classList.toggle('hidden',v!=='portais');
   document.getElementById('tab-bolsas').classList.toggle('active',v==='bolsas');
   document.getElementById('tab-brasil').classList.toggle('active',v==='brasil');
+  document.getElementById('tab-rankingpsi').classList.toggle('active',v==='rankingpsi');
   document.getElementById('tab-ranking').classList.toggle('active',v==='ranking');
   document.getElementById('tab-portais').classList.toggle('active',v==='portais');
   if(v==='portais') renderPortais();
   if(v==='ranking') renderRanking();
   if(v==='brasil') renderBrasilFiltered();
+  if(v==='rankingpsi') renderRankingPsi();
 }
 
 let rankPerson='Rafael';
@@ -871,8 +903,10 @@ async function syncBrasilCsv(){
     dataBR=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;});
     dataBR.forEach(computeDeadlineFieldsBR);
     const badgeBR=document.getElementById('tabCountBrasil'); if(badgeBR) badgeBR.textContent=dataBR.length;
+    const badgePsi=document.getElementById('tabCountPsi'); if(badgePsi) badgePsi.textContent=dataBR.filter(r=>r.area==='Psicologia').length;
     populateBrasilFilters();
     if(!document.getElementById('view-brasil').classList.contains('hidden')) renderBrasilFiltered();
+    if(!document.getElementById('view-rankingpsi').classList.contains('hidden')) renderRankingPsi();
   }catch(e){ /* silencioso: só falha ao abrir direto do disco sem servidor */ }
 }
 function populateBrasilFilters(){
@@ -1006,6 +1040,96 @@ function exportCsvBR(){
   a.download=filtrado?`mestrados_brasil_filtrado_${list.length}.csv`:'mestrados_brasil.csv';
   a.click(); URL.revokeObjectURL(a.href);
   if(filtrado) alert(`Exportados ${list.length} de ${dataBR.length} programas (com os filtros ativos). Para exportar tudo, limpe os filtros antes.`);
+}
+
+// ===== Ranking Clínico Psicologia (todos os 105, não só Top 30) =====
+function starsCountPsi(compat){
+  if(!compat) return -1;
+  const m=compat.match(/^★+/);
+  return m?m[0].length:-1;
+}
+function isEncerradoPsi(compat){ return (compat||'').toUpperCase().includes('PROGRAMA ENCERRADO'); }
+function formandoStatusPsi(v){
+  v=v||'';
+  if(v.startsWith('SIM')) return 'SIM';
+  if(v.startsWith('PROGRAMA ENCERRADO')) return 'ENCERRADO';
+  if(v.startsWith('NÃO ENCONTRADO')||v.startsWith('NÃO PESQUISADO')) return 'UNK';
+  if(v.startsWith('NÃO')) return 'NAO';
+  return 'UNK';
+}
+function formandoBadgePsi(v){
+  const s=formandoStatusPsi(v);
+  const map={SIM:['✅ Aceita provável formando','var(--ok)'],NAO:['❌ Não aceita','var(--urgent)'],UNK:['⚪ Não confirmado','var(--muted)'],ENCERRADO:['🚫 Programa encerrado','var(--muted)']};
+  const [label,color]=map[s];
+  return `<span class="chip" style="background:${color};color:#fff;border-color:${color}">${label}</span>`;
+}
+function starsHtmlPsi(n){
+  if(n<0) return '<span class="nf">sem avaliação</span>';
+  return '★'.repeat(n)+'☆'.repeat(5-n);
+}
+function renderRankingPsi(){
+  const grid=document.getElementById('rkGridPsi');
+  const empty=document.getElementById('emptyPsi');
+  const q=(document.getElementById('searchBoxPsi').value||'').toLowerCase().trim();
+  const fFormando=document.getElementById('filterFormandoPsi').value;
+  const fEstrelas=document.getElementById('filterEstrelasPsi').value;
+  let list=dataBR.filter(r=>r.area==='Psicologia');
+  list.forEach(r=>{ r._stars=starsCountPsi(r.compat_clinica); r._encerrado=isEncerradoPsi(r.compat_clinica); });
+  list=list.filter(r=>{
+    if(fFormando && formandoStatusPsi(r.aceita_provavel_formando)!==fFormando) return false;
+    if(fEstrelas && r._stars<parseInt(fEstrelas,10)) return false;
+    if(q){
+      const hay=`${r.instituicao} ${r.ppg} ${r.linhas_pesquisa}`.toLowerCase();
+      const termos=q.split(/\s+/).filter(Boolean);
+      if(!termos.every(t=>hay.includes(t))) return false;
+    }
+    return true;
+  });
+  // encerrados vão sempre para o final, independente de estrelas
+  list.sort((a,b)=>{
+    if(a._encerrado!==b._encerrado) return a._encerrado?1:-1;
+    if(b._stars!==a._stars) return b._stars-a._stars;
+    return (parseFloat(b.nota_capes)||-1)-(parseFloat(a.nota_capes)||-1);
+  });
+  document.getElementById('rkPsiCount').textContent=list.length+' programa(s) de Psicologia';
+  empty.style.display=list.length?'none':'block';
+  renderStatsPsi(list);
+  grid.innerHTML=list.map((r,idx)=>{
+    const emailHtml=emailCellBR(r.email);
+    const siteBtn=r.link?`<a class="btn ghost" href="${escapeAttr(r.link)}" target="_blank" rel="noopener">🔗 Site</a>`:'';
+    const capesChip=`<span class="chip status">CAPES ${escapeHtml(r.nota_capes||'—')}</span>`;
+    const cardCls=r._encerrado?'card s-past':'card s-ok';
+    return `<div class="${cardCls}">
+      <div class="row"><span class="rk-rank">#${idx+1}</span><h3 style="margin:0">${escapeHtml(r.instituicao)}</h3></div>
+      <div class="inst">${escapeHtml(r.ppg)}</div>
+      <div class="row"><span class="chip" style="color:var(--accent)">${starsHtmlPsi(r._stars)}</span>${capesChip}${formandoBadgePsi(r.aceita_provavel_formando)}</div>
+      ${r.linhas_pesquisa?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">📚 ${escapeHtml(r.linhas_pesquisa)}</div>`:''}
+      <div class="row" style="margin-top:6px">✉️ ${emailHtml}</div>
+      <div class="card-actions">${siteBtn}</div>
+    </div>`;
+  }).join('');
+}
+function renderStatsPsi(list){
+  const cinco=list.filter(r=>r._stars===5).length;
+  const quatroMais=list.filter(r=>r._stars>=4).length;
+  const simFormando=list.filter(r=>formandoStatusPsi(r.aceita_provavel_formando)==='SIM').length;
+  const comEmail=list.filter(r=>r.email && !r.email.toLowerCase().startsWith('não encontrado')).length;
+  document.getElementById('statsPsi').innerHTML=`
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--accent)">${list.length}</div><div style="color:var(--muted);font-size:.8rem">Total (filtrado)</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#c99a4b">${cinco}</div><div style="color:var(--muted);font-size:.8rem">★★★★★</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#c99a4b">${quatroMais}</div><div style="color:var(--muted);font-size:.8rem">★★★★☆ ou mais</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${simFormando}</div><div style="color:var(--muted);font-size:.8rem">Aceitam provável formando</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${comEmail}</div><div style="color:var(--muted);font-size:.8rem">Com e-mail</div></div>`;
+}
+const COLS_PSI=['instituicao','ppg','nota_capes','compat_clinica','aceita_provavel_formando','linhas_pesquisa','email','link'];
+function exportCsvPsi(){
+  const list=dataBR.filter(r=>r.area==='Psicologia');
+  const rows=[COLS_PSI.join(',')];
+  list.forEach(i=>rows.push(COLS_PSI.map(c=>csvCell(i[c])).join(',')));
+  const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='ranking_clinico_psicologia.csv';
+  a.click(); URL.revokeObjectURL(a.href);
 }
 
 function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
