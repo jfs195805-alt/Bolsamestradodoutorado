@@ -131,6 +131,10 @@ Ranking construído com **apenas dados verificados** (Regra Zero: nenhum campo f
 
 ⚠️ Alguns dados de origem têm baixa confiança e devem ser confirmados antes de decidir: UNICAMP "Psicologia" (pode não existir como PPG autônomo), UDESC e UESC "Psicologia da Saúde" (não confirmados via busca), UFMS e UERJ "Psicologia Clínica" (linhas não confirmadas com certeza).
 
+💡 **Lembrete estratégico — certificação ISST**: a Daniela tem **certificação internacional em Terapia do Esquema (ISST — International Society of Schema Therapy)**. É um diferencial real de currículo para a carta de motivação e o projeto de pesquisa, especialmente nos programas com linha central em Psicoterapia/Psicologia Clínica/Saúde Mental (★4-5 no ranking abaixo) — vale citar essa certificação explicitamente na narrativa de candidatura, mesmo em programas de orientação não-Gestalt, como evidência de formação clínica avançada e prática supervisionada já em curso (soma-se ao estágio supervisionado em Gestalt-terapia).
+
+🖥️ **Ranking completo no site**: as tabelas abaixo mostram só o Top 30. **Os 105 programas de Psicologia estão todos disponíveis** (ordenáveis, filtráveis por "provável formando" e por estrelas, com botão de site e e-mail por card) na aba **"🎯 Ranking Clínico Psicologia"** do [site do projeto](https://jfs195805-alt.github.io/Bolsamestradodoutorado/) — inclui também exportação em CSV.
+
 ### Top 10
 
 | # | Instituição | Programa | ★ Compat. Clínica | Nota CAPES | Por que | E-mail | Link |
