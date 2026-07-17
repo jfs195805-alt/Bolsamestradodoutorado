@@ -94,3 +94,36 @@ Pesquisa de confirmação feita nas fontes oficiais (fetch bloqueado em vários 
 | NYT Learning Network — Student Contests | 14/08/2026 | ✅ confirmado, contest semanal (fecha toda sexta) | Vale muito a pena — gratuito, rápido, baixo risco |
 
 Detalhamento completo (documentos, elegibilidade, fontes) está no `bolsas.csv` (coluna `observacoes`).
+
+---
+
+## 🆕 Pesquisa de novas bolsas 100% de intercâmbio/estudo em inglês (17/07/2026)
+
+Rodada dedicada de pesquisa, cruzando cada achado contra as 778 oportunidades já catalogadas para não repetir nada. Critério: bolsa **100% integral** (não parcial, não "ajuda disponível" sem garantia), estudo/imersão em **inglês**, elegível para **14-15 anos**, **Brasil confirmado elegível**, programa ativo com fonte oficial.
+
+### 🎯 Achado novo mais forte: Davis International Scholars Program (via ASSIST)
+
+Adicionado ao `bolsas.csv`. Fundo filantrópico da família Shelby Cullom Davis — **distinto do Davis UWC** (que já estava na base) — financia até 5 bolsistas/ano por escola em **5 boarding schools nos EUA**: Emma Willard, Lawrenceville, Milton Academy, Taft e Westminster. US$25.000/ano doados pela família Davis + a escola completa o restante até cobrir **100%** (mensalidade + moradia). Grades 9-11 (~14-17 anos), **Brasil confirmado** entre os 84 países já representados no programa. Aplicação via ASSIST abre jul-ago/2026, fecha **~1º de dezembro/2026** para entrada no ciclo 2027-28 — compatível com o cronograma de preparação da Letícia (candidatura em 2026/2027, entrada 2027/2028).
+
+Duas oportunidades relacionadas também adicionadas:
+- **Milton Academy — Financial Aid internacional** (fora do programa Davis): admissão need-blind + compromisso de cobrir 100% da necessidade para internacionais — mais forte que a maioria das outras Ten Schools, que declaram ajuda "limitada" para estrangeiros.
+- **Concord Academy — Financial Aid** ⚠️: cobertura real mas **não garante 100% para todos** (média de 88% entre boarders) — opção mais fraca, priorizar as duas acima primeiro.
+
+### ❌ Descartado nesta rodada (verificado, não qualifica)
+
+| Opção | Motivo da desqualificação |
+|---|---|
+| Kennedy-Lugar YES Program | Brasil **não é elegível** — restrito a ~30 países de maioria/minoria muçulmana |
+| FLEX (Future Leaders Exchange) | Brasil **não é elegível** — restrito a países da Eurásia ex-URSS/Bálcãs |
+| Youth Ambassadors Program (único programa ECA dos EUA com Brasil elegível) | Intercâmbio curto (~3 semanas), sem inserção em escola americana — não é o formato buscado |
+| Rotary Youth Exchange (destinos anglófonos: Canadá, Austrália, NZ, Irlanda, RU, África do Sul) | **Não é gratuito** — taxas de ~R$17-19 mil no Brasil + Global Fee ~US$9.000 + US$5-10 mil de despesas no destino. Idade mínima 15,5 anos, não cobre 14 |
+| Programas governamentais de países anglófonos (além de Jovens Embaixadores) | Nenhum programa federal de high school exchange 100% financiado e aberto a brasileiros foi localizado |
+| King's Academy (Jordânia), Sacred Heart Network, Round Square, Concordia Language Villages | Ajuda proporcional/caso a caso, reciprocidade sem bolsa, ou formato de curto prazo — nenhum é bolsa integral de ano letivo |
+| Sevenoaks, Sherborne, Wellington (Reino Unido) | Bolsas são **honorárias** (sem redução real de mensalidade) — só ~10% de desconto efetivo |
+| Christ's Hospital (Reino Unido) | Bursary até 100% existe, mas exige guardião legal no Reino Unido — não é via limpa para família só no Brasil |
+| Alexandra College Dublin (Irlanda) | Bolsa integral exige residência na Irlanda — exclui brasileiros vindos do exterior |
+| Taft, Lawrenceville, St. Paul's, Northfield Mount Hermon, Middlesex (fora do programa Davis) | Todas declaram ajuda "limitada" a estrangeiros — possibilidade competitiva, não garantia de 100% |
+| YFU (bolsa extra anual) | Só 1 bolsa/ano quando ocorre, sem edital confirmado para o ciclo 2026/2027 |
+| Prontos Pro Mundo | 100% confirmado, mas restrito a alunos da rede estadual pública de SP — não aberto a qualquer brasileiro |
+
+**Conclusão honesta:** de ~15 frentes investigadas nesta rodada, 3 produziram achados genuinamente novos e qualificados (Davis Scholars, Milton Academy aid, Concord Academy com ressalva) — as demais foram descartadas com motivo específico documentado, não por falta de busca.
