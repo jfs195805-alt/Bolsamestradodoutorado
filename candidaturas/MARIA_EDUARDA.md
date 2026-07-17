@@ -172,3 +172,33 @@ Você (29 anos) é a **única elegível por idade** entre os três adultos da fa
 | Correlation One DS4A | 🇺🇸/Global | ⚠️ prazo não confirmado oficialmente | Bootcamp gratuito de 13-14 semanas, foco em grupos sub-representados (mulheres, negros, latinos), sem exigência de experiência prévia | Vale como upskilling gratuito — confirmar data em correlation-one.com |
 
 Detalhamento completo (documentos, elegibilidade, fontes) está no `bolsas.csv` (coluna `observacoes`).
+
+---
+
+## 🆕 Novas bolsas internacionais de Data Science/IA (17/07/2026)
+
+Você tinha cobertura bem menor que os outros membros da família na base internacional (35 itens vs. 231 do Rafael, 154 da Letícia, 135 da Daniela) — pesquisa dedicada para reduzir essa lacuna.
+
+### ⭐ Melhor ação imediata: AAUW International Fellowships
+Bolsa real e substancial para mulheres brasileiras em início de pós-graduação nos EUA. O ciclo atual (AY2026-27) já fechou, mas o próximo (AY2027-2028) normalmente **abre em agosto de 2026** — o mais próximo de todos os achados desta rodada. Vale começar a preparar a candidatura já. [Detalhes](https://www.aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships/)
+
+### Outros achados reais (a maioria com ciclo 2026 já fechado — preparar para 2027)
+| Programa | País | Bolsa | Situação |
+|---|---|---|---|
+| Google DeepMind AI Master's Scholarships | 🇧🇷 (via UNICAMP) | 100% | Precisa admissão no mestrado de IA da UNICAMP primeiro; universidade nomeia candidatos |
+| Spärck AI Scholarship (Edinburgh) | 🇬🇧 | 100% (£20.780/ano) | Ciclo 2026-27 fechado; próximo ~out-nov/2026 |
+| British Council — Women in STEM | 🇬🇧 | 100% (mín. £40.000) | **20 vagas específicas para as Américas incl. Brasil** — ciclo fechado, próximo final de 2026 |
+| Erasmus Mundus AI (EMAI) | 🇪🇺 | 100% (€1.400/mês) | Consórcio Barcelona/Roma/Nijmegen/Ljubljana — ciclo fechado, próximo final de 2026 |
+| EIT Digital Master School — Data Science | 🇪🇺 | 50-100% | Dupla titulação — ciclo fechado, próximo outono de 2026 |
+| DSSGx Munich | 🇩🇪 | 100% (€1.500/mês) | Fellowship de 2 meses, **encaixe direto com seu TCC** (IA e inclusão escolar/impacto social) |
+| Google Women Techmakers Scholars | 🌍 | Parcial (US$10k) | Ciclo 2026 fechado; próximo ~2027 |
+| Grace Hopper Celebration (AnitaB.org) | 🇺🇸 | 100% dos custos do evento | Não é bolsa de estudo — cobre participação na maior conferência de mulheres em tech do mundo |
+
+### Verificados e descartados (não se encaixam, com motivo)
+- **Microsoft Research PhD Fellowship**: só para quem já está matriculado em PhD.
+- **Microsoft Women in Tech Scholarship (WAM)**: só para formandas do ensino médio entrando na graduação — você já é graduada.
+- **Ford Foundation / Rockefeller Foundation**: voltados a líderes já estabelecidos em justiça social/clima, não início de carreira em dados.
+- **Chan Zuckerberg Initiative**: atua via grants institucionais, não fellowships individuais de "IA para educação".
+- **ETH Zurich / TU Delft**: nenhuma bolsa "Women in Data Science" nomeada encontrada — só bolsas gerais de excelência sem recorte de gênero.
+- **Gates Foundation AI Fellows**: é cargo remunerado nos EUA, mas exige autorização de trabalho já existente — sem patrocínio de visto.
+- **Mozilla Foundation Fellowship**: só por indicação/nomeação, não candidatura aberta; direcionado a quem já tem projeto em andamento com organização da sociedade civil.
