@@ -220,3 +220,78 @@ Lista completa (22): USP(IP) Psicologia Clínica★, USP(IP) Psicologia Experime
 A maioria dos programas coletados nas fases 2-3 do levantamento (incluindo vários bem avaliados) não tem nenhuma data estimada — isso inclui vários e-mails/particularidades que só saem no [CSV completo](../mestrados_brasil.csv) ou na planilha Excel. Não listados aqui individualmente para não sobrecarregar; consulte a aba "Mestrados Brasil" do site ou o arquivo `.xlsx` e filtre por `prazo = "—"`.
 
 ★ = programa presente no Top 30 desta seção.
+
+---
+
+## 🎓 "Aceita Provável Formando?" — Psicologia (para a Daniela)
+
+Como a Daniela conclui o bacharelado em dezembro/2026, esse é provavelmente o dado mais decisivo do levantamento: **programas que exigem diploma já emitido no ato da inscrição** ficam automaticamente fora de alcance para a seleção de 2026/2027, mesmo sendo ótimos em compatibilidade clínica.
+
+### ⚠️ Limitações desta pesquisa — leia antes de decidir
+
+Esta pesquisa foi feita por 7 agentes em paralelo, cada um lendo editais reais via busca web. Duas limitações técnicas relevantes:
+- **PDFs de editais universitários (.edu.br) ficaram bloqueados para leitura direta** durante toda a pesquisa (erro 403) — as respostas vieram de trechos indexados pela busca, não da leitura integral do PDF na maioria dos casos.
+- **A cota de buscas da sessão se esgotou antes de cobrir os 105 programas** — por isso uma parte considerável ficou marcada como "não pesquisado", não porque a resposta seja negativa.
+
+**Antes de se inscrever em qualquer programa, confirme a cláusula exata abrindo o edital num navegador comum** (não bloqueado como as ferramentas automatizadas usadas aqui) e procure por "provável formando", "concluinte" ou "declaração de conclusão".
+
+### Resultado consolidado (105 programas)
+
+| Resposta | Quantidade | O que significa |
+|---|---|---|
+| ✅ **SIM** | 34 | Edital/norma confirma aceitação de prováveis formandos (geralmente com declaração da IES na inscrição + diploma só até a matrícula) |
+| ❌ **NÃO** | 2 | Edital exige certificado/diploma de conclusão já emitido, sem exceção encontrada |
+| ⚪ **Não encontrado / não pesquisado** | 68 | Sem confirmação nesta rodada — não decida com base na ausência, confirme direto na fonte |
+| 🚫 **Programa encerrado** | 1 | UNISINOS (já excluído do ranking) |
+
+### Padrão observado (importante)
+
+Nos programas **federais e estaduais** (UFBA, UFPE, UFC, USP, UFG, UFES, UFAM, UFAL, UFMA, UFPR, UFSM, entre outros), o padrão dominante é: **candidato pode se inscrever como "provável formando"**, apresentando declaração da instituição de origem com a data prevista de conclusão, e só precisa entregar o diploma/certificado definitivo **na matrícula**, não na inscrição. Isso é comum no sistema público brasileiro — mas não deve ser generalizado sem confirmar caso a caso.
+
+### Top 30 da Daniela × Provável Formando
+
+| # | Instituição | Programa | ★ Compat. | Provável Formando? |
+|---|---|---|---|---|
+| 1 | USP (IP) | Psicologia Clínica | ★★★★★ | ✅ SIM (confiança moderada — norma geral USP) |
+| 2 | UFPA | Psicologia | ★★★★★ | ⚪ Não encontrado (edital citado, cláusula não confirmada) |
+| 3 | USP (FFCLRP) | Psicologia | ★★★★☆ | ✅ SIM |
+| 4 | UFRGS | Psicologia | ★★★★☆ | ⚪ Não encontrado |
+| 5 | UFRJ (IP) | Psicologia | ★★★★☆ | ⚪ Não pesquisado nesta rodada |
+| 6 | UFF | Psicologia | ★★★★☆ | ⚪ Não encontrado (indício não confirmado) |
+| 7 | UFBA | Psicologia | ★★★★☆ | ✅ SIM |
+| 8 | UnB | Psicologia Clínica e Cultura | ★★★★☆ | ⚪ Não pesquisado nesta rodada |
+| 9 | UFPR | Psicologia | ★★★★☆ | ✅ SIM |
+| 10 | UEM | Psicologia | ★★★★☆ | ⚪ Não pesquisado (cota esgotada) |
+| 11 | UFSM | Psicologia | ★★★★☆ | ✅ SIM |
+| 12 | UFG | Psicologia | ★★★★☆ | ✅ SIM |
+| 13 | UFAM | Psicologia | ★★★★☆ | ✅ SIM |
+| 14 | UEL | Psicologia | ★★★★☆ | ⚪ Não pesquisado (cota esgotada) |
+| 15 | UERJ | Psicologia Clínica | ★★★★☆ | ⚪ Não encontrado (link do programa não resolve — confirmar nome atual) |
+| 16 | UFAL | Psicologia | ★★★★☆ | ✅ SIM |
+| 17 | UFMA | Psicologia | ★★★★☆ | ✅ SIM |
+| 18 | UFMT | Psicologia | ★★★★☆ | ⚪ Não encontrado |
+| 19 | UNIR | Mestrado Acadêmico em Psicologia | ★★★★☆ | ⚪ Não encontrado |
+| 20 | Unifor | PPGP | ★★★★☆ | ⚪ Não pesquisado (cota esgotada) |
+| 21 | Unicap | PPGPSI | ★★★★☆ | ⚪ Não pesquisado (cota esgotada) |
+| 22 | UPE (Garanhuns) | PRISMAL | ★★★★☆ | ✅ SIM |
+| 23 | Bahiana (EBMSP) | Mestrado Prof. Psicologia e Intervenções em Saúde | ★★★★☆ | ❌ **NÃO** (exige certificado já emitido) |
+| 24 | UFRJ | PPGTP (Teoria Psicanalítica) | ★★★★☆ | ✅ SIM |
+| 25 | PUC-Rio | PPG Psicologia (Clínica) | ★★★★☆ | ✅ SIM |
+| 26 | UFRRJ | PPGPSI | ★★★★☆ | ✅ SIM |
+| 27 | PUC Minas | PPG Psicologia (Subjetivação) | ★★★★☆ | ✅ SIM |
+| 28 | UFU | PPGPSI | ★★★★☆ | ✅ SIM |
+| 29 | UNIVALI | Mestrado Profissional em Psicologia | ★★★★☆ | ⚪ Não encontrado |
+| 30 | PUCRS | PPGP | ★★★★☆ | ✅ SIM |
+
+**Destaque para a Daniela**: dos 30 programas do ranking, **16 já confirmam SIM** para prováveis formandos, incluindo o #1 (USP-IP Psicologia Clínica) e vários do topo. O único **NÃO confirmado** no Top 30 é a Bahiana/EBMSP (#23) — vale reconsiderar a prioridade desse programa dado o calendário dela. O #2 (UFPA, o mais aderente à Gestalt/Fenomenologia) ainda não foi verificado com segurança — recomendo confirmar diretamente com a secretaria (secppgp@ufpa.br) antes de descartar ou priorizar.
+
+### Lista completa dos 34 confirmados SIM (todas as 105 linhas, não só Top 30)
+
+USP-IP (Clínica, Experimental, Escolar/PSA, Social), USP-FFCLRP (Psicologia, Psicobiologia), UFBA, UFPE (Psicologia Cognitiva), UFC, UFPR, UFSM, UFG, UFES, UFAM, UFAL, UFMA, UPE-Garanhuns (PRISMAL), FPS, UNIVASF, UFRJ (PPGTP), PUC-Rio, Universo, UCP, UFRRJ, UFMG (PPGCogCom), PUC Minas, UFU, PUCRS, UCDB, Atitus, UNIFESP, PUC-SP (Social, Clínica, Análise do Comportamento).
+
+### Os 2 confirmados NÃO
+
+- **Bahiana (EBMSP) — Mestrado Profissional em Psicologia e Intervenções em Saúde**: exige Certificado de Conclusão reconhecido pelo MEC como pré-requisito, sem exceção documentada.
+- **Tuiuti (UTP) — Psicologia Forense**: exige diploma ou certificado autenticado, sem cláusula para quem ainda está cursando.
+
+Para todos os outros 68 programas (incluindo vários do Top 30), a resposta honesta é **"não sei ainda"** — não confunda "não encontrado" com "não aceita".
