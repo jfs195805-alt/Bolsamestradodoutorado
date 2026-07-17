@@ -156,6 +156,7 @@
     <button class="tab active" id="tab-bolsas" onclick="showView('bolsas')">🌍 Global (<span id="tabCountGlobal">…</span>)</button>
     <button class="tab" id="tab-brasil" onclick="showView('brasil')">🇧🇷 Mestrados Brasil (<span id="tabCountBrasil">…</span>)</button>
     <button class="tab" id="tab-rankingpsi" onclick="showView('rankingpsi')">🎯 Ranking Clínico Psicologia (<span id="tabCountPsi">…</span>)</button>
+    <button class="tab" id="tab-rankingdados" onclick="showView('rankingdados')">📊 Ranking Dados Maria Eduarda (<span id="tabCountDados">…</span>)</button>
     <button class="tab" id="tab-ranking" onclick="showView('ranking')">🏆 Ranking por Pessoa</button>
     <button class="tab" id="tab-portais" onclick="showView('portais')">🧭 Portais do mundo</button>
   </div>
@@ -235,6 +236,29 @@
     </div>
     <div class="grid" id="rkGridPsi"></div>
     <div class="empty" id="emptyPsi" style="display:none">Nenhum programa encontrado com esses filtros.</div>
+  </section>
+
+  <!-- ===== VIEW: RANKING DADOS (MARIA EDUARDA) ===== -->
+  <section id="view-rankingdados" class="hidden">
+    <div class="rk-note">📊 <b>Todos os 120 programas de Computação/Dados</b> do levantamento, ordenados por <b>Compatibilidade (★1–5)</b> com o perfil da Maria Eduarda — avaliada a partir das linhas de pesquisa oficiais de cada programa, não de um resumo genérico — com nota CAPES como critério de desempate. Fatores como chance de bolsa, qualidade docente e localização <b>não entram na pontuação</b> por falta de dado verificável; não foram inventados.
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">💡 <b>Lembrete estratégico:</b> a Maria Eduarda se formou em <b>Big Data & Inteligência Analítica</b> (jan/2026) com TCC em <b>"Inteligência artificial e inclusão escolar"</b>, e tem interesse forte em EdTech, mulheres em STEM e dados para desenvolvimento/impacto social. Isso é um diferencial real de narrativa para a carta de motivação e o pré-projeto — vale citar o TCC explicitamente, especialmente nos poucos programas ★★★★★ que têm linha nomeada de "Computação/Informática Aplicada à Educação".</div>
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">🎯 <b>Cada card abaixo já traz a linha de pesquisa recomendada</b> para ela desenvolver um projeto do zero naquele programa específico — decidida programa a programa com base no que ela realmente tem (TCC + diploma em Big Data), não uma sugestão genérica. Quando nenhuma linha do programa comporta um projeto autêntico nesse perfil, isso também aparece marcado (🚫 Sem linha natural), em vez de forçar um encaixe.</div>
+    </div>
+    <div class="stats" id="statsDados"></div>
+    <div class="toolbar">
+      <input class="search" id="searchBoxDados" placeholder="🔎 Buscar universidade, programa, linha de pesquisa…" oninput="renderRankingDados()">
+      <select class="filter" id="filterEstrelasDados" onchange="renderRankingDados()">
+        <option value="">Estrelas: qualquer</option>
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★☆ ou mais</option>
+        <option value="3">★★★☆☆ ou mais</option>
+      </select>
+      <div class="spacer"></div>
+      <span class="inst" id="rkDadosCount"></span>
+      <button class="btn ghost" onclick="exportCsvDados()">📤 Exportar</button>
+    </div>
+    <div class="grid" id="rkGridDados"></div>
+    <div class="empty" id="emptyDados" style="display:none">Nenhum programa encontrado com esses filtros.</div>
   </section>
 
   <!-- ===== VIEW: BOLSAS ===== -->
@@ -568,17 +592,20 @@ function showView(v){
   document.getElementById('view-bolsas').classList.toggle('hidden',v!=='bolsas');
   document.getElementById('view-brasil').classList.toggle('hidden',v!=='brasil');
   document.getElementById('view-rankingpsi').classList.toggle('hidden',v!=='rankingpsi');
+  document.getElementById('view-rankingdados').classList.toggle('hidden',v!=='rankingdados');
   document.getElementById('view-ranking').classList.toggle('hidden',v!=='ranking');
   document.getElementById('view-portais').classList.toggle('hidden',v!=='portais');
   document.getElementById('tab-bolsas').classList.toggle('active',v==='bolsas');
   document.getElementById('tab-brasil').classList.toggle('active',v==='brasil');
   document.getElementById('tab-rankingpsi').classList.toggle('active',v==='rankingpsi');
+  document.getElementById('tab-rankingdados').classList.toggle('active',v==='rankingdados');
   document.getElementById('tab-ranking').classList.toggle('active',v==='ranking');
   document.getElementById('tab-portais').classList.toggle('active',v==='portais');
   if(v==='portais') renderPortais();
   if(v==='ranking') renderRanking();
   if(v==='brasil') renderBrasilFiltered();
   if(v==='rankingpsi') renderRankingPsi();
+  if(v==='rankingdados') renderRankingDados();
 }
 
 let rankPerson='Rafael';
@@ -907,9 +934,11 @@ async function syncBrasilCsv(){
     dataBR.forEach(computeDeadlineFieldsBR);
     const badgeBR=document.getElementById('tabCountBrasil'); if(badgeBR) badgeBR.textContent=dataBR.length;
     const badgePsi=document.getElementById('tabCountPsi'); if(badgePsi) badgePsi.textContent=dataBR.filter(r=>r.area==='Psicologia').length;
+    const badgeDados=document.getElementById('tabCountDados'); if(badgeDados) badgeDados.textContent=dataBR.filter(r=>r.area==='Computação/Dados').length;
     populateBrasilFilters();
     if(!document.getElementById('view-brasil').classList.contains('hidden')) renderBrasilFiltered();
     if(!document.getElementById('view-rankingpsi').classList.contains('hidden')) renderRankingPsi();
+    if(!document.getElementById('view-rankingdados').classList.contains('hidden')) renderRankingDados();
   }catch(e){ /* silencioso: só falha ao abrir direto do disco sem servidor */ }
 }
 function populateBrasilFilters(){
@@ -1153,6 +1182,77 @@ function exportCsvPsi(){
   const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
   a.download='ranking_clinico_psicologia.csv';
   a.click(); URL.revokeObjectURL(a.href);
+}
+
+// ===== Ranking Dados Computação (Maria Eduarda) — todos os 120 =====
+let currentDadosList=[];
+function starsCountDados(compat){
+  if(!compat) return -1;
+  const m=compat.match(/^★+/);
+  return m?m[0].length:-1;
+}
+function renderRankingDados(){
+  const grid=document.getElementById('rkGridDados');
+  const empty=document.getElementById('emptyDados');
+  const q=(document.getElementById('searchBoxDados').value||'').toLowerCase().trim();
+  const fEstrelas=document.getElementById('filterEstrelasDados').value;
+  let list=dataBR.filter(r=>r.area==='Computação/Dados');
+  list.forEach(r=>{ r._starsDados=starsCountDados(r.compat_dados); });
+  list=list.filter(r=>{
+    if(fEstrelas && r._starsDados<parseInt(fEstrelas,10)) return false;
+    if(q){
+      const hay=`${r.instituicao} ${r.ppg} ${r.linhas_pesquisa} ${r.linha_recomendada_projeto}`.toLowerCase();
+      const termos=q.split(/\s+/).filter(Boolean);
+      if(!termos.every(t=>hay.includes(t))) return false;
+    }
+    return true;
+  });
+  list.sort((a,b)=>{
+    if(b._starsDados!==a._starsDados) return b._starsDados-a._starsDados;
+    return (parseFloat(b.nota_capes)||-1)-(parseFloat(a.nota_capes)||-1);
+  });
+  document.getElementById('rkDadosCount').textContent=list.length+' programa(s) de Computação/Dados';
+  empty.style.display=list.length?'none':'block';
+  renderStatsDados(list);
+  currentDadosList=list;
+  grid.innerHTML=list.map((r,idx)=>{
+    const emailHtml=emailCellBR(r.email);
+    const siteBtn=r.link?`<a class="btn ghost" href="${escapeAttr(r.link)}" target="_blank" rel="noopener">🔗 Site</a>`:'';
+    const capesChip=`<span class="chip status">CAPES ${escapeHtml(r.nota_capes||'—')}</span>`;
+    return `<div class="card s-ok">
+      <div class="row"><span class="rk-rank">#${idx+1}</span><h3 style="margin:0">${escapeHtml(r.instituicao)}</h3></div>
+      <div class="inst">${escapeHtml(r.ppg)}</div>
+      <div class="row"><span class="chip" style="color:var(--accent)">${starsHtmlPsi(r._starsDados)}</span>${capesChip}</div>
+      ${r.linhas_pesquisa?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">📚 ${escapeHtml(r.linhas_pesquisa)}</div>`:''}
+      ${linhaRecomendadaHtml(r.linha_recomendada_projeto)}
+      <div class="row" style="margin-top:6px">✉️ ${emailHtml}</div>
+      <div class="card-actions">${siteBtn}<button class="btn primary" onclick="prepararCandidaturaDados(${idx})">🤖 Preparar candidatura</button></div>
+    </div>`;
+  }).join('');
+}
+function renderStatsDados(list){
+  const cinco=list.filter(r=>r._starsDados===5).length;
+  const quatroMais=list.filter(r=>r._starsDados>=4).length;
+  const comEmail=list.filter(r=>r.email && !r.email.toLowerCase().startsWith('não encontrado')).length;
+  document.getElementById('statsDados').innerHTML=`
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--accent)">${list.length}</div><div style="color:var(--muted);font-size:.8rem">Total (filtrado)</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#c99a4b">${cinco}</div><div style="color:var(--muted);font-size:.8rem">★★★★★</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:#c99a4b">${quatroMais}</div><div style="color:var(--muted);font-size:.8rem">★★★★☆ ou mais</div></div>
+    <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${comEmail}</div><div style="color:var(--muted);font-size:.8rem">Com e-mail</div></div>`;
+}
+const COLS_DADOS=['instituicao','ppg','nota_capes','compat_dados','linhas_pesquisa','linha_recomendada_projeto','email','link'];
+function exportCsvDados(){
+  const list=dataBR.filter(r=>r.area==='Computação/Dados');
+  const rows=[COLS_DADOS.join(',')];
+  list.forEach(i=>rows.push(COLS_DADOS.map(c=>csvCell(i[c])).join(',')));
+  const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='ranking_dados_maria_eduarda.csv';
+  a.click(); URL.revokeObjectURL(a.href);
+}
+function prepararCandidaturaDados(idx){
+  const r=currentDadosList[idx]; if(!r) return;
+  copyCandidaturaPromptBR(montarPromptCandidaturaBR(r));
 }
 
 function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
