@@ -184,6 +184,7 @@
         <option value="Daniela">Daniela</option>
         <option value="Maria Eduarda">Maria Eduarda</option>
       </select>
+      <button class="btn ghost" onclick="exportCsvBR()">📤 Exportar</button>
     </div>
     <div class="tbl-wrap">
       <table class="br-tbl">
@@ -992,6 +993,19 @@ function doSortBrasil(){
     const va=a[key]||'', vb=b[key]||'';
     return sortAscBR ? String(va).localeCompare(String(vb),'pt') : String(vb).localeCompare(String(va),'pt');
   });
+}
+
+const COLS_BR=['instituicao','ppg','area','nota_capes','prazo','data_inicio_estimada','data_maxima_estimada','dias_para_prazo','status_abertura','email','explicacao','link'];
+function exportCsvBR(){
+  const list=filteredBR;
+  const filtrado=list.length!==dataBR.length;
+  const rows=[COLS_BR.join(',')];
+  list.forEach(i=>rows.push(COLS_BR.map(c=>csvCell(i[c])).join(',')));
+  const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download=filtrado?`mestrados_brasil_filtrado_${list.length}.csv`:'mestrados_brasil.csv';
+  a.click(); URL.revokeObjectURL(a.href);
+  if(filtrado) alert(`Exportados ${list.length} de ${dataBR.length} programas (com os filtros ativos). Para exportar tudo, limpe os filtros antes.`);
 }
 
 function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
