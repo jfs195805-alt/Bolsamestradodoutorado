@@ -298,4 +298,31 @@ USP-IP (Clínica, Experimental, Escolar/PSA, Social), USP-FFCLRP (Psicologia, Ps
 - **Bahiana (EBMSP) — Mestrado Profissional em Psicologia e Intervenções em Saúde**: exige Certificado de Conclusão reconhecido pelo MEC como pré-requisito, sem exceção documentada.
 - **Tuiuti (UTP) — Psicologia Forense**: exige diploma ou certificado autenticado, sem cláusula para quem ainda está cursando.
 
+---
+
+## 🔍 Verificação — bolsas internacionais com prazo entre 31-60 dias (17/07/2026)
+
+### 🚨 Achado crítico — 6 doutorados em Psicologia na Espanha (UAB, UCM, UB, UV, US, UGR)
+
+Todos os 6 exigem **Máster oficial (mínimo 60 ECTS) que dê acesso a doutorado no país de origem** — a certificação ISST em Terapia do Esquema e o estágio em Gestalt-terapia, por si só, **não substituem esse requisito formal**. Antes de investir mais tempo em qualquer uma dessas 6 linhas, é preciso esclarecer: a formação da Daniela inclui um mestrado formal (60+ ECTS) reconhecido, ou apenas certificações/especializações? Se sim, o título brasileiro é aceito via "declaración de equivalencia" (RD 889/2022, portal Valida-TE) — processo que pode levar meses e deveria começar já, independente da data de inscrição do doutorado em si (que também não foi possível confirmar com precisão em nenhuma das 6 — calendários variam por programa e as páginas oficiais bloquearam verificação automatizada).
+
+Se o requisito de máster não for atendido, os 6 itens abaixo devem ser tratados como **inviáveis por ora**, não como pendências de prazo.
+
+| Universidade | Programa | O que sabemos do prazo |
+|---|---|---|
+| UAB | Psicología Clínica y de la Salud | Não confirmado — janelas variam por programa |
+| UCM | Psicología | Não confirmado — portal 2026-27 já aberto |
+| UB | Psicologia Clínica i de la Salut | Não confirmado — calendário varia por programa na mesma faculdade |
+| UV | Psicología | Requisito de acesso até 30/11/2026 (condição, não prazo de inscrição) |
+| US (Sevilla) | Psicología | "Plazo anticipado" a partir de 03/09/2026 só p/ quem já tem contrato predoctoral |
+| UGR | Psicología | Nenhum dado de data localizado |
+
+**FPU/FPI (contratos predoctorales espanhóis) — confirmado:** convocatória 2026 abre 20/10 a 20/11/2026, ~€32.500/ano + €10.000 estadias. Mas normalmente exige já estar admitida/matriculada no doutorado antes de poder pedir — não é uma porta de entrada isolada.
+
+### Outros achados relevantes desta rodada
+
+- **BIAL Foundation Grants 2026/2027** (Portugal, prazo 31/08/2026 confirmado): **melhor encaixe temático da lista** — restrito a Psicofisiologia e Parapsicologia, até €60.000/projeto. Mas é grant de pesquisa científica formal (idealmente com afiliação institucional), não bolsa de estudo pessoal nem para prática clínica isolada.
+- **University of Sydney RTP** (Austrália, prazo ~11/09/2026 confirmado): viável em tese para doutorado em psicologia/saúde mental, mas exige compromisso de PhD em tempo integral — uma virada de carreira significativa, não um complemento rápido.
+- **Heinrich-Böll-Stiftung** (Alemanha, prazo 01/09/2026 confirmado): exige já estar admitida em doutorado em universidade alemã — não é para quem ainda está escolhendo onde estudar.
+
 Para todos os outros 68 programas (incluindo vários do Top 30), a resposta honesta é **"não sei ainda"** — não confunda "não encontrado" com "não aceita".

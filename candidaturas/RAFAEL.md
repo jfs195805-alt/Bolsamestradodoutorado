@@ -189,6 +189,22 @@ Pesquisa de confirmação de edital feita diretamente nas fontes oficiais (ou cr
 
 Detalhamento completo de cada uma (documentos exigidos, critérios de seleção, fontes) está registrado no `bolsas.csv` (coluna `observacoes`) e no histórico da sessão. Nenhuma informação pessoal do Rafael foi pesquisada nesta rodada — só os editais.
 
+## 🔍 Verificação — 9 bolsas com prazo entre 31-60 dias (17/07/2026)
+
+| Bolsa | Prazo na base | Situação real confirmada | Recomendação |
+|---|---|---|---|
+| CONICET Becas Doctorales (Argentina) | 21/08/2026 | ✅ prazo real, mas exige orientador CONICET já vinculado + mudança para Argentina | Descartar salvo orientador já garantido |
+| ANU PhD / University Research Scholarship | 31/08/2026 | ✅ prazo real; mesma via de aplicação da URS (não são 2 inscrições) | Só com supervisor pré-contatado em Data Science/BI |
+| ANU University Research Scholarship | 31/08/2026 | Duplicata da linha acima — mesma aplicação | Tratar como uma única ação |
+| UWA HDR / RTP Stipend | 31/08/2026 | ⚠️ provável duplicata de "International RTP" abaixo; dia exato não confirmado | Confirmar no site oficial antes de agir |
+| International RTP Stipend + Tuition | 31/08/2026 | ⚠️ provável duplicata da UWA acima | Tratar como uma bolsa só |
+| Estágio Blue Book (Comissão Europeia) | 31/08/2026 | ✅ **prazo corrigido: 04/09/2026** (inscrições abrem 22/07). Sem limite de idade; perfil de dados tem procura real | ✅ Melhor aposta do grupo |
+| RTP Scholarship (International) | 15/09/2026 | 🚫 universidade não identificada — nenhuma fonte bate com essa data exata | Não investir sem achar a fonte original |
+| Khalifa University PhD (Tier III) | 15/09/2026 | ⚠️ data não confirmada p/ 2026; exige GRE presencial obrigatório | Só se topar fazer GRE a tempo |
+| NVIDIA Graduate Fellowship | 15/09/2026 | 🚫 **exige PhD já em andamento** (mín. 1 ano) — bloqueio estrutural | Descartar agora |
+
+**Vários/família (relevantes para Rafael):** McCall MacBain (19/08) — só Maria Eduarda é elegível por idade; ER-GO Itália (24/08) — exige matrícula regular na Itália; Heinrich-Böll (01/09) — exige PhD já admitido na Alemanha; University of Sydney RTP (~11/09) — viável se topar virada de carreira para PhD; Correlation One DS4A (15/09, não confirmado) — bootcamp gratuito de upskilling, pode valer a pena independente de bolsa formal.
+
 ## 📋 Placeholders a confirmar (só você sabe)
 - `[PREENCHER]` Ano de conclusão do MBA/graduação (CV: MBA 2007-2008; Bacharelado 2001-2004 — confirmar).
 - `[PREENCHER]` Área-alvo preferida (dados/IA · políticas · educação) e país/idioma prioritário.

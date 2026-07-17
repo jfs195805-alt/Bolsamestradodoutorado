@@ -155,3 +155,20 @@ Ranking construído com **apenas dados verificados** (Regra Zero: nenhum campo f
 - **UFRJ — Informática**: linha "Informática, Educação e Sociedade" combina Ciência de Dados/Mineração de Dados com Educação.
 - **UFMT — Computação Aplicada**: linha "Ciência de Dados" (Big Data + IA) nomeia educação como domínio de aplicação na própria descrição oficial.
 - **UFSM — Ciência da Computação**: linha "Computação Aplicada" reúne explicitamente "Informática na Educação" + "Inteligência Artificial".
+
+---
+
+## 🔍 Verificação — bolsas internacionais com prazo entre 31-60 dias (17/07/2026)
+
+Você (29 anos) é a **única elegível por idade** entre os três adultos da família para várias dessas oportunidades — vale priorizar.
+
+| Programa | País | Prazo confirmado | Situação real | Recomendação |
+|---|---|---|---|---|
+| McCall MacBain Scholarship (McGill) | 🇨🇦 | ✅ 19/08/2026 16h ET | Regra de idade: último ano de graduação, formada a partir de jan/2021, OU **30 anos ou menos** — você se enquadra sem restrição | ✅ Melhor encaixe do grupo — só você é elegível entre os adultos |
+| KAIST International Graduate Scholarship | 🇰🇷 | ✅ 18/ago-01/set/2026 | É para entrada **Spring 2027** (não Fall 2026, já fechado). Bolsa integral automática ao selecionar "KAIST Scholarship" | Viável se topar mudar-se para mestrado/PhD em tempo integral |
+| KAIST Master Data Science | 🇰🇷 | ✅ ~02/09/2026 | Mesma ressalva — entrada **Spring 2027** (fev/mar), não 2026. Bolsa: isenção total + ~1.000.000 KRW/mês (4 semestres). Encaixe direto com Big Data & Inteligência Analítica | Confirmar corte de inglês do GSDS (gsds.kaist.ac.kr) antes de decidir |
+| POSTECH Graduate Scholarship | 🇰🇷 | ⚠️ **prazo corrigido: 11/09/2026** (não 01/09) | Mesmo padrão do KAIST — entrada Spring 2027, bolsa (GIFT) vinculada à admissão | Viável se topar mudar-se |
+| University of Sydney RTP | 🇦🇺 | ✅ ~11/09/2026 | Cobre mensalidade + stipend A$42.754/ano; exige doutorado por pesquisa em tempo integral | Só se topar virada de carreira para PhD |
+| Correlation One DS4A | 🇺🇸/Global | ⚠️ prazo não confirmado oficialmente | Bootcamp gratuito de 13-14 semanas, foco em grupos sub-representados (mulheres, negros, latinos), sem exigência de experiência prévia | Vale como upskilling gratuito — confirmar data em correlation-one.com |
+
+Detalhamento completo (documentos, elegibilidade, fontes) está no `bolsas.csv` (coluna `observacoes`).

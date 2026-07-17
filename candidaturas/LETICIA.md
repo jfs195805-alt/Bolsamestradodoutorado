@@ -127,3 +127,12 @@ Duas oportunidades relacionadas também adicionadas:
 | Prontos Pro Mundo | 100% confirmado, mas restrito a alunos da rede estadual pública de SP — não aberto a qualquer brasileiro |
 
 **Conclusão honesta:** de ~15 frentes investigadas nesta rodada, 3 produziram achados genuinamente novos e qualificados (Davis Scholars, Milton Academy aid, Concord Academy com ressalva) — as demais foram descartadas com motivo específico documentado, não por falta de busca.
+
+---
+
+## 🔍 Verificação — Canadian Open Mathematics Challenge (prazo 31-60 dias)
+
+- **⚠️ Prazo:** o "01/09/2026" na base parece ser a **abertura** de inscrições, não o fechamento — a data de fechamento real não foi confirmada em fonte primária (calendário oficial bloqueado para verificação automatizada). Data da prova em fonte secundária, não confirmada: 29/10/2026.
+- **Não é gratuito** — taxa de inscrição por estudante (~US$50/CAD em edição recente; valor oficial 2026 não confirmado).
+- **Inscrição internacional:** possível via divisão "International", mas exige um "Open Writing Centre" (OWC) com vagas limitadas — **não confirmado se há OWC disponível no Brasil**, checar diretamente antes de contar com esta opção.
+- **Formato:** 150 minutos, 3 seções (4 questões introdutórias + 4 desafiadoras + 4 com demonstração completa), 80 pontos, pontuação parcial por trabalho mostrado.
