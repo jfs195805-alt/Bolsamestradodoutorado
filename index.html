@@ -211,6 +211,7 @@
   <section id="view-rankingpsi" class="hidden">
     <div class="rk-note">🎯 <b>Todos os 105 programas de Psicologia</b> do levantamento, ordenados por <b>Compatibilidade Clínica (★1–5)</b> — avaliada a partir das linhas de pesquisa oficiais de cada programa, não de um resumo genérico — com nota CAPES como critério de desempate. Fatores como chance de bolsa, qualidade docente e localização <b>não entram na pontuação</b> por falta de dado verificável; não foram inventados.
       <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">💡 <b>Lembrete estratégico:</b> a Daniela tem <b>certificação internacional em Terapia do Esquema (ISST — International Society of Schema Therapy)</b>. Isso é um diferencial real de currículo para a carta de motivação e o projeto de pesquisa, especialmente em programas com linha de Psicoterapia/Psicologia Clínica/Saúde Mental (★4–5 abaixo) — vale citar essa certificação explicitamente na narrativa de candidatura, mesmo em programas de orientação não-Gestalt, como evidência de formação clínica avançada e prática supervisionada já em curso.</div>
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">🎯 <b>Cada card abaixo já traz a linha de pesquisa recomendada</b> para ela desenvolver um projeto do zero naquele programa específico — decidida programa a programa com base no que ela realmente tem (Terapia do Esquema + Gestalt-terapia), não uma sugestão genérica. Quando nenhuma linha do programa comporta um projeto autêntico nesse perfil, isso também aparece marcado (🚫 Sem linha natural), em vez de forçar um encaixe.</div>
     </div>
     <div class="stats" id="statsPsi"></div>
     <div class="toolbar">
@@ -1079,7 +1080,7 @@ function renderRankingPsi(){
     if(fFormando && formandoStatusPsi(r.aceita_provavel_formando)!==fFormando) return false;
     if(fEstrelas && r._stars<parseInt(fEstrelas,10)) return false;
     if(q){
-      const hay=`${r.instituicao} ${r.ppg} ${r.linhas_pesquisa}`.toLowerCase();
+      const hay=`${r.instituicao} ${r.ppg} ${r.linhas_pesquisa} ${r.linha_recomendada_projeto}`.toLowerCase();
       const termos=q.split(/\s+/).filter(Boolean);
       if(!termos.every(t=>hay.includes(t))) return false;
     }
@@ -1104,10 +1105,28 @@ function renderRankingPsi(){
       <div class="inst">${escapeHtml(r.ppg)}</div>
       <div class="row"><span class="chip" style="color:var(--accent)">${starsHtmlPsi(r._stars)}</span>${capesChip}${formandoBadgePsi(r.aceita_provavel_formando)}</div>
       ${r.linhas_pesquisa?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">📚 ${escapeHtml(r.linhas_pesquisa)}</div>`:''}
+      ${linhaRecomendadaHtml(r.linha_recomendada_projeto)}
       <div class="row" style="margin-top:6px">✉️ ${emailHtml}</div>
       <div class="card-actions">${siteBtn}</div>
     </div>`;
   }).join('');
+}
+function parseLinhaRecomendada(v){
+  if(!v) return null;
+  const m=v.match(/^\[(\w+)\]\s*Linha:\s*(.*?)\s*—\s*Motivo:\s*(.*)$/s);
+  if(!m) return {viab:'moderado', linha:'', motivo:v};
+  return {viab:m[1], linha:m[2], motivo:m[3]};
+}
+function linhaRecomendadaHtml(v){
+  const p=parseLinhaRecomendada(v);
+  if(!p) return '';
+  const viabMap={forte:['🎯 Melhor encaixe para projeto','var(--ok)'],moderado:['💡 Possível encaixe','var(--soon)'],fraco:['⚠️ Encaixe fraco','var(--muted)'],sem_linha:['🚫 Sem linha natural','var(--muted)'],dado_insuficiente:['❓ Dado insuficiente','var(--muted)']};
+  const [label,color]=viabMap[p.viab]||viabMap.moderado;
+  const linhaTxt=p.linha&&p.linha!=='—'?`<b>${escapeHtml(p.linha)}</b><br>`:'';
+  return `<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">
+    <span class="chip" style="background:${color};color:#fff;border-color:${color};margin-bottom:4px;display:inline-block">${label}</span><br>
+    ${linhaTxt}${escapeHtml(p.motivo||'')}
+  </div>`;
 }
 function renderStatsPsi(list){
   const cinco=list.filter(r=>r._stars===5).length;
@@ -1121,7 +1140,7 @@ function renderStatsPsi(list){
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${simFormando}</div><div style="color:var(--muted);font-size:.8rem">Aceitam provável formando</div></div>
     <div class="stat"><div style="font-size:1.4rem;font-weight:700;color:var(--ok)">${comEmail}</div><div style="color:var(--muted);font-size:.8rem">Com e-mail</div></div>`;
 }
-const COLS_PSI=['instituicao','ppg','nota_capes','compat_clinica','aceita_provavel_formando','linhas_pesquisa','email','link'];
+const COLS_PSI=['instituicao','ppg','nota_capes','compat_clinica','aceita_provavel_formando','linhas_pesquisa','linha_recomendada_projeto','email','link'];
 function exportCsvPsi(){
   const list=dataBR.filter(r=>r.area==='Psicologia');
   const rows=[COLS_PSI.join(',')];
