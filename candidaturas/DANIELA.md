@@ -185,3 +185,38 @@ Ranking construído com **apenas dados verificados** (Regra Zero: nenhum campo f
 
 - **USP (IP) — Psicologia Clínica**: programa 100% dedicado a Psicologia Clínica/psicoterapia, mas viés majoritariamente PSICANALÍTICO — checar orientadores individuais
 - **UFPA — Psicologia**: DESTAQUE MÁXIMO: linha explícita 'Fenomenologia: Teoria e Clínica' (Husserl/Heidegger/Ricoeur/Giorgi) — máxima aderência ao perfil humanista-existencial/fenomenológico
+---
+
+## 📅 EDITAIS — Psicologia (janelas estimadas, para a Daniela)
+
+⚠️ **Leia isto antes de usar a lista abaixo.** As datas vêm do campo `prazo` coletado no levantamento nacional (fase 1) e são **janelas genéricas estimadas** (ex.: "Ago-Out/2026"), não datas de edital confirmadas. Só 54 dos 105 programas de Psicologia têm algum dado de data — os outros 51 estão marcados "sem dado" porque vieram das fases posteriores do levantamento, que não coletaram essa informação. Mesmo os 54 com data têm o mesmo problema: dezenas de programas diferentes compartilham exatamente a mesma janela (ex. "Ago-Out/2026"), o que é um sinal de que a estimativa é aproximada, não pesquisada programa a programa. **Antes de se inscrever em qualquer um, confirme a data real no site oficial do programa** (coluna Link no CSV/planilha) — nunca use esta lista como data definitiva.
+
+Calculado em relação a hoje (17/07/2026).
+
+### 🟢 Possivelmente abertos agora (3 programas)
+
+| Instituição | Programa | Janela estimada |
+|---|---|---|
+| UFBA | Psicologia | Jun-Jul/2026 (verificar) |
+| UFPE | Psicologia Cognitiva | Jun-Jul/2026 (verificar) |
+| UFC | Psicologia | Jun-Jul/2026 (verificar) |
+
+⚠️ UFBA está no Top 10 (posição 7) — se essa janela estiver correta, o edital pode estar prestes a fechar. Confirme urgentemente em [ppgpsi.ufba.br](https://ppgpsi.ufba.br).
+
+### 🟡 Abrindo em breve — próximos ~60 dias (24 programas, janela Ago-Out/2026)
+
+Entre estes, destacam-se os que estão no Top 30 da Daniela: **UnB (Psicologia Clínica e Cultura, #8)**, **UFPR (#9)**, **UEM (#10)**, **UFSM (#11)**, **UFG (#12)**, **UFPA (#2, o mais recomendado — Fenomenologia)**, **UEL (#14)**.
+
+Lista completa (24): UNICAMP Psicologia, UFMG Psicologia Cognição/Comportamento, UFMG Neurociências, UnB Psicologia Clínica e Cultura★, UnB Psicologia Social/Trabalho/Organizações, UnB Ciências do Comportamento, UFSC Psicologia, UFPR Psicologia★, UFSCar Psicologia, UFSM Psicologia★, UFJF Psicologia, UFPB Psicologia Social, UFPB Neurociência Cognitiva e Comportamento, UFRN Psicologia, UFRN Psicobiologia, UFPA Neurociências e Comportamento, UFPA Psicologia★ (Top 2!), UFG Psicologia★, UFES Psicologia, UNESP (Assis) Psicologia, UNESP (Bauru) Psicologia do Desenvolvimento e Aprendizagem, UEL Psicologia★, UEM Psicologia★, UPE Neuropsiquiatria e Ciências do Comportamento.
+
+### 🟠 Abrindo mais adiante — ~3 a 4 meses (22 programas, janela Set-Nov/2026)
+
+Destaques do Top 30: **USP-IP Psicologia Clínica (#1, o mais bem avaliado no CAPES)**, **USP-FFCLRP (#3)**, **UFRGS (#4)**, **UFRJ-IP (#5)**, **UFF (#6)**, **UFAM (#13)**, **UERJ Psicologia Clínica (#15)**, **UFAL (#16)**, **UFMA (#17)**, **UFMT (#18)**.
+
+Lista completa (22): USP(IP) Psicologia Clínica★, USP(IP) Psicologia Experimental, USP(IP) Psicologia Escolar e do Desenvolvimento Humano, USP(FFCLRP) Psicologia★, USP(FFCLRP) Psicobiologia, UFRJ(IP) Psicologia★, UFRJ Psicobiologia, UFRGS Psicologia★, UFRGS Neurociências, UFF Psicologia★, UFAM Psicologia★, UFS Psicologia Social, UFAL Psicologia★, UFMA Psicologia★, UFMS Psicologia, UFMT Psicologia★, UFT Ensino em Ciências e Saúde, UERJ Psicologia Social, UERJ Psicologia Clínica★, UDESC Psicologia (dado de baixa confiança), UESC Psicologia da Saúde (dado de baixa confiança).
+
+### ⚪ Sem dado de data (51 programas)
+
+A maioria dos programas coletados nas fases 2-3 do levantamento (incluindo vários bem avaliados) não tem nenhuma data estimada — isso inclui vários e-mails/particularidades que só saem no [CSV completo](../mestrados_brasil.csv) ou na planilha Excel. Não listados aqui individualmente para não sobrecarregar; consulte a aba "Mestrados Brasil" do site ou o arquivo `.xlsx` e filtre por `prazo = "—"`.
+
+★ = programa presente no Top 30 desta seção.
