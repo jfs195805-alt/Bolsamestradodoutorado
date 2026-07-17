@@ -200,6 +200,7 @@
           <th>E-mail coordenação</th>
           <th onclick="sortBrasil(6)">Explicação (linhas de pesquisa + melhor encaixe)</th>
           <th>Link</th>
+          <th>Candidatura</th>
         </tr></thead>
         <tbody id="tbodyBR"></tbody>
       </table>
@@ -896,6 +897,7 @@ async function syncFromCsv(silent){
 // ===== Mestrados Brasil (PPGs) =====
 let dataBR=[];
 let filteredBR=[];
+let currentPsiList=[];
 let sortColBR=-1, sortAscBR=true;
 async function syncBrasilCsv(){
   try{
@@ -973,7 +975,7 @@ function renderBrasilFiltered(){
 function renderTableBR(){
   const tbody=document.getElementById('tbodyBR');
   const empty=document.getElementById('emptyBR');
-  tbody.innerHTML=filteredBR.map(r=>`<tr>
+  tbody.innerHTML=filteredBR.map((r,idx)=>`<tr>
     <td class="pn">${escapeHtml(r.instituicao)}</td>
     <td>${escapeHtml(r.ppg)}</td>
     <td>${escapeHtml(r.nota_capes||'—')}</td>
@@ -984,6 +986,7 @@ function renderTableBR(){
     <td>${emailCellBR(r.email)}</td>
     <td class="wrap-lg">${escapeHtml(r.explicacao||'—')}</td>
     <td>${r.link?`<a href="${escapeAttr(r.link)}" target="_blank" rel="noopener">Site</a>`:'—'}</td>
+    <td><button class="btn primary" style="white-space:nowrap" onclick="prepararCandidaturaBR(${idx})">🤖 Preparar candidatura</button></td>
   </tr>`).join('');
   empty.style.display=filteredBR.length?'none':'block';
   renderStatsBR();
@@ -1095,6 +1098,7 @@ function renderRankingPsi(){
   document.getElementById('rkPsiCount').textContent=list.length+' programa(s) de Psicologia';
   empty.style.display=list.length?'none':'block';
   renderStatsPsi(list);
+  currentPsiList=list;
   grid.innerHTML=list.map((r,idx)=>{
     const emailHtml=emailCellBR(r.email);
     const siteBtn=r.link?`<a class="btn ghost" href="${escapeAttr(r.link)}" target="_blank" rel="noopener">🔗 Site</a>`:'';
@@ -1107,7 +1111,7 @@ function renderRankingPsi(){
       ${r.linhas_pesquisa?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">📚 ${escapeHtml(r.linhas_pesquisa)}</div>`:''}
       ${linhaRecomendadaHtml(r.linha_recomendada_projeto)}
       <div class="row" style="margin-top:6px">✉️ ${emailHtml}</div>
-      <div class="card-actions">${siteBtn}</div>
+      <div class="card-actions">${siteBtn}<button class="btn primary" onclick="prepararCandidaturaPsi(${idx})">🤖 Preparar candidatura</button></div>
     </div>`;
   }).join('');
 }
@@ -1188,6 +1192,64 @@ function prepararCandidatura(id){
   } else { prompt2(prompt); }
 }
 function prompt2(text){ window.prompt('Copie o texto abaixo (Ctrl+C) e cole numa conversa com o Claude:', text); }
+
+// ===== Preparar candidatura com Claude — Mestrados Brasil =====
+function prazoLabelBR(r){
+  const s=r.status_abertura||'';
+  if(s.startsWith('Aberto')) return 'aberto agora (estimado)';
+  if(s.startsWith('Ainda')) return 'ainda não abriu (estimado)';
+  if(s.startsWith('Encerrado')) return 'encerrado (estimado) — checar próximo ciclo';
+  return 'sem dado de prazo confirmado nesta base';
+}
+function personGuessBR(r){
+  if(r.area==='Psicologia') return 'Daniela';
+  if(r.area==='Computação/Dados') return 'Maria Eduarda';
+  const e=(r.explicacao||'')+' '+(r.linhas_pesquisa||'');
+  if(e.includes('Daniela')) return 'Daniela';
+  if(e.includes('Maria Eduarda')) return 'Maria Eduarda';
+  if(e.includes('Rafael')) return 'Rafael';
+  return `a definir (área: ${r.area||'não informada'})`;
+}
+function montarPromptCandidaturaBR(r){
+  return `Quero que você prepare e pré-preencha (SEM enviar) minha candidatura para este programa de pós-graduação brasileiro:
+
+Instituição: ${r.instituicao||''}
+Programa: ${r.ppg||''}
+Área: ${r.area||''}
+Nota CAPES: ${r.nota_capes||'não informada'}
+Prazo (janela estimada): ${r.prazo||'não informado'} (${prazoLabelBR(r)})
+Link oficial: ${r.link||'não informado'}
+E-mail de coordenação (nossa base): ${r.email||'não encontrado — pesquise'}
+Linhas de pesquisa do programa (nossa base): ${r.linhas_pesquisa||'não levantadas nesta base — pesquise'}
+Compatibilidade clínica — nossa análise, quando aplicável (Psicologia): ${r.compat_clinica||'—'}
+Linha recomendada para o projeto do zero — nossa análise, quando aplicável (Psicologia): ${r.linha_recomendada_projeto||'—'}
+Aceita "provável formando" — nossa pesquisa, quando aplicável (Psicologia): ${r.aceita_provavel_formando||'não pesquisado'}
+Observações da nossa base: ${r.explicacao||'—'}
+Pessoa candidata: ${personGuessBR(r)}
+
+O que preciso que você faça:
+1. Pesquise a fundo os critérios REAIS de seleção deste programa específico (edital vigente ou mais recente disponível, o que a banca avalia, exigências de projeto/proficiência em idioma/documentos, formato da entrevista quando houver) — sem inventar nada que não conseguir verificar.
+2. Monte um dossiê de candidatura completo: rascunho de pré-projeto de pesquisa (usando a linha recomendada acima como ponto de partida quando houver, ou a linha de pesquisa do programa mais compatível com meu perfil), carta de motivação personalizada com base no meu perfil real (arquivo candidaturas/*.md do repositório jfs195805-alt/Bolsamestradodoutorado — inclui, no caso da Daniela, a certificação internacional ISST em Terapia do Esquema e o estágio supervisionado em Gestalt-terapia), checklist de documentos exigidos, e um briefing para quem vai escrever minha carta de recomendação.
+3. Se o link oficial for um formulário de inscrição, use automação de navegador (Playwright) para ABRIR o portal oficial e PRÉ-PREENCHER os campos com os dados que eu te passar na hora — sem clicar em enviar/submit em nenhuma hipótese. Eu reviso e envio pessoalmente.
+4. Use as skills, ferramentas e subagentes que precisar (pesquisa profunda, leitura do PDF do edital, automação de navegador etc.) para fazer isso da forma mais completa e real possível — sem atalhos nem dados inventados. Se algo não puder ser verificado, diga isso explicitamente em vez de estimar.
+5. Me avise claramente quando algum campo/etapa não puder ser automatizado (CAPTCHA, verificação por e-mail/SMS, upload de documento, ensaio que exige minha voz pessoal, entrevista) em vez de fingir que preencheu.
+
+Pode começar pedindo os dados pessoais/documentos que precisar de mim.`;
+}
+function copyCandidaturaPromptBR(prompt){
+  const msg='📋 Prompt copiado! Cole numa conversa com o Claude para ele pesquisar o edital real, montar o dossiê completo (pré-projeto, carta, checklist) e pré-preencher o formulário oficial (sem enviar) deste programa.';
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(prompt).then(()=>alert(msg)).catch(()=>{ prompt2(prompt); });
+  } else { prompt2(prompt); }
+}
+function prepararCandidaturaBR(idx){
+  const r=filteredBR[idx]; if(!r) return;
+  copyCandidaturaPromptBR(montarPromptCandidaturaBR(r));
+}
+function prepararCandidaturaPsi(idx){
+  const r=currentPsiList[idx]; if(!r) return;
+  copyCandidaturaPromptBR(montarPromptCandidaturaBR(r));
+}
 
 document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==='overlay')closeModal();});
 populatePaisFilter();
