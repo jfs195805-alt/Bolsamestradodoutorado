@@ -136,3 +136,37 @@ Duas oportunidades relacionadas também adicionadas:
 - **Não é gratuito** — taxa de inscrição por estudante (~US$50/CAD em edição recente; valor oficial 2026 não confirmado).
 - **Inscrição internacional:** possível via divisão "International", mas exige um "Open Writing Centre" (OWC) com vagas limitadas — **não confirmado se há OWC disponível no Brasil**, checar diretamente antes de contar com esta opção.
 - **Formato:** 150 minutos, 3 seções (4 questões introdutórias + 4 desafiadoras + 4 com demonstração completa), 80 pontos, pontuação parcial por trabalho mostrado.
+
+---
+
+## 🆕 Pesquisa em ângulos ainda não explorados: esportes, leitura/escrita, IA e programas estaduais (17/07/2026)
+
+### 🚨 AÇÃO URGENTE — Olimpíada Nacional de Inteligência Artificial Aplicada
+
+**Prazo até 31/07/2026** (poucos dias!). Gratuita, organizada pelo Ceia-UFG + Secti-GO, nacional pela primeira vez em 2026 (antes era só de Goiás). Inclui trilhas de capacitação gratuitas em Python/Lógica/IA antes de cada fase. Idade certa (9º ano do fundamental até última série do ensino médio/técnico), inscrição em equipe de 3 alunos + 1 tutor, premiação até R$10 mil/pessoa, **120 vagas reservadas prioritariamente a equipes com maioria feminina**. Diferente da ONIA (já catalogada) — nomes parecidos, organizações diferentes. [Inscrição](https://olimpiadadeia.ceia.digital/)
+
+### 📖 Leitura/Escrita/Jornalismo
+
+- **Youth Journalism International** ✅ melhor achado da rodada — 100% gratuito, adesão contínua, 12-20 anos, qualquer país. [Cadastro](https://youthjournalism.org/join/)
+- **Cambridge Re:think Essay Competition** e **JASNA Jane Austen Essay Contest** — gratuitos, mundiais, mas ciclo 2026 já fechou; aguardar reabertura em 2027 (~jan e ~jun respectivamente).
+- **Harvard Crimson Global Essay Competition** — prestigiado mas pago (US$15-20); próximo ciclo ~fev/2027.
+
+### 🤖 IA/Dados (novos, mas a maioria com ciclo 2026 já fechado)
+
+- **USAII Global AI Hackathon** e **WAICY** — gratuitos, escala global, idade certa — mas ambos com o ciclo 2026 já encerrado; cadastrar interesse e aguardar 2027.
+- **UC Berkeley BeSMART** — programa inaugural 2026, mas PAGO (US$7.000) com bolsas à parte não totalmente confirmadas — baixa prioridade.
+- Não foi encontrado nenhum programa realmente gratuito e aberto a brasileiras de 14 anos vindo de Google/Microsoft/Meta/OpenAI/Anthropic — as iniciativas dessas empresas em 2025/2026 são restritas a professores, universitários, ou geografias específicas dos EUA.
+
+### 🇧🇷 Programas estaduais brasileiros (além de SP)
+
+- **Intercâmbio Estudantil SEDU-ES** (Espírito Santo) e **Ganhando o Mundo** (Paraná) — bolsas integrais reais, mas só se a família residir nesses estados.
+- **Ceará Científico** — feira de ciências gratuita do CE, premiação em medalhas (não confirmado se há valor em dinheiro).
+- **CNPq — Iniciação Científica Júnior (IC-Jr)** — bolsa real para escola pública, mas inscrição não é direta no CNPq — precisa contatar a Fundação de Amparo à Pesquisa do estado ou uma universidade local com cota.
+
+### 🏃 Esportes — poucos achados sólidos
+
+- **Bolsa Talento Esportivo (SP)**: bolsa real, mas exige residência em SP (2+ anos) e ser atleta federada com resultados — não é bolsa de iniciação.
+- **LOVE ALL Scholarship** (tênis, Kodjoe Family Foundation): bolsa integral real na Mouratoglou Academy, mas elegibilidade de país não confirmada.
+- A maioria do que existe no mercado de "bolsas esportivas" para boarding schools é, na prática, serviço pago de agência — não bolsa gratuita real.
+
+Detalhamento completo está no `bolsas.csv` (coluna `observacoes`).
