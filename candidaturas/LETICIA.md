@@ -170,3 +170,33 @@ Duas oportunidades relacionadas também adicionadas:
 - A maioria do que existe no mercado de "bolsas esportivas" para boarding schools é, na prática, serviço pago de agência — não bolsa gratuita real.
 
 Detalhamento completo está no `bolsas.csv` (coluna `observacoes`).
+
+---
+
+## 🌍 Varredura exaustiva mundial + cursos de verão (18/07/2026)
+
+Pergunta direta: "já encontrou todas as melhores bolsas 100% do mundo?" Resposta honesta: não, as rodadas anteriores foram sólidas mas não exaustivas (WebFetch bloqueado em boa parte das buscas, listas curadas de escolas conhecidas, não um censo completo). Rodou-se então uma varredura organizada por geografia (EUA/UK, Canadá/Austrália/NZ/Irlanda, fundações globais) + uma rodada específica de cursos de verão universitários, sempre cruzando contra tudo já catalogado.
+
+### 🎯 Melhor achado novo: ASSIST Scholars — Sanderson Scholarship
+100% confirmado (tuition + moradia, até ~US$84.000/ano em algumas das ~75 escolas da rede ASSIST nos EUA). **Aplicações para o ano letivo 2027-2028 abrem agora (julho/2026)**. Único porém real: dura 1 ano letivo, não o ensino médio completo (diferente do Davis Scholars, que é 2-3 anos). [Detalhes](https://www.assistscholars.org/en/scholarship/)
+
+### 🏆 Achado mais forte de todas as rodadas: need-blind internacional
+**Phillips Exeter Academy** e **Phillips Academy Andover** (já catalogadas) são as ÚNICAS duas escolas do mundo inteiro, entre dezenas verificadas nesta e em rodadas anteriores, com política de **need-blind explicitamente estendida a candidatos internacionais** — ou seja, a decisão de admissão não considera se a família consegue pagar, e quem é aceito recebe até 100% da necessidade demonstrada sem empréstimos. Isso é diferente de "bolsa disponível" (que quase toda escola tem) — é a garantia de que pedir ajuda financeira não prejudica a chance de ser aceita. **Ressalva importante:** a admissão em si continua extremamente seletiva (poucos % de aceitação) — isso não é bolsa garantida, é uma política que remove uma barreira específica.
+
+### 📚 Cursos de verão gratuitos — achado raro confirmado
+Combinação "genuinamente gratuito + aceita brasileiros + 14-15 anos" é rara: quase todo programa de pesquisa em laboratório gratuito nos EUA (MITES/MIT, Jackson Laboratory, Simons SRP, Clark Scholars, Broad, BWSI) exige cidadania/residência permanente americana ou tem 16+ anos como idade mínima por política de segurança.
+- **The Junior Academy (NYAS)** ✅ — 100% gratuito, virtual, 13-17 anos, global, gera projeto/portfólio real com mentor STEM. Um dos únicos dois programas (junto com Technovation Girls, já catalogada) que passa em todos os critérios simultaneamente.
+- **National Youth Science Camp** — 100% gratuito com Brasil explicitamente elegível, mas idade mínima 16 anos — guardar para 2028-2029.
+- Fora dos EUA (Reino Unido, Canadá, Europa), nenhum curso de verão genuinamente gratuito e aberto a uma adolescente brasileira de 14-15 anos foi encontrado.
+
+### 🎓 Contexto de longo prazo — universidades de elite genuinamente "grátis" para internacionais
+Para dar sentido ao objetivo final (currículo forte → Ivy League gratuita): confirmado que **Harvard, Yale, Princeton, MIT e Dartmouth** são need-blind + cobrem 100% da necessidade para internacionais, sem empréstimos — as apostas mais seguras de "grátis de verdade" se ela for aceita daqui a alguns anos. **Brown** passa a ser need-blind para internacionais a partir da turma que entra em 2029. Amherst, Bowdoin e Washington and Lee também são need-blind para internacionais (fora do grupo Ivy formal). Columbia, Cornell e Penn continuam need-aware (pedir bolsa pode prejudicar a admissão).
+
+### ❌ Descartado nesta rodada, com motivo (dezenas de escolas verificadas)
+- **Canadá/Austrália/Nova Zelândia**: nenhuma bolsa 100% de boarding school genuinamente aberta a brasileiros foi confirmada em >25 escolas checadas — o padrão é sistemático: bolsas 100% existem mas são restritas a cidadãos/residentes locais (ou grupos étnicos específicos, como indígenas canadenses); bolsas abertas a internacionais são sempre parciais.
+- **Reino Unido**: mesmo padrão das rodadas anteriores — bursaries de até 100% existem na política de escolas como Eton, Harrow, Winchester, Marlborough, Cheltenham, mas na prática dependem de vínculo fiscal/residencial britânico. Winchester e Ampleforth confirmaram exclusão explícita de novos candidatos internacionais.
+- **EUA**: escolas como St. Andrew's (DE), Cranbrook, The Hill, Kent, Frederick Gunn e Peddie (Armellino) têm ajuda financeira formalmente limitada ou excluída para internacionais.
+- **Fundações intermediárias/corporativas**: A Better Chance, Sutton Trust US, Bridge2Rwanda (todas fechadas geograficamente); nenhuma fundação corporativa brasileira adicional (Vale, Telefônica Vivo, Natura, Roberto Marinho, B3 Social) tem programa de intercâmbio internacional de ensino médio.
+- **Programas estaduais brasileiros "Ganhando o Mundo" (PR) e "Prontos Pro Mundo" (SP)**: são 100% financiados e enviam para Canadá/Irlanda/Austrália/NZ/UK, mas só servem a quem já é aluno da rede pública estadual desses dois estados especificamente — não é aberto a qualquer brasileiro.
+
+Detalhamento completo está no `bolsas.csv` (coluna `observacoes`).
