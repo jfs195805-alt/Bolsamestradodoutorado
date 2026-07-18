@@ -216,3 +216,25 @@ Para dar sentido ao objetivo final (currículo forte → Ivy League gratuita): c
 - **Programas estaduais brasileiros "Ganhando o Mundo" (PR) e "Prontos Pro Mundo" (SP)**: são 100% financiados e enviam para Canadá/Irlanda/Austrália/NZ/UK, mas só servem a quem já é aluno da rede pública estadual desses dois estados especificamente — não é aberto a qualquer brasileiro.
 
 Detalhamento completo está no `bolsas.csv` (coluna `observacoes`).
+
+---
+
+## 💻 Cursos de tecnologia/IA 100% financiados incluindo passagem aérea (18/07/2026)
+
+Pedido específico: cursos de tecnologia/IA com bolsa 100% cobrindo também a passagem aérea — critério mais rígido que "tuition + hospedagem" usado em rodadas anteriores. Rodou-se uma varredura em duas frentes (EUA/UK + resto do mundo) que também voltou para verificar, um a um, se os programas de tecnologia/IA já catalogados cobrem passagem.
+
+### 🎯 Melhor achado: TechGirls (Departamento de Estado dos EUA)
+O único programa de tecnologia/IA encontrado com passagem aérea 100% confirmada e Brasil explicitamente elegível. Acampamento tecnológico intensivo na Virginia Tech (coding, IA, robótica) + visitas a empresas + homestay, com passagem, visto, hospedagem e seguro-saúde todos custeados pelo governo dos EUA. **Ressalva:** idade mínima 15 anos e o ciclo 2026 já fechou — Letícia deve se preparar para se inscrever no ciclo 2027 (abertura estimada nov/2026-jan/2027), quando já terá 15 anos. [Detalhes](https://exchanges.state.gov/non-us/program/techgirls)
+
+### 🏆 Achado mais imediato: Hack Club Horizons
+Ecossistema de hackathons presenciais gratuitos (hospedagem + alimentação + passagem/estipêndio de viagem) para 13-18 anos, com edições rotativas pelo mundo (Cingapura, Sydney, e outras). Entrada não é inscrição tradicional — exige acumular ~35h de horas de projeto na plataforma Horizons antes de resgatar o ingresso. Vale acompanhar `hackathons.hackclub.com` regularmente; cada edição tem prazo curto e regras próprias. [Calendário](https://hackathons.hackclub.com/)
+
+### 🔶 Outros achados reais, mas com barreira de acesso clara
+- **AFS Global STEM Academies** — passagem confirmada, mas não é IA-específico (foco em STEM/liderança amplo) e exige 15+ anos; ciclo 2026 fechado, preparar para 2027.
+- **EUCYS (European Union Contest for Young Scientists)** — passagem paga pela UE para finalistas, idade certa (14-20), mas não é inscrição direta: exige vencer uma feira de ciências nacional primeiro, e não foi confirmado se o Brasil tem uma rota ativa para essa competição especificamente.
+- **Sakura Science Exchange (Japão)** — financiamento e passagem confirmados pelo governo japonês, mas a inscrição só pode ser feita por uma instituição brasileira (escola/universidade/ONG) em parceria com uma instituição japonesa — não é candidatura individual.
+
+### ❌ Conclusão honesta sobre os já catalogados
+Ao verificar item a item os programas de tecnologia/IA já na base (Stanford AI4ALL, Kode With Klossy, Wharton Global Youth, Conrad Challenge, Genius Olympiad, Diamond Challenge, Georgetown, NYU Precollege, FIRST Global/Robotics, Breakthrough Junior Challenge, Rise, TKS), **quase nenhum cobre passagem aérea internacional** — a esmagadora maioria cobre só tuition/hospedagem e deixa o voo por conta da família; isso está agora documentado explicitamente na coluna `observacoes` de cada um. Também identificado: a **Yale Young Global Scholars** elevou a idade mínima para 16 anos em 2026 (Letícia não é mais elegível por enquanto), e o **Girls Who Code Summer Immersion** presencial foi encerrado após 2025.
+
+Detalhamento completo está no `bolsas.csv` (coluna `observacoes`).
