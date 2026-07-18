@@ -6,6 +6,22 @@
 
 ---
 
+## 🚨 AÇÃO IMEDIATA — Olimpíada Nacional de IA Aplicada (prazo 31/07/2026)
+
+Esta é a bolsa/competição catalogada com o prazo mais urgente de toda a base para Letícia. Checklist para inscrever a tempo:
+
+- [ ] **1. Achar um tutor elegível.** Precisa ter 18+ anos e (a) graduação já concluída OU (b) estar matriculado em curso superior reconhecido pelo MEC. Pode ser um professor da escola, um profissional de tecnologia da família/rede de contatos, ou um universitário conhecido. **Este é o gargalo real** — sem tutor não há inscrição.
+- [ ] **2. Recrutar 2 colegas de equipe.** Equipe fixa de 3 estudantes (Letícia + 2). Colegas de turma/escola com interesse em IA/programação são o caminho mais rápido.
+- [ ] **3. Inscrever a equipe** em [olimpiadadeia.ceia.digital](https://olimpiadadeia.ceia.digital/) **antes de 31/07/2026**. 600 vagas nacionais, 120 reservadas com prioridade a equipes com maioria feminina (equipe da Letícia se qualifica se tiver 2+ meninas).
+- [ ] **4. Aguardar resultado da inscrição em 07/08/2026.**
+- [ ] **5. Participar das trilhas formativas gratuitas** (Lógica de Programação, Python, IA Aplicada) a partir de 10/08/2026 — preparação obrigatória antes da fase 1 (online).
+- [ ] **6. Se avançar entre as 50 melhores equipes:** fase 2 é online + presencial (2 dias de imersão na Escola do Futuro Luiz Rassi, Aparecida de Goiânia/GO) e já garante R$900/integrante, incluindo o tutor.
+- [ ] **7. Final e premiação:** 01-02/11/2026, presencial em Goiás. Prêmios individuais top 5: R$10k/8k/6k/4k/2k.
+
+**Contato oficial em caso de dúvida:** olimpiada@ceia.ufg.br / Instagram @olimpiadaiaaplicada.
+
+---
+
 ## 🏆 RANKING GERAL — TODAS as oportunidades
 
 | # | Programa | País/Formato | Tipo | Idade | Prazo | Link direto | O que é |
@@ -143,7 +159,7 @@ Duas oportunidades relacionadas também adicionadas:
 
 ### 🚨 AÇÃO URGENTE — Olimpíada Nacional de Inteligência Artificial Aplicada
 
-**Prazo até 31/07/2026** (poucos dias!). Gratuita, organizada pelo Ceia-UFG + Secti-GO, nacional pela primeira vez em 2026 (antes era só de Goiás). Inclui trilhas de capacitação gratuitas em Python/Lógica/IA antes de cada fase. Idade certa (9º ano do fundamental até última série do ensino médio/técnico), inscrição em equipe de 3 alunos + 1 tutor, premiação até R$10 mil/pessoa, **120 vagas reservadas prioritariamente a equipes com maioria feminina**. Diferente da ONIA (já catalogada) — nomes parecidos, organizações diferentes. [Inscrição](https://olimpiadadeia.ceia.digital/)
+**Prazo até 31/07/2026** (poucos dias!). Gratuita, organizada pelo Ceia-UFG + Secti-GO, nacional pela primeira vez em 2026 (antes era só de Goiás). Checklist completo de inscrição (com cronograma detalhado e o gargalo real — achar tutor) está no topo deste documento, seção "🚨 AÇÃO IMEDIATA". Diferente da ONIA (já catalogada) — nomes parecidos, organizações diferentes.
 
 ### 📖 Leitura/Escrita/Jornalismo
 
