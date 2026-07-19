@@ -191,6 +191,9 @@
         <option value="Alê">Alê</option>
         <option value="Big">Big</option>
       </select>
+      <label class="filter" style="display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none">
+        <input type="checkbox" id="filter15diasBR" onchange="renderBrasilFiltered()"> ⏰ Vencendo em 15 dias
+      </label>
       <button class="btn ghost" onclick="exportCsvBR()">📤 Exportar</button>
     </div>
     <div class="tbl-wrap">
@@ -235,6 +238,9 @@
         <option value="4">★★★★☆ ou mais</option>
         <option value="3">★★★☆☆ ou mais</option>
       </select>
+      <label class="filter" style="display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none">
+        <input type="checkbox" id="filter15diasPsi" onchange="renderRankingPsi()"> ⏰ Vencendo em 15 dias
+      </label>
       <div class="spacer"></div>
       <span class="inst" id="rkPsiCount"></span>
       <button class="btn ghost" onclick="exportCsvPsi()">📤 Exportar</button>
@@ -258,6 +264,9 @@
         <option value="4">★★★★☆ ou mais</option>
         <option value="3">★★★☆☆ ou mais</option>
       </select>
+      <label class="filter" style="display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none">
+        <input type="checkbox" id="filter15diasDados" onchange="renderRankingDados()"> ⏰ Vencendo em 15 dias
+      </label>
       <div class="spacer"></div>
       <span class="inst" id="rkDadosCount"></span>
       <button class="btn ghost" onclick="exportCsvDados()">📤 Exportar</button>
@@ -277,6 +286,9 @@
       <select class="filter" id="filterCategoriaEdu" onchange="renderRankingEdu()">
         <option value="">Categoria: todas</option>
       </select>
+      <label class="filter" style="display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none">
+        <input type="checkbox" id="filter15diasEdu" onchange="renderRankingEdu()"> ⏰ Vencendo em 15 dias
+      </label>
       <div class="spacer"></div>
       <span class="inst" id="rkEduCount"></span>
       <button class="btn ghost" onclick="exportCsvEdu()">📤 Exportar</button>
@@ -296,6 +308,9 @@
       <select class="filter" id="filterCategoriaNeuro" onchange="renderRankingNeuro()">
         <option value="">Categoria: todas</option>
       </select>
+      <label class="filter" style="display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none">
+        <input type="checkbox" id="filter15diasNeuro" onchange="renderRankingNeuro()"> ⏰ Vencendo em 15 dias
+      </label>
       <div class="spacer"></div>
       <span class="inst" id="rkNeuroCount"></span>
       <button class="btn ghost" onclick="exportCsvNeuro()">📤 Exportar</button>
@@ -400,6 +415,9 @@
         <option value="">Todos os níveis</option>
         <option>Ensino Médio</option><option>Graduação/Verão</option><option>Mestrado</option><option>Doutorado</option><option>Pós-doutorado</option><option>Fellowship</option><option>Trabalho/Voluntariado</option>
       </select>
+      <label class="filter" style="display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none">
+        <input type="checkbox" id="rkFilter15dias" onchange="renderRanking()"> ⏰ Vencendo em 15 dias
+      </label>
       <div class="spacer"></div>
       <span class="inst" id="rkCount"></span>
     </div>
@@ -716,10 +734,12 @@ function renderRanking(){
   const rkGrid=document.getElementById('rkGrid');
   const fPrazo=document.getElementById('rkFilterPrazo').value;
   const fNivel=document.getElementById('rkFilterNivel').value;
+  const f15dias=document.getElementById('rkFilter15dias').checked;
   let list=data.filter(i=>{
     if(!matchesPersonRank(i.pessoa_indicada, rankPerson)) return false;
     if(fNivel && !(i.nivel||'').includes(fNivel)) return false;
     if(fPrazo && prazoStatus(i)!==fPrazo) return false;
+    if(f15dias){ const d=daysUntil(i.prazo_inscricao); if(d===null||d<0||d>15) return false; }
     return true;
   });
   list.sort((a,b)=>(parseFloat(b.valor_mensal)||0)-(parseFloat(a.valor_mensal)||0));
@@ -1194,11 +1214,13 @@ function renderBrasilFiltered(){
   const fPrazo=document.getElementById('filterPrazoBR').value;
   const fStatusAbertura=document.getElementById('filterStatusAberturaBR').value;
   const fPessoa=document.getElementById('filterPessoaBR').value;
+  const f15dias=document.getElementById('filter15diasBR').checked;
   filteredBR=dataBR.filter(r=>{
     if(fArea && r.area!==fArea) return false;
     if(fPrazo && r.prazo!==fPrazo) return false;
     if(fStatusAbertura && r.status_abertura!==fStatusAbertura) return false;
     if(fPessoa && !(r.explicacao||'').includes(personCanonical(fPessoa))) return false;
+    if(f15dias){ const d=r.dias_para_prazo; if(d===null||d===undefined||d<0||d>15) return false; }
     if(q){
       const hay=`${r.instituicao} ${r.ppg} ${r.explicacao}`.toLowerCase();
       const termos=q.split(/\s+/).filter(Boolean);
@@ -1314,11 +1336,13 @@ function renderRankingPsi(){
   const q=(document.getElementById('searchBoxPsi').value||'').toLowerCase().trim();
   const fFormando=document.getElementById('filterFormandoPsi').value;
   const fEstrelas=document.getElementById('filterEstrelasPsi').value;
+  const f15dias=document.getElementById('filter15diasPsi').checked;
   let list=dataBR.filter(r=>r.area==='Psicologia');
   list.forEach(r=>{ r._stars=starsCountPsi(r.compat_clinica); r._encerrado=isEncerradoPsi(r.compat_clinica); });
   list=list.filter(r=>{
     if(fFormando && formandoStatusPsi(r.aceita_provavel_formando)!==fFormando) return false;
     if(fEstrelas && r._stars<parseInt(fEstrelas,10)) return false;
+    if(f15dias){ const d=r.dias_para_prazo; if(d===null||d===undefined||d<0||d>15) return false; }
     if(q){
       const hay=`${r.instituicao} ${r.ppg} ${r.linhas_pesquisa} ${r.linha_recomendada_projeto}`.toLowerCase();
       const termos=q.split(/\s+/).filter(Boolean);
@@ -1404,10 +1428,12 @@ function renderRankingDados(){
   const empty=document.getElementById('emptyDados');
   const q=(document.getElementById('searchBoxDados').value||'').toLowerCase().trim();
   const fEstrelas=document.getElementById('filterEstrelasDados').value;
+  const f15dias=document.getElementById('filter15diasDados').checked;
   let list=dataBR.filter(r=>r.area==='Computação/Dados');
   list.forEach(r=>{ r._starsDados=starsCountDados(r.compat_dados); });
   list=list.filter(r=>{
     if(fEstrelas && r._starsDados<parseInt(fEstrelas,10)) return false;
+    if(f15dias){ const d=r.dias_para_prazo; if(d===null||d===undefined||d<0||d>15) return false; }
     if(q){
       const hay=`${r.instituicao} ${r.ppg} ${r.linhas_pesquisa} ${r.linha_recomendada_projeto}`.toLowerCase();
       const termos=q.split(/\s+/).filter(Boolean);
@@ -1499,11 +1525,13 @@ function renderRankingEdu(){
   const empty=document.getElementById('emptyEdu');
   const q=(document.getElementById('searchBoxEdu').value||'').toLowerCase().trim();
   const fCategoria=document.getElementById('filterCategoriaEdu').value;
+  const f15dias=document.getElementById('filter15diasEdu').checked;
   let list=dataBR.filter(r=>r.area==='Educação');
   populateCategoriaEduFilter(list);
   list=list.filter(r=>{
     const cat=parseCategoriaEdu(r.categoria_tematica_educacao);
     if(fCategoria && (!cat || cat.cat!==fCategoria)) return false;
+    if(f15dias){ const d=r.dias_para_prazo; if(d===null||d===undefined||d<0||d>15) return false; }
     if(q){
       const hay=`${r.instituicao} ${r.ppg} ${r.linhas_pesquisa} ${r.categoria_tematica_educacao}`.toLowerCase();
       const termos=q.split(/\s+/).filter(Boolean);
@@ -1606,11 +1634,13 @@ function renderRankingNeuro(){
   const empty=document.getElementById('emptyNeuro');
   const q=(document.getElementById('searchBoxNeuro').value||'').toLowerCase().trim();
   const fCategoria=document.getElementById('filterCategoriaNeuro').value;
+  const f15dias=document.getElementById('filter15diasNeuro').checked;
   let list=dataBR.filter(r=>r.area==='Interdisciplinar'||r.area==='Neurociência');
   populateCategoriaNeuroFilter(list);
   list=list.filter(r=>{
     const cat=parseCategoriaNeuro(r.categoria_tematica_interdisc_neuro);
     if(fCategoria && (!cat || cat.cat!==fCategoria)) return false;
+    if(f15dias){ const d=r.dias_para_prazo; if(d===null||d===undefined||d<0||d>15) return false; }
     if(q){
       const hay=`${r.instituicao} ${r.ppg} ${r.linhas_pesquisa} ${r.categoria_tematica_interdisc_neuro}`.toLowerCase();
       const termos=q.split(/\s+/).filter(Boolean);
