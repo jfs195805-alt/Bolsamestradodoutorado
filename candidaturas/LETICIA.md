@@ -22,6 +22,28 @@ Esta é a bolsa/competição catalogada com o prazo mais urgente de toda a base 
 
 ---
 
+## 🥈 PRÓXIMAS AÇÕES — TKS e Lumiere (nenhuma exige carta de recomendação)
+
+Como a Davis (e qualquer bolsa que exija carta de recomendação) foi desprioritizada, estas são as próximas duas apostas reais, em ordem de urgência.
+
+### TKS — The Knowledge Society (prazo 31/07/2026)
+Fellowship de mentoria real em IA/biotech/dados para adolescentes (13-17 anos). **Documentos: só formulário + entrevista de 30min — sem carta de recomendação.**
+- Pago (~US$489/mês virtual), mas **mais de 60% dos alunos recebem auxílio financeiro**, podendo chegar a 100%.
+- [ ] Preencher formulário em [tks.world/apply-now](https://www.tks.world/apply-now)
+- [ ] Preparar para a entrevista (30min) — falar sobre interesse real em IA/dados
+- [ ] Se aceita: pedir avaliação de auxílio financeiro por necessidade
+- ⚠️ Cobertura de passagem até o hub físico (se optar pelo presencial em Toronto) não confirmada — priorizar o cohort virtual.
+
+### Lumiere Research Scholar Program (prazo 09/08/2026)
+Pareamento 1:1 com pesquisador de PhD/pós-doc para projeto de pesquisa original de 12 semanas, 100% online. **Documentos: formulário + histórico escolar + entrevista — sem carta de recomendação.**
+- Caro (US$2.800-8.900 + depósito de US$200), mas tem **bolsa de inclusão de até 100% baseada em renda familiar** (~US$80k/ano, padrão americano) — avaliada por parceiros locais para candidatos fora dos EUA, processo não totalmente confirmado.
+- [ ] Preencher formulário em [lumiere.foundation/application](https://lumiere.foundation/application)
+- [ ] Assim que possível, perguntar diretamente sobre o processo de avaliação de bolsa por renda para candidatos do Brasil (antes de decidir sobre o depósito)
+- [ ] Reunir histórico escolar para a candidatura
+- ⚠️ Status "condicional" na base — vale confirmar a real disponibilidade/critério da bolsa de inclusão antes de investir tempo no formulário completo.
+
+---
+
 ## 🏆 RANKING GERAL — TODAS as oportunidades
 
 | # | Programa | País/Formato | Tipo | Idade | Prazo | Link direto | O que é |
@@ -118,6 +140,8 @@ Detalhamento completo (documentos, elegibilidade, fontes) está no `bolsas.csv` 
 Rodada dedicada de pesquisa, cruzando cada achado contra as 778 oportunidades já catalogadas para não repetir nada. Critério: bolsa **100% integral** (não parcial, não "ajuda disponível" sem garantia), estudo/imersão em **inglês**, elegível para **14-15 anos**, **Brasil confirmado elegível**, programa ativo com fonte oficial.
 
 ### 🎯 Achado novo mais forte: Davis International Scholars Program (via ASSIST)
+
+⚠️ **DESPRIORIZADO em 19/07/2026:** exige 2-3 cartas de recomendação, e a família confirmou que Letícia não terá essa carta disponível. Sem esse documento não há como montar candidatura viável para este programa — mantido aqui só como registro histórico do achado; energia redirecionada para TKS, Olimpíada de IA e Lumiere (ver seção "🚨 AÇÃO IMEDIATA" no topo do arquivo), nenhuma das quais exige carta de recomendação.
 
 Adicionado ao `bolsas.csv`. Fundo filantrópico da família Shelby Cullom Davis — **distinto do Davis UWC** (que já estava na base) — financia até 5 bolsistas/ano por escola em **5 boarding schools nos EUA**: Emma Willard, Lawrenceville, Milton Academy, Taft e Westminster. US$25.000/ano doados pela família Davis + a escola completa o restante até cobrir **100%** (mensalidade + moradia). Grades 9-11 (~14-17 anos), **Brasil confirmado** entre os 84 países já representados no programa. Aplicação via ASSIST abre jul-ago/2026, fecha **~1º de dezembro/2026** para entrada no ciclo 2027-28 — compatível com o cronograma de preparação da Letícia (candidatura em 2026/2027, entrada 2027/2028).
 
