@@ -366,6 +366,9 @@
         <option value="valor">Ordenar por valor</option>
         <option value="nome">Ordenar por nome</option>
       </select>
+      <label class="filter" style="display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none">
+        <input type="checkbox" id="filter15dias" onchange="render()"> ⏰ Vencendo em 15 dias
+      </label>
       <div class="spacer"></div>
       <button class="btn ghost" onclick="syncFromCsv(false)">🔄 Sincronizar</button>
       <button class="btn ghost" onclick="importCsv()">📥 Importar</button>
@@ -964,6 +967,7 @@ function render(){
   const fPrazo=document.getElementById('filterPrazo').value;
   const fPais=document.getElementById('filterPais').value;
   const fStatusDossie=document.getElementById('filterStatusDossie').value;
+  const f15dias=document.getElementById('filter15dias').checked;
   let list=data.filter(i=>{
     if(fStatus && i.status!==fStatus) return false;
     if(fNivel && !(i.nivel||'').includes(fNivel)) return false;
@@ -972,6 +976,7 @@ function render(){
     if(fPrazo && prazoStatus(i)!==fPrazo) return false;
     if(fPais && extractCountry(i.observacoes)!==fPais) return false;
     if(fStatusDossie && (i.status_dossie||'Não iniciado')!==fStatusDossie) return false;
+    if(f15dias){ const d=daysUntil(i.prazo_inscricao); if(d===null||d<0||d>15) return false; }
     if(q){
       const hay=`${i.nome} ${i.instituicao} ${i.observacoes} ${i.nivel} ${i.explicacao_pessoal||''}`.toLowerCase();
       const termos=q.split(/\s+/).filter(Boolean);
