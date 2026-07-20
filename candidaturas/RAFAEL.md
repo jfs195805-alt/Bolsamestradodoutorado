@@ -175,6 +175,28 @@ Análise de acompanhamento (mesma origem — ChatGPT, refinada): nenhum dos prog
 ## 🗣️ Inglês + Fellowship (opcional)
 Seu inglês já é **Full Professional** — não precisa de curso, só **certificar** (IELTS/TOEFL) quando a bolsa pedir. A **Hubert H. Humphrey Fellowship** (EUA, integral + curso de inglês) encaixaria bem — enquadre como **tecnologia/política de dados** — mas ⚠️ **o prazo de inscrição do ciclo 2026-2027 já encerrou em 30/06/2026**; a data 11/08/2026 era a de resultados/entrevistas da 1ª fase, não o prazo de candidatura (ver seção de verificação abaixo). Replaneje para o ciclo 2027-2028. [Inscrição](https://fulbright.org.br/edital/humphrey/)
 
+## 💼 Vagas de emprego com patrocínio de visto (20/07/2026)
+
+Diferente das bolsas/fellowships acima, vagas de emprego **não são programas permanentes** — cada posting pode ser preenchido ou sair do ar a qualquer momento. Trate a lista abaixo como pontos de partida a confirmar diretamente na fonte, não como oportunidades garantidas. Buscadas com foco no perfil real (BI/Analytics Engineer sênior — BigQuery, Power BI, Tableau, Looker, dbt, Databricks).
+
+### 🎯 Melhor achado: Senior Business Intelligence (BI) Data Engineer — Haiilo, Alemanha
+- **Empresa real e verificável:** Haiilo, plataforma de comunicação corporativa com 1.000+ clientes internacionais (Coca-Cola, EY, Deutsche Bahn, Deutsche Telekom) — coincidência boa: você já trabalhou com Coca-Cola.
+- **Stack bate exatamente com o seu:** BI, arquitetura de dados/pipelines, Tableau, Power BI, Looker, dbt.
+- **Patrocínio de visto + pacote de relocation confirmado no post.**
+- Faixa salarial de referência para sênior na Alemanha: €75.000–120.000/ano (não confirmado se é exatamente o que essa vaga paga — confirmar direto).
+- Fonte: [jaabz.com/jobs/25328](https://jaabz.com/jobs/25328-senior-business-intelligence-bi-data-engineer) (agregador — confirmar a vaga direto no site da Haiilo antes de aplicar).
+
+### 🔶 Outro achado: Senior Power BI Developer — 2iSolutions Inc., Canadá
+- Contrato de 6 meses, remoto, foco em soluções Power BI, dashboards de KPI.
+- Menos informação disponível sobre patrocínio de visto específico — confirmar diretamente antes de investir tempo.
+- Fonte: [jaabz.com/jobs/184250](https://jaabz.com/jobs/184250-power-bi-developer)
+
+### 📌 Canal recomendado para busca contínua
+Em vez de depender de páginas agregadoras genéricas do LinkedIn (que nesta conversa mostraram vários posts de baixa qualidade/golpe), o caminho mais confiável para monitorar vagas reais de BI/Dados com visto na Alemanha/Holanda/Canadá é busca direta e recorrente em:
+- [indeed.com](https://www.indeed.com/q-business-intelligence-engineer-visa-sponsorship-jobs.html) / [ca.indeed.com](https://ca.indeed.com/q-business-intelligence-analyst-visa-sponsorship-jobs.html) — filtro "visa sponsorship" + "Power BI"/"BI Engineer"
+- [arbeitnow.com](https://www.arbeitnow.com/visa-sponsorship-jobs) — vagas na Alemanha com patrocínio de visto
+- LinkedIn Jobs com filtro de "visa sponsorship" (usar a busca de vagas de verdade, não posts de página de conteúdo)
+
 ## 🔍 Verificação urgente — 5 bolsas com prazo em 30 dias (17/07/2026)
 
 Pesquisa de confirmação de edital feita diretamente nas fontes oficiais (ou cruzada via busca quando o fetch foi bloqueado). Resultado: **nenhuma das 5 está hoje em condição real de candidatura completa e viável no prazo**.
