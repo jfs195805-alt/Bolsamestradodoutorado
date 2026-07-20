@@ -8,6 +8,8 @@
 
 ---
 
+> 🚨 **Alerta visto EUA (20/07/2026):** o DHS publicou regra final (efetiva 15/09/2026) acabando com o "duration of status" para F-1/J-1 — teto fixo de **4 anos** de admissão, exigindo extensão via USCIS depois disso; carência pós-programa cai de 60 para 30 dias. Como o **doutorado nos EUA dura em média ~5,7 anos**, qualquer bolsa/fellowship 🇺🇸 abaixo em nível Doutorado (ex.: MATS, Redwood Research, Anthropic Fellows, Lemann Fellowship, Knight-Hennessy) deve ser avaliada já considerando esse novo teto — confirmar com a instituição de destino como pretendem lidar com isso antes de aplicar.
+
 ## 🏆 RANKING GERAL — TODAS as oportunidades
 
 | # | Programa | País | Nível | Valor/mês | Prazo | Link direto | Por que encaixa |

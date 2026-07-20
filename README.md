@@ -41,3 +41,9 @@ Colunas: `nome, instituicao, nivel, prazo_inscricao, valor_mensal, duracao_meses
 - **`observacoes`** traz o valor na moeda original, país e ressalvas.
 
 > ⚠️ Os valores e prazos são aproximados (câmbio jul/2026) e vários prazos de 2027 ainda são estimados. **Confirme sempre na página oficial** antes de se candidatar.
+
+## 🚨 Alerta: mudança na política de visto dos EUA (F-1/J-1)
+
+O DHS publicou uma regra final em **17/07/2026**, efetiva **15/09/2026**, que **acaba com o "duration of status"** para vistos F-1 (estudante) e J-1 (intercâmbio/pesquisa): em vez de poder ficar nos EUA por toda a duração do curso, o período de admissão passa a ter um **teto fixo de 4 anos**, exigindo pedido de extensão via USCIS para ultrapassar esse prazo. O período de carência após o fim do programa também cai de 60 para 30 dias. Fontes: DHS, NAFSA, Nixon Peabody, Ogletree.
+
+**Por que importa aqui:** afeta qualquer bolsa/fellowship baseada nos EUA já catalogada neste arquivo, principalmente **doutorados** — a duração média de um PhD nos EUA (~5,7 anos) **ultrapassa o novo teto de 4 anos**, então quem for aplicar deve considerar a necessidade de pedir extensão via USCIS antes de concluir o curso. Verifique esse ponto diretamente com a instituição/orientador ao avaliar qualquer bolsa dos EUA marcada como doutorado.
