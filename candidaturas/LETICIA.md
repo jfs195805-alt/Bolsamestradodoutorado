@@ -44,70 +44,71 @@ Pareamento 1:1 com pesquisador de PhD/pós-doc para projeto de pesquisa original
 
 ---
 
-## 🎤 Preparação para a entrevista do TKS — pra Letícia ler (21/07/2026)
+## 🎤 Kit de entrevista — narrativa e respostas prontas (serve para TKS e outros programas)
 
-> ⚠️ **Aviso honesto, sem enrolação:** nada aqui garante que ela vai ser aceita ou ganhar bolsa 100%. Isso quem decide é o TKS, depois da entrevista. O que dá pra fazer é chegar preparada, confiante, e contando a verdade sobre quem ela é — porque é isso que eles realmente avaliam.
+> ⚠️ **Aviso honesto, sem enrolação:** nada aqui garante aprovação ou bolsa 100% em nenhum programa. Isso quem decide é cada banca, na entrevista. O que dá pra fazer é chegar preparada, confiante, e contando a verdade sobre quem ela é — porque é isso que qualquer programa sério realmente avalia.
+>
+> 🧭 **Este kit não é só para o TKS** — a narrativa central e 5 das 7 perguntas abaixo são genéricas o suficiente pra servir em QUALQUER entrevista seletiva (Lumiere, Technovation, e qualquer outra que aparecer). Só as perguntas 2 e 7 têm uma parte específica do programa — estão marcadas onde trocar.
 
 ### Letícia, é assim que funciona:
 
-Eles não estão procurando o aluno "perfeito" com nota 10 em tudo. Eles estão procurando alguém **curiosa de verdade**, que gosta de aprender coisas novas e não tem medo de tentar algo difícil. Você já tem isso — só precisa mostrar.
+Eles não estão procurando o aluno "perfeito" com nota 10 em tudo. Estão procurando alguém **curiosa de verdade**, que gosta de aprender coisas novas e não tem medo de tentar algo difícil. Você já tem isso — só precisa mostrar. Isso vale pra qualquer entrevista, não só uma.
 
-**A narrativa central — o fio que conecta todas as respostas:**
+**A narrativa central — o fio que conecta todas as respostas, em qualquer programa:**
 
 > *"Eu gosto de entender como as coisas funcionam por dentro — seja um problema de matemática, uma jogada de um esporte, uma história de um livro, ou como uma inteligência artificial toma decisões. Eu não preciso ser a melhor pra começar. Eu só preciso ser curiosa o suficiente pra continuar tentando."*
 
-Essa é a ideia central que sustenta tudo. Ela é verdadeira, não depende de nenhuma conquista específica que a Letícia ainda não tem, e conecta os interesses reais dela (matemática, IA, dados, esportes, leitura) em uma coisa só: curiosidade + persistência. Toda resposta abaixo puxa esse mesmo fio.
+Essa é a ideia central que sustenta tudo, em qualquer entrevista. Ela é verdadeira, não depende de nenhuma conquista específica que a Letícia ainda não tem, e conecta os interesses reais dela (matemática, IA, dados, esportes, leitura) em uma coisa só: curiosidade + persistência.
+
+### ⭐ Caso real de inspiração — guardar na estratégia para qualquer programa
+
+Antes das perguntas, um caso real que vale lembrar sempre que ela for se preparar para qualquer entrevista seletiva daqui pra frente (não só o TKS):
+
+A equipe **Bionic Girls** — quatro adolescentes brasileiras surdas, de 11 a 15 anos (Julia Araujo, Heloisa Arévalo Leite, Katarina Silva e Isabella Fridman Rosenberg) — venceram o título **global** da categoria júnior do **Technovation Girls 2023** com o app "Connect Sounds", um alerta sonoro para pessoas com deficiência auditiva. **Elas não tinham nenhum background técnico prévio** — aprenderam a programar dentro do próprio programa. A força da candidatura delas veio de uma **conexão pessoal genuína com um problema real** (a própria surdez), não de currículo técnico impressionante.
+
+**Por que isso importa como estratégia permanente:** confirma, com um caso real e verificado, que programas seletivos sérios valorizam curiosidade genuína e conexão pessoal com um problema mais do que currículo técnico pronto — exatamente a aposta que este kit já faz em todas as respostas abaixo. Sempre que Letícia for se preparar pra uma nova entrevista, vale lembrar desse caso: **ela não precisa "parecer" avançada, precisa ser genuína.**
+
+(Nota de honestidade: pesquisei especificamente por meninas latino-americanas aprovadas no TKS e não achei nenhum caso documentado publicamente — o TKS opera turmas presenciais em Seattle, San Francisco, Nova York, Vancouver, Calgary, Toronto e Dubai, nenhuma na América Latina. O caso das Bionic Girls é de um programa diferente e comparável, o Technovation Girls — não é uma prova de que o padrão se repete exatamente igual no TKS, mas é o exemplo real mais próximo e verificável que encontrei.)
 
 ### Perguntas prováveis + resposta pronta (em inglês simples, pra treinar em voz alta)
 
 > ⚠️ Estas respostas já estão prontas para usar — **não dependem de nenhum exemplo específico que ela ainda não tem.** Elas são verdadeiras porque contam o jeito dela de pensar, não um resultado. Ler em voz alta várias vezes até sair natural, com as próprias palavras — não precisa recitar igual decoreba.
 >
-> ✅ **Revisado em 21/07/2026 por um painel de 3 juízes independentes** (conselheiro de admissão, entrevistador do TKS, professor de inglês B2) + 1 revisor final que pesquisou casos reais de aprovação. Todas as 7 respostas abaixo já incorporam as correções válidas — ajustes pontuais de naturalidade e nível de inglês, nunca invenção de fatos.
+> ✅ **Revisado em 21/07/2026 por um painel de 3 juízes independentes** (conselheiro de admissão, entrevistador do TKS, professor de inglês B2) + 1 revisor final que pesquisou casos reais de aprovação. Todas as respostas abaixo já incorporam as correções válidas — ajustes pontuais de naturalidade e nível de inglês, nunca invenção de fatos.
 
-**1. "Tell me about yourself." (Fale sobre você)**
+**1. "Tell me about yourself." (Fale sobre você) — 🧭 serve para qualquer programa**
 - O que eles querem ouvir: quem ela é — é a apresentação da narrativa central.
 - Resposta: *"Hi, I'm Leticia, I'm 14 and I'm from Brazil. I like understanding how things work on the inside — a math problem, a play in a game, a story in a book, or a decision an AI makes. I don't need to be the best to start something. I just need to be curious enough to keep trying."*
 
-**2. "Why do you want to join TKS?" (Por que quer entrar no TKS)**
+**2. "Why do you want to join [PROGRAMA]?" — ⚙️ trocar o nome do programa**
 - O que eles querem ouvir: interesse genuíno, conectado à mesma narrativa de curiosidade.
-- Resposta: *"Because I want to go deeper into that curiosity with people who actually work with technology, not just learn about it alone. I want a mentor who can show me how AI is used to solve real problems, and help me ask better questions than I can ask by myself right now."*
+- Versão para o **TKS**: *"Because I want to go deeper into that curiosity with people who actually work with technology, not just learn about it alone. I want a mentor who can show me how AI is used to solve real problems, and help me ask better questions than I can ask by myself right now."*
+- Versão para o **Lumiere**: troque "with people who actually work with technology" por *"with a real researcher"* e "how AI is used to solve real problems" por *"what doing real research actually looks like"*.
+- Versão para o **Technovation Girls**: troque a segunda frase por *"I want to build something real with a team, not just learn about technology alone."*
 
-**3. "Tell me about a difficult problem you solved." (Um problema difícil que você resolveu)**
+**3. "Tell me about a difficult problem you solved." (Um problema difícil que você resolveu) — 🧭 serve para qualquer programa**
 - O que eles querem ouvir: ela **não precisa de um caso específico**. A resposta honesta é sobre o método dela, não sobre um resultado — isso é tão válido quanto um exemplo pronto, e é verdade.
 - Resposta: *"I don't have one big, perfect example — I'm still 14 and just starting. But I know how I deal with something difficult: first I try it the way I already know, and if it doesn't work, I stop and ask myself what I'm missing instead of just doing the same thing again. Then I try a different angle — maybe break it into smaller parts, or start from a different point — until something starts to make sense. That's how it works with math problems, and I think it will work with real projects too. I don't know everything yet, and I'd rather say that than pretend I do."*
-- ⭐ **Esta é a resposta com maior potencial de melhoria** — ver "Recomendação real" abaixo.
+- ⭐ Resposta com maior potencial de melhoria — se ela tiver um detalhe pequeno e real pra oferecer (ver checklist), me avisar pra eu ajustar aqui.
 
-**4. "What do you do when you don't know something?" (O que faz quando não sabe algo)**
+**4. "What do you do when you don't know something?" (O que faz quando não sabe algo) — 🧭 serve para qualquer programa**
 - O que eles querem ouvir: continuação natural da resposta anterior — reforça o mesmo traço de personalidade.
 - Resposta: *"I look it up, I try, and if I get it wrong, I try it a different way. Not knowing something doesn't scare me — it usually just means I'm about to learn something new."*
 
-**5. "What are you curious about right now?" (O que te deixa curiosa hoje em dia)**
+**5. "What are you curious about right now?" (O que te deixa curiosa hoje em dia) — 🧭 serve para qualquer programa**
 - O que eles querem ouvir: curiosidade real, específica, ligando matemática + IA + dados — o núcleo técnico da narrativa.
 - Resposta: *"Right now I'm curious about how artificial intelligence actually works — not just using it, but understanding what's happening behind it, and how data can uncover what's really going on. I like math because it's what lets you actually check if a pattern is real, or just random."*
-- ⭐ Segunda resposta com maior potencial de melhoria — ver "Recomendação real" abaixo.
+- ⭐ Segunda resposta com maior potencial de melhoria — mesma observação da pergunta 3.
 
-**6. "Why should we choose you?" (Por que deveriam te escolher)**
+**6. "Why should we choose you?" (Por que deveriam te escolher) — 🧭 serve para qualquer programa**
 - O que eles querem ouvir: fecha a narrativa com honestidade em vez de exagero — o ponto mais convincente de todos.
 - Resposta: *"I probably don't know as much as older applicants yet. But I'm curious, I don't give up easily, and I actually want to be here to learn — not just to put it on a resume. I think that matters just as much as already knowing a lot."*
 
-**7. "Do you have any questions for us?" (pergunta final, quase sempre fazem)**
-- Isso é importante: SEMPRE tenha uma pergunta pronta — mostra interesse real e pesquisa genuína sobre o programa.
-- Resposta: *"Yeah, actually — I read that TKS students each pick a DEEP tech domain to focus on. Once someone starts, is it common to switch domains if they find a different interest along the way, or do most people stick with their first pick?"*
-- (Se IA for de fato o foco dela, dá pra deixar ainda mais forte trocando "a different interest" por algo específico de IA — só se for verdade.)
-
-### 🔎 Revisão final — o que um pesquisador real encontrou (21/07/2026)
-
-Depois do painel de juízes, um último revisor pesquisou de verdade (não inventou) casos reais de meninas latino-americanas aprovadas em programas parecidos, pra comparar a candidatura da Letícia com padrões reais. Resultado, com total honestidade:
-
-- **Não existe registro público de nenhuma menina latino-americana especificamente aprovada no TKS** — o programa opera turmas presenciais em Seattle, San Francisco, Nova York, Vancouver, Calgary, Toronto e Dubai, nenhuma na América Latina, e não há alumni latino-americanas documentadas publicamente. Isso não prova que não existam, só que a pesquisa não achou.
-- **Mas achou um caso real, verificado e inspirador que vale a pena a Letícia conhecer:** a equipe **Bionic Girls** — quatro adolescentes brasileiras surdas, de 11 a 15 anos (Julia Araujo, Heloisa Arévalo Leite, Katarina Silva e Isabella Fridman Rosenberg) — venceram o título **global** da categoria júnior do **Technovation Girls 2023** com o app "Connect Sounds", um alerta sonoro para pessoas com deficiência auditiva. Elas **não tinham nenhum background técnico prévio** — aprenderam a programar dentro do próprio programa. A força da candidatura delas veio de uma conexão pessoal genuína com um problema real (a própria surdez), não de currículo técnico impressionante.
-- Sobre o TKS especificamente, o próprio programa descreve a entrevista oficialmente como **"not a test"**, buscando **"curiosity over perfection"**, com **"no right or wrong answers"** — o que bate exatamente com a estratégia que já foi usada aqui (curiosidade genuína > conquista inventada).
-
-**O que isso confirma:** a decisão de nunca inventar um exemplo específico foi a certa — está alinhada com o que o TKS diz valorizar de verdade, e com o padrão real das Bionic Girls (elas também não tinham currículo técnico prévio).
-
-**A única recomendação prática real que sobrou — não é para inventar nada, é uma pergunta pra fazer pra Letícia antes da entrevista final:** será que existe algum detalhe pequeno e verdadeiro que ela possa oferecer — um aplicativo que ela usa e achou estranho, uma aula de matemática específica que gostou, um jogo, um livro — que possa substituir uma frase mais abstrata nas respostas 3 ou 5? Não é obrigatório. Se ela não tiver nada concreto pra contar honestamente, as respostas atuais (sem invenção) continuam sendo a escolha certa e já estão bem alinhadas com o que o TKS realmente busca.
-
-- [ ] Perguntar pra Letícia: "tem algum app, jogo, aula ou livro específico que te deixou curiosa outro dia?" — se ela tiver algo real, me avise que eu ajusto a resposta 3 ou 5 com esse detalhe verdadeiro.
+**7. "Do you have any questions for us?" — ⚙️ pesquisar 1 detalhe real do programa antes**
+- Isso é importante: SEMPRE tenha uma pergunta pronta — mostra interesse real e pesquisa genuína sobre o programa específico. A regra geral: pesquisar um detalhe real e específico do programa (não genérico) e perguntar sobre ele.
+- Versão para o **TKS** (já pesquisado): *"Yeah, actually — I read that TKS students each pick a DEEP tech domain to focus on. Once someone starts, is it common to switch domains if they find a different interest along the way, or do most people stick with their first pick?"*
+- Para **Lumiere**: perguntar algo específico sobre como funciona o pareamento com o pesquisador, ou sobre o formato do projeto de 12 semanas — pesquisar antes de cada entrevista.
+- Para **Technovation Girls**: perguntar algo específico sobre como funcionam as equipes ou o processo de mentoria — pesquisar antes.
 
 ### Sobre o inglês:
 
@@ -118,9 +119,12 @@ Você não precisa ser fluente. Precisa conseguir se fazer entender. Dicas:
 
 ### O que fazer agora:
 - [ ] Ler isso com calma, mais de uma vez
-- [ ] Ler as 7 respostas em voz alta várias vezes até ficarem naturais, com as próprias palavras
-- [ ] Praticar falando em voz alta em inglês, pelo menos 3 vezes antes da entrevista
+- [ ] Ler as respostas em voz alta várias vezes até ficarem naturais, com as próprias palavras
+- [ ] Perguntar pra Letícia: "tem algum app, jogo, aula ou livro específico que te deixou curiosa outro dia?" — se ela tiver algo real, ajustar a resposta 3 ou 5 com esse detalhe verdadeiro
+- [ ] Antes de CADA entrevista (TKS, Lumiere, Technovation, etc.), pesquisar 1 detalhe real específico daquele programa pra pergunta 7
+- [ ] Praticar falando em voz alta em inglês, pelo menos 3 vezes antes de cada entrevista
 - [ ] Lembrar: ser você mesma é a estratégia — não existe personagem que funcione melhor que a verdade
+
 
 ---
 
