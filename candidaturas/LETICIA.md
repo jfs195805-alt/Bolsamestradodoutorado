@@ -1,6 +1,8 @@
 # Candidatura — Letícia (14 anos — Ensino Médio)
 
-**Perfil:** Brasileira, 14 anos, ensino médio. Português nativo, inglês em desenvolvimento, espanhol básico. Interesses: STEM, matemática, IA, análise de dados, esportes, leitura. Eclética e curiosa — busca oportunidades que pode começar AGORA: competições, programas de verão, coding camps, feiras de ciência, cursos online, certificações de idiomas.
+**Perfil:** Brasileira, 14 anos, ensino médio. Português nativo, inglês em desenvolvimento (B2, não fluente), espanhol básico. Interesses: STEM, matemática, IA, análise de dados, esportes, leitura. Eclética e curiosa — busca oportunidades que pode começar AGORA: competições, programas de verão, coding camps, feiras de ciência, cursos online, certificações de idiomas.
+
+**Rotina/disponibilidade:** fuso horário de Brasília (UTC-3). Escola de manhã até 12h30 — livre à tarde/noite em dias de semana e fim de semana inteiro. Útil pra checar compatibilidade de horário com qualquer programa que exija sessões ao vivo.
 
 **Contato:** `[PRIVADO — mantido fora do repositório público]`
 
@@ -33,6 +35,35 @@ Fellowship de mentoria real em IA/biotech/dados para adolescentes (13-17 anos). 
 - [ ] Preparar para a entrevista (30min) — falar sobre interesse real em IA/dados
 - [ ] Se aceita: pedir avaliação de auxílio financeiro por necessidade
 - ⚠️ Cobertura de passagem até o hub físico (se optar pelo presencial em Toronto) não confirmada — priorizar o cohort virtual.
+
+**Estrutura do programa (pesquisado 21/07/2026, via busca — WebFetch direto no site bloqueado, confirmar com a admissão se for decisivo):**
+- Duração: cohort anual fixo, **setembro a junho (10 meses)**. Não é contínuo automaticamente — continuar num 2º ano ("Activate") exige nova inscrição e aceite.
+- Frequência: **1 sessão ao vivo em grupo por semana**, com mentores/Program Directors.
+- Duração da sessão: **2 a 3 horas**, aos finais de semana ou fim de tarde/noite em dias de semana (desenhado pra encaixar com a rotina escolar).
+- Carga total: sessão obrigatória (2-3h) + 5-10h opcionais/semana (projetos, calls com colegas, 1:1 com mentores) — total típico **~7-13h/semana**.
+- **Disponibilidade real da Letícia:** fuso de Brasília (UTC-3), escola de manhã até 12h30 — livre à tarde/noite em dias de semana e fim de semana inteiro. Isso encaixa bem com o formato descrito, mas o site menciona "múltiplos fusos horários" sem listar quais — não confirmado se cobre um horário razoável pra Brasília.
+- [ ] Perguntar na admissão (junto com a pergunta de inglês/bolsa): confirmar fuso horário/horário exato oferecido pro cohort virtual, pra garantir que não é de madrugada no horário dela.
+
+**E-mail atualizado pra mandar (inglês nível + bolsa + fuso horário):**
+
+> **Assunto:** Questions about English proficiency, financial aid, and virtual cohort schedule — 14-year-old Brazilian applicant
+>
+> Hello,
+>
+> My daughter is 14 years old, Brazilian, and interested in applying to TKS (virtual cohort). Her English level is upper-intermediate (CEFR B2) — she is comfortable with conversation but not yet fully fluent.
+>
+> Before we start the application process, I have three questions:
+>
+> 1. Is there a minimum English proficiency level required to participate and succeed in the program (for the application interview and for the ongoing mentorship sessions)? Is B2-level English generally sufficient for a student her age?
+>
+> 2. Since more than 60% of students reportedly receive some form of financial aid: could you clarify whether full (100%) aid — covering both the monthly cost and the enrollment deposit — is available for international families with limited financial means, and what the process for requesting it looks like?
+>
+> 3. She is based in Brazil (Brasília time zone, UTC-3) and attends school in the mornings until 12:30pm. I understand the virtual cohort offers weekly live sessions in the evenings or on weekends, in multiple time zones — could you confirm which time zone options would be available to her, to make sure the schedule works for her?
+>
+> Thank you very much for your time.
+>
+> Best regards,
+> [Nome do responsável]
 
 ### Lumiere Research Scholar Program (prazo 09/08/2026)
 Pareamento 1:1 com pesquisador de PhD/pós-doc para projeto de pesquisa original de 12 semanas, 100% online. **Documentos: formulário + histórico escolar + entrevista — sem carta de recomendação.**
