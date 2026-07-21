@@ -61,34 +61,53 @@ Essa é a ideia central que sustenta tudo. Ela é verdadeira, não depende de ne
 ### Perguntas prováveis + resposta pronta (em inglês simples, pra treinar em voz alta)
 
 > ⚠️ Estas respostas já estão prontas para usar — **não dependem de nenhum exemplo específico que ela ainda não tem.** Elas são verdadeiras porque contam o jeito dela de pensar, não um resultado. Ler em voz alta várias vezes até sair natural, com as próprias palavras — não precisa recitar igual decoreba.
+>
+> ✅ **Revisado em 21/07/2026 por um painel de 3 juízes independentes** (conselheiro de admissão, entrevistador do TKS, professor de inglês B2) + 1 revisor final que pesquisou casos reais de aprovação. Todas as 7 respostas abaixo já incorporam as correções válidas — ajustes pontuais de naturalidade e nível de inglês, nunca invenção de fatos.
 
 **1. "Tell me about yourself." (Fale sobre você)**
 - O que eles querem ouvir: quem ela é — é a apresentação da narrativa central.
-- Resposta: *"Hi, I'm Letícia, I'm 14 and I'm from Brazil. I like understanding how things work on the inside — a math problem, a play in a sport, a story in a book, or how artificial intelligence makes decisions. I don't need to be the best to start something. I just need to be curious enough to keep trying."*
+- Resposta: *"Hi, I'm Leticia, I'm 14 and I'm from Brazil. I like understanding how things work on the inside — a math problem, a play in a game, a story in a book, or a decision an AI makes. I don't need to be the best to start something. I just need to be curious enough to keep trying."*
 
 **2. "Why do you want to join TKS?" (Por que quer entrar no TKS)**
 - O que eles querem ouvir: interesse genuíno, conectado à mesma narrativa de curiosidade.
-- Resposta: *"Because I want to go deeper into that curiosity with people who actually work with technology, not just learn about it alone. I want a mentor who can show me how AI is used for real problems, and help me ask better questions than I can ask by myself right now."*
+- Resposta: *"Because I want to go deeper into that curiosity with people who actually work with technology, not just learn about it alone. I want a mentor who can show me how AI is used to solve real problems, and help me ask better questions than I can ask by myself right now."*
 
 **3. "Tell me about a difficult problem you solved." (Um problema difícil que você resolveu)**
 - O que eles querem ouvir: ela **não precisa de um caso específico**. A resposta honesta é sobre o método dela, não sobre um resultado — isso é tão válido quanto um exemplo pronto, e é verdade.
-- Resposta: *"I don't have one big, perfect example — I'm still 14 and just starting. But I know how I deal with something difficult: I try it, and if it doesn't work, I try a different way instead of giving up. That happens with math problems, and I think it will happen with real projects too. I'd rather be honest about that than pretend I already have it all figured out."*
+- Resposta: *"I don't have one big, perfect example — I'm still 14 and just starting. But I know how I deal with something difficult: first I try it the way I already know, and if it doesn't work, I stop and ask myself what I'm missing instead of just doing the same thing again. Then I try a different angle — maybe break it into smaller parts, or start from a different point — until something starts to make sense. That's how it works with math problems, and I think it will work with real projects too. I don't know everything yet, and I'd rather say that than pretend I do."*
+- ⭐ **Esta é a resposta com maior potencial de melhoria** — ver "Recomendação real" abaixo.
 
 **4. "What do you do when you don't know something?" (O que faz quando não sabe algo)**
 - O que eles querem ouvir: continuação natural da resposta anterior — reforça o mesmo traço de personalidade.
-- Resposta: *"I look it up, I try, and if I get it wrong, I try again a different way. Not knowing something doesn't scare me — it's usually the starting point of learning something new."*
+- Resposta: *"I look it up, I try, and if I get it wrong, I try it a different way. Not knowing something doesn't scare me — it usually just means I'm about to learn something new."*
 
 **5. "What are you curious about right now?" (O que te deixa curiosa hoje em dia)**
 - O que eles querem ouvir: curiosidade real, específica, ligando matemática + IA + dados — o núcleo técnico da narrativa.
-- Resposta: *"Right now I'm curious about how artificial intelligence actually works — not just using it, but understanding what's happening behind it, and how data can tell a true story about something real. I like math because it's the language behind all of that."*
+- Resposta: *"Right now I'm curious about how artificial intelligence actually works — not just using it, but understanding what's happening behind it, and how data can uncover what's really going on. I like math because it's what lets you actually check if a pattern is real, or just random."*
+- ⭐ Segunda resposta com maior potencial de melhoria — ver "Recomendação real" abaixo.
 
 **6. "Why should we choose you?" (Por que deveriam te escolher)**
 - O que eles querem ouvir: fecha a narrativa com honestidade em vez de exagero — o ponto mais convincente de todos.
-- Resposta: *"I probably don't know as much as older applicants yet. But I'm curious, I don't give up easily, and I actually want to be here for the right reason — to learn, not just to have it on a resume. I think that matters just as much as already knowing a lot."*
+- Resposta: *"I probably don't know as much as older applicants yet. But I'm curious, I don't give up easily, and I actually want to be here to learn — not just to put it on a resume. I think that matters just as much as already knowing a lot."*
 
 **7. "Do you have any questions for us?" (pergunta final, quase sempre fazem)**
-- Isso é importante: SEMPRE tenha uma pergunta pronta — mostra interesse real.
-- Resposta: *"Yes — what kind of projects do students usually work on with their mentors in the first few months?"*
+- Isso é importante: SEMPRE tenha uma pergunta pronta — mostra interesse real e pesquisa genuína sobre o programa.
+- Resposta: *"Yeah, actually — I read that TKS students each pick a DEEP tech domain to focus on. Once someone starts, is it common to switch domains if they find a different interest along the way, or do most people stick with their first pick?"*
+- (Se IA for de fato o foco dela, dá pra deixar ainda mais forte trocando "a different interest" por algo específico de IA — só se for verdade.)
+
+### 🔎 Revisão final — o que um pesquisador real encontrou (21/07/2026)
+
+Depois do painel de juízes, um último revisor pesquisou de verdade (não inventou) casos reais de meninas latino-americanas aprovadas em programas parecidos, pra comparar a candidatura da Letícia com padrões reais. Resultado, com total honestidade:
+
+- **Não existe registro público de nenhuma menina latino-americana especificamente aprovada no TKS** — o programa opera turmas presenciais em Seattle, San Francisco, Nova York, Vancouver, Calgary, Toronto e Dubai, nenhuma na América Latina, e não há alumni latino-americanas documentadas publicamente. Isso não prova que não existam, só que a pesquisa não achou.
+- **Mas achou um caso real, verificado e inspirador que vale a pena a Letícia conhecer:** a equipe **Bionic Girls** — quatro adolescentes brasileiras surdas, de 11 a 15 anos (Julia Araujo, Heloisa Arévalo Leite, Katarina Silva e Isabella Fridman Rosenberg) — venceram o título **global** da categoria júnior do **Technovation Girls 2023** com o app "Connect Sounds", um alerta sonoro para pessoas com deficiência auditiva. Elas **não tinham nenhum background técnico prévio** — aprenderam a programar dentro do próprio programa. A força da candidatura delas veio de uma conexão pessoal genuína com um problema real (a própria surdez), não de currículo técnico impressionante.
+- Sobre o TKS especificamente, o próprio programa descreve a entrevista oficialmente como **"not a test"**, buscando **"curiosity over perfection"**, com **"no right or wrong answers"** — o que bate exatamente com a estratégia que já foi usada aqui (curiosidade genuína > conquista inventada).
+
+**O que isso confirma:** a decisão de nunca inventar um exemplo específico foi a certa — está alinhada com o que o TKS diz valorizar de verdade, e com o padrão real das Bionic Girls (elas também não tinham currículo técnico prévio).
+
+**A única recomendação prática real que sobrou — não é para inventar nada, é uma pergunta pra fazer pra Letícia antes da entrevista final:** será que existe algum detalhe pequeno e verdadeiro que ela possa oferecer — um aplicativo que ela usa e achou estranho, uma aula de matemática específica que gostou, um jogo, um livro — que possa substituir uma frase mais abstrata nas respostas 3 ou 5? Não é obrigatório. Se ela não tiver nada concreto pra contar honestamente, as respostas atuais (sem invenção) continuam sendo a escolha certa e já estão bem alinhadas com o que o TKS realmente busca.
+
+- [ ] Perguntar pra Letícia: "tem algum app, jogo, aula ou livro específico que te deixou curiosa outro dia?" — se ela tiver algo real, me avise que eu ajusto a resposta 3 ou 5 com esse detalhe verdadeiro.
 
 ### Sobre o inglês:
 
