@@ -52,45 +52,43 @@ Pareamento 1:1 com pesquisador de PhD/pós-doc para projeto de pesquisa original
 
 Eles não estão procurando o aluno "perfeito" com nota 10 em tudo. Eles estão procurando alguém **curiosa de verdade**, que gosta de aprender coisas novas e não tem medo de tentar algo difícil. Você já tem isso — só precisa mostrar.
 
-**A sua história, em palavras simples:**
+**A narrativa central — o fio que conecta todas as respostas:**
 
-Você tem 14 anos, é brasileira, e gosta de matemática, de entender como a inteligência artificial funciona, gosta de esportes e de ler. Isso já é uma história boa, porque mostra que você é uma pessoa completa — não só "boa em tecnologia", mas alguém curiosa em várias direções. Na entrevista, não precisa inventar nada mirabolante. Conte a verdade:
-- Por que IA e dados te interessam (o que te fez ficar curiosa sobre isso?)
-- Um exemplo pequeno de algo que você já tentou aprender sozinha (um vídeo, um curso, um jogo, um problema de matemática difícil que você resolveu)
-- O que você espera aprender no TKS que não consegue aprender sozinha
+> *"Eu gosto de entender como as coisas funcionam por dentro — seja um problema de matemática, uma jogada de um esporte, uma história de um livro, ou como uma inteligência artificial toma decisões. Eu não preciso ser a melhor pra começar. Eu só preciso ser curiosa o suficiente pra continuar tentando."*
 
-### Perguntas prováveis + resposta modelo (em inglês simples, pra treinar em voz alta)
+Essa é a ideia central que sustenta tudo. Ela é verdadeira, não depende de nenhuma conquista específica que a Letícia ainda não tem, e conecta os interesses reais dela (matemática, IA, dados, esportes, leitura) em uma coisa só: curiosidade + persistência. Toda resposta abaixo puxa esse mesmo fio.
 
-> ⚠️ Isso aqui NÃO é pra decorar igual robô. É um modelo pra você entender o formato de uma boa resposta e depois trocar pelas SUAS palavras e SEUS exemplos reais. Onde tiver `[...]`, é você quem preenche com algo verdadeiro da sua vida — se não tiver um exemplo específico ainda, tudo bem, use a versão "se ainda não tiver exemplo" que também está aí.
+### Perguntas prováveis + resposta pronta (em inglês simples, pra treinar em voz alta)
+
+> ⚠️ Estas respostas já estão prontas para usar — **não dependem de nenhum exemplo específico que ela ainda não tem.** Elas são verdadeiras porque contam o jeito dela de pensar, não um resultado. Ler em voz alta várias vezes até sair natural, com as próprias palavras — não precisa recitar igual decoreba.
 
 **1. "Tell me about yourself." (Fale sobre você)**
-- O que eles querem ouvir: quem você é, não só notas da escola.
-- Modelo simples: *"Hi, I'm Letícia, I'm 14 and I'm from Brazil. I really like math, and lately I've been curious about artificial intelligence and how data can help solve real problems. I also like sports and reading — I don't want to only talk about technology, because I think being curious about many things helps me learn better."*
+- O que eles querem ouvir: quem ela é — é a apresentação da narrativa central.
+- Resposta: *"Hi, I'm Letícia, I'm 14 and I'm from Brazil. I like understanding how things work on the inside — a math problem, a play in a sport, a story in a book, or how artificial intelligence makes decisions. I don't need to be the best to start something. I just need to be curious enough to keep trying."*
 
 **2. "Why do you want to join TKS?" (Por que quer entrar no TKS)**
-- O que eles querem ouvir: interesse genuíno, não decoreba.
-- Modelo simples: *"I want to learn from people who really work with technology, not just watch videos about it. I want a mentor who can show me how AI is used for real problems, and help me understand what I don't know yet."*
+- O que eles querem ouvir: interesse genuíno, conectado à mesma narrativa de curiosidade.
+- Resposta: *"Because I want to go deeper into that curiosity with people who actually work with technology, not just learn about it alone. I want a mentor who can show me how AI is used for real problems, and help me ask better questions than I can ask by myself right now."*
 
 **3. "Tell me about a difficult problem you solved." (Um problema difícil que você resolveu)**
-- O que eles querem ouvir: como você pensa, não se o problema é "impressionante". Pode ser da escola, de matemática, ou até organizar algo complicado na sua vida.
-- Modelo simples: *"[Descreva o problema em 1 frase]. At first I didn't know how to solve it, so I [o que você fez — pesquisou, tentou de um jeito, errou, tentou de outro jeito]. In the end, [o que aconteceu]. I learned that it's okay to try more than once."*
-- Se ainda não tiver um exemplo específico: *"I don't have one big example yet, but in math class, when I get a hard problem, I usually try it two or three different ways before I ask for help. That's how I like to learn."*
+- O que eles querem ouvir: ela **não precisa de um caso específico**. A resposta honesta é sobre o método dela, não sobre um resultado — isso é tão válido quanto um exemplo pronto, e é verdade.
+- Resposta: *"I don't have one big, perfect example — I'm still 14 and just starting. But I know how I deal with something difficult: I try it, and if it doesn't work, I try a different way instead of giving up. That happens with math problems, and I think it will happen with real projects too. I'd rather be honest about that than pretend I already have it all figured out."*
 
 **4. "What do you do when you don't know something?" (O que faz quando não sabe algo)**
-- O que eles querem ouvir: que você não desiste fácil.
-- Modelo simples: *"I search for it, I try, and if I get it wrong, I try again a different way. I'm not afraid of not knowing something — I think that's normal when you're learning."*
+- O que eles querem ouvir: continuação natural da resposta anterior — reforça o mesmo traço de personalidade.
+- Resposta: *"I look it up, I try, and if I get it wrong, I try again a different way. Not knowing something doesn't scare me — it's usually the starting point of learning something new."*
 
 **5. "What are you curious about right now?" (O que te deixa curiosa hoje em dia)**
-- O que eles querem ouvir: curiosidade real, específica, não genérica.
-- Modelo simples: *"Right now I'm curious about how artificial intelligence actually works — not just using it, but understanding what's happening behind it. I also like thinking about how data can tell a story about something real."*
+- O que eles querem ouvir: curiosidade real, específica, ligando matemática + IA + dados — o núcleo técnico da narrativa.
+- Resposta: *"Right now I'm curious about how artificial intelligence actually works — not just using it, but understanding what's happening behind it, and how data can tell a true story about something real. I like math because it's the language behind all of that."*
 
 **6. "Why should we choose you?" (Por que deveriam te escolher)**
-- O que eles querem ouvir: honestidade, não arrogância.
-- Modelo simples: *"I don't know if I'm the most advanced student applying, but I know I'm curious, I don't give up easily, and I really want to learn. I think that matters as much as already knowing a lot."*
+- O que eles querem ouvir: fecha a narrativa com honestidade em vez de exagero — o ponto mais convincente de todos.
+- Resposta: *"I probably don't know as much as older applicants yet. But I'm curious, I don't give up easily, and I actually want to be here for the right reason — to learn, not just to have it on a resume. I think that matters just as much as already knowing a lot."*
 
 **7. "Do you have any questions for us?" (pergunta final, quase sempre fazem)**
 - Isso é importante: SEMPRE tenha uma pergunta pronta — mostra interesse real.
-- Modelo simples: *"Yes — what kind of projects do students usually work on with their mentors in the first few months?"*
+- Resposta: *"Yes — what kind of projects do students usually work on with their mentors in the first few months?"*
 
 ### Sobre o inglês:
 
@@ -101,7 +99,7 @@ Você não precisa ser fluente. Precisa conseguir se fazer entender. Dicas:
 
 ### O que fazer agora:
 - [ ] Ler isso com calma, mais de uma vez
-- [ ] Escrever (pode ser à mão) as respostas das 7 perguntas acima, trocando os modelos pelas suas próprias palavras e exemplos reais
+- [ ] Ler as 7 respostas em voz alta várias vezes até ficarem naturais, com as próprias palavras
 - [ ] Praticar falando em voz alta em inglês, pelo menos 3 vezes antes da entrevista
 - [ ] Lembrar: ser você mesma é a estratégia — não existe personagem que funcione melhor que a verdade
 
