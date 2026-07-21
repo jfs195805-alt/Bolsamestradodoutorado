@@ -44,6 +44,50 @@ Pareamento 1:1 com pesquisador de PhD/pós-doc para projeto de pesquisa original
 
 ---
 
+## 🎤 Preparação para a entrevista do TKS — pra Letícia ler (21/07/2026)
+
+> ⚠️ **Aviso honesto, sem enrolação:** nada aqui garante que ela vai ser aceita ou ganhar bolsa 100%. Isso quem decide é o TKS, depois da entrevista. O que dá pra fazer é chegar preparada, confiante, e contando a verdade sobre quem ela é — porque é isso que eles realmente avaliam.
+
+### Letícia, é assim que funciona:
+
+Eles não estão procurando o aluno "perfeito" com nota 10 em tudo. Eles estão procurando alguém **curiosa de verdade**, que gosta de aprender coisas novas e não tem medo de tentar algo difícil. Você já tem isso — só precisa mostrar.
+
+**A sua história, em palavras simples:**
+
+Você tem 14 anos, é brasileira, e gosta de matemática, de entender como a inteligência artificial funciona, gosta de esportes e de ler. Isso já é uma história boa, porque mostra que você é uma pessoa completa — não só "boa em tecnologia", mas alguém curiosa em várias direções. Na entrevista, não precisa inventar nada mirabolante. Conte a verdade:
+- Por que IA e dados te interessam (o que te fez ficar curiosa sobre isso?)
+- Um exemplo pequeno de algo que você já tentou aprender sozinha (um vídeo, um curso, um jogo, um problema de matemática difícil que você resolveu)
+- O que você espera aprender no TKS que não consegue aprender sozinha
+
+### Perguntas que provavelmente vão te fazer (e como pensar sobre elas — não decore respostas, só organize as ideias):
+
+1. **"Por que você quer entrar no TKS?"**
+   → Fale a verdade: você quer aprender com gente que trabalha de verdade com tecnologia de ponta, e não só ver isso na internet.
+
+2. **"Conte sobre um problema difícil que você já resolveu."**
+   → Pode ser da escola, de matemática, ou até um problema pessoal que você organizou sozinha. Não precisa ser sobre tecnologia.
+
+3. **"O que você faz quando não sabe alguma coisa?"**
+   → Resposta honesta é a melhor: você pesquisa, tenta, erra, tenta de novo. Isso é exatamente o que eles querem ouvir.
+
+4. **"Fale sobre você" (em inglês).**
+   → Treine isso antes, em voz alta, algumas vezes. Não precisa ser perfeito — B2 já é o suficiente para se fazer entender. Fale devagar, é normal.
+
+### Sobre o inglês:
+
+Você não precisa ser fluente. Precisa conseguir se fazer entender. Dicas:
+- Se não souber uma palavra, explique com outras palavras — isso mostra inteligência, não fraqueza.
+- Está tudo bem pedir pra repetirem a pergunta.
+- Treine essas respostas em voz alta em inglês antes da entrevista, mesmo que do seu jeito.
+
+### O que fazer agora:
+- [ ] Ler isso com calma, mais de uma vez
+- [ ] Escrever (pode ser à mão) as respostas das 4 perguntas acima, com suas próprias palavras
+- [ ] Praticar falando em voz alta em inglês, pelo menos 3 vezes antes da entrevista
+- [ ] Lembrar: ser você mesma é a estratégia — não existe personagem que funcione melhor que a verdade
+
+---
+
 ## 🏆 RANKING GERAL — TODAS as oportunidades
 
 | # | Programa | País/Formato | Tipo | Idade | Prazo | Link direto | O que é |
