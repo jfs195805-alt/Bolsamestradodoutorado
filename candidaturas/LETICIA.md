@@ -59,19 +59,38 @@ Você tem 14 anos, é brasileira, e gosta de matemática, de entender como a int
 - Um exemplo pequeno de algo que você já tentou aprender sozinha (um vídeo, um curso, um jogo, um problema de matemática difícil que você resolveu)
 - O que você espera aprender no TKS que não consegue aprender sozinha
 
-### Perguntas que provavelmente vão te fazer (e como pensar sobre elas — não decore respostas, só organize as ideias):
+### Perguntas prováveis + resposta modelo (em inglês simples, pra treinar em voz alta)
 
-1. **"Por que você quer entrar no TKS?"**
-   → Fale a verdade: você quer aprender com gente que trabalha de verdade com tecnologia de ponta, e não só ver isso na internet.
+> ⚠️ Isso aqui NÃO é pra decorar igual robô. É um modelo pra você entender o formato de uma boa resposta e depois trocar pelas SUAS palavras e SEUS exemplos reais. Onde tiver `[...]`, é você quem preenche com algo verdadeiro da sua vida — se não tiver um exemplo específico ainda, tudo bem, use a versão "se ainda não tiver exemplo" que também está aí.
 
-2. **"Conte sobre um problema difícil que você já resolveu."**
-   → Pode ser da escola, de matemática, ou até um problema pessoal que você organizou sozinha. Não precisa ser sobre tecnologia.
+**1. "Tell me about yourself." (Fale sobre você)**
+- O que eles querem ouvir: quem você é, não só notas da escola.
+- Modelo simples: *"Hi, I'm Letícia, I'm 14 and I'm from Brazil. I really like math, and lately I've been curious about artificial intelligence and how data can help solve real problems. I also like sports and reading — I don't want to only talk about technology, because I think being curious about many things helps me learn better."*
 
-3. **"O que você faz quando não sabe alguma coisa?"**
-   → Resposta honesta é a melhor: você pesquisa, tenta, erra, tenta de novo. Isso é exatamente o que eles querem ouvir.
+**2. "Why do you want to join TKS?" (Por que quer entrar no TKS)**
+- O que eles querem ouvir: interesse genuíno, não decoreba.
+- Modelo simples: *"I want to learn from people who really work with technology, not just watch videos about it. I want a mentor who can show me how AI is used for real problems, and help me understand what I don't know yet."*
 
-4. **"Fale sobre você" (em inglês).**
-   → Treine isso antes, em voz alta, algumas vezes. Não precisa ser perfeito — B2 já é o suficiente para se fazer entender. Fale devagar, é normal.
+**3. "Tell me about a difficult problem you solved." (Um problema difícil que você resolveu)**
+- O que eles querem ouvir: como você pensa, não se o problema é "impressionante". Pode ser da escola, de matemática, ou até organizar algo complicado na sua vida.
+- Modelo simples: *"[Descreva o problema em 1 frase]. At first I didn't know how to solve it, so I [o que você fez — pesquisou, tentou de um jeito, errou, tentou de outro jeito]. In the end, [o que aconteceu]. I learned that it's okay to try more than once."*
+- Se ainda não tiver um exemplo específico: *"I don't have one big example yet, but in math class, when I get a hard problem, I usually try it two or three different ways before I ask for help. That's how I like to learn."*
+
+**4. "What do you do when you don't know something?" (O que faz quando não sabe algo)**
+- O que eles querem ouvir: que você não desiste fácil.
+- Modelo simples: *"I search for it, I try, and if I get it wrong, I try again a different way. I'm not afraid of not knowing something — I think that's normal when you're learning."*
+
+**5. "What are you curious about right now?" (O que te deixa curiosa hoje em dia)**
+- O que eles querem ouvir: curiosidade real, específica, não genérica.
+- Modelo simples: *"Right now I'm curious about how artificial intelligence actually works — not just using it, but understanding what's happening behind it. I also like thinking about how data can tell a story about something real."*
+
+**6. "Why should we choose you?" (Por que deveriam te escolher)**
+- O que eles querem ouvir: honestidade, não arrogância.
+- Modelo simples: *"I don't know if I'm the most advanced student applying, but I know I'm curious, I don't give up easily, and I really want to learn. I think that matters as much as already knowing a lot."*
+
+**7. "Do you have any questions for us?" (pergunta final, quase sempre fazem)**
+- Isso é importante: SEMPRE tenha uma pergunta pronta — mostra interesse real.
+- Modelo simples: *"Yes — what kind of projects do students usually work on with their mentors in the first few months?"*
 
 ### Sobre o inglês:
 
@@ -82,7 +101,7 @@ Você não precisa ser fluente. Precisa conseguir se fazer entender. Dicas:
 
 ### O que fazer agora:
 - [ ] Ler isso com calma, mais de uma vez
-- [ ] Escrever (pode ser à mão) as respostas das 4 perguntas acima, com suas próprias palavras
+- [ ] Escrever (pode ser à mão) as respostas das 7 perguntas acima, trocando os modelos pelas suas próprias palavras e exemplos reais
 - [ ] Praticar falando em voz alta em inglês, pelo menos 3 vezes antes da entrevista
 - [ ] Lembrar: ser você mesma é a estratégia — não existe personagem que funcione melhor que a verdade
 
