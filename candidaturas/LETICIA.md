@@ -28,13 +28,14 @@ Esta é a bolsa/competição catalogada com o prazo mais urgente de toda a base 
 
 Como a Davis (e qualquer bolsa que exija carta de recomendação) foi desprioritizada, estas são as próximas duas apostas reais, em ordem de urgência.
 
-### TKS — The Knowledge Society (prazo 31/07/2026)
-Fellowship de mentoria real em IA/biotech/dados para adolescentes (13-17 anos). **Documentos: só formulário + entrevista de 30min — sem carta de recomendação.**
-- Pago (~US$489/mês virtual), mas **mais de 60% dos alunos recebem auxílio financeiro**, podendo chegar a 100%.
-- [ ] Preencher formulário em [tks.world/apply-now](https://www.tks.world/apply-now)
-- [ ] Preparar para a entrevista (30min) — falar sobre interesse real em IA/dados
-- [ ] Se aceita: pedir avaliação de auxílio financeiro por necessidade
-- ⚠️ Cobertura de passagem até o hub físico (se optar pelo presencial em Toronto) não confirmada — priorizar o cohort virtual.
+### TKS — The Knowledge Society (prazo 30/07/2026 — CORRIGIDO)
+Fellowship de mentoria real em IA/biotech/dados para adolescentes (13-17 anos). **Documentos: só formulário (3 perguntas curtas, ~20-30min) + entrevista em grupo (~30min via Zoom) — sem carta de recomendação.**
+- Pago (~US$489/mês virtual), mas **30 bolsas full-ride (mérito)** + auxílio financeiro por necessidade **até 100%** (>60% dos alunos recebem apoio; >US$2M concedidos no último ciclo).
+- Aplicação: 3 perguntas sobre quem você é e o que te motiva (não sobre notas). Entrevista em pequeno grupo com Director — conversa, não teste. Decisão em 72h.
+- [ ] Preencher formulário em [tks.world/apply-now](https://www.tks.world/apply-now) **antes de 30/07/2026**
+- [ ] Preparar para a entrevista em grupo (30min, Zoom) — ver kit de entrevista abaixo
+- [ ] Se aceita: pedir avaliação de auxílio financeiro por necessidade (caso a caso, sem obrigação)
+- ⚠️ Formato virtual recomendado — alunos de 65+ países, mesmo currículo do presencial.
 
 **Estrutura do programa (pesquisado 21/07/2026, via busca — WebFetch direto no site bloqueado, confirmar com a admissão se for decisivo):**
 - Duração: cohort anual fixo, **setembro a junho (10 meses)**. Não é contínuo automaticamente — continuar num 2º ano ("Activate") exige nova inscrição e aceite.
