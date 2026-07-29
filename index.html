@@ -339,7 +339,7 @@
     <div class="toolbar">
       <select class="filter" id="filterStatus" onchange="render()">
         <option value="">Todos os status</option>
-        <option>A fazer</option><option>Em andamento</option><option>Enviado</option><option>Aprovado</option><option>Não aprovado</option>
+        <option>A fazer</option><option>Em andamento</option><option>Enviado</option><option>Aprovado</option><option>Não aprovado</option><option>Não recomendado</option>
       </select>
       <select class="filter" id="filterNivel" onchange="render()">
         <option value="">Todos os níveis</option>
@@ -470,7 +470,7 @@
     </div>
     <div class="two">
       <div class="field"><label>Prazo de inscrição</label><input type="date" id="f_prazo"></div>
-      <div class="field"><label>Status</label><select id="f_status"><option>A fazer</option><option>Em andamento</option><option>Enviado</option><option>Aprovado</option><option>Não aprovado</option></select></div>
+      <div class="field"><label>Status</label><select id="f_status"><option>A fazer</option><option>Em andamento</option><option>Enviado</option><option>Aprovado</option><option>Não aprovado</option><option>Não recomendado</option></select></div>
     </div>
     <div class="two">
       <div class="field"><label>Valor mensal (US$)</label><input type="number" id="f_valor" placeholder="1700" min="0" step="50"></div>
@@ -659,6 +659,19 @@ function populatePaisFilter(){
   sel.innerHTML='<option value="">Todos os países</option>'+[...paises].sort().map(p=>`<option value="${escapeAttr(p)}">${escapeHtml(p)}</option>`).join('');
   sel.value=cur;
 }
+function normalizeDossie(raw){
+  if(!raw) return 'Não iniciado';
+  const s=raw.trim();
+  if(s==='Completo'||s==='Pronto com ressalvas'||s==='Não recomendado'||s==='Não iniciado') return s;
+  if(s.startsWith('Não iniciado')) return 'Não iniciado';
+  if(s.startsWith('Pesquisa concluída — recomendado')) return 'Pronto com ressalvas';
+  if(s.startsWith('Pesquisa concluída — condicional')) return 'Pronto com ressalvas';
+  if(s.startsWith('Pesquisa concluída — verificar')) return 'Pronto com ressalvas';
+  if(s.startsWith('Pesquisa concluída — descartar')) return 'Não recomendado';
+  if(s.startsWith('Ação necessária')) return 'Pronto com ressalvas';
+  if(s.startsWith('Verificar relevância')) return 'Pronto com ressalvas';
+  return 'Não iniciado';
+}
 function prazoStatus(item){
   if(!item.prazo_inscricao) return 'Prazo inexistente';
   const d=daysUntil(item.prazo_inscricao);
@@ -725,8 +738,12 @@ function setRankPerson(p){
 
 function matchesPersonRank(pessoaIndicada, target){
   const p=pessoaIndicada||'';
-  if(p===target || personCanonical(p)===personCanonical(target)) return true;
-  if((p==='Vários'||p==='Toda a família') && ['Rafael','Daniela','Maria Eduarda'].includes(personCanonical(target))) return true;
+  if(p==='Vários'||p==='Toda a família') return true;
+  const canon=personCanonical(target);
+  const parts=p.split(';').map(s=>s.trim()).filter(Boolean);
+  for(const part of parts){
+    if(part===target || personCanonical(part)===canon) return true;
+  }
   return false;
 }
 
@@ -992,10 +1009,10 @@ function render(){
     if(fStatus && i.status!==fStatus) return false;
     if(fNivel && !(i.nivel||'').includes(fNivel)) return false;
     if(fValor && (parseFloat(i.valor_mensal)||0)<fValor) return false;
-    if(fPessoa){ const p=i.pessoa_indicada||''; const ok = p===fPessoa || personCanonical(p)===personCanonical(fPessoa) || (p==='Vários' && ['Rafael','Daniela','Maria Eduarda'].includes(personCanonical(fPessoa))); if(!ok) return false; }
+    if(fPessoa){ if(!matchesPersonRank(i.pessoa_indicada, fPessoa)) return false; }
     if(fPrazo && prazoStatus(i)!==fPrazo) return false;
     if(fPais && extractCountry(i.observacoes)!==fPais) return false;
-    if(fStatusDossie && (i.status_dossie||'Não iniciado')!==fStatusDossie) return false;
+    if(fStatusDossie && normalizeDossie(i.status_dossie)!==fStatusDossie) return false;
     if(f15dias){ const d=daysUntil(i.prazo_inscricao); if(d===null||d<0||d>15) return false; }
     if(q){
       const hay=`${i.nome} ${i.instituicao} ${i.observacoes} ${i.nivel} ${i.explicacao_pessoal||''}`.toLowerCase();
@@ -1060,7 +1077,7 @@ function renderStats(list){
 }
 
 function renderAlerts(list){
-  const prontos=list.filter(i=>i.status_dossie==='Completo');
+  const prontos=list.filter(i=>normalizeDossie(i.status_dossie)==='Completo');
   const urgentes=list.filter(i=>{
     const d=daysUntil(i.prazo_inscricao);
     return d!==null&&d>=0&&d<=7&&i.status!=='Aprovado'&&i.status!=='Enviado';
@@ -1114,7 +1131,7 @@ function save(){
 function remove(id){ const item=data.find(i=>i.id===id); if(!confirm(`Excluir "${item?item.nome:''}"?`))return; data=data.filter(i=>i.id!==id); delete docDone[id]; persist(); renderAll(); }
 function renderAll(){ populatePaisFilter(); render(); if(!document.getElementById('view-ranking').classList.contains('hidden')) renderRanking(); }
 
-const COLS=['nome','instituicao','nivel','prazo_inscricao','valor_mensal','duracao_meses','status','documentos','link','observacoes','pessoa_indicada','explicacao_pessoal','status_prazo'];
+const COLS=['nome','instituicao','nivel','prazo_inscricao','valor_mensal','duracao_meses','status','documentos','link','observacoes','pessoa_indicada','explicacao_pessoal','status_prazo','status_dossie'];
 function exportCsv(){
   const list=lastFilteredList;
   const filtrado=list.length!==data.length;
