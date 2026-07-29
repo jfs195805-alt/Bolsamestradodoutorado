@@ -1,6 +1,6 @@
 # 📋 Relatório de Bolsas — Mestrado & Doutorado
 
-**Atualização 29/07/2026 — limpeza + triagem de urgências:** removidas 27 duplicatas; normalizados 37 status_dossie para vocabulário canônico; corrigidos 4 bugs no painel; 2 bolsas novas (Aalborg PhD, Lester B. Pearson). Rebaixadas DAAD Helmut-Schmidt (regra diploma <6 anos) e NLnet (chamada restrita a GNU Taler/Fediversity) para "Não recomendado". Atualizada seção de urgências: 5 bolsas de agosto prioritárias (destaque Aalborg PhD US$4.000/mês). Total: **804** (115 não recomendadas, 31 prontas com ressalvas, 658 não iniciadas).
+**Atualização 29/07/2026 — limpeza + triagem de urgências:** removidas 27 duplicatas; normalizados 37 status_dossie para vocabulário canônico; corrigidos 4 bugs no painel; 2 bolsas novas (Aalborg PhD, Lester B. Pearson). Rebaixadas DAAD Helmut-Schmidt (regra diploma <6 anos) e NLnet (chamada restrita a GNU Taler/Fediversity) para "Não recomendado". Atualizada seção de urgências: 5 bolsas de agosto prioritárias (destaque Aalborg PhD US$4.000/mês). Total: **804** (120 não recomendadas, 31 prontas com ressalvas, 653 não iniciadas). Verificação de elegibilidade individual: Meta PhD Fellowship (exige PhD ativo), Swiss Gov Excellence (idade <35), Schwarzman (idade <29), Rhodes (suspenso+idade) eliminadas para Rafael.
 
 **Atualização 24/07/2026 — screenshots LinkedIn:** processado lote de 15 bolsas/estágios vindos de posts do LinkedIn (Scholarship Abroad, Fellowships Guide, Scholarships Corner) enviados pelo usuário. 4 verificadas e adicionadas com dados de fonte oficial (Hanns Seidel Foundation, Erasmus Mundus MARIHE, La Trobe University LTGRS, WMO Internship Programme — total sobe para 829). 11 descartadas com motivo específico: Toyohashi/Asia Pacific MEXT (valor abaixo do piso no câmbio atual), Swansea/Newcastle (desconto de mensalidade, não estipêndio), Aberdeen (só vítimas de conflito armado), Bayreuth (€300-400/mês), Asia in the World Fellowship (exige PhD concluído), Gulbenkian IGEA (exige currículo acadêmico consolidado, não serve para quem está começando), University of Milan/Statale (mesmo teto ISEE já descartado via DSU Lombardia), IsDB Internship (Brasil fora do escopo OCI), UNDP Digital AI Internship (US$200-500/mês).
 
@@ -29,8 +29,8 @@
 | Bolsa | País | Valor/mês | Prazo |
 |---|---|---|---|
 | Khalifa University (Doutorado) | 🇦🇪 EAU | ~US$5.450 | 15/09/2026 |
-| Meta Research PhD Fellowship | 🇺🇸 EUA | ~US$3.500 | 20/09/2026 |
-| Swiss Government Excellence | 🇨🇭 Suíça | ~US$2.700 | ~30/09/2026 |
+| ~~Meta Research PhD Fellowship~~ | ~~🇺🇸 EUA~~ | ~~US$3.500~~ | ~~20/09~~ *(exige PhD ativo)* |
+| ~~Swiss Government Excellence~~ | ~~🇨🇭 Suíça~~ | ~~US$2.700~~ | ~~30/09~~ *(idade <35)* |
 | Australian RTP Stipend | 🇦🇺 Austrália | ~US$2.035 | ~ago–out/2026 |
 | Rosa Luxemburg Foundation | 🇩🇪 Alemanha | ~US$1.520 | 01/10/2026 |
 | Boehringer Ingelheim Fonds (Doutorado) | 🇩🇪 Alemanha | ~US$2.270 | 01/10/2026 |
