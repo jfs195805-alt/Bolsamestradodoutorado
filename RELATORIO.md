@@ -1,6 +1,6 @@
 # 📋 Relatório de Bolsas — Mestrado & Doutorado
 
-**Atualização 29/07/2026 — limpeza + varredura diária:** removidas 27 duplicatas (3 autoidentificadas + 7 com nome idêntico + 17 quase-idênticas); normalizados 37 valores livres de `status_dossie` para o vocabulário canônico (Completo / Pronto com ressalvas / Não recomendado / Não iniciado). Corrigidos 4 bugs no painel: filtro por pessoa com ponto-e-vírgula, filtro de dossiê com valores livres, exportação sem coluna status_dossie, e "Toda a família" excluindo Letícia. 2 bolsas novas verificadas (Aalborg PhD NLP/AI/LLM Security, Lester B. Pearson UofT). Total: **804**.
+**Atualização 29/07/2026 — limpeza + triagem de urgências:** removidas 27 duplicatas; normalizados 37 status_dossie para vocabulário canônico; corrigidos 4 bugs no painel; 2 bolsas novas (Aalborg PhD, Lester B. Pearson). Rebaixadas DAAD Helmut-Schmidt (regra diploma <6 anos) e NLnet (chamada restrita a GNU Taler/Fediversity) para "Não recomendado". Atualizada seção de urgências: 5 bolsas de agosto prioritárias (destaque Aalborg PhD US$4.000/mês). Total: **804** (115 não recomendadas, 31 prontas com ressalvas, 658 não iniciadas).
 
 **Atualização 24/07/2026 — screenshots LinkedIn:** processado lote de 15 bolsas/estágios vindos de posts do LinkedIn (Scholarship Abroad, Fellowships Guide, Scholarships Corner) enviados pelo usuário. 4 verificadas e adicionadas com dados de fonte oficial (Hanns Seidel Foundation, Erasmus Mundus MARIHE, La Trobe University LTGRS, WMO Internship Programme — total sobe para 829). 11 descartadas com motivo específico: Toyohashi/Asia Pacific MEXT (valor abaixo do piso no câmbio atual), Swansea/Newcastle (desconto de mensalidade, não estipêndio), Aberdeen (só vítimas de conflito armado), Bayreuth (€300-400/mês), Asia in the World Fellowship (exige PhD concluído), Gulbenkian IGEA (exige currículo acadêmico consolidado, não serve para quem está começando), University of Milan/Statale (mesmo teto ISEE já descartado via DSU Lombardia), IsDB Internship (Brasil fora do escopo OCI), UNDP Digital AI Internship (US$200-500/mês).
 
@@ -14,19 +14,22 @@
 
 ---
 
-## 🔴 URGENTE — prazo nos próximos dias/semanas
+## 🔴 URGENTE — prazo em agosto/2026
 
-| Bolsa | País | Nível | Valor/mês | Prazo |
-|---|---|---|---|---|
-| **DAAD Helmut-Schmidt** (Políticas Públicas) | 🇩🇪 Alemanha | Mestrado | ~US$1.080 | **31/07/2026** |
-| **Rhodes (Global)** — Oxford | 🇬🇧 Reino Unido | Mestrado/Doutorado | ~US$2.150 | **~01/08/2026** (confirmar) |
-| **McCall MacBain** — McGill | 🇨🇦 Canadá | Mestrado | ~US$1.500 | **19/08/2026** |
+| Bolsa | País | Nível | Valor/mês | Prazo | Dossiê |
+|---|---|---|---|---|---|
+| **McCall MacBain** — McGill | 🇨🇦 Canadá | Mestrado | ~US$1.500 | **19/08/2026** | Pronto c/ ressalvas |
+| **Aalborg PhD NLP/AI/LLM Security** | 🇩🇰 Dinamarca | Doutorado | ~US$4.000 | **31/08/2026** | Não iniciado |
+| **ANU PhD / University Research** | 🇦🇺 Austrália | Doutorado | ~US$2.245 | **31/08/2026** | Pronto c/ ressalvas |
+| **UWA HDR / RTP Stipend** | 🇦🇺 Austrália | Mestrado/Doutorado | ~US$2.190 | **31/08/2026** | Pronto c/ ressalvas |
+| **Estágio Blue Book** | 🇪🇺 UE | Fellowship | ~US$1.650 | **31/08/2026** | Pronto c/ ressalvas |
 
 ## 🟠 Prazos entre setembro e outubro/2026
 
 | Bolsa | País | Valor/mês | Prazo |
 |---|---|---|---|
-| Khalifa University (Doutorado) | 🇦🇪 EAU | ~US$3.000 | 15/09/2026 |
+| Khalifa University (Doutorado) | 🇦🇪 EAU | ~US$5.450 | 15/09/2026 |
+| Meta Research PhD Fellowship | 🇺🇸 EUA | ~US$3.500 | 20/09/2026 |
 | Swiss Government Excellence | 🇨🇭 Suíça | ~US$2.700 | ~30/09/2026 |
 | Australian RTP Stipend | 🇦🇺 Austrália | ~US$2.035 | ~ago–out/2026 |
 | Rosa Luxemburg Foundation | 🇩🇪 Alemanha | ~US$1.520 | 01/10/2026 |
