@@ -771,11 +771,16 @@ function renderRanking(){
   const fNivel=document.getElementById('rkFilterNivel').value;
   const f15dias=document.getElementById('rkFilter15dias').checked;
   const fExclusivas=document.getElementById('rkFilterExclusivas').checked;
+  const LETICIA_EXCLUDE_NIVELS=['Mestrado','Doutorado','Pós-doutorado','Fellowship','Trabalho/Voluntariado','Pesquisa','Estágio/Júnior','Bootcamp','Visto trabalho remoto','Graduação','Ensino','Certificação clínica','Bolsa/Mentoria'];
   let list=data.filter(i=>{
     if(fExclusivas){
       if(!isExclusiveMatch(i.pessoa_indicada, rankPerson)) return false;
     } else {
       if(!matchesPersonRank(i.pessoa_indicada, rankPerson)) return false;
+    }
+    if(rankPerson==='Letícia' && !isExclusiveMatch(i.pessoa_indicada,'Letícia')){
+      const n=(i.nivel||'');
+      if(LETICIA_EXCLUDE_NIVELS.some(ex=>n.includes(ex))) return false;
     }
     if(fNivel && !(i.nivel||'').includes(fNivel)) return false;
     if(fPrazo && prazoStatus(i)!==fPrazo) return false;
