@@ -479,6 +479,11 @@
     <div class="field"><label>Documentos necessários</label><textarea id="f_documentos" placeholder="Um por linha, ou separados por ponto e vírgula (;)"></textarea><small>Ex.: CV; Histórico; Cartas de referência</small></div>
     <div class="field"><label>Link do edital</label><input id="f_link" placeholder="https://..."></div>
     <div class="field"><label>Observações</label><input id="f_observacoes" placeholder="País, valor na moeda original, ressalvas"></div>
+    <div class="two">
+      <div class="field"><label>Pessoa indicada</label><select id="f_pessoa"><option value="">— Selecionar —</option><option>Rafael</option><option>Daniela</option><option>Maria Eduarda</option><option>Letícia</option><option>Toda a família</option><option>Vários</option></select></div>
+      <div class="field"><label>Status do dossiê</label><select id="f_dossie"><option>Não iniciado</option><option>Pronto com ressalvas</option><option>Completo</option><option>Não recomendado</option></select></div>
+    </div>
+    <div class="field"><label>Explicação pessoal</label><input id="f_explicacao" placeholder="Por que esta bolsa encaixa no perfil da pessoa indicada"></div>
     <div class="modal-actions">
       <button class="btn ghost" onclick="closeModal()">Cancelar</button>
       <button class="btn primary" onclick="save()">Salvar</button>
@@ -1050,9 +1055,13 @@ function render(){
     const prazoIcons={'Dentro do prazo':'✅','Fora do prazo':'⛔','Prazo inexistente':'➖'};
     const prazoChip=`<span class="chip" style="background:${prazoColors[pStatus]};color:#fff;border-color:${prazoColors[pStatus]}">${prazoIcons[pStatus]} ${pStatus}</span>`;
     const paisChip=`<span class="chip">${escapeHtml(extractCountry(item.observacoes))}</span>`;
+    const dossieNorm=normalizeDossie(item.status_dossie);
+    const dossieColors={'Completo':'#059669','Pronto com ressalvas':'#d97706','Não recomendado':'#dc2626','Não iniciado':'#6b7280'};
+    const dossieIcons={'Completo':'📁','Pronto com ressalvas':'⚠️','Não recomendado':'🚫','Não iniciado':'➖'};
+    const dossieChip=`<span class="chip" style="background:${dossieColors[dossieNorm]||'#6b7280'};color:#fff;border-color:${dossieColors[dossieNorm]||'#6b7280'}">${dossieIcons[dossieNorm]||'➖'} ${escapeHtml(dossieNorm)}</span>`;
     return `<div class="card s-${cls}">
       <div><h3>${escapeHtml(item.nome||'(sem nome)')}</h3><div class="inst">${escapeHtml(item.instituicao||'')}</div></div>
-      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span>${paisChip}${pessoaChip}${prazoChip}</div>
+      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span>${paisChip}${pessoaChip}${prazoChip}${dossieChip}</div>
       <div class="row"><span class="deadline">📅 ${fmtDate(item.prazo_inscricao)}</span><span class="count ${cls}">${countdownText(item)}</span></div>
       ${money?`<div class="row">${money}</div>`:''}
       ${docsHtml}
@@ -1118,18 +1127,24 @@ function renderPortais(){
 
 function toggleDoc(id,el,doc){ docDone[id]=docDone[id]||{}; if(el.checked)docDone[id][doc]=true; else delete docDone[id][doc]; persist(); el.parentElement.querySelector('span').classList.toggle('done-doc',el.checked); }
 
-function openModal(){ document.getElementById('modalTitle').textContent='Nova bolsa'; ['f_id','f_nome','f_instituicao','f_prazo','f_valor','f_duracao','f_documentos','f_link','f_observacoes'].forEach(x=>document.getElementById(x).value=''); document.getElementById('f_nivel').value='Mestrado'; document.getElementById('f_status').value='A fazer'; document.getElementById('overlay').classList.add('open'); }
-function edit(id){ const item=data.find(i=>i.id===id); if(!item)return; document.getElementById('modalTitle').textContent='Editar bolsa'; document.getElementById('f_id').value=item.id; document.getElementById('f_nome').value=item.nome||''; document.getElementById('f_instituicao').value=item.instituicao||''; document.getElementById('f_nivel').value=item.nivel||'Mestrado'; document.getElementById('f_prazo').value=item.prazo_inscricao||''; document.getElementById('f_status').value=item.status||'A fazer'; document.getElementById('f_valor').value=item.valor_mensal||''; document.getElementById('f_duracao').value=item.duracao_meses||''; document.getElementById('f_documentos').value=docsArray(item.documentos).join('\n'); document.getElementById('f_link').value=item.link||''; document.getElementById('f_observacoes').value=item.observacoes||''; document.getElementById('overlay').classList.add('open'); }
+function openModal(){ document.getElementById('modalTitle').textContent='Nova bolsa'; ['f_id','f_nome','f_instituicao','f_prazo','f_valor','f_duracao','f_documentos','f_link','f_observacoes','f_explicacao'].forEach(x=>document.getElementById(x).value=''); document.getElementById('f_nivel').value='Mestrado'; document.getElementById('f_status').value='A fazer'; document.getElementById('f_pessoa').value=''; document.getElementById('f_dossie').value='Não iniciado'; document.getElementById('overlay').classList.add('open'); }
+function edit(id){ const item=data.find(i=>i.id===id); if(!item)return; document.getElementById('modalTitle').textContent='Editar bolsa'; document.getElementById('f_id').value=item.id; document.getElementById('f_nome').value=item.nome||''; document.getElementById('f_instituicao').value=item.instituicao||''; document.getElementById('f_nivel').value=item.nivel||'Mestrado'; document.getElementById('f_prazo').value=item.prazo_inscricao||''; document.getElementById('f_status').value=item.status||'A fazer'; document.getElementById('f_valor').value=item.valor_mensal||''; document.getElementById('f_duracao').value=item.duracao_meses||''; document.getElementById('f_documentos').value=docsArray(item.documentos).join('\n'); document.getElementById('f_link').value=item.link||''; document.getElementById('f_observacoes').value=item.observacoes||''; document.getElementById('f_pessoa').value=item.pessoa_indicada||''; document.getElementById('f_dossie').value=normalizeDossie(item.status_dossie); document.getElementById('f_explicacao').value=item.explicacao_pessoal||''; document.getElementById('overlay').classList.add('open'); }
 function closeModal(){ document.getElementById('overlay').classList.remove('open'); }
 function save(){
   const nome=document.getElementById('f_nome').value.trim(); if(!nome){alert('Informe o nome da bolsa.');return;}
   const id=document.getElementById('f_id').value||uid();
-  const obj={id,nome,instituicao:document.getElementById('f_instituicao').value.trim(),nivel:document.getElementById('f_nivel').value,prazo_inscricao:document.getElementById('f_prazo').value,valor_mensal:document.getElementById('f_valor').value,duracao_meses:document.getElementById('f_duracao').value,status:document.getElementById('f_status').value,documentos:docsArray(document.getElementById('f_documentos').value).join(';'),link:document.getElementById('f_link').value.trim(),observacoes:document.getElementById('f_observacoes').value.trim()};
+  const obj={id,nome,instituicao:document.getElementById('f_instituicao').value.trim(),nivel:document.getElementById('f_nivel').value,prazo_inscricao:document.getElementById('f_prazo').value,valor_mensal:document.getElementById('f_valor').value,duracao_meses:document.getElementById('f_duracao').value,status:document.getElementById('f_status').value,documentos:docsArray(document.getElementById('f_documentos').value).join(';'),link:document.getElementById('f_link').value.trim(),observacoes:document.getElementById('f_observacoes').value.trim(),pessoa_indicada:document.getElementById('f_pessoa').value,status_dossie:document.getElementById('f_dossie').value,explicacao_pessoal:document.getElementById('f_explicacao').value.trim()};
   const idx=data.findIndex(i=>i.id===id); if(idx>=0)data[idx]=Object.assign({},data[idx],obj); else data.push(obj);
   persist(); closeModal(); renderAll();
 }
 function remove(id){ const item=data.find(i=>i.id===id); if(!confirm(`Excluir "${item?item.nome:''}"?`))return; data=data.filter(i=>i.id!==id); delete docDone[id]; persist(); renderAll(); }
-function renderAll(){ populatePaisFilter(); render(); if(!document.getElementById('view-ranking').classList.contains('hidden')) renderRanking(); }
+function renderAll(){
+  populatePaisFilter(); render();
+  const badgeG=document.getElementById('tabCountGlobal'); if(badgeG) badgeG.textContent=data.length;
+  updatePrazoBadgeCount();
+  if(!document.getElementById('view-ranking').classList.contains('hidden')) renderRanking();
+  if(!document.getElementById('view-prazos').classList.contains('hidden')) renderPrazos();
+}
 
 const COLS=['nome','instituicao','nivel','prazo_inscricao','valor_mensal','duracao_meses','status','documentos','link','observacoes','pessoa_indicada','explicacao_pessoal','status_prazo','status_dossie'];
 function exportCsv(){
@@ -1832,7 +1847,8 @@ function prepararCandidaturaPsi(idx){
 document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==='overlay')closeModal();});
 populatePaisFilter();
 render();
-syncFromCsv(true); // sempre busca o bolsas.csv mais recente ao carregar, para nunca ficar preso em cache local desatualizado
+{ const badgeG=document.getElementById('tabCountGlobal'); if(badgeG && data.length) badgeG.textContent=data.length; }
+syncFromCsv(true);
 syncBrasilCsv();
 </script>
 </body>
