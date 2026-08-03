@@ -418,6 +418,9 @@
       <label class="filter" style="display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none">
         <input type="checkbox" id="rkFilter15dias" onchange="renderRanking()"> ⏰ Vencendo em 15 dias
       </label>
+      <label class="filter" style="display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none">
+        <input type="checkbox" id="rkFilterExclusivas" onchange="renderRanking()"> 🎯 Só exclusivas
+      </label>
       <div class="spacer"></div>
       <span class="inst" id="rkCount"></span>
     </div>
@@ -751,14 +754,29 @@ function matchesPersonRank(pessoaIndicada, target){
   }
   return false;
 }
+function isExclusiveMatch(pessoaIndicada, target){
+  const p=(pessoaIndicada||'').trim();
+  if(p==='Vários'||p==='Toda a família') return false;
+  const canon=personCanonical(target);
+  const parts=p.split(';').map(s=>s.trim()).filter(Boolean);
+  for(const part of parts){
+    if(part===target || personCanonical(part)===canon) return true;
+  }
+  return false;
+}
 
 function renderRanking(){
   const rkGrid=document.getElementById('rkGrid');
   const fPrazo=document.getElementById('rkFilterPrazo').value;
   const fNivel=document.getElementById('rkFilterNivel').value;
   const f15dias=document.getElementById('rkFilter15dias').checked;
+  const fExclusivas=document.getElementById('rkFilterExclusivas').checked;
   let list=data.filter(i=>{
-    if(!matchesPersonRank(i.pessoa_indicada, rankPerson)) return false;
+    if(fExclusivas){
+      if(!isExclusiveMatch(i.pessoa_indicada, rankPerson)) return false;
+    } else {
+      if(!matchesPersonRank(i.pessoa_indicada, rankPerson)) return false;
+    }
     if(fNivel && !(i.nivel||'').includes(fNivel)) return false;
     if(fPrazo && prazoStatus(i)!==fPrazo) return false;
     if(f15dias){ const d=daysUntil(i.prazo_inscricao); if(d===null||d<0||d>15) return false; }
@@ -766,7 +784,12 @@ function renderRanking(){
   });
   list.sort((a,b)=>(parseFloat(b.valor_mensal)||0)-(parseFloat(a.valor_mensal)||0));
 
-  document.getElementById('rkCount').textContent=list.length+' bolsa(s) indicada(s) para '+rankPerson;
+  const exclusiveCount=list.filter(i=>isExclusiveMatch(i.pessoa_indicada, rankPerson)).length;
+  const sharedCount=list.length-exclusiveCount;
+  const countLabel=fExclusivas
+    ? exclusiveCount+' bolsa(s) exclusiva(s) para '+rankPerson
+    : exclusiveCount+' exclusiva(s) + '+sharedCount+' compartilhada(s) = '+list.length+' total para '+rankPerson;
+  document.getElementById('rkCount').textContent=countLabel;
 
   if(list.length===0){ rkGrid.innerHTML=`<div class="empty">Nenhuma bolsa encontrada para ${escapeHtml(rankPerson)} com esses filtros.</div>`; return; }
 
@@ -781,7 +804,7 @@ function renderRanking(){
     return `<div class="card s-${cls}">
       <div class="row"><span class="rk-rank">#${idx+1}</span><h3 style="margin:0">${escapeHtml(item.nome||'(sem nome)')}</h3></div>
       <div class="inst">${escapeHtml(item.instituicao||'')}</div>
-      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span><span class="chip">${escapeHtml(extractCountry(item.observacoes))}</span>${prazoChip}</div>
+      <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip status">${escapeHtml(item.status||'—')}</span><span class="chip">${escapeHtml(extractCountry(item.observacoes))}</span>${prazoChip}${isExclusiveMatch(item.pessoa_indicada,rankPerson)?'<span class="chip" style="background:#7c3aed;color:#fff;border-color:#7c3aed">🎯 Exclusiva</span>':'<span class="chip" style="background:#64748b;color:#fff;border-color:#64748b">👥 '+escapeHtml(item.pessoa_indicada||'—')+'</span>'}</div>
       <div class="row"><span class="deadline">📅 ${fmtDate(item.prazo_inscricao)}</span></div>
       <div class="row">${money}</div>
       ${item.explicacao_pessoal?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">💡 ${escapeHtml(item.explicacao_pessoal)}</div>`:''}
