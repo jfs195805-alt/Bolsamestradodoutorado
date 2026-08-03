@@ -22,7 +22,7 @@
 | **Aalborg PhD NLP/AI/LLM Security** | 🇩🇰 Dinamarca | Doutorado | ~US$4.000 | **31/08/2026** | Não iniciado |
 | **ANU PhD / University Research** | 🇦🇺 Austrália | Doutorado | ~US$2.245 | **31/08/2026** | Pronto c/ ressalvas |
 | **UWA HDR / RTP Stipend** | 🇦🇺 Austrália | Mestrado/Doutorado | ~US$2.190 | **31/08/2026** | Pronto c/ ressalvas |
-| **Estágio Blue Book** | 🇪🇺 UE | Fellowship | ~US$1.650 | **31/08/2026** | Pronto c/ ressalvas |
+| **Estágio Blue Book** | 🇪🇺 UE | Fellowship | ~US$1.650 | **04/09/2026** | Pronto c/ ressalvas |
 
 ## 🟠 Prazos entre setembro e outubro/2026
 
