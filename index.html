@@ -406,8 +406,8 @@
     </div>
     <div class="toolbar">
       <select class="filter" id="rkFilterPrazo" onchange="renderRanking()">
-        <option value="">Qualquer prazo</option>
-        <option value="Dentro do prazo" selected>✅ Só dentro do prazo</option>
+        <option value="" selected>Qualquer prazo</option>
+        <option value="Dentro do prazo">✅ Só dentro do prazo</option>
         <option value="Fora do prazo">⛔ Fora do prazo</option>
         <option value="Prazo inexistente">➖ Prazo inexistente / contínuo</option>
       </select>
@@ -1191,7 +1191,7 @@ async function syncFromCsv(silent){
     const res=await fetch('bolsas.csv?ts='+Date.now(),{cache:'no-store'}); if(!res.ok)throw new Error('HTTP '+res.status);
     const text=await res.text(); const rows=parseCsv(text); const header=rows.shift().map(h=>h.trim());
     const imported=rows.filter(r=>r.length&&r.some(c=>c!=='')).map(r=>{const o={id:uid()};header.forEach((h,i)=>o[h]=(r[i]||'').trim());return o;});
-    if(imported.length){ data=imported; persist(); renderAll(); if(!silent)alert('Carregadas '+imported.length+' bolsas do bolsas.csv.'); }
+    if(imported.length){ data=imported; persist(); renderAll(); if(!silent)alert('Carregadas '+imported.length+' bolsas do bolsas.csv.'); console.log('[sync] CSV carregado: '+imported.length+' bolsas'); }
     const badgeG=document.getElementById('tabCountGlobal'); if(badgeG) badgeG.textContent=data.length;
     updatePrazoBadgeCount();
     if(!document.getElementById('view-prazos').classList.contains('hidden')) renderPrazos();
