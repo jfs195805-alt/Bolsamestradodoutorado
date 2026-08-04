@@ -8,6 +8,43 @@
 
 ---
 
+## Personalidade, historia familiar e narrativa autentica
+
+### Raizes familiares com numeros
+- **Avo materno/paterno**: professor universitario de matematica. Numeros e raciocinio logico sao parte da heranca cultural da familia, nao algo adquirido por pressao externa.
+- **Pai (Rafael)**: analista de dados com 18+ anos de experiencia. Matematica, estatistica e dados sao "conversa normal de jantar" na casa da Leticia.
+- Essa combinacao (avo academico + pai profissional de dados) cria um ambiente onde curiosidade quantitativa e natural, nao forcada.
+
+### O momento que mudou tudo — a historia da conta de energia
+> "There was a specific moment that changed things: looking at our house's energy data with my dad, I realized numbers weren't just for getting good grades — they were a way to actually understand how things work, and fix what's broken."
+
+Esse e o "origin story" real da Leticia. Usar em QUALQUER carta de motivacao ou entrevista como gancho inicial. E concreto, verdadeiro, e mostra que ela aprendeu a pensar com dados antes de saber que isso era uma habilidade valorizada.
+
+### Personalidade em primeira pessoa (fatos reais, voz propria)
+> "I grew up with math and data as normal dinner conversation — my grandfather was a math professor, my dad works with data analysis."
+
+> "At home I learned to love numbers, but I've never had a mentor who works with real technology and data outside my family. I want someone who can push my questions further than I can push them myself right now — and be around other people my age who think this way too, because that doesn't really exist where I live."
+
+> "There was a day my whole class cheered because the teacher gave shorter homework, and I was actually a little disappointed — I wanted a bigger challenge. My friends see calculations as a boring chore. To me it's almost a hobby. I can't accept an answer without asking 'why' or 'how is this proven with data?'"
+
+> "I probably don't know as much as older applicants yet. But I already use math and data to understand real things around me — my house, my school. I'm curious, I don't give up on a problem easily, and I actually want to be here to learn, not just to add it to a resume."
+
+### Diferenciais narrativos para cartas e entrevistas
+1. **Heranca intelectual genuina**: avo professor + pai analista de dados = curiosidade herdada, nao ensinada.
+2. **Momento concreto de transformacao**: analise de dados de energia da casa com o pai — numeros deixaram de ser "materia escolar" e viraram ferramenta de entender o mundo.
+3. **Deslocamento social positivo**: ela quer desafios maiores do que o ambiente escolar oferece. Nao reclama da escola — simplesmente quer mais. Isso e atraente para programas seletivos.
+4. **Honestidade sobre limites**: admite que sabe menos que candidatos mais velhos, mas posiciona curiosidade e persistencia como compensacao real — nao falsa modestia.
+5. **Busca por mentoria externa**: ja tem base familiar forte, mas reconhece que precisa de alguem de fora da familia que trabalhe com tecnologia e dados profissionalmente. Isso mostra maturidade.
+6. **Peer group**: quer estar perto de pessoas da mesma idade que pensam como ela — isso nao existe onde ela mora. Motivacao social genuina.
+
+### Como usar em cada tipo de documento
+- **Cartas de motivacao**: abrir com a historia da conta de energia, seguir com a heranca familiar, fechar com o desejo de mentoria externa.
+- **Entrevistas**: usar as citacoes em primeira pessoa como base das respostas — ja estao no nivel de ingles adequado (B2, natural).
+- **Essays**: expandir o tema do "deslocamento" — ela nao se encaixa no ambiente escolar tipico, e isso e uma forca, nao um problema.
+- **Formularios curtos**: resumir em 1-2 frases: "I grew up analyzing data at the dinner table with my grandfather (a math professor) and my dad (a data analyst). I want a mentor and peers who can push my curiosity further than my current environment allows."
+
+---
+
 ## 🚨 AÇÃO IMEDIATA — Olimpíada Nacional de IA Aplicada (prazo 31/07/2026)
 
 Esta é a bolsa/competição catalogada com o prazo mais urgente de toda a base para Letícia. Checklist para inscrever a tempo:
