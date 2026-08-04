@@ -45,17 +45,11 @@ Esse e o "origin story" real da Leticia. Usar em QUALQUER carta de motivacao ou 
 
 ---
 
-## 🚨 AÇÃO IMEDIATA — Olimpíada Nacional de IA Aplicada (prazo 31/07/2026)
+## ❌ ENCERRADA — Olimpíada Nacional de IA Aplicada (prazo era 31/07/2026)
 
-Esta é a bolsa/competição catalogada com o prazo mais urgente de toda a base para Letícia. Checklist para inscrever a tempo:
+**Status (confirmado 04/08/2026): prazo perdido.** Não deu tempo de achar tutor elegível e montar a equipe de 3 antes de 31/07/2026 — o gargalo real (achar tutor) não foi resolvido a tempo. Mantido aqui só como registro — não há mais ação a tomar nesta edição.
 
-- [ ] **1. Achar um tutor elegível.** Precisa ter 18+ anos e (a) graduação já concluída OU (b) estar matriculado em curso superior reconhecido pelo MEC. Pode ser um professor da escola, um profissional de tecnologia da família/rede de contatos, ou um universitário conhecido. **Este é o gargalo real** — sem tutor não há inscrição.
-- [ ] **2. Recrutar 2 colegas de equipe.** Equipe fixa de 3 estudantes (Letícia + 2). Colegas de turma/escola com interesse em IA/programação são o caminho mais rápido.
-- [ ] **3. Inscrever a equipe** em [olimpiadadeia.ceia.digital](https://olimpiadadeia.ceia.digital/) **antes de 31/07/2026**. 600 vagas nacionais, 120 reservadas com prioridade a equipes com maioria feminina (equipe da Letícia se qualifica se tiver 2+ meninas).
-- [ ] **4. Aguardar resultado da inscrição em 07/08/2026.**
-- [ ] **5. Participar das trilhas formativas gratuitas** (Lógica de Programação, Python, IA Aplicada) a partir de 10/08/2026 — preparação obrigatória antes da fase 1 (online).
-- [ ] **6. Se avançar entre as 50 melhores equipes:** fase 2 é online + presencial (2 dias de imersão na Escola do Futuro Luiz Rassi, Aparecida de Goiânia/GO) e já garante R$900/integrante, incluindo o tutor.
-- [ ] **7. Final e premiação:** 01-02/11/2026, presencial em Goiás. Prêmios individuais top 5: R$10k/8k/6k/4k/2k.
+Se a olimpíada tiver uma próxima edição em 2027, vale reabrir esta linha com bastante antecedência para resolver o gargalo do tutor cedo.
 
 **Contato oficial em caso de dúvida:** olimpiada@ceia.ufg.br / Instagram @olimpiadaiaaplicada.
 
@@ -65,13 +59,13 @@ Esta é a bolsa/competição catalogada com o prazo mais urgente de toda a base 
 
 Como a Davis (e qualquer bolsa que exija carta de recomendação) foi desprioritizada, estas são as próximas duas apostas reais, em ordem de urgência.
 
-### TKS — The Knowledge Society (prazo 30/07/2026 — CORRIGIDO)
+### TKS — The Knowledge Society (formulário enviado ✅ — confirmado 04/08/2026)
 Fellowship de mentoria real em IA/biotech/dados para adolescentes (13-17 anos). **Documentos: só formulário (3 perguntas curtas, ~20-30min) + entrevista em grupo (~30min via Zoom) — sem carta de recomendação.**
 - Pago (~US$489/mês virtual), mas **30 bolsas full-ride (mérito)** + auxílio financeiro por necessidade **até 100%** (>60% dos alunos recebem apoio; >US$2M concedidos no último ciclo).
 - Aplicação: 3 perguntas sobre quem você é e o que te motiva (não sobre notas). Entrevista em pequeno grupo com Director — conversa, não teste. Decisão em 72h.
-- [ ] Preencher formulário em [tks.world/apply-now](https://www.tks.world/apply-now) **antes de 30/07/2026**
-- [ ] Preparar para a entrevista em grupo (30min, Zoom) — ver kit de entrevista abaixo
-- [ ] Se aceita: pedir avaliação de auxílio financeiro por necessidade (caso a caso, sem obrigação)
+- [x] **Formulário enviado** em [tks.world/apply-now](https://www.tks.world/apply-now) — confirmado pela família em 04/08/2026.
+- [ ] **Próximo passo: preparar a entrevista em grupo (30min, Zoom)** — usar o kit de entrevista abaixo. Pode chegar a qualquer momento (decisão típica em 72h da inscrição, entrevista costuma vir antes/junto da decisão).
+- [ ] Se aceita: pedir avaliação de auxílio financeiro por necessidade (caso a caso, sem obrigação) — usar o e-mail-modelo abaixo se ainda não foi enviado.
 - ⚠️ Formato virtual recomendado — alunos de 65+ países, mesmo currículo do presencial.
 
 **Estrutura do programa (pesquisado 21/07/2026, via busca — WebFetch direto no site bloqueado, confirmar com a admissão se for decisivo):**
