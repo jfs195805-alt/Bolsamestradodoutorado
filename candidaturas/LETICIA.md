@@ -55,16 +55,15 @@ Se a olimpíada tiver uma próxima edição em 2027, vale reabrir esta linha com
 
 ---
 
-## 🥈 PRÓXIMAS AÇÕES — TKS e Lumiere (nenhuma exige carta de recomendação)
+## 🥈 STATUS ATUAL — TKS (aguardando resultado) — Lumiere descartado
 
-Como a Davis (e qualquer bolsa que exija carta de recomendação) foi desprioritizada, estas são as próximas duas apostas reais, em ordem de urgência.
-
-### TKS — The Knowledge Society (formulário enviado ✅ — confirmado 04/08/2026)
+### TKS — The Knowledge Society (formulário enviado + entrevista realizada ✅ — confirmado 04/08/2026)
 Fellowship de mentoria real em IA/biotech/dados para adolescentes (13-17 anos). **Documentos: só formulário (3 perguntas curtas, ~20-30min) + entrevista em grupo (~30min via Zoom) — sem carta de recomendação.**
 - Pago (~US$489/mês virtual), mas **30 bolsas full-ride (mérito)** + auxílio financeiro por necessidade **até 100%** (>60% dos alunos recebem apoio; >US$2M concedidos no último ciclo).
 - Aplicação: 3 perguntas sobre quem você é e o que te motiva (não sobre notas). Entrevista em pequeno grupo com Director — conversa, não teste. Decisão em 72h.
 - [x] **Formulário enviado** em [tks.world/apply-now](https://www.tks.world/apply-now) — confirmado pela família em 04/08/2026.
-- [ ] **Próximo passo: preparar a entrevista em grupo (30min, Zoom)** — usar o kit de entrevista abaixo. Pode chegar a qualquer momento (decisão típica em 72h da inscrição, entrevista costuma vir antes/junto da decisão).
+- [x] **Entrevista em grupo realizada** — confirmado pela família em 04/08/2026. Kit de preparo não é mais necessário.
+- [ ] **Aguardando resultado** (decisão típica em até 72h da entrevista/inscrição).
 - [ ] Se aceita: pedir avaliação de auxílio financeiro por necessidade (caso a caso, sem obrigação) — usar o e-mail-modelo abaixo se ainda não foi enviado.
 - ⚠️ Formato virtual recomendado — alunos de 65+ países, mesmo currículo do presencial.
 
@@ -97,13 +96,9 @@ Fellowship de mentoria real em IA/biotech/dados para adolescentes (13-17 anos). 
 > Best regards,
 > [Nome do responsável]
 
-### Lumiere Research Scholar Program (prazo 09/08/2026)
-Pareamento 1:1 com pesquisador de PhD/pós-doc para projeto de pesquisa original de 12 semanas, 100% online. **Documentos: formulário + histórico escolar + entrevista — sem carta de recomendação.**
-- Caro (US$2.800-8.900 + depósito de US$200), mas tem **bolsa de inclusão de até 100% baseada em renda familiar** (~US$80k/ano, padrão americano) — avaliada por parceiros locais para candidatos fora dos EUA, processo não totalmente confirmado.
-- [ ] Preencher formulário em [lumiere.foundation/application](https://lumiere.foundation/application)
-- [ ] Assim que possível, perguntar diretamente sobre o processo de avaliação de bolsa por renda para candidatos do Brasil (antes de decidir sobre o depósito)
-- [ ] Reunir histórico escolar para a candidatura
-- ⚠️ Status "condicional" na base — vale confirmar a real disponibilidade/critério da bolsa de inclusão antes de investir tempo no formulário completo.
+### ❌ DESCARTADO — Lumiere Research Scholar Program (prazo era 09/08/2026)
+
+**Status (decisão da família, 04/08/2026): descartado.** Não será mais perseguido — mantido aqui só como registro histórico do achado. Motivo original de risco: caro (US$2.800-8.900 + depósito de US$200), com bolsa de inclusão baseada em renda familiar nunca totalmente confirmada para candidatos fora dos EUA.
 
 ---
 
