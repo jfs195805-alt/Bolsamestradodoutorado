@@ -142,7 +142,24 @@
   .field small{color:var(--muted);font-size:.75rem}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:8px}
-  @media(max-width:520px){.two{grid-template-columns:1fr}}
+
+  /* candidatura modal */
+  .cand-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:flex-start;justify-content:center;padding:16px;z-index:60;overflow-y:auto}
+  .cand-overlay.open{display:flex}
+  .cand-modal{background:var(--panel);border-radius:16px;padding:24px 22px;width:100%;max-width:760px;margin:30px auto;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+  .cand-modal h2{margin:0 0 6px;font-size:1.3rem}
+  .cand-modal h3{margin:18px 0 8px;font-size:1rem;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:4px}
+  .cand-section{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:14px;white-space:pre-wrap;font-size:.88rem;line-height:1.6}
+  .cand-section.letter{font-style:italic}
+  .cand-checklist{list-style:none;padding:0;margin:0}
+  .cand-checklist li{padding:6px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:flex-start}
+  .cand-checklist li:last-child{border-bottom:none}
+  .cand-checklist input[type=checkbox]{margin-top:3px;accent-color:var(--accent)}
+  .cand-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:.85rem}
+  .cand-meta dt{color:var(--muted);font-weight:600}
+  .cand-meta dd{margin:0}
+  .cand-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  @media(max-width:520px){.two{grid-template-columns:1fr}.cand-meta{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -808,7 +825,7 @@ function renderRanking(){
       <div class="row"><span class="deadline">📅 ${fmtDate(item.prazo_inscricao)}</span></div>
       <div class="row">${money}</div>
       ${item.explicacao_pessoal?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">💡 ${escapeHtml(item.explicacao_pessoal)}</div>`:''}
-      <div class="card-actions"><button class="btn primary" onclick="prepararCandidatura('${item.id}')">🤖 Preparar candidatura</button>${link}</div>
+      <div class="card-actions"><button class="btn primary" onclick="abrirCandidatura('${item.id}')">📋 Candidatar</button>${link}</div>
     </div>`;
   }).join('');
 }
@@ -882,7 +899,7 @@ function renderPrazos(){
         <div class="row"><span class="chip">${escapeHtml(item.nivel||'—')}</span><span class="chip">${escapeHtml(item.pessoa_indicada||'—')}</span><span class="chip">${escapeHtml(extractCountry(item.observacoes))}</span></div>
         <div class="row"><span class="deadline">📅 ${fmtDate(item.prazo_inscricao)}</span></div>
         <div class="row">${money}</div>
-        <div class="card-actions"><button class="btn primary" onclick="prepararCandidatura('${item.id}')">🤖 Preparar candidatura</button>${link}</div>
+        <div class="card-actions"><button class="btn primary" onclick="abrirCandidatura('${item.id}')">📋 Candidatar</button>${link}</div>
       </div>`;
     }).join('');
   }
@@ -1090,7 +1107,7 @@ function render(){
       ${docsHtml}
       ${item.observacoes?`<div class="inst">📝 ${escapeHtml(item.observacoes)}</div>`:''}
       ${item.explicacao_pessoal?`<div class="inst" style="border-top:1px solid var(--border);padding-top:8px;margin-top:2px">💡 ${escapeHtml(item.explicacao_pessoal)}</div>`:''}
-      <div class="card-actions"><button class="btn" onclick="edit('${item.id}')">✏️ Editar</button><button class="btn" onclick="remove('${item.id}')">🗑️</button><button class="btn primary" onclick="prepararCandidatura('${item.id}')">🤖 Preparar candidatura</button>${link}</div>
+      <div class="card-actions"><button class="btn" onclick="edit('${item.id}')">✏️ Editar</button><button class="btn" onclick="remove('${item.id}')">🗑️</button><button class="btn primary" onclick="abrirCandidatura('${item.id}')">📋 Candidatar</button>${link}</div>
     </div>`;
   }).join('');
 }
@@ -1868,6 +1885,194 @@ function prepararCandidaturaPsi(idx){
 }
 
 document.getElementById('overlay').addEventListener('click',e=>{if(e.target.id==='overlay')closeModal();});
+
+// ===== Candidatura Modal — dossiê completo inline =====
+const PERFIS={
+  'Rafael':{
+    nome:'Rafael',idade:45,
+    resumo:'Senior Data Analyst / Analytics Engineer. 18+ anos em BI, Cloud Analytics e Modern Data Stack. Google Cloud/BigQuery, ThoughtSpot, Power BI (PL-300), Tableau, Looker, SQL, Python, dbt, Databricks; IA/ML. Trajetória: Oi, TIM, Coca-Cola, Keyrus, DataEX. Entregou US$3M em economia (Six Sigma Green Belt).',
+    formacao:'MBA em Administração (Ibmec) + Bacharelado em Segurança de Sistemas de Informação (Ibmec).',
+    idiomas:'Português nativo, Inglês (Full Professional), Espanhol (Professional Working).',
+    objetivo:'Mestrado + doutorado + emprego + fellowship — mundo todo, com foco em IA.',
+    diferencial:'Combinação rara de experiência corporativa sênior (18+ anos) + proficiência técnica avançada (Python, SQL, Cloud, ML) + certificações (PL-300, Tableau, Six Sigma Green Belt) + impacto financeiro mensurável (US$3M).'
+  },
+  'Daniela':{
+    nome:'Daniela',idade:44,
+    resumo:'Graduanda em Psicologia (formatura dez/2026). Estágio supervisionado em Gestalt-terapia + certificação internacional em Terapia do Esquema (ISST).',
+    formacao:'Bacharelado em Psicologia (em conclusão, dez/2026). Certificação ISST em Terapia do Esquema.',
+    idiomas:'Português nativo, Espanhol (profissional), Italiano (básico), Inglês (intermediário).',
+    objetivo:'Mestrado/Doutorado em Psicologia Clínica, Neurociência, Terapia do Esquema — foco Espanha, Portugal, Itália, aberta ao mundo.',
+    diferencial:'Certificação ISST internacional (rara em estudantes de graduação) + estágio em Gestalt-terapia — combinação de abordagem humanista/fenomenológica + especialização reconhecida em Terapia do Esquema.'
+  },
+  'Maria Eduarda':{
+    nome:'Maria Eduarda',idade:29,
+    resumo:'Data Science / Analytics. Perfil técnico com foco em dados, programação e IA aplicada.',
+    formacao:'Formação em área de dados/tecnologia.',
+    idiomas:'Português nativo, Inglês (profissional).',
+    objetivo:'Mestrado/Doutorado em Data Science, IA, Computação — qualquer país.',
+    diferencial:'Perfil técnico jovem com narrativa forte de mulheres em STEM; experiência prática com dados e análise.'
+  },
+  'Letícia':{
+    nome:'Letícia',idade:14,
+    resumo:'Estudante de Ensino Médio, 14 anos. Interesse forte em STEM: matemática, IA, ciência de dados, esportes e leitura.',
+    formacao:'Ensino Médio (em curso).',
+    idiomas:'Português nativo, Inglês (em desenvolvimento).',
+    objetivo:'Programas de intercâmbio, pesquisa jovem, olimpíadas de IA, bolsas para Ensino Médio e Graduação futura.',
+    diferencial:'Curiosidade genuína e persistência — interesse real em como as coisas funcionam (matemática, IA, dados). Perfil jovem com grande potencial narrativo.'
+  }
+};
+
+function detectPersonForItem(item){
+  const p=(item.pessoa_indicada||'').trim();
+  if(PERFIS[p]) return p;
+  for(const name of Object.keys(PERFIS)){
+    if(p.includes(name)) return name;
+  }
+  return rankPerson||'Rafael';
+}
+
+function gerarCartaMotivacao(item,perfil){
+  const pais=extractCountry(item.observacoes)||'o país de destino';
+  const nivel=(item.nivel||'programa').toLowerCase();
+  const inst=item.instituicao||'a instituição';
+  const nome=item.nome||'o programa';
+  const lines=[];
+  lines.push(`Dear Selection Committee,`);
+  lines.push(``);
+  lines.push(`I am writing to express my strong interest in the ${nome} at ${inst}. ${perfil.resumo}`);
+  lines.push(``);
+  if(perfil.idade>=30){
+    lines.push(`With ${perfil.idade>=40?'over 18':'several'} years of professional experience, I bring a mature perspective and proven track record to this ${nivel}. ${perfil.diferencial}`);
+  } else if(perfil.idade>=18){
+    lines.push(`As a young professional driven by ${perfil.objetivo.toLowerCase().includes('ia')||perfil.objetivo.toLowerCase().includes('data')?'the transformative potential of AI and data science':'a passion for my field'}, I am eager to deepen my expertise through this ${nivel}. ${perfil.diferencial}`);
+  } else {
+    lines.push(`Although I am ${perfil.idade} years old, my genuine curiosity and dedication to learning set me apart. ${perfil.diferencial}`);
+  }
+  lines.push(``);
+  if(item.explicacao_pessoal){
+    lines.push(`This opportunity is a particularly strong fit for my profile: ${item.explicacao_pessoal}`);
+    lines.push(``);
+  }
+  lines.push(`My educational background includes: ${perfil.formacao} I am proficient in: ${perfil.idiomas}`);
+  lines.push(``);
+  lines.push(`I am committed to making the most of this opportunity and contributing meaningfully to the academic community at ${inst}. I look forward to the possibility of joining this program and bringing my unique combination of skills and experience.`);
+  lines.push(``);
+  lines.push(`Sincerely,`);
+  lines.push(`${perfil.nome}`);
+  return lines.join('\n');
+}
+
+function gerarChecklistDocs(item){
+  const docs=(item.documentos||'').split(';').map(d=>d.trim()).filter(Boolean);
+  const base=['Passaporte válido','Histórico escolar / Diploma','Certificado de proficiência em inglês (TOEFL/IELTS)','CV / Currículo atualizado','Carta(s) de recomendação','Carta de motivação / Statement of Purpose','Foto 3x4 recente'];
+  const all=docs.length>0?docs:base;
+  return all;
+}
+
+function gerarBriefingRecomendacao(item,perfil){
+  const inst=item.instituicao||'a instituição';
+  const nome=item.nome||'o programa';
+  return `BRIEFING PARA CARTA DE RECOMENDAÇÃO
+
+Programa: ${nome} (${inst})
+Candidato(a): ${perfil.nome}, ${perfil.idade} anos
+Nível: ${item.nivel||'não especificado'}
+
+O que o comitê quer ver:
+• Capacidade acadêmica e intelectual do(a) candidato(a)
+• Exemplos concretos de trabalho, iniciativa ou liderança
+• Potencial para contribuir com o programa
+• Qualidades pessoais: ética, colaboração, resiliência
+
+Diferenciais a destacar:
+${perfil.diferencial}
+
+Formação relevante:
+${perfil.formacao}
+
+⚠️ Status: em preparação (carta de recomendação nunca deve ser descrita como "pronta" ou "finalizada" — apenas "em preparação").`;
+}
+
+function abrirCandidatura(id){
+  const item=data.find(i=>i.id===id);
+  if(!item) return;
+  const personName=detectPersonForItem(item);
+  const perfil=PERFIS[personName]||PERFIS['Rafael'];
+  const pStatus=prazoStatus(item);
+  const daysLeft=daysUntil(item.prazo_inscricao);
+  const daysLabel=daysLeft!==null?(daysLeft>=0?daysLeft+' dias restantes':'Prazo expirado'):'Sem data definida';
+
+  const carta=gerarCartaMotivacao(item,perfil);
+  const docs=gerarChecklistDocs(item);
+  const briefing=gerarBriefingRecomendacao(item,perfil);
+
+  const docsHtml=docs.map((d,i)=>`<li><input type="checkbox" id="ck${i}"><label for="ck${i}">${escapeHtml(d)}</label></li>`).join('');
+
+  const html=`
+    <div class="cand-modal">
+      <h2>📋 Dossiê de Candidatura</h2>
+      <p style="color:var(--muted);margin:0 0 12px">${escapeHtml(item.nome||'')} — ${escapeHtml(item.instituicao||'')}</p>
+
+      <h3>📊 Dados da Bolsa</h3>
+      <dl class="cand-meta">
+        <dt>Nível</dt><dd>${escapeHtml(item.nivel||'—')}</dd>
+        <dt>Prazo</dt><dd>${fmtDate(item.prazo_inscricao)} (${daysLabel})</dd>
+        <dt>Valor</dt><dd>${item.valor_mensal?'US$ '+fmtMoney(item.valor_mensal)+'/mês'+(item.duracao_meses?' · '+item.duracao_meses+' meses':''):'Não informado'}</dd>
+        <dt>País</dt><dd>${escapeHtml(extractCountry(item.observacoes))}</dd>
+        <dt>Candidato(a)</dt><dd><strong>${escapeHtml(perfil.nome)}</strong> (${perfil.idade} anos)</dd>
+        <dt>Status dossiê</dt><dd>${escapeHtml(item.status_dossie||'Não iniciado')}</dd>
+      </dl>
+      ${item.link?'<a href="'+escapeAttr(item.link)+'" target="_blank" rel="noopener" class="btn primary" style="margin-top:10px">🔗 Abrir edital oficial</a>':''}
+      ${item.observacoes?'<div class="cand-section" style="margin-top:10px"><strong>Observações:</strong> '+escapeHtml(item.observacoes)+'</div>':''}
+
+      <h3>✉️ Rascunho de Carta de Motivação</h3>
+      <div class="cand-section letter" id="candCarta">${escapeHtml(carta)}</div>
+      <button class="btn" onclick="copiarTexto('candCarta','Carta copiada!')">📋 Copiar carta</button>
+
+      <h3>📑 Checklist de Documentos</h3>
+      <ul class="cand-checklist">${docsHtml}</ul>
+
+      <h3>📝 Briefing para Carta de Recomendação</h3>
+      <div class="cand-section" id="candBriefing">${escapeHtml(briefing)}</div>
+      <button class="btn" onclick="copiarTexto('candBriefing','Briefing copiado!')">📋 Copiar briefing</button>
+
+      <h3>🤖 Prompt para Claude (pesquisa + pré-preenchimento)</h3>
+      <div class="cand-section" id="candPrompt" style="font-size:.82rem">${escapeHtml(montarPromptCandidatura(item))}</div>
+      <button class="btn" onclick="copiarTexto('candPrompt','Prompt copiado!')">📋 Copiar prompt completo</button>
+
+      <div class="cand-actions">
+        ${item.link?'<a href="'+escapeAttr(item.link)+'" target="_blank" rel="noopener" class="btn primary">🌐 Ir para o edital</a>':''}
+        <button class="btn ghost" onclick="fecharCandidatura()">Fechar</button>
+      </div>
+    </div>`;
+
+  let overlay=document.getElementById('candOverlay');
+  if(!overlay){
+    overlay=document.createElement('div');
+    overlay.id='candOverlay';
+    overlay.className='cand-overlay';
+    overlay.addEventListener('click',e=>{if(e.target===overlay)fecharCandidatura();});
+    document.body.appendChild(overlay);
+  }
+  overlay.innerHTML=html;
+  overlay.classList.add('open');
+  overlay.scrollTop=0;
+}
+
+function fecharCandidatura(){
+  const o=document.getElementById('candOverlay');
+  if(o) o.classList.remove('open');
+}
+
+function copiarTexto(elId,msg){
+  const el=document.getElementById(elId);
+  if(!el) return;
+  const text=el.innerText||el.textContent;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(()=>alert(msg)).catch(()=>prompt2(text));
+  } else { prompt2(text); }
+}
+
 populatePaisFilter();
 render();
 { const badgeG=document.getElementById('tabCountGlobal'); if(badgeG && data.length) badgeG.textContent=data.length; }
